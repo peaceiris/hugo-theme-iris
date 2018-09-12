@@ -1,0 +1,37 @@
+<!-- cf. https://github.com/joshbuchea/HEAD -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui">
+
+<!-- Force IE 8/9/10 to use its latest rendering engine -->
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!-- Android -->
+<!-- Add to home screen and run web page in full-screen mode -->
+<meta name="mobile-web-app-capable" content="yes">
+
+<!-- iOS -->
+<!-- Add to home screen and run web page in full-screen mode -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- the style of the status bar -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- Disable automatic detection and formatting of possible phone numbers -->
+<meta name="format-detection" content="telephone=no">
+
+<!-- Allows control over how referrer information is passed -->
+<meta name="referrer" content="no-referrer">
+
+<!-- Control the behavior of search engine crawling and indexing -->
+<meta name="robots" content="index,follow"><!-- All Search Engines -->
+<meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+<!-- favicon, home icon -->
+{{ partial "head/favicon" . }}
+
+<!-- Feed, RSS -->
+<link rel="alternate" type="application/rss+xml" href="{{ .Site.RSSLink }}" title="{{ with .Site.Title }}{{ . }}{{ end }}">
+
+<title>{{ with .Title }}{{ . }}{{ end }}</title>
+<meta name="author" content="{{ with .Site.Params.author }}{{ . }}{{ end }}">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+
+{{ .Hugo.Generator }}

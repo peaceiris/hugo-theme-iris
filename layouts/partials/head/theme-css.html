@@ -1,0 +1,3 @@
+{{ range .Site.Params.customCSS }}
+<link rel="preload" href="{{ "/css/" | relURL }}{{ . }}" as="style" onload="this.rel='stylesheet'">
+{{ end }}

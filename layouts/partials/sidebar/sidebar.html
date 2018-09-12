@@ -1,0 +1,58 @@
+<!-- <ul id="slide-out" class="sidenav"> -->
+<!--   <li><a href="#!">First Sidebar Link</a></li> -->
+<!--   <li><a href="#!">Second Sidebar Link</a></li> -->
+<!--   <li class="no-padding"> -->
+<!--     <ul class="collapsible collapsible-accordion"> -->
+<!--       <li> -->
+<!--         <a class="collapsible-header">Dropdown</a> -->
+<!--         <div class="collapsible-body"> -->
+<!--           <ul> -->
+<!--             <li><a href="#!">First</a></li> -->
+<!--             <li><a href="#!">Second</a></li> -->
+<!--             <li><a href="#!">Third</a></li> -->
+<!--             <li><a href="#!">Fourth</a></li> -->
+<!--           </ul> -->
+<!--         </div> -->
+<!--       </li> -->
+<!--     </ul> -->
+<!--   </li> -->
+<!-- </ul> -->
+<!-- <ul class="right hide-on-med-and-down"> -->
+<!--   <li><a href="#!">First Sidebar Link</a></li> -->
+<!--   <li><a href="#!">Second Sidebar Link</a></li> -->
+<!--   <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li> -->
+<!--   <ul id='dropdown1' class='dropdown-content'> -->
+<!--     <li><a href="#!">First</a></li> -->
+<!--     <li><a href="#!">Second</a></li> -->
+<!--     <li><a href="#!">Third</a></li> -->
+<!--     <li><a href="#!">Fourth</a></li> -->
+<!--   </ul> -->
+<!-- </ul> -->
+
+<ul id="slide-out" class="sidenav left-align">
+  <li>
+    <div class="user-view">
+      {{ with .Site.Params.sidebar.image }}
+      <div class="background">
+        <img src="/img/sidebar/{{ . }}">
+      </div>
+      {{ end }}
+      {{ with .Site.Params.sidebar.icon }}
+      <a href="#user"><img class="circle" src="/img/sidebar/{{ . }}"></a>
+      {{ end }}
+      {{ with .Site.Params.sidebar.name }}
+      <a href="#name"><span class="white-text name">{{ . }}</span></a>
+      {{ end }}
+    </div>
+  </li>
+  <li><div class="divider"></div></li>
+  <li><a class="subheader">Internal</a></li>
+  {{ partial "sidebar/internal-links" . }}
+  <li><div class="divider"></div></li>
+  <li><a class="subheader">Social</a></li>
+  {{ partial "sidebar/social-links" . }}
+</ul>
+
+<a href="#!" class="menu-btn sidenav-trigger btn-floating hoverable {{ .Site.Params.materialColor }} lighten-2" data-target="slide-out">
+  <i class="fas fa-bars fa-fw"></i>
+</a>

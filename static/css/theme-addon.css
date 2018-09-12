@@ -1,0 +1,20 @@
+/* custom style is here */
+body {
+    font-family: 'Droid Serif';
+}
+
+header {
+    margin-bottom: 5rem;
+}
+
+img.header-icon {
+    height: 5rem;
+    margin-top: 1rem;
+}
+
+h1 {
+    font-size: 200%;
+    margin: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}

@@ -1,0 +1,38 @@
+<footer class="page-footer {{ .Site.Params.materialColor }} lighten-2">
+  <div class="container">
+    <div class="row">
+      <div class="col l4 m4 s6">
+        <h5 class="white-text">Internal links</h5>
+        <ul>
+          {{ partial "footer/internal-links" . }}
+        </ul>
+      </div> <!-- col -->
+      <div class="col l4 m4 s6">
+        <h5 class="white-text">Social</h5>
+        <ul>
+          {{ partial "footer/social-links" . }}
+        </ul>
+      </div> <!-- col -->
+      <div class="input-field col l4 m4 s12">
+        <i class="fas fa-search fa-fw prefix"></i>
+        <input type="text" id="autocomplete-input" class="autocomplete">
+        <label for="autocomplete-input" class="white-text">Search</label>
+      </div> <!-- col -->
+    </div> <!-- row -->
+  </div>
+  <div class="footer-copyright">
+    <div class="container center-align">
+      © {{ .Site.LastChange.Year }}
+      {{ with .Site.Params.footer.copyright.link }}
+      <a href="{{ . }}" class="white-text hoverable">
+      {{ end }}
+      {{ .Site.Params.footer.copyright.name }}
+      {{ if .Site.Params.footer.copyright.link }}
+      </a>
+      {{ end }}
+      {{ if .Site.Params.footer.credit }}
+      - Powered by <a href="https://github.com/peaceiris/hugo-slide-manager" class="white-text hoverable">Slide Manager</a>
+      {{ end }}
+    </div> <!-- container -->
+  </div> <!-- container -->
+</footer>

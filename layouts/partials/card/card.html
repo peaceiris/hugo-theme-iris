@@ -1,0 +1,33 @@
+<article>
+  <div class="card z-depth-3">
+    {{ with .Params.eyeCatchingImg }}
+    <div class="card-image">
+      <img class="responsive-img" src="/img/slide/{{ . }}">
+    </div> <!-- card-image -->
+    {{ end }}
+    <div class="card-content">
+      <h2><span class="card-title {{ .Site.Params.materialColor }}-text text-lighten-1">{{ .Title }}</span></h2>
+      <p>{{ .Description }}</p>
+    </div> <!-- card-content -->
+    <footer>
+      <div class="card-content">
+        <div class="row grey-text">
+          <div class="col s6 m12 l6"><i class="fas fa-calendar-alt fa-fw"></i> {{ .Date.Format "2, January 2006" }}</div>
+          <div class="col s6 m12 l6"><a href="#!" class="hoverable grey-text"><i class="fas fa-user fa-fw"></i> {{ with .Params.author }}{{ . }}{{ end }}</a></div>
+          <div class="col s6 m12 l6"><a href="#!" class="hoverable grey-text"><i class="fas fa-folder fa-fw"></i> Category</a></div>
+          <div class="col s6 m12 l6"><a href="#!" class="hoverable grey-text"><i class="fas fa-tag fa-fw"></i> Tag</a></div>
+        </div>
+      </div> <!-- card-content -->
+      <div class="card-action">
+        <a class="btn-flat waves-effect waves-{{ .Site.Params.materialColor }} grey-text lighten-5">
+          <i class="fas fa-download fa-fw"></i> PDF</a>
+        <!-- <a class="btn-flat waves-effect waves-{{ .Site.Params.materialColor }} grey-text lighten-5"> -->
+          <!--   <i class="fas fa-qrcode fa-fw"></i> QR code</a> -->
+        <!-- <a class="btn-flat waves-effect waves-{{ .Site.Params.materialColor }} grey-text lighten-5"> -->
+          <!--   <i class="fas fa-print fa-fw"></i> Print</a> -->
+        <a class="btn-small hoverable waves-effect waves-light {{ .Site.Params.materialColor }} lighten-2 right" href="{{ .RelPermalink }}">
+          <i class="fas fa-play-circle fa-fw"></i> View</a>
+      </div> <!-- card-action -->
+    </footer>
+  </div> <!-- card -->
+</article>

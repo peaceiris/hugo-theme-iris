@@ -1,0 +1,8 @@
+{{ if .Params.mermaid }}
+  {{ if .Site.IsServer }}
+    <script src="/local/mermaid/mermaid.min.js"></script>
+  {{ else }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
+  {{ end }}
+  <script>mermaid.initialize({startOnLoad:true});</script>
+{{ end }}

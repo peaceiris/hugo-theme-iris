@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
+  <head>
+    {{ partial "head/head" . }}
+    {{ partial "head/preload" . }}
+    {{ partial "head/materialize" . }}
+    {{ partial "sidebar/css" . }}
+    {{ partial "scrollToTop/css" . }}
+    {{ partial "head/theme-css" . }}
+  </head>
+  <body class="{{ .Site.Params.materialColor }} lighten-5">
+
+    {{ partial "header" . }}
+    <main>
+      <div class="container">
+        <div class="row">
+          {{ range .Data.Pages }}
+          <div class="col s12 m6">
+            {{ partial "card/card" . }}
+          </div> <!-- col -->
+          {{ end }}
+        </div> <!-- row -->
+      </div> <!-- container -->
+    </main>
+    {{ partial "footer/footer" . }}
+    {{ partial "js/materialize" . }}
+    {{ partial "js/fontawesome" . }}
+    {{ partial "sidebar/js" . }}
+    {{ partial "scrollToTop/js" . }}
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{{ if .Params.mathjax }}
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true
+        },
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script>
+  <!-- {{ if .Site.IsServer }} -->
+  <!--   <script src="/local/mathjax/MathJax.js?config=TeX-MML-AM_CHTML" async></script> -->
+  <!-- {{ else }} -->
+  <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script> -->
+  <!-- {{ end }} -->
+{{ end }}

@@ -1,0 +1,33 @@
+<script type="text/javascript" defer>
+  function disableBackgroundScroll() {
+      //console.log('run disableBackgroundScroll()');
+      document.documentElement.classList.add('fix-background');
+      document.body.classList.add('fix-background');
+      // document.documentElement.style.height = '100%';
+      // document.documentElement.style.overflow = 'hidden';
+      // document.body.style.height = '100%';
+      // document.body.style.overflow = 'hidden';
+  }
+  function enableBackgroundScroll() {
+      //console.log('run enableBackgroundScroll()');
+      document.documentElement.classList.remove('fix-background');
+      document.body.classList.remove('fix-background');
+      // document.documentElement.style.removeAttribute('height');
+      // document.documentElement.style.removeAttribute('overflow');
+      // document.body.style.removeAttribute('height');
+      // document.body.style.removeAttribute('overflow');
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems, {
+          //'edge': 'right',
+          'draggable': false,
+          'onOpenStart': disableBackgroundScroll, // for ios
+          'onCloseStart': enableBackgroundScroll, // for ios
+      });
+  });
+
+  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+  // var collapsibleElem = document.querySelector('.collapsible');
+  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+</script>

@@ -1,0 +1,11 @@
+{{ partial "head/head" . }}
+{{ partial "head/remark" . }}
+</head>
+<body>
+<textarea id="source">
+{{ .RawContent }}<!-- {{ range .Data.Pages.ByWeight }}{{ if eq .Type "slide" }}{{ if eq .Params.contentType "md" }}{{ .RawContent }}{{ end }}{{ if eq .Params.contentType "sc" }}{{ .Content }}{{ end }}{{ end }}{{ end }} -->
+</textarea>
+{{ partial "js/remark" . }}
+{{ partial "js/mathjax" . }}
+{{ partial "js/mermaid" . }}
+</body></html>

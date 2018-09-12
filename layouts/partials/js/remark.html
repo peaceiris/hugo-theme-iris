@@ -1,0 +1,10 @@
+<script src="/js/remark-0.14.0.min.js"></script>
+<script>
+  var slideshow = remark.create({
+      highlightLanguage: 'javascript',
+      {{ with .Site.Params.highlightStyle }}
+      highlightStyle: '{{ . }}',
+      {{ end }}
+      highlightLines: true
+  });
+</script>

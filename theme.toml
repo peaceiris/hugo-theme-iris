@@ -1,0 +1,24 @@
+name = "Slide Manager"
+license = "MIT"
+licenselink = "https://raw.githubusercontent.com/peaceiris/hugo-slide-manager/master/LICENSE"
+description = "Hugo theme to write remark slides with MathJax and mermaid."
+homepage = "https://github.com/peaceiris/hugo-slide-manager"
+tags = [
+     "presentation",
+     "slide",
+     "remark",
+     "google-analytics",
+     "mermaid",
+     "mathjax",
+     "academic",
+     "fontawesome",
+     "responsive",
+     "material-design",
+     "netlify",
+]
+features = ["remark.js", "mathjax", "mermaid"]
+min_version = 0.47
+
+[author]
+    name = "peaceiris"
+    homepage = "https://github.com/peaceiris"
