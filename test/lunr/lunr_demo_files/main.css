@@ -1,0 +1,41 @@
+.content {
+    font-family: sans-serif;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#search-form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#search-form input {
+    display: block;
+    width: 100%;
+    padding: 0.4em;
+    border: 1px solid #ccc;
+    font-size: 1.4em;
+}
+
+#search-form .controls {
+    margin: 1em auto;
+}
+
+#search-form .query-error {
+  font-size: 0.8em;
+  color: red;
+}
+
+article {
+    border-bottom: 1px solid #ccc;
+}
+
+article header h2 {
+    text-transform: capitalize;
+}
+
+article section p {
+    line-height: 1.6em;
+}
+

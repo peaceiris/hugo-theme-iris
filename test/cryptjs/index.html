@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST</title>
+  </head>
+  <body>
+
+    <div id="org">
+      <h2>Title</h2>
+      <p>hoge</p>
+      <a href="https://news.yahoo.co.jp/" target="_blank">Jump to Yahoo News</a>
+    </div>
+
+    <form name="passwordform" action="#">
+      <input type="text" id="password">
+      <input type="button" value="Login" onClick="decrypt();">
+    </form>
+
+    <div id="output"></div>
+
+    <script type="text/javascript" src="crypto-js.js"></script>
+    <script type="text/javascript">
+      let myString = 'U2FsdGVkX1+8VS04wMMraHmjxgYsH+BVCoRKvBlqZvWBFB7KzqiGRCk9kEqkS93tf9Qdti0ihAMQnJQ/Mx2SLzyBLP3oBkQ4AHhLtiwqSi2gune6Uxgvkz/amDAt2hVm/Z8mHzPhL+aAjbLXxjt+gSK4ZxJBmVoH1glC/6v90ng=';
+      function decrypt() {
+          let myPassword = document.getElementById('password').value;
+          let decrypted = CryptoJS.AES.decrypt(myString, myPassword);
+          document.getElementById("output").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
+      }
+    </script>
+  </body>
+</html>

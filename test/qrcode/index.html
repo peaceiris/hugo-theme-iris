@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+    <div id="qrcode"></div>
+    <script type="text/javascript" src="qrcode.min.js"></script>
+    <script type="text/javascript">
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+	  text: "https://www.p-iris.com/",
+	  width: 128,
+	  height: 128,
+	  colorDark : "#000000",
+	  colorLight : "#ffffff",
+	  correctLevel : QRCode.CorrectLevel.H
+      });
+    </script>
+
+    <div id="qrcode-svg"></div>
+    <script type="text/javascript" src="qrcode-svg.min.js"></script>
+    <script>
+      var qrcode = new QRCode("https://www.p-iris.com/");
+      var svg = qrcode.svg();
+      document.getElementById("qrcode-svg").innerHTML = svg;
+    </script>
+
+  </body>
+</html>

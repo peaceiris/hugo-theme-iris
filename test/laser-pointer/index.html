@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Laser pointer</title>
+  <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <article>
+  <section>
+    <h1> Hello world </h1>
+  </section>
+</article>
+
+<div class="pointingjs">
+  <div class="pointer"></div>
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="glow">
+        <fegaussianblur class="blur" result="coloredBlur" stddeviation="4"></fegaussianblur>
+          <femerge>
+            <femergenode in="coloredBlur"></femergenode>
+            <femergenode in="coloredBlur"></femergenode>
+            <femergenode in="coloredBlur"></femergenode>
+            <femergenode in="SourceGraphic"></femergenode>
+          </femerge>
+      </filter>
+      <linearGradient id="linear">
+        <stop offset="0"   stop-color="red" stop-opacity="0"/>
+        <stop offset="1" stop-color="red"/>
+      </linearGradient>
+    </defs>
+    <path id="trail" fill="transparent" d="M10 10  20 20" result="coloredBlur"//>
+  </svg>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
