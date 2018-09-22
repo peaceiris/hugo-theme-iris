@@ -1,4 +1,4 @@
-# hugo slide manager
+# Hugo Theme Attica
 
 このリポジトリでは、[Hugo] のプレゼンテーション用テーマを管理・公開しています。
 
@@ -17,6 +17,9 @@ remark 単体でもスライドの作成は可能ですが、Hugo Theme に組�
 
 
 ## Table of Contents
+
+<details>
+<summary>Click me to expand</summary>
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -51,6 +54,8 @@ remark 単体でもスライドの作成は可能ですが、Hugo Theme に組�
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+</details>
 
 
 
