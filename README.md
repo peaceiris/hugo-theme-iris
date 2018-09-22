@@ -1,4 +1,4 @@
-# Hugo Slide Manager
+# Hugo Theme Attica
 
 <!-- https://shields.io/ -->
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-slide-manager/blob/master/LICENSE)
@@ -18,6 +18,9 @@ This theme can manage and publish slides using Hugo.
 
 
 ## Table of Contents
+
+<details>
+<summary>Click me to expand</summary>
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -40,6 +43,8 @@ This theme can manage and publish slides using Hugo.
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+</details>
 
 
 
