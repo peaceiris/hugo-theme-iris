@@ -5,22 +5,19 @@
 
 This repository includes the [Hugo] theme for your presentation.
 
-- Writing slides using Markdown. ([remark])
+- Writing slides using Markdown. ([reveal.js])
 - [MathJax] on slides.
 - Diagram and flowchart on slides. ([mermaid])
 
 This theme can manage and publish slides using Hugo.
 
 - [Demo]
-- [Demo project]
+- [Demo Hugo Project]
 - [:jp: Japanese README is here.](https://github.com/peaceiris/hugo-slide-manager/blob/master/README_ja.md)
 
 
 
 ## Table of Contents
-
-<details>
-<summary>Click me to expand</summary>
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -44,8 +41,6 @@ This theme can manage and publish slides using Hugo.
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-</details>
-
 
 
 ## Features
@@ -58,8 +53,6 @@ This theme can manage and publish slides using Hugo.
 ### MathJax
 
 ### mermaid
-
-[:small_red_triangle: Back to TOC]
 
 
 
@@ -77,8 +70,6 @@ This theme can manage and publish slides using Hugo.
 <!-- ``` -->
 
 <!-- For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo. -->
-
-[:small_red_triangle: Back to TOC]
 
 
 
@@ -112,8 +103,6 @@ This theme can manage and publish slides using Hugo.
 
 <!-- Have fun! -->
 
-[:small_red_triangle: Back to TOC]
-
 
 
 ## Host on GitHub Pages
@@ -124,18 +113,14 @@ The next method is recommended.
 
 - [Deployment of Project Pages From Your gh-pages branch]
 
-[:small_red_triangle: Back to TOC]
-
 
 
 ## Special Thanks
 
 - [Hugo]
-- [remark]
+- [reveal.js]
 - [MathJax]
 - [mermaid]
-
-[:small_red_triangle: Back to TOC]
 
 
 
@@ -144,8 +129,6 @@ The next method is recommended.
 - peaceiris
     - [GitHub]
     - [Twitter]
-
-[:small_red_triangle: Back to TOC]
 
 
 
@@ -162,8 +145,6 @@ You can find more detail in our [Contributing Guide].
 
 Participation in this open source project is subject to a [Code of Conduct].
 
-[:small_red_triangle: Back to TOC]
-
 
 
 ## License
@@ -171,6 +152,10 @@ Participation in this open source project is subject to a [Code of Conduct].
 This theme is released under the [MIT License].
 
 Copyright © 2018, peaceiris
+
+
+
+---
 
 [:small_red_triangle: Back to TOC]
 
@@ -180,18 +165,18 @@ Copyright © 2018, peaceiris
 [:small_red_triangle: Back to TOC]: #table-of-contents
 
 [Demo]: https://peaceiris.github.io/open-slides/
-[Demo project]: https://github.com/peaceiris/hugo-slide-manager-demo
+[Demo Hugo Project]: https://github.com/peaceiris/hugo-slide-manager-demo
 [MIT License]: ./LICENSE
 [GitHub Issues]: https://github.com/peaceiris/hugo-slide-manager/issues
 [Contributing Guide]: ./CONTRIBUTING.md
 [Code of Conduct]: ./CODE_OF_CONDUCT.md
 
 [GitHub]: https://github.com/peaceiris
-[Twitter]: https://twitter.com/piris314
+[Twitter]: https://twitter.com/piris314en
 
 <!-- External References -->
 [Hugo]: https://gohugo.io/
-[remark]: https://github.com/gnab/remark
+[reveal.js]: https://github.com/hakimel/reveal.js/
 [MathJax]: https://www.mathjax.org/
 [mermaid]: https://github.com/knsv/mermaid
 
