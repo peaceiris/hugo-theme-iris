@@ -1,7 +1,7 @@
 # Hugo Theme Attica
 
 <!-- https://shields.io/ -->
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-slide-manager/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-attica/blob/master/LICENSE)
 
 This repository includes the [Hugo] theme for your presentation.
 
@@ -11,9 +11,9 @@ This repository includes the [Hugo] theme for your presentation.
 
 This theme can manage and publish slides using Hugo.
 
-- [Demo]
+- [Demo (Netlify)]
 - [Demo Hugo Project]
-- [:jp: Japanese README is here.](https://github.com/peaceiris/hugo-slide-manager/blob/master/README_ja.md)
+- [:jp: Japanese README is here.](https://github.com/peaceiris/hugo-attica/blob/master/README_ja.md)
 
 
 
@@ -81,7 +81,7 @@ This theme can manage and publish slides using Hugo.
 
 <!-- ```toml -->
 <!-- baseurl         = "/" -->
-<!-- theme           = "slide-manager" -->
+<!-- theme           = "attica" -->
 <!-- languageCode    = "en" -->
 <!-- title           = "" -->
 <!-- canonifyurls    = true -->
@@ -164,10 +164,10 @@ Copyright © 2018, peaceiris
 <!-- Internal References -->
 [:small_red_triangle: Back to TOC]: #table-of-contents
 
-[Demo]: https://peaceiris.github.io/open-slides/
-[Demo Hugo Project]: https://github.com/peaceiris/hugo-slide-manager-demo
+[Demo (Netlify)]: https://hugoattica.netlify.com/
+[Demo Hugo Project]: https://github.com/peaceiris/hugo-attica-demo
 [MIT License]: ./LICENSE
-[GitHub Issues]: https://github.com/peaceiris/hugo-slide-manager/issues
+[GitHub Issues]: https://github.com/peaceiris/hugo-attica/issues
 [Contributing Guide]: ./CONTRIBUTING.md
 [Code of Conduct]: ./CODE_OF_CONDUCT.md
 
