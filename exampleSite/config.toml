@@ -1,5 +1,5 @@
 baseurl         = "/"
-theme           = "slide-manager"
+theme           = "iris"
 languageCode    = "en-US"
 title           = "Hugo slide manager"
 canonifyurls    = true
@@ -11,7 +11,7 @@ hrefTargetBlank = true
 [params]
   googleAnalytics = ""
   author          = "peaceiris"
-  description     = "Demo slides for Hugo slide manager"
+  description     = "Demo slides for Hugo Iris"
   custom_css      = ["remark.css", "custom.css"]
   highlightStyle  = "solarized-light" # Another recommended styles are "monokai" and "rainbow".
   mathjax         = true
