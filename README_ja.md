@@ -1,4 +1,4 @@
-# Hugo Theme Attica
+# Hugo Theme Iris!
 
 このリポジトリでは、[Hugo] のプレゼンテーション用テーマを管理・公開しています。
 

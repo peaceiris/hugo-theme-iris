@@ -1,8 +1,8 @@
-name = "Attica"
+name = "Iris"
 license = "MIT"
-licenselink = "https://raw.githubusercontent.com/peaceiris/hugo-attica/master/LICENSE"
+licenselink = "https://raw.githubusercontent.com/peaceiris/hugo-iris/master/LICENSE"
 description = "Hugo theme to write remark slides with MathJax and mermaid."
-homepage = "https://github.com/peaceiris/hugo-attica"
+homepage = "https://github.com/peaceiris/hugo-iris"
 tags = [
      "presentation",
      "slide",
