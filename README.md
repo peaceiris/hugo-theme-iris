@@ -105,7 +105,15 @@ This theme can manage and publish slides using Hugo.
 
 
 
-## Host on GitHub Pages
+## Hosting
+
+### Netlify
+
+<!-- Deploy to Netlify Button -->
+<!-- https://www.netlify.com/docs/deploy-button/ -->
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/peaceiris/hugo-iris)
+
+### GitHub Pages
 
 - [Host on GitHub | Hugo]
 
