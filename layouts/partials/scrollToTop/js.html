@@ -1,19 +1,14 @@
-<!-- <div id="page-top" class="blogicon-chevron-up"> -->
-<!--   <i class="fas fa-arrow-up fa-fw" data-fa-mask="fas fa-square" style="color:Gray" data-fa-transform="shrink-3"></i> -->
-<!-- </div> -->
-
-<a id="page-top" class="btn-floating waves-effect waves-light">
-  <i class="fas fa-arrow-up fa-fw"></i>
+<a id="scroll-button" class="btn-floating scale-transition scale-out hoverable grey darken-3">
+  <i id="scroll-icon" class="fas fa-arrow-up fa-fw fa-lg"></i>
 </a>
-
 
 <script type="text/javascript">
   function getScrolled() {
       return ( window.pageYOffset !== undefined ) ? window.pageYOffset: document.documentElement.scrollTop;
   };
-  var topButton = document.getElementById( 'page-top' );
+  var topButton = document.getElementById( 'scroll-button' );
   window.onscroll = function() {
-      ( getScrolled() > 500 ) ? topButton.classList.add( 'fade-in' ): topButton.classList.remove( 'fade-in' );
+      ( getScrolled() > 500 ) ? topButton.classList.add( 'scale-in' ): topButton.classList.remove( 'scale-in' );
   };
   function scrollToTop() {
       var scrolled = getScrolled();
