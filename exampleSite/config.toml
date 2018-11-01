@@ -1,7 +1,7 @@
 baseurl         = "/"
 theme           = "iris"
 languageCode    = "en-US"
-title           = "Hugo slide manager"
+title           = "Hugo Iris"
 canonifyurls    = true
 
 # open link as new tab
