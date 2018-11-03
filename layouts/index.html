@@ -2,7 +2,7 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
   <head>
     {{ partial "head/head" . }}
-    {{ partial "head/preload" . }}
+    {{ partial "head/prefetch" . }}
     {{ partial "head/materialize" . }}
     {{ partial "sidebar/css" . }}
     {{ partial "scrollToTop/css" . }}
