@@ -1,0 +1,8 @@
+{{ if .Site.IsServer }}
+  <link rel="stylesheet" href="/local/fonts/NotoSansJP-Medium.otf">
+{{ else }}
+  <link rel="stylesheet" href="{{ .Site.Params.fontURL }}">
+  <style>
+    body { font-family: '{{ .Site.Params.fontFamily }}', sans-serif; }
+  </style>
+{{ end }}
