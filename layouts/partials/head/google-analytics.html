@@ -1,6 +1,4 @@
-{{ if .Site.IsServer }}
-  <!-- hugo's built-in server is TRUE-->
-{{ else }}
+{{ if not .Site.IsServer }}
   {{ with .Site.Params.googleAnalytics }}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
