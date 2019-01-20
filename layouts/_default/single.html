@@ -1,6 +1,11 @@
 {{ partial "head/head" . }}
-{{ partial "head/remark" . }}
 {{ partial "head/font" . }}
+  <style>
+    {{ $remark := resources.Get "css/remark.css" }}
+    {{ $remarkAddon := resources.Get "css/remark-addon.css" }}
+    {{ $remarkStyle := slice $remark $remarkAddon | resources.Concat "remark.bundle.css" | minify }}
+    {{ $remarkStyle.Content | safeCSS }}
+  </style>
 </head>
 <body>
 <textarea id="source">

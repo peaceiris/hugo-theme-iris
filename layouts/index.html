@@ -6,8 +6,12 @@
     {{ partial "head/materialize" . }}
     {{ partial "sidebar/css" . }}
     {{ partial "scrollToTop/css" . }}
-    {{ partial "head/theme-css" . }}
     {{ partial "head/font" . }}
+    <style>
+      {{ $addonStyle := resources.Get "css/addon.css" }}
+      {{ $inlineStyle := slice $addonStyle | resources.Concat "style.bundle.css" | minify }}
+      {{ $inlineStyle.Content | safeCSS }}
+    </style>
   </head>
   <body class="{{ .Site.Params.materialColor }} lighten-5">
 
