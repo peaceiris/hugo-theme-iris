@@ -51,6 +51,7 @@ This theme can manage and publish slides using Hugo.
 - Switch css: change css file by `config.toml`
 - [MathJax]: Beautiful math in all browsers.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
+- [PageSpeed Insights Scores](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhugoiris.netlify.com%2F): Mobile `96`, Desktop `100`
 
 ### MathJax
 
