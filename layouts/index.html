@@ -3,6 +3,7 @@
   <head>
     {{ partial "head/head" . }}
     {{ partial "head/prefetch" . }}
+    {{ partial "materialize/css" . }}
     {{ partial "sidebar/css" . }}
     {{ partial "scrollToTop/css" . }}
     {{ partial "head/font" . }}
@@ -26,6 +27,7 @@
         </div> <!-- row -->
       </div> <!-- container -->
     </main>
+    {{ partial "materialize/js" . }}
     {{ partial "footer/footer" . }}
     {{ partial "js/fontawesome" . }}
     {{ partial "sidebar/js" . }}

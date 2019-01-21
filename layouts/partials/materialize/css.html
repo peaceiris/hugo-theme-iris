@@ -1,0 +1,4 @@
+<style>
+{{ $mtCSS := resources.Get "materialize/materialize.min.css" | resources.Minify }}
+{{ $mtCSS.Content | safeCSS }}
+</style>
