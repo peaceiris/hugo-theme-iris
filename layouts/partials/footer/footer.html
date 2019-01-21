@@ -22,17 +22,15 @@
   </div>
   <div class="footer-copyright">
     <div class="container center-align">
-      © {{ .Site.LastChange.Year }}
+      © {{ with .Site.Params.footer.copyright.year }}{{ . }}{{ end }}
       {{ with .Site.Params.footer.copyright.link }}
-      <a href="{{ . }}" class="white-text hoverable">
+      <a href="{{ . }}" class="white-text">
       {{ end }}
-      {{ .Site.Params.footer.copyright.name }}
+      {{ with .Site.Params.footer.copyright.name }}{{ . }}{{ end }}
       {{ if .Site.Params.footer.copyright.link }}
       </a>
       {{ end }}
-      {{ if .Site.Params.footer.credit }}
-      - Powered by <a href="https://github.com/peaceiris/hugo-iris" class="white-text hoverable">Hugo Iris</a>
-      {{ end }}
+      - Powered by <a href="https://github.com/peaceiris/hugo-iris" class="white-text">Hugo Iris</a>
     </div> <!-- container -->
   </div> <!-- container -->
 </footer>
