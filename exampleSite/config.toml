@@ -1,0 +1,18 @@
+baseurl         = "/"
+theme           = "iris"
+languageCode    = "en-US"
+title           = "Hugo Iris"
+canonifyurls    = true
+
+# open link as new tab
+[blackfriday]
+hrefTargetBlank = true
+
+[params]
+  googleAnalytics = ""
+  author          = "peaceiris"
+  description     = "Demo slides for Hugo Iris"
+  custom_css      = ["remark.css", "custom.css"]
+  highlightStyle  = "solarized-light" # Another recommended styles are "monokai" and "rainbow".
+  mathjax         = true
+  mermaid         = true
