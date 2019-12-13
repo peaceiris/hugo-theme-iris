@@ -1,9 +1,9 @@
-## Hugo Iris Theme
+## Hugo IRIS Theme
 
 <!-- https://shields.io/ -->
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-iris/blob/master/LICENSE)
+[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-iris/blob/master/LICENSE)
 
-This repository includes the [Hugo] theme for your presentation.
+This repository includes the [Hugo] theme.
 
 - Writing slides using Markdown. ([reveal.js])
 - [MathJax] on slides.
@@ -66,11 +66,7 @@ This theme can manage and publish slides using Hugo.
 
 ### GitHub Pages
 
-- [Host on GitHub | Hugo]
-
-The next method is recommended.
-
-- [Deployment of Project Pages From Your gh-pages branch]
+GitHub Actions.
 
 
 
@@ -85,32 +81,21 @@ The next method is recommended.
 
 ## Author
 
-- peaceiris
-    - [GitHub]
-    - [Twitter]
+- [peaceiris homepage](https://peaceiris.com)
 
 
 
 ## Contributing
 
-To contribute to this hugo theme.
-
-1. Fork this repo locally.
-2. Find or Open [GitHub Issues].
-3. Commit your code on a separate branch.
-4. Send your Pull Request.
+To contribute to this Hugo theme.
 
 You can find more detail in our [Contributing Guide].
-
-Participation in this open source project is subject to a [Code of Conduct].
 
 
 
 ## License
 
 This theme is released under the [MIT License].
-
-Copyright © 2019, peaceiris
 
 
 
@@ -125,18 +110,10 @@ Copyright © 2019, peaceiris
 
 [Demo (Netlify)]: https://hugoiris.netlify.com/
 [MIT License]: ./LICENSE
-[GitHub Issues]: https://github.com/peaceiris/hugo-iris/issues
 [Contributing Guide]: ./CONTRIBUTING.md
-[Code of Conduct]: ./CODE_OF_CONDUCT.md
-
-[GitHub]: https://github.com/peaceiris
-[Twitter]: https://twitter.com/piris314en
 
 <!-- External References -->
 [Hugo]: https://gohugo.io/
 [reveal.js]: https://github.com/hakimel/reveal.js/
 [MathJax]: https://www.mathjax.org/
 [mermaid]: https://github.com/knsv/mermaid
-
-[Host on GitHub | Hugo]: https://gohugo.io/hosting-and-deployment/hosting-on-github/
-[Deployment of Project Pages From Your gh-pages branch]: https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch
