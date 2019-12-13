@@ -4,10 +4,6 @@ languageCode    = "en-US"
 title           = "Hugo Iris"
 canonifyurls    = true
 
-# open link as new tab
-[blackfriday]
-hrefTargetBlank = true
-
 [params]
   googleAnalytics = ""
   author          = "peaceiris"
