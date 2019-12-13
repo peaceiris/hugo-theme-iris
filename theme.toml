@@ -1,7 +1,7 @@
 name = "Iris"
 license = "MIT"
 licenselink = "https://raw.githubusercontent.com/peaceiris/hugo-iris/master/LICENSE"
-description = "Hugo Iris Theme - portfolio and blog"
+description = "Hugo Iris Theme - Portfolio and Blog"
 homepage = "https://github.com/peaceiris/hugo-iris"
 tags = [
   "presentation",
@@ -17,7 +17,7 @@ tags = [
   "netlify",
 ]
 features = ["reveal.js", "mathjax", "mermaid"]
-min_version = 0.56
+min_version = 0.61
 
 [author]
     name = "peaceiris"
