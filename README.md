@@ -18,6 +18,7 @@ Hugo IRIS Theme
 
 - [Overview](#overview)
   - [Features](#features)
+  - [Roadmap](#roadmap)
 - [Installation](#installation)
   - [Download theme](#download-theme)
 - [Hosting](#hosting)
@@ -36,15 +37,20 @@ Hugo IRIS Theme
 
 This repository includes the [Hugo] theme.
 
-- [Demo (Netlify)]
-- Demo on GitHub Pages
+- Demo site on GitHub Pages
 
 ### Features
 
+- Dark theme
+- Support Multilingual
+<!-- - PageSpeed Insights Scores: Mobile `100`, Desktop `100` -->
+
+### Roadmap
+
+- Netlify, Netlify CMS
 - Writing slides using Markdown. ([reveal.js])
 - [MathJax]: Beautiful math in all browsers.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
-- PageSpeed Insights Scores: Mobile `100`, Desktop `100`
 
 
 
@@ -71,9 +77,10 @@ GitHub Actions.
 ## Special Thanks
 
 - [Hugo]
-- [reveal.js]
-- [MathJax]
-- [mermaid]
+- [Bulma]
+<!-- - [reveal.js] -->
+<!-- - [MathJax] -->
+<!-- - [mermaid] -->
 
 
 
@@ -106,11 +113,11 @@ You can find more detail in our [Contributing Guide].
 
 
 <!-- Internal References -->
-[Demo (Netlify)]: https://hugoiris.netlify.com/
 [Contributing Guide]: https://github.com/peaceiris/hugo-theme-iris/blob/master/CONTRIBUTING.md
 
 <!-- External References -->
 [Hugo]: https://gohugo.io/
+[Bulma]: https://bulma.io/
 [reveal.js]: https://github.com/hakimel/reveal.js/
 [MathJax]: https://www.mathjax.org/
 [mermaid]: https://github.com/knsv/mermaid
