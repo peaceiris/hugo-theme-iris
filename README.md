@@ -24,7 +24,7 @@ Hugo IRIS Theme
   - [Hugo Modules](#hugo-modules)
 - [Hosting](#hosting)
   - [Netlify](#netlify)
-  - [GitHub Pages](#github-pages)
+  - [GitHub Pages using Actions](#github-pages-using-actions)
 - [Special Thanks](#special-thanks)
 - [Maintainer](#maintainer)
 - [Contributing](#contributing)
@@ -82,9 +82,12 @@ hugo mod get github.com/peaceiris/hugo-theme-iris@v0.1.0
 <!-- https://www.netlify.com/docs/deploy-button/ -->
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/peaceiris/hugo-theme-iris)
 
-### GitHub Pages
+### GitHub Pages using Actions
 
-GitHub Actions.
+The following actions are useful to deploy your site to GitHub Pages using GitHub Actions.
+
+- [peaceiris/actions-hugo: GitHub Actions for Hugo](https://github.com/peaceiris/actions-hugo)
+- [peaceiris/actions-gh-pages: GitHub Actions for GitHub Pages](https://github.com/peaceiris/actions-gh-pages)
 
 
 
