@@ -1,0 +1,19 @@
+{
+  "name": "hugo-theme-iris",
+  "version": "0.1.0",
+  "description": "Hugo IRIS Theme - Portfolio and Blog",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://peaceiris@github.com/peaceiris/hugo-theme-iris.git"
+  },
+  "author": "peaceiris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peaceiris/hugo-theme-iris/issues"
+  },
+  "homepage": "https://github.com/peaceiris/hugo-theme-iris#readme"
+}
