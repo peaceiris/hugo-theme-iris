@@ -102,13 +102,13 @@ You can find more detail in our [Contributing Guide].
 
 ---
 
-[:small_red_triangle: Back to TOC]
+<div align="right">
+<a href="#table-of-contents">Back to TOC ☝️</a>
+</div>
 
 
 
 <!-- Internal References -->
-[:small_red_triangle: Back to TOC]: #table-of-contents
-
 [Demo (Netlify)]: https://hugoiris.netlify.com/
 [Contributing Guide]: https://github.com/peaceiris/hugo-theme-iris/blob/master/CONTRIBUTING.md
 
