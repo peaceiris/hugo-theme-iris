@@ -20,7 +20,8 @@ Hugo IRIS Theme
   - [Features](#features)
   - [Roadmap](#roadmap)
 - [Installation](#installation)
-  - [Download theme](#download-theme)
+  - [Git Submodule](#git-submodule)
+  - [Hugo Modules](#hugo-modules)
 - [Hosting](#hosting)
   - [Netlify](#netlify)
   - [GitHub Pages](#github-pages)
@@ -42,6 +43,7 @@ This repository includes the [Hugo] theme.
 ### Features
 
 - Dark theme
+- Responsive
 - Support Multilingual
 <!-- - PageSpeed Insights Scores: Mobile `100`, Desktop `100` -->
 
@@ -56,7 +58,19 @@ This repository includes the [Hugo] theme.
 
 ## Installation
 
-### Download theme
+### Git Submodule
+
+```sh
+git submodule add https://github.com/peaceiris/hugo-theme-iris.git ./themes/hugo-theme-iris
+cd ./themes/hugo-theme-iris
+git checkout v0.1.0
+```
+
+### Hugo Modules
+
+```
+hugo mod get github.com/peaceiris/hugo-theme-iris@v0.1.0
+```
 
 
 
