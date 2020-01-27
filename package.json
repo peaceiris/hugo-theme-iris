@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/peaceiris/hugo-theme-iris/issues"
   },
-  "homepage": "https://github.com/peaceiris/hugo-theme-iris#readme"
+  "homepage": "https://github.com/peaceiris/hugo-theme-iris#readme",
+  "devDependencies": {
+    "hugo-bin": "^0.51.2"
+  }
 }
