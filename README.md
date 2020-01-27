@@ -8,16 +8,6 @@ Hugo IRIS Theme
 <img src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/images/tn.png" alt="thumbnail" width="500px">
 </div>
 
-This repository includes the [Hugo] theme.
-
-- Writing slides using Markdown. ([reveal.js])
-- [MathJax] on slides.
-- Diagram and flowchart on slides. ([mermaid])
-
-This theme can manage and publish slides using Hugo.
-
-- [Demo (Netlify)]
-
 
 
 ## Table of Contents
@@ -26,9 +16,8 @@ This theme can manage and publish slides using Hugo.
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Features](#features)
-  - [MathJax](#mathjax)
-  - [mermaid](#mermaid)
+- [Overview](#overview)
+  - [Features](#features)
 - [Installation](#installation)
   - [Download theme](#download-theme)
 - [Hosting](#hosting)
@@ -43,15 +32,19 @@ This theme can manage and publish slides using Hugo.
 
 
 
-## Features
+## Overview
 
+This repository includes the [Hugo] theme.
+
+- [Demo (Netlify)]
+- Demo on GitHub Pages
+
+### Features
+
+- Writing slides using Markdown. ([reveal.js])
 - [MathJax]: Beautiful math in all browsers.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
 - PageSpeed Insights Scores: Mobile `100`, Desktop `100`
-
-### MathJax
-
-### mermaid
 
 
 
