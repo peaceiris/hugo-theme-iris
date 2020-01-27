@@ -1,24 +1,37 @@
 name = "Iris"
 license = "MIT"
-licenselink = "https://raw.githubusercontent.com/peaceiris/hugo-iris/master/LICENSE"
+licenselink = "https://github.com/peaceiris/hugo-theme-iris/blob/master/LICENSE"
 description = "Hugo Iris Theme - Portfolio and Blog"
-homepage = "https://github.com/peaceiris/hugo-iris"
+homepage = "https://github.com/peaceiris/hugo-theme-iris"
+min_version = "0.63.1"
 tags = [
-  "presentation",
-  "slide",
-  "revealjs",
-  "google-analytics",
-  "mermaid",
-  "mathjax",
-  "academic",
-  "fontawesome",
+  "blog",
   "responsive",
-  "material-design",
+  "personal",
+  # "google-analytics",
+  "portfolio",
+  "dark",
+  # "disqus",
+  "multilingual",
+  "fast",
+  "mobile",
+  "syntax-highlighting",
+  # "font-awesome",
+  "flexbox",
+  # "search",
+  # "presentation",
+  "bulma",
+  # "fontawesome",
   "netlify",
+  # "slide"
 ]
-features = ["reveal.js", "mathjax", "mermaid"]
-min_version = 0.61
+features = [
+  # "reveal.js",
+  # "mathjax",
+  # "mermaid",
+  # "netlify-cms"
+]
 
 [author]
-    name = "peaceiris"
-    homepage = "https://github.com/peaceiris"
+  name = "peaceiris"
+  homepage = "https://peaceiris.com"
