@@ -1,5 +1,7 @@
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-theme-iris/blob/master/LICENSE)
 
+![thumbnail](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/images/tn.png)
+
 
 
 ## Hugo IRIS Theme
