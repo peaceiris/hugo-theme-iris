@@ -1,0 +1,16 @@
+[build]
+publish = "public"
+command = "npm run build:netlify"
+
+# [context.production.environment]
+# HUGO_VERSION = ""
+
+[context.deploy-preview]
+command = "npm run build -- -b $DEPLOY_PRIME_URL --environment staging"
+# [context.deploy-preview.environment]
+# HUGO_VERSION = ""
+
+[context.branch-deploy]
+command = "npm run build -- -b $DEPLOY_PRIME_URL"
+# [context.branch-deploy.environment]
+# HUGO_VERSION = ""
