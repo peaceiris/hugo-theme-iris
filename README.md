@@ -1,7 +1,8 @@
-## Hugo IRIS Theme
+[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-theme-iris/blob/master/LICENSE)
 
-<!-- https://shields.io/ -->
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-iris/blob/master/LICENSE)
+
+
+## Hugo IRIS Theme
 
 This repository includes the [Hugo] theme.
 
@@ -30,7 +31,7 @@ This theme can manage and publish slides using Hugo.
   - [Netlify](#netlify)
   - [GitHub Pages](#github-pages)
 - [Special Thanks](#special-thanks)
-- [Author](#author)
+- [Maintainer](#maintainer)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -42,7 +43,7 @@ This theme can manage and publish slides using Hugo.
 
 - [MathJax]: Beautiful math in all browsers.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
-- [PageSpeed Insights Scores](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhugoiris.netlify.com%2F): Mobile `96`, Desktop `100`
+- PageSpeed Insights Scores: Mobile `100`, Desktop `100`
 
 ### MathJax
 
@@ -62,7 +63,7 @@ This theme can manage and publish slides using Hugo.
 
 <!-- Deploy to Netlify Button -->
 <!-- https://www.netlify.com/docs/deploy-button/ -->
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/peaceiris/hugo-iris)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/peaceiris/hugo-theme-iris)
 
 ### GitHub Pages
 
@@ -79,7 +80,7 @@ GitHub Actions.
 
 
 
-## Author
+## Maintainer
 
 - [peaceiris homepage](https://peaceiris.com)
 
@@ -95,7 +96,7 @@ You can find more detail in our [Contributing Guide].
 
 ## License
 
-This theme is released under the [MIT License].
+- [MIT License - peaceiris/hugo-theme-iris](https://github.com/peaceiris/hugo-theme-iris/blob/master/LICENSE)
 
 
 
@@ -109,8 +110,7 @@ This theme is released under the [MIT License].
 [:small_red_triangle: Back to TOC]: #table-of-contents
 
 [Demo (Netlify)]: https://hugoiris.netlify.com/
-[MIT License]: ./LICENSE
-[Contributing Guide]: ./CONTRIBUTING.md
+[Contributing Guide]: https://github.com/peaceiris/hugo-theme-iris/blob/master/CONTRIBUTING.md
 
 <!-- External References -->
 [Hugo]: https://gohugo.io/
