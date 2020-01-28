@@ -10,6 +10,7 @@
     "hugo": "hugo",
     "build": "cd ./exampleSite && hugo --minify --cleanDestinationDir --themesDir ../ --layoutDir ../layouts",
     "test:hugo": "cd ./exampleSite && hugo --renderToMemory --themesDir ../ --layoutDir ../layouts && :",
+    "release": "standard-version",
     "update-deps": "(git diff 'HEAD@{1}' --name-only | grep 'package-lock.json' > /dev/null) && npm ci || :"
   },
   "hugo-bin": {
