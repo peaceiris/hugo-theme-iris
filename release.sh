@@ -3,6 +3,10 @@
 # fail on unset variables and command errors
 set -eu -o pipefail # -x: is for debugging
 
+function print_info() {
+    echo -e "\e[36mINFO: ${1}\e[m"
+}
+
 if [ "$(git branch --show-current)" != "master" ]; then
   echo "$0: Current branch is not master" 1>&2
   exit 1
@@ -32,7 +36,10 @@ git pull origin --tags
 npm ci
 
 npm run build
-if git add ./exampleSite/resources; then
+RESOURCES_DIR="./exampleSite/resources"
+if git add "${RESOURCES_DIR}"; then
+  print_info "skip add and commit for ${RESOURCES_DIR}"
+else
   git commit -m "chore(release): Add resources"
 fi
 
