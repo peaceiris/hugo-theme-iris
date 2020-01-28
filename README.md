@@ -76,7 +76,7 @@ mkdir ./homepage && cd ./homepage
 git init
 git submodule add https://github.com/peaceiris/hugo-theme-iris.git ./themes/hugo-theme-iris
 cd ./themes/hugo-theme-iris
-git checkout v0.1.3
+git checkout vx.x.x
 cd ../..
 git commit "Add theme"
 cp -r ./themes/hugo-theme-iris/exampleSite/{assets,config,content,data,static} .
