@@ -32,8 +32,9 @@ git pull origin --tags
 npm ci
 
 npm run build
-git add ./exampleSite/resources
-git commit -m "chore(release): Add resources"
+if git add ./exampleSite/resources; then
+  git commit -m "chore(release): Add resources"
+fi
 
 npm run release -- --release-as "${RELEASE_TYPE}" --preset eslint
 
