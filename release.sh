@@ -39,10 +39,9 @@ npm run build
 RESOURCES_DIR="resources"
 cp -r "./exampleSite/${RESOURCES_DIR}" .
 if git add "${RESOURCES_DIR}"; then
-  print_info "skip add and commit for ${RESOURCES_DIR}"
-else
-  git add "./${RESOURCES_DIR}"
   git commit -m "chore(release): update ${RESOURCES_DIR}"
+else
+  print_info "skip add and commit for ${RESOURCES_DIR}"
 fi
 
 npm run release -- --release-as "${RELEASE_TYPE}" --preset eslint
