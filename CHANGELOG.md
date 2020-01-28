@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.8](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.7...v0.1.8) (2020-01-28)
+
+
+### chore
+
+* fix resources commit ([bfebcbb](https://github.com/peaceiris/hugo-theme-iris/commit/bfebcbbed86da9482d56962950d0128f3af00808))
+
+
+
 ## [0.1.7](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.6...v0.1.7) (2020-01-28)
 
 
