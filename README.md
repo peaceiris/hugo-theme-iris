@@ -38,7 +38,7 @@ Hugo IRIS Theme
 
 This repository includes the [Hugo] theme.
 
-- Demo site on GitHub Pages
+- [Demo site on GitHub Pages](https://hugothemeiris.peaceiris.app/)
 
 ### Features
 
