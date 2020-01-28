@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.1...v0.1.2) (2020-01-28)
+
+
+### chore
+
+* Add hugo mod init ([0533150](https://github.com/peaceiris/hugo-theme-iris/commit/053315070d0f68401fe09935e175f7e566164a79))
+* hugo mod init ([6c4798b](https://github.com/peaceiris/hugo-theme-iris/commit/6c4798b5e46ccc6fb7109856f607dfb0a894b922))
+
+
+
 ## [0.1.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.0...v0.1.1) (2020-01-28)
 
 
