@@ -1,0 +1,14 @@
+{{ if .Params.eyecatch }}
+  {{ $image := $.Page.Resources.GetMatch "eyecatch.jpg" }}
+  <div class="columns">
+    <div class="column is-8 is-offset-2">
+      <img
+        class=""
+        src="{{- $image.Permalink -}}?v={{- slicestr ($image.Content | md5) 0 10 -}}"
+        alt="{{ $.Params.Description }}"
+        decoding="async"
+        loading="lazy"
+      />
+    </div>
+  </div>
+{{ end }}

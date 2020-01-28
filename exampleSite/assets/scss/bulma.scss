@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+// bulma 0.7.5
+
+@import "./bulma-latest/utilities/_all.sass";
+@import "./bulma-latest/base/_all.sass";
+
+$tablet: 760px;
+$dimensions: 16 24 32 48 64 96 128 180 256;
+
+// ====================
+// components
+// ====================
+// @import "./bulma-latest/components/_all.sass";
+
+$breadcrumb-item-hover-color: gold;
+$breadcrumb-item-active-color: $grey-lighter;
+@import "./bulma-latest/components/breadcrumb.sass";
+
+$card-color: $grey-lighter;
+$card-header-color: skyblue;
+$card-background-color: $grey-dark;
+$card-footer-border-top: 1px solid $grey-darker;
+@import "./bulma-latest/components/card.sass";
+
+$dropdown-content-background-color: $grey-dark;
+@import "./bulma-latest/components/dropdown.sass";
+// @import "./bulma-latest/components/level.sass";
+// @import "./bulma-latest/components/list.sass";
+// @import "./bulma-latest/components/media.sass";
+// @import "./bulma-latest/components/menu.sass";
+// @import "./bulma-latest/components/message.sass";
+// @import "./bulma-latest/components/modal.sass";
+// @import "./bulma-latest/components/navbar.sass";
+// @import "./bulma-latest/components/pagination.sass";
+// @import "./bulma-latest/components/panel.sass";
+// @import "./bulma-latest/components/tabs.sass";
+
+// ====================
+// elements
+// ====================
+// @import "./bulma-latest/elements/_all.sass";
+// @import "./bulma-latest/elements/box.sass";
+
+$button-color: $grey-lighter;
+$button-background-color: $grey-dark;
+$button-hover-color: skyblue;
+@import "./bulma-latest/elements/button.sass";
+@import "./bulma-latest/elements/container.sass";
+@import "./bulma-latest/elements/content.sass";
+// @import "./bulma-latest/elements/form.sass";
+// @import "./bulma-latest/elements/icon.sass";
+@import "./bulma-latest/elements/image.sass";
+// @import "./bulma-latest/elements/notification.sass";
+@import "./bulma-latest/elements/other.sass";
+// @import "./bulma-latest/elements/progress.sass";
+
+$table-color: $grey-lighter;
+$table-head-cell-color: gold;
+$table-cell-border: 1px solid $grey-darker;
+$table-background-color: $grey-dark;
+$table-striped-row-even-background-color: $grey-dark;
+$table-row-hover-background-color: sienna;
+$table-striped-row-even-hover-background-color: sienna;
+@import "./bulma-latest/elements/table.sass";
+
+@import "./bulma-latest/elements/tag.sass";
+@import "./bulma-latest/elements/title.sass";
+
+// ====================
+// form
+// ====================
+// @import "./bulma-latest/form/_all.sass";
+// @import "./bulma-latest/form/checkbox-radio.sass";
+// @import "./bulma-latest/form/file.sass";
+// @import "./bulma-latest/form/input-textarea.sass";
+// @import "./bulma-latest/form/select.sass";
+// @import "./bulma-latest/form/shared.sass";
+// @import "./bulma-latest/form/tools.sass";
+
+// ====================
+// grid
+// ====================
+// @import "./bulma-latest/grid/_all.sass";
+@import "./bulma-latest/grid/columns.sass";
+// @import "./bulma-latest/grid/tiles.sass";
+
+// ====================
+// layout
+// ====================
+@import "./bulma-latest/layout/_all.sass";
+
+// ====================
+// Iris theme
+// ====================
+html {
+	overflow: auto;
+}
+
+body {
+  overflow: hidden;
+}
+
+h2 {
+  border-bottom: solid 2px $grey;
+}
+
+a {
+  text-decoration: none;
+  color: skyblue;
+}
+a:hover {
+  text-decoration: underline;
+  color: gold;
+}
+a:visited {
+  color: gold;
+}
+
+strong {
+  color: $grey-lighter;
+}
+
+code {
+  background: $grey-dark;
+  color: gold;
+}
+
+blockquote {
+  position: relative;
+  padding: 2rem 1rem 1rem 1rem;
+  margin: 2rem 0rem;
+  box-sizing: border-box;
+  font-style: italic;
+  background: $grey-dark;
+  border-left: 0.2rem solid chocolate;
+
+  :before {
+    display: inline-block;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.3rem;
+    content: "“";
+    font-family: sans-serif;
+    color: chocolate;
+    font-size: 5rem;
+    line-height: 1;
+  }
+
+  p {
+    padding: 0rem;
+    margin: 1rem 0rem;
+    line-height: 1.7;
+    color: $grey-lighter;
+  }
+
+  cite {
+    display: block;
+    text-align: right;
+    color: $grey-lighter;
+    font-size: 0.9rem;
+  }
+}
+
+// ====================
+// code shortcode
+// ====================
+.highlight {
+  margin-top: 2rem;
+  margin-bottom: 2rem !important;
+}
+.code-block {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.code-block-title {
+  display: inline-block;
+  color: gray;
+  position: relative;
+  bottom: -1rem;
+  left: 0.5rem;
+}
+.code-block-body pre {
+  overflow: auto;
+  // overflow: scroll;
+}
+.code-block pre.chroma {
+  margin-top: 0.3rem;
+}
+.code-block-lang {
+  float: right;
+  color: gray;
+  position: relative;
+  bottom: -1rem;
+  right: 0.5rem;
+}

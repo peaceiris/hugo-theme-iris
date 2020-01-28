@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: peaceiris/hugo-theme-iris
+  branch: master
+  # squash_merges: true
+
+media_folder: "static/images"
+# media_folder_relative: true
+public_folder: "images/"
+editor:
+  preview: false
+# publish_mode: editorial_workflow
+
+display_url: https://hugothemeiris.peaceiris.app
+logo_url: https://hugothemeiris.peaceiris.app/favicon/favicon64.ico
+
+collections:
+  - label: "Post"
+    name: "post"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Home"
+    name: "home"
+    folder: "content"
+    create: false
+    slug: "_index"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }

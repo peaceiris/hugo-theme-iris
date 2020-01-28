@@ -1,0 +1,48 @@
+baseURL: "https://example.com"
+# theme: hugo-theme-iris
+
+# paginate: 3
+canonifyURLs: true
+enableRobotsTXT: true
+pluralizeListTitles: false
+
+# hugo syntax highlighting
+pygmentsUseClasses: true
+pygmentsCodefences: true
+
+enableEmoji: true
+enableGitInfo: true
+enableInlineShortcodes: true
+
+taxonomies: {}
+#   - tag: tags
+
+imaging:
+  quality: 75
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Configure Languages
+DefaultContentLanguage: en
+languages:
+  en:
+    contentDir: content/en
+    languageName: English
+    languageCode: en-us
+    params:
+      author: peaceiris
+      description: Hugo IRIS Theme Demo Site
+    title: Hugo IRIS Theme
+    weight: 1
+  ja:
+    contentDir: content/ja
+    languageName: Japanese
+    languageCode: ja-jp
+    params:
+      author: peaceiris
+      description: Hugo IRIS テーマデモサイト
+    title: Hugo IRIS テーマ
+    weight: 2

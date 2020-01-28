@@ -1,0 +1,12 @@
+{{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
+{{ $small := $image.Resize "480x jpg" }}
+{{ $medium := $image.Resize "768x jpg" }}
+{{ $large := $image.Resize "1024x jpg" }}
+{{ $alt := .PlainText | safeHTML }}
+
+<picture>
+  <source media="(max-width: 480px)" srcset="{{ $small.RelPermalink }} 480w">
+  <source media="(max-width: 768px)" srcset="{{ $medium.RelPermalink }} 768w">
+  <source media="(max-width: 1024px)" srcset="{{ $large.RelPermalink }} 1024w">
+  <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}" decoding="async" loading="lazy">
+</picture>

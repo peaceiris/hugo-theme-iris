@@ -1,0 +1,21 @@
+<div class="dropdown" id="langDrop">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" onclick="toggleDropdownActive();">
+      <span>{{ .Language.LanguageName }} ↓</span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      {{ $langPage := cond (gt (len .Translations) 0) . .Site.Home }}
+      {{ range $langPage.Translations }}
+        <a href="{{ .RelPermalink }}" class="dropdown-item">{{ .Language.LanguageName }}</a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<script>
+  function toggleDropdownActive() {
+    var obj = document.getElementById("langDrop");
+    obj.classList.toggle("is-active");
+  }
+</script>

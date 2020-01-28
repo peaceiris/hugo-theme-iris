@@ -4,6 +4,7 @@
   "description": "Hugo IRIS Theme - Portfolio and Blog",
   "private": true,
   "scripts": {
+    "start": "cd ./exampleSite && hugo server --themesDir ../ --layoutDir ../layouts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

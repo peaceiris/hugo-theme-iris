@@ -1,0 +1,61 @@
+{{ $name := "" }}
+{{ $fullname := "" }}
+{{ $url := "" }}
+{{ $description := "" }}
+{{ $stars := "" }}
+{{ $forks := "" }}
+{{ $lang := "" }}
+
+{{ $id := .Get "id" }}
+{{ $repoName := .Get "name" }}
+{{ $JSONdata := .Page.Site.Data }}
+{{ $githubData := (index $JSONdata "github") }}
+{{ $userData := (index $githubData $id) }}
+{{ range where $userData "name" $repoName }}
+  {{ $name = .name }}
+  {{ $fullname = .full_name }}
+  {{ $url = .html_url }}
+  {{ $description = .description }}
+  {{ $stars = .stargazers_count }}
+  {{ $forks = .forks }}
+  {{ $lang = .language }}
+{{ end }}
+
+{{ with .Get "fullname" }}
+  {{ $fullname = . }}
+{{ end }}
+{{ with .Get "url" }}
+  {{ $url = . }}
+{{ end }}
+{{ with .Get "description" }}
+  {{ $description = . }}
+{{ end }}
+{{ with .Get "lang" }}
+  {{ $lang = . }}
+{{ end }}
+
+<div class="columns">
+  <div class="column is-10-tablet is-offset-1-tablet is-8-desktop is-offset-2-desktop">
+    <a href="{{ $url }}">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            {{ $fullname }}
+          </p>
+        </header>
+
+        <div class="card-content">
+          <div class="content">
+            {{ $description }}
+          </div>
+        </div>
+
+        <footer class="card-footer">
+          <div class="card-footer-item">{{ $lang }}</div>
+          <div class="card-footer-item">⭐️{{ $stars }}</div>
+          <div class="card-footer-item">{{ $forks }} Forks</div>
+        </footer>
+      </div>
+    </a>
+  </div>
+</div>

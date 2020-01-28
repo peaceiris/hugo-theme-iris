@@ -1,0 +1,3 @@
+{{ $table := .Inner | markdownify | safeHTML }}
+{{ $tableBulma := $table | replaceRE "<table>" "<table class=\"table is-striped is-hoverable\">" }}
+{{ $tableBulma | safeHTML }}

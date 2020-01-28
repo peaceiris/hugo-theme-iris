@@ -1,0 +1,23 @@
+<header>
+  <section class="hero is-dark is-bold">
+    <div class="hero-body columns is-desktop">
+      <div class="column is-8 is-offset-2">
+        <h1 class="title">
+          {{ if .IsHome }}
+            {{ .Site.Title }}
+          {{ else }}
+            {{ .Title }}
+          {{ end }}
+        </h1>
+        <p class="subtitle has-text-grey">
+          {{ if .IsHome }}
+            {{ .Site.Params.description }}
+          {{ else }}
+            {{ .Description }}
+          {{ end }}
+        </p>
+        {{ partial "breadcrumb" . }}
+      </div>
+    </div>
+  </section>
+</header>

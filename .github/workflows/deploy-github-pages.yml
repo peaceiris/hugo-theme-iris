@@ -1,0 +1,63 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'README.md'
+  schedule:
+    - cron: "13 13 * * *"
+
+jobs:
+  skipci:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo "[Skip CI] ${{ contains(github.event.head_commit.message, '[skip ci]') }}"
+
+  deploy:
+    runs-on: ubuntu-18.04
+    if: contains(github.event.head_commit.message, '[skip ci]') == false
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Read .env
+        id: hugo_version
+        run: |
+          . ./exampleSite/.env
+          echo "::set-output name=hugo_version::${HUGO_VERSION}"
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "${{ steps.hugo_version.outputs.hugo_version }}"
+          extended: true
+
+      - name: Build
+        working-directory: ./exampleSite
+        run: |
+          make data
+          hugo --minify --themesDir ../ --layoutDir ../layouts
+
+      - name: Deploy (script mode)
+        env:
+          # ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./exampleSite/public
+          SCRIPT_MODE: true
+        run: |
+          wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2/entrypoint.sh
+          bash ./entrypoint.sh
+
+    # - name: Deploy
+    #   # uses: peaceiris/actions-gh-pages@v2
+    #   uses: docker://peaceiris/gh-pages:v2
+    #   env:
+    #     # ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #     PUBLISH_BRANCH: master
+    #     PUBLISH_DIR: ./public
+    #   with:
+    #     emptyCommits: false
+    #     forceOrphan: true

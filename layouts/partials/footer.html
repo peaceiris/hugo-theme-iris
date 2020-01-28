@@ -1,0 +1,15 @@
+<footer class="footer hero is-dark is-bold">
+  <div class="content has-text-centered">
+    © {{ with .Site.Params.footer.copyright.year }}{{ . }}{{ else }}{{ now.Format "2006" }}{{ end }}
+    {{ with .Site.Params.footer.copyright.link }}<a href="{{ . }}" rel="noopener noreferrer" target=_blank>{{ end }}
+    {{ with .Site.Params.footer.copyright.name }}{{ . }}{{ end }}
+    {{ if .Site.Params.footer.copyright.link }}</a>{{ end }}
+    <!-- - Powered by <a href="https://gohugo.io" rel="noopener noreferrer nofollow" target=_blank>Hugo</a> -->
+  </div>
+  <div class="content has-text-centered">
+    <p>
+      <!-- Latest build: -->
+      {{/* {{ now.Format "2006-01-02 15:04:05" }} ({{ .GitInfo.AbbreviatedHash }}) */}}
+    </p>
+  </div>
+</footer>

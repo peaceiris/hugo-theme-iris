@@ -1,0 +1,7 @@
+<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Params.icon.x180 }}">
+<link rel="icon" type="image/x-icon" href="{{ .Site.Params.icon.favicon }}">
+<meta name="msapplication-TileImage" content="{{ .Site.Params.icon.mstile }}">
+{{ with .Site.Params.themeColor }}
+  <meta name="theme-color" content="{{ . }}">
+  <meta name="msapplication-TileColor" content="{{ . }}">
+{{ end }}

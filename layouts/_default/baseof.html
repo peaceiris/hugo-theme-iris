@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
+  {{ partial "head" . }}
+  <body>
+    {{ partial "header.html" . }}
+    <section class="hero is-dark is-large">
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+          {{ partial "lang-button" . }}
+          {{ partial "edit-button" . }}
+          {{ block "main" . }}{{ end }}
+        </div>
+      </div>
+    </section>
+    {{ partial "footer" . }}
+  </body>
+</html>

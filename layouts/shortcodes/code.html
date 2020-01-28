@@ -1,0 +1,14 @@
+<!-- https://maku77.github.io/hugo/shortcode/highlight.html -->
+<!-- キャプションを付けられる独自のショートコードを作成する -->
+
+{{ $title := .Get "title" }}
+{{ $lang := or (.Get "lang") "" }}
+<div class="code-block">
+    {{ with $title }}
+    <div class="code-block-title">{{.}}</div>
+    <span class="code-block-lang">{{ $lang }}</span>
+    {{ end }}
+    <div class="code-block-body">
+      {{ highlight (trim .Inner "\r\n") $lang "" }}
+    </div>
+</div>
