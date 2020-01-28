@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.7](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.6...v0.1.7) (2020-01-28)
+
+
+### chore
+
+* [ImgBot] Optimize images (#90) ([2e0f774](https://github.com/peaceiris/hugo-theme-iris/commit/2e0f7741b93b9e9d2c2fdd7ec8cd14237d6df57c)), closes [#90](https://github.com/peaceiris/hugo-theme-iris/issues/90)
+* move resources ([95746ad](https://github.com/peaceiris/hugo-theme-iris/commit/95746ad177b33c326a70a8f40e2d15cbd9a5baf4))
+* move to theme root ([1b61ef5](https://github.com/peaceiris/hugo-theme-iris/commit/1b61ef5b3c4a0aa0d674d3e9da3c68b968d0f347))
+* release test ([248fb41](https://github.com/peaceiris/hugo-theme-iris/commit/248fb419ead571ca7dba024a51ea1d9b115f181f))
+* rename path to bulma ([f1eab8c](https://github.com/peaceiris/hugo-theme-iris/commit/f1eab8c53e8d7ed3d76087cb876d13a819c5125c))
+
+### ci
+
+* fix path to .env ([feaf227](https://github.com/peaceiris/hugo-theme-iris/commit/feaf227e5b13fb144d2f1cb7245aca81dbaf22ec))
+* Fix version [skip ci] ([63b4233](https://github.com/peaceiris/hugo-theme-iris/commit/63b423306356737712e01c23874c8374dc2b9857))
+
+### deps
+
+* bump hugo v0.63.2 ([e38cf25](https://github.com/peaceiris/hugo-theme-iris/commit/e38cf2541318a4bd84a2495e9b7d500b2d817aae))
+
+### docs
+
+* Add hugo mod get -u ([941d385](https://github.com/peaceiris/hugo-theme-iris/commit/941d385ddbe24220a01abfd7deef86475acf9ec0))
+* Add hugo themes badge ([11cd20c](https://github.com/peaceiris/hugo-theme-iris/commit/11cd20c3309e806c794ea4eef0c27833c747a1c5))
+* change badge color to blueviolet ([3a82c46](https://github.com/peaceiris/hugo-theme-iris/commit/3a82c466892e131f2f806613524628a48935f027))
+* update tag ([e0ba79e](https://github.com/peaceiris/hugo-theme-iris/commit/e0ba79e3570e0ee8cc575ff773663dbbbdddac1d))
+
+### feat
+
+* bump hugo v0.63.2 ([dd0c47c](https://github.com/peaceiris/hugo-theme-iris/commit/dd0c47c376aff734d31c11117d118538794aeec8))
+
+
+
 ## [0.1.6](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.5...v0.1.6) (2020-01-28)
 
 
