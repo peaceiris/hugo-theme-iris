@@ -88,7 +88,7 @@ hugo server
 
 *Customize your site! ʕ◔ϖ◔ʔ*
 
-> If your Hugo is not an extended version, you need to copy `exampleSite/resources`.
+> If your Hugo is not an extended version, you need to copy `resources`.
 
 
 
