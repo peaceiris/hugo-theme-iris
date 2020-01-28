@@ -46,5 +46,10 @@ fi
 npm run release -- --release-as "${RELEASE_TYPE}" --preset eslint
 
 TAG_NAME="v$(jq -r '.version' ./package.json)"
+hugo mod init "github.com/peaceiris/hugo-theme-iris/${TAG_NAME}"
+git add ./go.mod
+git commit -m "chore(release): hugo mod init ${TAG_NAME}"
+git tag --force -a "${TAG_NAME}" -m "Release ${TAG_NAME}"
+
 git push origin master
 git push origin "${TAG_NAME}"
