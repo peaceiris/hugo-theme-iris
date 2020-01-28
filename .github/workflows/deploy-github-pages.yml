@@ -24,7 +24,7 @@ jobs:
       - name: Read .env
         id: hugo_version
         run: |
-          . ./exampleSite/.env
+          . ./.env
           echo "::set-output name=hugo_version::${HUGO_VERSION}"
 
       - name: Setup Hugo
