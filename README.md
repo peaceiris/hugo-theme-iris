@@ -23,9 +23,10 @@ Hugo IRIS Theme
 - [Overview](#overview)
   - [Features](#features)
   - [Roadmap](#roadmap)
-- [Installation](#installation)
-  - [Git Submodule](#git-submodule)
-  - [Hugo Modules](#hugo-modules)
+- [Getting Started](#getting-started)
+  - [Get Hugo](#get-hugo)
+  - [Initialize New Hugo Project](#initialize-new-hugo-project)
+- [Hugo Modules](#hugo-modules)
 - [Hosting](#hosting)
   - [Netlify](#netlify)
   - [GitHub Pages using Actions](#github-pages-using-actions)
@@ -60,20 +61,48 @@ This repository includes the [Hugo] theme.
 
 
 
-## Installation
+## Getting Started
 
-### Git Submodule
+### Get Hugo
+
+You can find the minimum supported Hugo version in [theme.toml] `min_version`. Using Hugo extended version is desirable.
+
+[theme.toml]: https://github.com/peaceiris/hugo-theme-iris/blob/master/theme.toml
+
+### Initialize New Hugo Project
 
 ```sh
+mkdir ./homepage && cd ./homepage
+git init
 git submodule add https://github.com/peaceiris/hugo-theme-iris.git ./themes/hugo-theme-iris
 cd ./themes/hugo-theme-iris
-git checkout v0.1.0
+git checkout v0.1.3
+cd ../..
+git commit "Add theme"
+cp -r ./themes/hugo-theme-iris/exampleSite/{assets,config,content,data,static} .
+hugo server
 ```
 
-### Hugo Modules
+- http://localhost:1313/
 
+*Customize your site! ʕ◔ϖ◔ʔ*
+
+> If your Hugo is not an extended version, you need to copy `exampleSite/resources`.
+
+
+
+## Hugo Modules
+
+```sh
+hugo mod get github.com/peaceiris/hugo-theme-iris
 ```
-hugo mod get github.com/peaceiris/hugo-theme-iris@v0.1.0
+
+`config/_default/config.yaml`
+
+```yaml
+module:
+  imports:
+    - path: github.com/peaceiris/hugo-theme-iris
 ```
 
 
