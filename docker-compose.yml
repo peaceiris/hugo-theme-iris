@@ -11,7 +11,12 @@ services:
       - ${PWD}:/src
     stdin_open: true
     tty: true
+    working_dir: /src/exampleSite
     command:
       - server
       - --bind=0.0.0.0
       - --buildDrafts
+      - --themesDir
+      - ../
+      - --layoutDir
+      - ../layouts

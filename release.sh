@@ -36,13 +36,13 @@ git pull origin --tags
 npm ci
 
 npm run build
-RESOURCES_DIR="./exampleSite/resources"
+RESOURCES_DIR="resources"
+cp -r "./exampleSite/${RESOURCES_DIR}" .
 if git add "${RESOURCES_DIR}"; then
-  print_info "skip add and commit for ${RESOURCES_DIR} and /resources"
+  print_info "skip add and commit for ${RESOURCES_DIR}"
 else
-  cp -r "${RESOURCES_DIR}" ./resources
-  git add ./resources
-  git commit -m "chore(release): update resources"
+  git add "./${RESOURCES_DIR}"
+  git commit -m "chore(release): update ${RESOURCES_DIR}"
 fi
 
 npm run release -- --release-as "${RELEASE_TYPE}" --preset eslint
