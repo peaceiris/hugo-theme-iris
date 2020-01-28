@@ -3,7 +3,7 @@
 [![release date](https://img.shields.io/github/release-date/peaceiris/hugo-theme-iris.svg)](https://github.com/peaceiris/hugo-theme-iris/releases)
 [![release feed](https://img.shields.io/badge/release-feed-yellow)](https://github.com/peaceiris/hugo-theme-iris/releases.atom)
 ![deploy status](https://github.com/peaceiris/hugo-theme-iris/workflows/Deploy/badge.svg?branch=master&event=push)
-[![hugo themes](https://img.shields.io/static/v1?label=Hugo%20Themes&message=IRIS&color=ff69b4)](https://themes.gohugo.io/hugo-theme-iris/)
+[![hugo themes](https://img.shields.io/static/v1?label=Hugo%20Themes&message=IRIS&color=blueviolet)](https://themes.gohugo.io/hugo-theme-iris/)
 
 <h2 align="center">
 Hugo IRIS Theme
