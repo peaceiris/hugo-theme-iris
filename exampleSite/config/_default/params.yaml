@@ -15,8 +15,8 @@ themeColor: "#ffffff" # smart phone's browser tab color
 footer:
   copyright:
     # year: 2020
-    name: gohugoio
-    link: "https://gohugo.io/"
+    name: peaceiris
+    link: "https://peaceiris.com/"
 
 font:
   # URL: "https://fonts.googleapis.com/css?family=Noto+Sans+JP"
