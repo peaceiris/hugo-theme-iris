@@ -94,8 +94,10 @@ hugo server
 
 ## Hugo Modules
 
+Get and Update.
+
 ```sh
-hugo mod get github.com/peaceiris/hugo-theme-iris
+hugo mod get -u github.com/peaceiris/hugo-theme-iris
 ```
 
 `config/_default/config.yaml`
