@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.9](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.8...v0.1.9) (2020-01-28)
+
+
+### chore
+
+* revert release test change ([cf81798](https://github.com/peaceiris/hugo-theme-iris/commit/cf81798ff558eba499d1ce7a3297ef4e49e0314c))
+
+
+
 ## [0.1.8](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.7...v0.1.8) (2020-01-28)
 
 
