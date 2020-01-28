@@ -4,9 +4,28 @@
   "description": "Hugo IRIS Theme - Portfolio and Blog",
   "private": true,
   "scripts": {
-    "start": "cd ./exampleSite && hugo server --themesDir ../ --layoutDir ../layouts",
-    "build": "cd ./exampleSite && hugo --minify --themesDir ../ --layoutDir ../layouts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "run-p client server",
+    "server": "cd ./exampleSite && hugo server --themesDir ../ --layoutDir ../layouts",
+    "client": "wait-on http://localhost:1313 && open http://localhost:1313",
+    "hugo": "hugo",
+    "build": "cd ./exampleSite && hugo --minify --cleanDestinationDir --themesDir ../ --layoutDir ../layouts",
+    "test:hugo": "cd ./exampleSite && hugo --renderToMemory --themesDir ../ --layoutDir ../layouts && :",
+    "update-deps": "(git diff 'HEAD@{1}' --name-only | grep 'package-lock.json' > /dev/null) && npm ci || :"
+  },
+  "hugo-bin": {
+    "buildTags": "extended"
+  },
+  "husky": {
+    "skipCI": true,
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-merge": "npm run update-deps; git remote prune origin"
+    }
+  },
+  "lint-staged": {
+    "**/*.html": [
+      "npm run test:hugo"
+    ]
   },
   "repository": {
     "type": "git",
@@ -19,6 +38,12 @@
   },
   "homepage": "https://github.com/peaceiris/hugo-theme-iris#readme",
   "devDependencies": {
-    "hugo-bin": "^0.51.2"
+    "hugo-bin": "^0.51.2",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.3",
+    "npm-run-all": "^4.1.5",
+    "open": "^7.0.0",
+    "standard-version": "^7.1.0",
+    "wait-on": "^4.0.0"
   }
 }
