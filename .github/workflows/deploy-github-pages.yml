@@ -37,7 +37,7 @@ jobs:
         working-directory: ./exampleSite
         run: |
           make data
-          hugo --minify --themesDir ../ --layoutDir ../layouts --baseURL https://hugothemeiris.peaceiris.app/
+          hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL https://hugothemeiris.peaceiris.app/
 
       - name: Deploy (script mode)
         env:
