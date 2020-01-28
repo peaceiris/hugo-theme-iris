@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.4](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.3...v0.1.4) (2020-01-28)
+
+
+### ci
+
+* Fix target theme ([0fa24d1](https://github.com/peaceiris/hugo-theme-iris/commit/0fa24d14fc7cb73963202d177976bd2b211756a8))
+
+### docs
+
+* update Getting Started ([9ad4e8e](https://github.com/peaceiris/hugo-theme-iris/commit/9ad4e8eb007e5abc9445f17c34c4efbdddc2e51a))
+
+
+
 ## [0.1.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.2...v0.1.3) (2020-01-28)
 
 
