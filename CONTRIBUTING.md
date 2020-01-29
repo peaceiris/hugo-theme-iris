@@ -16,7 +16,7 @@
 
 ## Find Similar Issues or Pull Requests
 
-Nothing? Then, open a new Issue first, and discuss problems or proposals.
+Nothing? Then, open a new issue first, and discuss problems or proposals.
 
 
 
@@ -27,6 +27,7 @@ Nothing? Then, open a new Issue first, and discuss problems or proposals.
 
 # (2) Clone your fork repository to your local.
 git clone https://github.com/<username>/hugo-theme-iris.git
+cd ./hugo-theme-iris
 
 # (3) Start Hugo Server with Docker.
 make up
