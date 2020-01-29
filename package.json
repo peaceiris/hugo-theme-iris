@@ -13,9 +13,6 @@
     "release": "standard-version",
     "update-deps": "(git diff 'HEAD@{1}' --name-only | grep 'package-lock.json' > /dev/null) && npm ci || :"
   },
-  "hugo-bin": {
-    "buildTags": "extended"
-  },
   "husky": {
     "skipCI": true,
     "hooks": {
