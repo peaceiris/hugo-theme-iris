@@ -32,6 +32,7 @@ Hugo IRIS Theme
   - [Netlify](#netlify)
   - [GitHub Pages using Actions](#github-pages-using-actions)
 - [Special Thanks](#special-thanks)
+- [Changelog](#changelog)
 - [Maintainer](#maintainer)
 - [Contributing](#contributing)
 - [License](#license)
@@ -135,6 +136,12 @@ The following actions are useful to deploy your site to GitHub Pages using GitHu
 <!-- - [reveal.js] -->
 <!-- - [MathJax] -->
 <!-- - [mermaid] -->
+
+
+
+## Changelog
+
+- [hugo-theme-iris/CHANGELOG.md](https://github.com/peaceiris/hugo-theme-iris/blob/master/CHANGELOG.md)
 
 
 
