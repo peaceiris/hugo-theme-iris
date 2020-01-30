@@ -53,7 +53,8 @@ This repository includes the [Hugo] theme.
 - Dark theme
 - Responsive
 - Support Multilingual
-<!-- - PageSpeed Insights Scores: Mobile `100`, Desktop `100` -->
+- [PageSpeed Insights Scores: Good](https://developers.google.com/speed/pagespeed/insights/?hl=EN&url=https%3A%2F%2Fhugothemeiris.peaceiris.app%2F)
+- [Lighthouse Scores: Good](https://hugothemeiris.peaceiris.app/report.html)
 
 ### Roadmap
 
