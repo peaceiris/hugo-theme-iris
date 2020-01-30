@@ -36,8 +36,10 @@ jobs:
       - name: Build
         working-directory: ./exampleSite
         run: |
+          export BASE_URL="https://hugothemeiris.peaceiris.app"
           make data
-          hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL https://hugothemeiris.peaceiris.app/
+          hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL "${BASE_URL}"
+          wget -O ./public/report.html "${BASE_URL}/report.html" || true
 
       - name: Deploy (script mode)
         env:
