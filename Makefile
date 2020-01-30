@@ -25,4 +25,5 @@ build:
 
 .PHONY: buildgha
 buildgha:
-	hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL https://hugothemeiris.peaceiris.app/
+	cd ./exampleSite && \
+		hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL https://hugothemeiris.peaceiris.app/

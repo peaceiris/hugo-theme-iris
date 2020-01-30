@@ -38,7 +38,6 @@ jobs:
           extended: true
 
       - name: Build Testing
-        working-directory: ./exampleSite
         run: make buildgha
 
   test-docker:
