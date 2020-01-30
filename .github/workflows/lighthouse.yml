@@ -1,0 +1,54 @@
+name: Lighthouse
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "*.md"
+
+jobs:
+  skipci:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo "[Skip CI] ${{ contains(github.event.head_commit.message, '[skip ci]') }}"
+
+  lighthouse:
+    runs-on: ubuntu-18.04
+    if: contains(github.event.head_commit.message, '[skip ci]') == false
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+
+      - name: Install lighthouse
+        run: sudo npm i -g lighthouse
+
+      - name: Run lighthouse
+        run: |
+          lighthouse \
+            --chrome-flags="--headless" \
+            --output html --output-path ./report.html \
+            'https://hugothemeiris.peaceiris.app'
+
+      - name: Upload result
+        uses: actions/upload-artifact@v1
+        with:
+          name: lighthouse-report
+          path: report.html
+
+      - name: Prepare assets
+        run: |
+          mkdir ./public
+          cp ./report.html ./public/report.html
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./public
+        with:
+          keepFiles: true
