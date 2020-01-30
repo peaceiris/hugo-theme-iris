@@ -22,3 +22,7 @@ data:
 build:
 	$(eval opt := --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL https://hugothemeiris.peaceiris.app/)
 	$(DOCKER_COMPOSE) run --rm hugo $(opt)
+
+.PHONY: buildgha
+buildgha:
+	hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL https://hugothemeiris.peaceiris.app/
