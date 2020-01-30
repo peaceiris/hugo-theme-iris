@@ -41,3 +41,6 @@ jobs:
         working-directory: ./exampleSite
         run: |
           hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL https://hugothemeiris.peaceiris.app/
+
+      - name: Build Testing with Docker
+        run: make build
