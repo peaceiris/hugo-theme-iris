@@ -32,6 +32,11 @@ Hugo IRIS Theme
 - [Hosting](#hosting)
   - [Netlify](#netlify)
   - [GitHub Pages using Actions](#github-pages-using-actions)
+- [Shortcodes](#shortcodes)
+  - [button](#button)
+  - [li](#li)
+  - [repo](#repo)
+  - [table](#table)
 - [Special Thanks](#special-thanks)
 - [Changelog](#changelog)
 - [Maintainer](#maintainer)
@@ -55,6 +60,9 @@ This repository includes the [Hugo] theme.
 - Support Multilingual
 - [PageSpeed Insights Scores: Good](https://developers.google.com/speed/pagespeed/insights/?hl=EN&url=https%3A%2F%2Fhugothemeiris.peaceiris.app%2F)
 - [Lighthouse Scores: Good](https://hugothemeiris.peaceiris.app/report.html)
+- Breadcrumb List
+- Syntax Highlighting
+- Eye-catching Image
 
 ### Roadmap
 
@@ -62,6 +70,8 @@ This repository includes the [Hugo] theme.
 - Writing slides using Markdown. ([reveal.js])
 - [MathJax]: Beautiful math in all browsers.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
+- Categories, Tags, Authors
+- Open Graph Protocol (OGP) Image
 
 
 
@@ -126,6 +136,65 @@ The following actions are useful to deploy your site to GitHub Pages using GitHu
 
 - [peaceiris/actions-hugo: GitHub Actions for Hugo](https://github.com/peaceiris/actions-hugo)
 - [peaceiris/actions-gh-pages: GitHub Actions for GitHub Pages](https://github.com/peaceiris/actions-gh-pages)
+
+
+
+## Shortcodes
+
+### button
+
+```md
+<div class="buttons">
+  {{< button href="https://gohugo.io/" txt="Hugo Homepage" >}}
+  {{< button href="https://github.com/gohugoio/" txt="Hugo GitHub" >}}
+  {{< button href="https://discourse.gohugo.io/" txt="Hugo Forum" >}}
+  {{< button href="https://twitter.com/GoHugoIO" txt="Hugo Twitter" >}}
+</div>
+```
+
+<img width="500px" src="./exampleSite/static/images/shortcode_button.jpg" alt="Shortcode button">
+
+### li
+
+```md
+{{< li >}}
+- Hugo
+- Golang
+- Static Site Generators
+{{< /li >}}
+
+{{< li >}}
+1. Hugo
+1. Golang
+1. Static Site Generators
+{{< /li >}}
+```
+
+<img width="500px" src="./exampleSite/static/images/shortcode_li.jpg" alt="Shortcode li">
+
+### repo
+
+```md
+{{< repo id="peaceiris" name="actions-gh-pages" >}}
+{{< repo id="peaceiris" name="actions-hugo" >}}
+```
+
+<img width="500px" src="./exampleSite/static/images/shortcode_repo.jpg" alt="Shortcode repo">
+
+### table
+
+```md
+{{< table >}}
+| Key | Value |
+|---|---|
+| Static Site Generator | Hugo |
+| Language | Go |
+{{< /table >}}
+```
+
+| Mouse out | Mouse over |
+|---|---|
+| ![Shortcode table mouse out](./exampleSite/static/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](./exampleSite/static/images/shortcode_table_2.jpg) |
 
 
 

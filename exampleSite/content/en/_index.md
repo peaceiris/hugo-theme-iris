@@ -22,8 +22,15 @@ date: 2019-09-25T23:00:00.000Z
 ### Keywords
 
 {{< li >}}
+- Hugo
 - Golang
 - Static Site Generators
+{{< /li >}}
+
+{{< li >}}
+1. Hugo
+1. Golang
+1. Static Site Generators
 {{< /li >}}
 
 {{< /section >}}
