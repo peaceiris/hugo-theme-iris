@@ -72,6 +72,7 @@ This repository includes the [Hugo] theme.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
 - Categories, Tags, Authors
 - Open Graph Protocol (OGP) Image
+- Font Awesome
 
 
 
@@ -205,6 +206,7 @@ The following actions are useful to deploy your site to GitHub Pages using GitHu
 <!-- - [reveal.js] -->
 <!-- - [MathJax] -->
 <!-- - [mermaid] -->
+<!-- - Font Awesome -->
 
 
 
