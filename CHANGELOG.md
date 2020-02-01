@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.5.0...v0.5.1) (2020-02-01)
+
+
+### chore
+
+* Add ogp image ([56d944c](https://github.com/peaceiris/hugo-theme-iris/commit/56d944c8c66828ee0e785d7d22a4c4e1ba0d1e37))
+
+
+
 # [0.5.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.4.0...v0.5.0) (2020-02-01)
 
 
