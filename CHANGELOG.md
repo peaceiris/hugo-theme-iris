@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.2.0...v0.2.1) (2020-02-01)
+
+
+### chore
+
+* enhance make and npm tasks ([229bf06](https://github.com/peaceiris/hugo-theme-iris/commit/229bf06652de4280cb57d289132b1aa94d7cd5c9))
+* fix lint-staged ([071a3cb](https://github.com/peaceiris/hugo-theme-iris/commit/071a3cb5cb85d0418e0bad86f5022a13523d1d13))
+* fix lint-staged ([e6d7d5d](https://github.com/peaceiris/hugo-theme-iris/commit/e6d7d5df748086257fa461b87acbac8868baff9a))
+* fix lint-staged ([92c1bbe](https://github.com/peaceiris/hugo-theme-iris/commit/92c1bbe039274810efa011b72dc5a75334bdb0c0))
+* fix lint-staged ([c620609](https://github.com/peaceiris/hugo-theme-iris/commit/c6206092145521dcdca16ea59f6e4eac65f3572f))
+
+### docs
+
+* fix path to images ([3d07686](https://github.com/peaceiris/hugo-theme-iris/commit/3d07686c3730ddaeda05eb30d222bbfae7860a72))
+* update Roadmap ([5af38e6](https://github.com/peaceiris/hugo-theme-iris/commit/5af38e6f6af066915c85c4e0b074a6ce851b6819))
+
+### fix
+
+* section for h2 ([1f0d672](https://github.com/peaceiris/hugo-theme-iris/commit/1f0d6729b977cdb7d78ea92ac4fb8574572fe722))
+
+
+
 # [0.2.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.9...v0.2.0) (2020-02-01)
 
 
