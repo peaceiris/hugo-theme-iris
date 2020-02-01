@@ -6,8 +6,10 @@
     <section class="hero is-dark is-large">
       <div class="columns">
         <div class="column is-8 is-offset-2">
-          {{ partial "lang-button" . }}
-          {{ partial "edit-button" . }}
+          <section class="section">
+            {{ partial "lang-button" . }}
+            {{ partial "edit-button" . }}
+          </section>
           {{ block "main" . }}{{ end }}
         </div>
       </div>

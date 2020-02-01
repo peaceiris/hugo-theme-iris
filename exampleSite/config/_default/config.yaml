@@ -1,6 +1,8 @@
 baseURL: "https://example.com"
 # theme: hugo-theme-iris
 
+disqusShortname: hugothemeiris
+
 # paginate: 3
 canonifyURLs: true
 enableRobotsTXT: true
