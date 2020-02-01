@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.4.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.3.0...v0.4.0) (2020-02-01)
+
+
+### docs
+
+* Move Disqus to Features ([09ffb09](https://github.com/peaceiris/hugo-theme-iris/commit/09ffb099889478a04143be5dd37961ef1ddb1632))
+
+### feat
+
+* Add Google Analytics ([cc7fa41](https://github.com/peaceiris/hugo-theme-iris/commit/cc7fa41fb2056243a18cd290fced96d91c3ea71f))
+* add link to posts ([2831a55](https://github.com/peaceiris/hugo-theme-iris/commit/2831a55cc54e85d227dbf6eadf8fd57c8fb3ecbd))
+
+### fix
+
+* section of h2 ([12130e7](https://github.com/peaceiris/hugo-theme-iris/commit/12130e743f25e99bad18211a24048c52b5f266b4))
+
+
+
 # [0.3.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.2.1...v0.3.0) (2020-02-01)
 
 
