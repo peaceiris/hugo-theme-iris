@@ -1,6 +1,7 @@
 baseURL: "https://example.com"
 # theme: hugo-theme-iris
 
+# googleAnalytics: UA-123-45
 disqusShortname: hugothemeiris
 
 # paginate: 3

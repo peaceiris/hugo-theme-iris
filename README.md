@@ -64,6 +64,7 @@ This repository includes the [Hugo] theme.
 - Syntax Highlighting
 - Eye-catching Image
 - Disqus Comment System
+- Google Analytics
 
 ### Roadmap
 
@@ -74,7 +75,6 @@ This repository includes the [Hugo] theme.
 - Categories, Tags, Authors
 - Open Graph Protocol (OGP) Image
 - Font Awesome
-- Google Analytics
 
 
 
