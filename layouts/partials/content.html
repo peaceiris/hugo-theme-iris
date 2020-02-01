@@ -1,7 +1,6 @@
 {{ $content := .Content }}
 
-{{ $content = $content | replaceRE "<h2 " "</section><h2 class=\"title is-2\" " }}
-{{ $content = $content | replaceRE "</h2>" "</h2><section class=\"section\">" }}
+{{ $content = $content | replaceRE "<h2 " "</section><section class=\"section\"><h2 class=\"title is-2\" " }}
 {{ $content = $content | replaceRE "<h3 " "<h3 class=\"title is-3\" " }}
 {{ $content = $content | replaceRE "<h4 " "<h4 class=\"title is-4\" " }}
 {{ $content = $content | replaceRE "<h5 " "<h5 class=\"title is-5\" " }}
