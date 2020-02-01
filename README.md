@@ -73,6 +73,8 @@ This repository includes the [Hugo] theme.
 - Categories, Tags, Authors
 - Open Graph Protocol (OGP) Image
 - Font Awesome
+- Disqus Comment System
+- Google Analytics
 
 
 
