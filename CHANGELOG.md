@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.2.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.9...v0.2.0) (2020-02-01)
+
+
+### chore
+
+* [ImgBot] Optimize images (#99) ([672e65f](https://github.com/peaceiris/hugo-theme-iris/commit/672e65fab7422d8017f2bfaa9b03a06e1340c7b1)), closes [#99](https://github.com/peaceiris/hugo-theme-iris/issues/99)
+* fix resources updating ([96652fa](https://github.com/peaceiris/hugo-theme-iris/commit/96652fadd9fde1239ddc5267d92d6324f38ecf40))
+* rename container_name [skip ci] ([18e50d8](https://github.com/peaceiris/hugo-theme-iris/commit/18e50d8eb476b983bceb2706177fa0acdac1648b))
+* update data ([7e99cdb](https://github.com/peaceiris/hugo-theme-iris/commit/7e99cdb5b8f30f7d1678f30796bd7355a80dd13f))
+
+### ci
+
+* Add test workflow (#98) ([a0570a6](https://github.com/peaceiris/hugo-theme-iris/commit/a0570a6a399fcf8d76e8be9d48723065a5ace1e3)), closes [#98](https://github.com/peaceiris/hugo-theme-iris/issues/98) [#96](https://github.com/peaceiris/hugo-theme-iris/issues/96)
+* update push.paths-ignore ([93b7dd8](https://github.com/peaceiris/hugo-theme-iris/commit/93b7dd89f439525312c1a223432c4d9cd86b7e21))
+
+### deps
+
+* Remove hugo-bin ([1ac3464](https://github.com/peaceiris/hugo-theme-iris/commit/1ac34640a2b1125cac6542193bc7cf7a304fc36f))
+* remove hugo-bin [skip ci] ([af8291e](https://github.com/peaceiris/hugo-theme-iris/commit/af8291e7ca20d2a6c42a1d83b08ff3e6e2744794))
+* update ([5facd41](https://github.com/peaceiris/hugo-theme-iris/commit/5facd41bb72f37f5c8f66de819865950f87228cc))
+
+### docs
+
+* Add contributing process ([0ad6eca](https://github.com/peaceiris/hugo-theme-iris/commit/0ad6eca016db6647a47d5663b91c67cb70f8a31d))
+* add Font Awesome to roadmap ([561ce37](https://github.com/peaceiris/hugo-theme-iris/commit/561ce37f8c149c86dcad9649bf9bb66e6a19fd85))
+* Add lighthouse score badge ([724c0ac](https://github.com/peaceiris/hugo-theme-iris/commit/724c0ac345b980dbd91fcbaf1ebdd87356a2bcc4))
+* Add link to Changelog ([14a3d9e](https://github.com/peaceiris/hugo-theme-iris/commit/14a3d9e642f9e10d88f07734df6a8298c8b7a801))
+* add links to scores ([8ef5f78](https://github.com/peaceiris/hugo-theme-iris/commit/8ef5f782e0e244f91e8ac26ded466ecb600e3845))
+* Add Shortcodes section ([862752d](https://github.com/peaceiris/hugo-theme-iris/commit/862752d7a2591811247a59a01b8fe683c056cb5a))
+* fix Develop ([4b25f8e](https://github.com/peaceiris/hugo-theme-iris/commit/4b25f8ed5a1a73f954aa6305552df418af097ae8))
+* remove old info ([beed827](https://github.com/peaceiris/hugo-theme-iris/commit/beed82732adc754467a3698264253d001b2a1329))
+
+
+
 ## [0.1.9](https://github.com/peaceiris/hugo-theme-iris/compare/v0.1.8...v0.1.9) (2020-01-28)
 
 
