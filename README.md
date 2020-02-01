@@ -153,7 +153,7 @@ The following actions are useful to deploy your site to GitHub Pages using GitHu
 </div>
 ```
 
-<img width="500px" src="./exampleSite/static/images/shortcode_button.jpg" alt="Shortcode button">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_button.jpg" alt="Shortcode button">
 
 ### li
 
@@ -171,7 +171,7 @@ The following actions are useful to deploy your site to GitHub Pages using GitHu
 {{< /li >}}
 ```
 
-<img width="500px" src="./exampleSite/static/images/shortcode_li.jpg" alt="Shortcode li">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_li.jpg" alt="Shortcode li">
 
 ### repo
 
@@ -180,7 +180,7 @@ The following actions are useful to deploy your site to GitHub Pages using GitHu
 {{< repo id="peaceiris" name="actions-hugo" >}}
 ```
 
-<img width="500px" src="./exampleSite/static/images/shortcode_repo.jpg" alt="Shortcode repo">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_repo.jpg" alt="Shortcode repo">
 
 ### table
 
@@ -195,7 +195,7 @@ The following actions are useful to deploy your site to GitHub Pages using GitHu
 
 | Mouse out | Mouse over |
 |---|---|
-| ![Shortcode table mouse out](./exampleSite/static/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](./exampleSite/static/images/shortcode_table_2.jpg) |
+| ![Shortcode table mouse out](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_table_2.jpg) |
 
 
 
