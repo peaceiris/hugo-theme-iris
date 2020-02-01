@@ -20,7 +20,7 @@
     }
   },
   "lint-staged": {
-    "**/*.html": [
+    ".env,Makefile,docker-compose.yml{,archetypes,exampleSite,layouts}/**/*,package.json": [
       "npm test"
     ]
   },
