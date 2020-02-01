@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.3.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.2.1...v0.3.0) (2020-02-01)
+
+
+### feat
+
+* Add disqus ([080c200](https://github.com/peaceiris/hugo-theme-iris/commit/080c200f076c7b084e6e3d20afce64953f1582ae))
+
+### fix
+
+* top buttons ([8649532](https://github.com/peaceiris/hugo-theme-iris/commit/8649532028c302b0f572ba841e95063ca58f9e23))
+
+
+
 ## [0.2.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.2.0...v0.2.1) (2020-02-01)
 
 
