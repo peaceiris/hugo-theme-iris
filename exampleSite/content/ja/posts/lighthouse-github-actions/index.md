@@ -4,6 +4,8 @@ description: GitHub Actions で lighthouse を実行してサイトパフォー�
 publishdate: 2019-10-01T01:00:00.000Z
 # draft: true
 eyecatch: true
+images:
+  - posts/lighthouse-github-actions/eyecatch.jpg
 # tags: ["GitHub Actions"]
 # toc: true
 # mathjax: true

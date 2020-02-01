@@ -1,3 +1,6 @@
+{{ hugo.Generator }}
+
+<!-- Google Analytics -->
 {{ template "_internal/google_analytics_async.html" . }}
 
 <!-- cf. https://github.com/joshbuchea/HEAD -->
@@ -36,4 +39,8 @@
 <meta name="author" content="{{ with .Site.Params.author }}{{ . }}{{ end }}">
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
 
-{{ hugo.Generator }}
+<!-- Open Graph Protocol (OGP) -->
+{{ template "_internal/opengraph.html" . }}
+
+<!-- Twitter Cards -->
+{{ template "_internal/twitter_cards.html" . }}

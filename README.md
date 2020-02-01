@@ -65,6 +65,7 @@ This repository includes the [Hugo] theme.
 - Eye-catching Image
 - Disqus Comment System
 - Google Analytics
+- Open Graph Protocol, OGP Images
 
 ### Roadmap
 
@@ -73,7 +74,6 @@ This repository includes the [Hugo] theme.
 - [MathJax]: Beautiful math in all browsers.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
 - Categories, Tags, Authors
-- Open Graph Protocol (OGP) Image
 - Font Awesome
 
 

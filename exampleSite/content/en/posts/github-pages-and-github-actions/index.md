@@ -4,6 +4,8 @@ description: Deploy your static site to GitHub Pages using GitHub Actions
 publishdate: 2019-11-01T01:00:00.000Z
 # draft: true
 eyecatch: true
+images:
+  - posts/github-pages-and-github-actions/eyecatch.jpg
 # tags: ["GitHub Actions"]
 # toc: true
 # mathjax: true

@@ -1,4 +1,5 @@
-# googleAnalytics: UA-xxxxxxxxx-x
+images:
+  - images/ogp.jpg
 
 repo:
   URL: "https://github.com/peaceiris/hugo-theme-iris"
