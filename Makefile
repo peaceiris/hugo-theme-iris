@@ -2,11 +2,12 @@ pwd := $(CURDIR)
 cmd := ""
 DOCKER_COMPOSE := docker-compose
 OPEN_BROWSER := open http://localhost:1313
+BASE_URL := https://hugothemeiris.peaceiris.app/
 
 
 .PHONY: up
 up:
-	$(OPEN_BROWSER)
+	# $(OPEN_BROWSER)
 	$(DOCKER_COMPOSE) up
 
 .PHONY: hugo
@@ -20,10 +21,15 @@ data:
 
 .PHONY: build
 build:
-	$(eval opt := --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL https://hugothemeiris.peaceiris.app/)
+	$(eval opt := --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL $(BASE_URL))
+	$(DOCKER_COMPOSE) run --rm hugo $(opt)
+
+.PHONY: test
+test:
+	$(eval opt := --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL $(BASE_URL) --renderToMemory)
 	$(DOCKER_COMPOSE) run --rm hugo $(opt)
 
 .PHONY: buildgha
 buildgha:
 	cd ./exampleSite && \
-		hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL https://hugothemeiris.peaceiris.app/
+		hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL $(BASE_URL)

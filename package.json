@@ -5,11 +5,10 @@
   "private": true,
   "scripts": {
     "start": "run-p client server",
-    "server": "cd ./exampleSite && hugo server --themesDir ../ --layoutDir ../layouts",
+    "server": "make up",
     "client": "wait-on http://localhost:1313 && open http://localhost:1313",
-    "hugo": "hugo",
-    "build": "cd ./exampleSite && hugo --minify --cleanDestinationDir --themesDir ../ --layoutDir ../layouts",
-    "test:hugo": "cd ./exampleSite && hugo --renderToMemory --themesDir ../ --layoutDir ../layouts && :",
+    "build": "make build",
+    "test": "make test",
     "release": "standard-version",
     "update-deps": "(git diff 'HEAD@{1}' --name-only | grep 'package-lock.json' > /dev/null) && npm ci || :"
   },
@@ -22,7 +21,7 @@
   },
   "lint-staged": {
     "**/*.html": [
-      "npm run test:hugo"
+      "npm test"
     ]
   },
   "repository": {
