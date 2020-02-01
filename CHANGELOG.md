@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.5.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.4.0...v0.5.0) (2020-02-01)
+
+
+### feat
+
+* Add Open Graph Protocol options ([be29814](https://github.com/peaceiris/hugo-theme-iris/commit/be29814b8b6c2703f70448d89ecc0a561fecf277))
+
+
+
 # [0.4.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.3.0...v0.4.0) (2020-02-01)
 
 
