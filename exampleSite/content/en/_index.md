@@ -35,6 +35,14 @@ date: 2020-01-01T23:00:00.000Z
 
 ## Links
 
+### Internal
+
+<div class="buttons">
+  {{< button href="./posts/" txt="All Posts" >}}
+</div>
+
+### External
+
 <div class="buttons">
   {{< button href="https://gohugo.io/" txt="Hugo Homepage" >}}
   {{< button href="https://github.com/gohugoio/" txt="Hugo GitHub" >}}
