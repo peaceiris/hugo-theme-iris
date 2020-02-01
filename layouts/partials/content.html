@@ -1,6 +1,10 @@
 {{ $content := .Content }}
+{{ $hasH2 := findRE "</h2>" $content }}
 
-{{ $content = $content | replaceRE "<h2 " "</section><section class=\"section\"><h2 class=\"title is-2\" " }}
+{{ if $hasH2 }}
+  {{ $content = $content | replaceRE "<h2 " "</section><section class=\"section\"><h2 class=\"title is-2\" " }}
+{{ end }}
+
 {{ $content = $content | replaceRE "<h3 " "<h3 class=\"title is-3\" " }}
 {{ $content = $content | replaceRE "<h4 " "<h4 class=\"title is-4\" " }}
 {{ $content = $content | replaceRE "<h5 " "<h5 class=\"title is-5\" " }}
