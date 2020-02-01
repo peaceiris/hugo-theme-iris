@@ -6,8 +6,6 @@ date: 2020-01-25T23:00:00.000Z
 
 
 
-{{< section >}}
-
 ## Hugo IRIS Theme について
 
 ### プロファイル
@@ -26,11 +24,7 @@ date: 2020-01-25T23:00:00.000Z
 - Static Site Generators
 {{< /li >}}
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## リンク
 
@@ -41,17 +35,11 @@ date: 2020-01-25T23:00:00.000Z
   {{< button href="https://twitter.com/GoHugoIO" txt="Hugo Twitter" >}}
 </div>
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## プロジェクト
 
 ### オープンソースソフトウェア
-
-{{< /section >}}
 
 {{< repo id="peaceiris" name="actions-gh-pages" >}}
 {{< repo id="peaceiris" name="actions-hugo" >}}

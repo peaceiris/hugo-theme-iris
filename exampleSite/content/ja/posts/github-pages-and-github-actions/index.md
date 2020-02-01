@@ -16,8 +16,6 @@ twitter:
 
 
 
-{{< section >}}
-
 ## GitHub Actions for GitHub Pages
 
 > GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators
@@ -38,11 +36,7 @@ This deploy action can be combined simply and freely with [Static Site Generator
 
 The above example step will deploy `./public` directory to `gh-pages` branch.
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## Example workflow
 
@@ -57,5 +51,3 @@ Creat YAML file `.github/workflows/gh-pages.yml` and push to your remote default
     PUBLISH_BRANCH: gh-pages
     PUBLISH_DIR: ./public
 ```
-
-{{< /section >}}

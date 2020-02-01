@@ -1,12 +1,10 @@
 ---
 title: Home
 description: Hugo Theme IRIS homepage
-date: 2019-09-25T23:00:00.000Z
+date: 2020-01-01T23:00:00.000Z
 ---
 
 
-
-{{< section >}}
 
 ## About Hugo IRIS Theme
 
@@ -33,11 +31,7 @@ date: 2019-09-25T23:00:00.000Z
 1. Static Site Generators
 {{< /li >}}
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## Links
 
@@ -48,17 +42,11 @@ date: 2019-09-25T23:00:00.000Z
   {{< button href="https://twitter.com/GoHugoIO" txt="Hugo Twitter" >}}
 </div>
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## Projects
 
 ### OSS
-
-{{< /section >}}
 
 {{< repo id="peaceiris" name="actions-gh-pages" >}}
 {{< repo id="peaceiris" name="actions-hugo" >}}

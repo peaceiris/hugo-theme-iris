@@ -4,17 +4,13 @@ date: 2019-09-25T23:00:00.000Z
 description: Sample article showcasing basic Markdown syntax and formatting for HTML elements.
 ---
 
-{{< section >}}
+
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 
 <!--more-->
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## Headings
 
@@ -29,11 +25,7 @@ The following HTML `<h1>` to `<h6>` elements represent six levels of section hea
 
 ###### H6
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## Paragraph
 
@@ -41,11 +33,7 @@ Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptio
 
 Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## Blockquotes
 
@@ -65,11 +53,7 @@ The blockquote element represents content that is quoted from another source, op
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## Tables
 
@@ -92,11 +76,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 | *italics*  | **bold** | ~~strikethrough~~ | `code` |
 {{< /table >}}
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## Code Blocks
 
@@ -130,11 +110,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 </html>
 {{< /highlight >}}
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## List Types
 
@@ -162,11 +138,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
   2. Second Sub-item
 {{< /li >}}
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 
@@ -179,5 +151,3 @@ X<sup>n</sup> + Y<sup>n</sup>: Z<sup>n</sup>
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
-
-{{< /section >}}

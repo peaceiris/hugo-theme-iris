@@ -16,17 +16,11 @@ twitter:
 
 
 
-{{< section >}}
-
 ## lighthouse
 
 No Docker action.
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## Example lighthouse workflow
 
@@ -64,11 +58,7 @@ jobs:
         path: /tmp/report.html
 ```
 
-{{< /section >}}
 
-
-
-{{< section >}}
 
 ## Deploy result to GitHub Pages
 
@@ -108,5 +98,3 @@ jobs:
       with:
         keepFiles: true
 ```
-
-{{< /section >}}

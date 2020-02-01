@@ -4,7 +4,7 @@ date: 2019-09-30T08:00:00.000Z
 description: Guide to emoji usage in Hugo
 ---
 
-{{< section >}}
+
 
 Emoji can be enabled in a Hugo project in a number of ways.
 
@@ -44,5 +44,3 @@ The [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) is a useful reference
 }
 </style>
 {{< /css.inline >}}
-
-{{< /section >}}
