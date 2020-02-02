@@ -12,8 +12,16 @@
   {{- end -}}
 
   {{- if eq .node .start -}}
-    <li class="is-active"><a href="#" aria-current="page">{{- .node.LinkTitle -}}</a></li>
+    <li class="is-active">
+      <button class="button is-static">
+        <a href="#" aria-current="page">{{- .node.LinkTitle -}}</a>
+      </button>
+    </li>
   {{- else -}}
-    <li><a href="{{- .node.Permalink -}}">{{- .node.LinkTitle -}}</a></li>
+    <li>
+      <button class="button is-text">
+        <a href="{{- .node.Permalink -}}">{{- .node.LinkTitle -}}</a>
+      </button>
+    </li>
   {{- end -}}
 {{- end -}}
