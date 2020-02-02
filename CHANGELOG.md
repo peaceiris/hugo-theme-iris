@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.6.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.5.1...v0.6.0) (2020-02-02)
+
+
+### chore
+
+* [ImgBot] Optimize images (#100) ([77bc99f](https://github.com/peaceiris/hugo-theme-iris/commit/77bc99fdffa3db14bb1a0a39d76915449882de5b)), closes [#100](https://github.com/peaceiris/hugo-theme-iris/issues/100)
+
+### docs
+
+* Add Table of Contents feature ([e59d6b0](https://github.com/peaceiris/hugo-theme-iris/commit/e59d6b0c05c7e888f6556bea9e049145e221f63e))
+
+### feat
+
+* Add Table of Contents (ToC) ([763db2e](https://github.com/peaceiris/hugo-theme-iris/commit/763db2ee468e40dcffa56c52276ceb3b90964fab))
+
+
+
 ## [0.5.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.5.0...v0.5.1) (2020-02-01)
 
 
