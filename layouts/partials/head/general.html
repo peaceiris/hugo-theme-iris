@@ -40,7 +40,4 @@
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
 
 <!-- Open Graph Protocol (OGP) -->
-{{ template "_internal/opengraph.html" . }}
-
-<!-- Twitter Cards -->
-{{ template "_internal/twitter_cards.html" . }}
+{{ partial "head/ogp" . }}

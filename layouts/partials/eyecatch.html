@@ -1,10 +1,11 @@
 {{ if .Params.eyecatch }}
-  {{ $image := $.Page.Resources.GetMatch "eyecatch.jpg" }}
+  {{ $image := resources.Get .Params.eyecatch }}
+  {{ $imageHash := $image | resources.Fingerprint "sha512" }}
   <div class="columns">
     <div class="column is-8 is-offset-2">
       <img
         class=""
-        src="{{- $image.Permalink -}}?v={{- slicestr ($image.Content | md5) 0 10 -}}"
+        src="{{- $imageHash.Permalink -}}"
         alt="{{ $.Params.Description }}"
         decoding="async"
         loading="lazy"

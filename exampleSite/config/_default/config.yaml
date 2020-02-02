@@ -38,6 +38,12 @@ languages:
     params:
       author: peaceiris
       description: Hugo IRIS Theme Demo Site
+      twitter:
+        username: piris314
+      ogp:
+        siteName: Hugo Theme Iris
+        image: images/ogp.jpg
+        locale: en-US
     title: Hugo IRIS Theme
     weight: 1
   ja:
@@ -47,5 +53,11 @@ languages:
     params:
       author: peaceiris
       description: Hugo IRIS テーマデモサイト
+      twitter:
+        username: piris314
+      ogp:
+        siteName: Hugo Theme Iris
+        image: images/ogp.jpg
+        locale: js-JP
     title: Hugo IRIS テーマ
     weight: 2

@@ -1,0 +1,45 @@
+{{ $imagePath := "" }}
+{{ if $.Params.eyecatch }}
+  {{ $image := resources.Get $.Params.eyecatch }}
+  {{ $imagePath = ($image | resources.Fingerprint "sha512").Permalink }}
+{{ else }}
+  {{ $imagePath = $.Site.Params.ogp.image | relURL }}
+{{ end }}
+
+{{ $description := "" }}
+{{ if $.IsHome }}
+  {{ $description = $.Site.Params.description | safeHTML }}
+{{ else }}
+  {{ $description = $.Description | safeHTML }}
+{{ end }}
+
+{{ $title := "" }}
+{{ if $.IsHome }}
+  {{ $title = $.Site.Params.Title | safeHTML }}
+{{ else }}
+  {{ $title = $.Title | safeHTML }}
+{{ end }}
+
+<!-- OGP: Open Graph Protocol -->
+<meta property="og:url" content="{{ $.Permalink }}" />
+<meta property="og:site_name" content="{{ $.Site.Params.ogp.siteName }}" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:image" content="{{ $imagePath }}" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="{{ $.Site.Params.ogp.locale }}" />
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image" />
+
+{{ with $.Params.twitter.username }}
+  <meta name="twitter:site" content="@{{ . }}" />
+  <meta name="twitter:creator" content="@{{ . }}" />
+{{ else }}
+  <meta name="twitter:site" content="@{{ $.Site.Params.twitter.username }}" />
+{{ end }}
+
+<meta property="twitter:url" content="{{ $.Permalink }}" />
+<meta property="twitter:title" content="{{ $title }}" />
+<meta property="twitter:description" content="{{ $description }}" />
+<meta property="twitter:image" content="{{ $imagePath }}" />

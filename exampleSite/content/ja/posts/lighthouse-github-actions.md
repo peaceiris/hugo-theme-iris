@@ -1,11 +1,9 @@
 ---
-title: Run lighthouse on GitHub Actions
-description: How to run lighthouse on GitHub Actions and test your site performance
+title: lighthouse を GitHub Actions で実行する
+description: GitHub Actions で lighthouse を実行してサイトパフォーマンスをテストする。
 publishdate: 2019-10-01T01:00:00.000Z
 # draft: true
-eyecatch: true
-images:
-  - posts/lighthouse-github-actions/eyecatch.jpg
+eyecatch: images/lighthouse-github-actions.jpg
 # tags: ["GitHub Actions"]
 # toc: true
 # mathjax: true
@@ -92,7 +90,7 @@ jobs:
         cp /tmp/report.html ./public/report.html
 
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2
+      uses: peaceiris/actions-gh-pages@v2.4.0
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
