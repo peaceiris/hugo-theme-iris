@@ -13,13 +13,13 @@
 
   {{- if eq .node .start -}}
     <li class="is-active">
-      <button class="button is-static">
+      <button class="button is-dark is-outlined is-focused">
         <a href="#" aria-current="page">{{- .node.LinkTitle -}}</a>
       </button>
     </li>
   {{- else -}}
     <li>
-      <button class="button is-text">
+      <button class="button is-dark is-outlined is-text">
         <a href="{{- .node.Permalink -}}">{{- .node.LinkTitle -}}</a>
       </button>
     </li>
