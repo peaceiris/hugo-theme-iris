@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.8.2...v0.8.3) (2020-02-02)
+
+
+### feat
+
+* Add links to Hugo and Theme ([961aefa](https://github.com/peaceiris/hugo-theme-iris/commit/961aefa9fd333f9990e25b1b18883752df9d7d78))
+
+
+
 ## [0.8.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.8.1...v0.8.2) (2020-02-02)
 
 
