@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.8.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.7.0...v0.8.0) (2020-02-02)
+
+
+### feat
+
+* Make breadcrumb link button ([78c1e91](https://github.com/peaceiris/hugo-theme-iris/commit/78c1e91dbad4f55e6c8049bf8dae3d14134e3e66))
+
+
+
 # [0.7.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.6.2...v0.7.0) (2020-02-02)
 
 
