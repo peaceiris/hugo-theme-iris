@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.7.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.6.2...v0.7.0) (2020-02-02)
+
+
+### feat
+
+* Add check tools links ([dd4366e](https://github.com/peaceiris/hugo-theme-iris/commit/dd4366ed6180b977c051a9fb7646c2d46d624972))
+
+
+
 ## [0.6.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.6.1...v0.6.2) (2020-02-02)
 
 
