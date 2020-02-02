@@ -3,7 +3,7 @@
   {{ $image := resources.Get $.Params.eyecatch }}
   {{ $imagePath = ($image | resources.Fingerprint "sha512").Permalink }}
 {{ else }}
-  {{ $imagePath = $.Site.Params.ogp.image | relURL }}
+  {{ $imagePath = $.Site.Params.ogp.image | absURL }}
 {{ end }}
 
 {{ $description := "" }}
