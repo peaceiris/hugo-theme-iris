@@ -66,6 +66,7 @@ This repository includes the [Hugo] theme.
 - Disqus Comment System
 - Google Analytics
 - Open Graph Protocol, OGP Images
+- Table of Contents
 
 ### Roadmap
 
