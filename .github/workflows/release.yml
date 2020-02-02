@@ -31,6 +31,5 @@ jobs:
           sed -i "1i${RELEASE_NAME} ${TAG_NAME}\n" ./release_notes.md
           ./bin/hub release create \
             --draft \
-            --prerelease \
             --file ./release_notes.md \
             "${TAG_NAME}"
