@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.6.1...v0.6.2) (2020-02-02)
+
+
+### chore
+
+* [ImgBot] Optimize images (#102) ([d515ec0](https://github.com/peaceiris/hugo-theme-iris/commit/d515ec02bf30e708a6b9b16a8d2831b2940fe063)), closes [#102](https://github.com/peaceiris/hugo-theme-iris/issues/102)
+
+### fix
+
+* change OGP image path from relURL to absURL ([f63068a](https://github.com/peaceiris/hugo-theme-iris/commit/f63068aef512f666b405bdd2f4e5e5795531240a))
+
+
+
 ## [0.6.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.6.0...v0.6.1) (2020-02-02)
 
 
