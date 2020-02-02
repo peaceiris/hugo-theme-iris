@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.4](https://github.com/peaceiris/hugo-theme-iris/compare/v0.8.3...v0.8.4) (2020-02-02)
+
+
+### fix
+
+* footer link style ([7753ac3](https://github.com/peaceiris/hugo-theme-iris/commit/7753ac34115081eae9a1a547377bfddf2936dbd5))
+
+
+
 ## [0.8.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.8.2...v0.8.3) (2020-02-02)
 
 
