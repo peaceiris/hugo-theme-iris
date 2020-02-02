@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.8.0...v0.8.1) (2020-02-02)
+
+
+### ci
+
+* remove prerelease flag ([c8a474e](https://github.com/peaceiris/hugo-theme-iris/commit/c8a474e758a2894cc659d468c6aa133f54bc4f33))
+
+### fix
+
+* breadcrumb style ([58366c6](https://github.com/peaceiris/hugo-theme-iris/commit/58366c65a82d7e2057b9f20bc2e61f010b7aeb0a))
+
+
+
 # [0.8.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.7.0...v0.8.0) (2020-02-02)
 
 
