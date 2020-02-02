@@ -42,7 +42,7 @@ languages:
     weight: 1
   ja:
     contentDir: content/ja
-    languageName: Japanese
+    languageName: 日本語
     languageCode: ja-jp
     params:
       author: peaceiris

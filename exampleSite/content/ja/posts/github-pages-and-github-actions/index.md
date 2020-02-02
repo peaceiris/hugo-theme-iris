@@ -7,7 +7,7 @@ eyecatch: true
 images:
   - posts/github-pages-and-github-actions/eyecatch.jpg
 # tags: ["GitHub Actions"]
-# toc: true
+toc: true
 # mathjax: true
 # mermaid: true
 # weight: 1

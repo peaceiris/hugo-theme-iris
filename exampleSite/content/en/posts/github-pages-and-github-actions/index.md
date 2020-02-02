@@ -7,7 +7,7 @@ eyecatch: true
 images:
   - posts/github-pages-and-github-actions/eyecatch.jpg
 # tags: ["GitHub Actions"]
-# toc: true
+toc: true
 # mathjax: true
 # mermaid: true
 # weight: 1
@@ -40,7 +40,7 @@ The above example step will deploy `./public` directory to `gh-pages` branch.
 
 
 
-## Example workflow
+## Example Workflow
 
 Here is an example workflow for Hugo project.
 Creat YAML file `.github/workflows/gh-pages.yml` and push to your remote default branch.
@@ -51,5 +51,18 @@ Creat YAML file `.github/workflows/gh-pages.yml` and push to your remote default
   env:
     ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
     PUBLISH_BRANCH: gh-pages
+    PUBLISH_DIR: ./public
+```
+
+### Deploy to master branch
+
+For `<username>.github.io` repository.
+
+```yaml
+- name: Deploy
+  uses: peaceiris/actions-gh-pages@v2
+  env:
+    ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+    PUBLISH_BRANCH: master
     PUBLISH_DIR: ./public
 ```

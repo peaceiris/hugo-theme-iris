@@ -11,5 +11,6 @@
 {{ $content = $content | replaceRE "<h6 " "<h6 class=\"title is-6\" " }}
 
 <section class="section">
+  {{ partial "toc" . }}
   {{ $content | safeHTML }}
 </section>
