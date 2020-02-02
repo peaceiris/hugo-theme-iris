@@ -6,6 +6,7 @@
     <section class="hero is-dark is-large">
       <div class="columns">
         <div class="column is-8 is-offset-2">
+          {{ partial "check-tools" . }}
           {{ partial "lang-button" . }}
           {{ partial "edit-button" . }}
           {{ block "main" . }}{{ end }}

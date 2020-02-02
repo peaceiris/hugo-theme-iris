@@ -1,11 +1,1 @@
 <a class="button is-pulled-right" href="{{ .Site.Params.repo.URL }}/edit/{{ .Site.Params.repo.branch }}/{{ .Site.Params.repo.contentDir }}/{{ .Language }}/{{ .File.Path }}">Edit</a>
-
-<br><br>
-
-{{ if eq .Site.Params.hugoenv "development" }}
-  <span class="tag is-warning is-medium">development</span>
-{{ end }}
-
-{{ if ne .Site.Params.hugoenv "production" }}
-  Dev Tools
-{{ end }}

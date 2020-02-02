@@ -1,0 +1,87 @@
+{{ if ne $.Site.Params.hugoenv "production" }}
+  {{ $targetURL := $.Permalink }}
+  {{ if $.Site.IsServer }}
+    {{ $targetRelURL := ($.Page.Permalink | relURL) }}
+    {{ $targetURL = delimit (slice $.Site.Params.stagingURL $targetRelURL) "" }}
+  {{ end }}
+
+<span class="tag is-warning is-medium">Development</span>
+
+<div class="dropdown" id="checkTools">
+  <div class="dropdown-trigger">
+    <button class="button is-warning" aria-haspopup="true" aria-controls="dropdown-menu" onclick="toggleDropdownCheckTools();">
+      <span>Check Tools ↓</span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      <a
+        href="https://developers.google.com/speed/pagespeed/insights/?url={{ $targetURL }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="dropdown-item"
+        >Page Speed Insights</a
+      >
+      <a
+        href="https://search.google.com/structured-data/testing-tool#url={{ $targetURL }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="dropdown-item"
+        >JSON-LD</a
+      >
+      <a
+        href="https://search.google.com/test/rich-results?url={{ $targetURL }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="dropdown-item"
+        >Rich result</a
+      >
+      <a
+        href="https://validator.w3.org/nu/?doc={{ $targetURL }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="dropdown-item"
+        >Markup</a
+      >
+      <a
+        href="https://material.io/tools/resizer/#url={{ $targetURL }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="dropdown-item"
+        >RESIZER</a
+      >
+      <a
+        href="https://search.google.com/test/mobile-friendly?url={{ $targetURL }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="dropdown-item"
+        >Mobile</a
+      >
+      <a
+        href="https://developers.facebook.com/tools/debug/sharing/?q={{ $targetURL }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="dropdown-item"
+        >Facebook</a
+      >
+      <a
+        href="https://cards-dev.twitter.com/validator"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="dropdown-item"
+        >Twitter</a
+      >
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleDropdownCheckTools() {
+    var obj = document.getElementById("checkTools");
+    obj.classList.toggle("is-active");
+  }
+</script>
+
+<br>
+
+{{ end }}

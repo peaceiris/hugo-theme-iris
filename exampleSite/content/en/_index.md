@@ -57,8 +57,11 @@ date: 2020-01-01T23:00:00.000Z
 ### OSS
 
 {{< repo id="peaceiris" name="actions-gh-pages" >}}
+
 {{< repo id="peaceiris" name="actions-hugo" >}}
+
 {{< repo id="peaceiris" name="hugo-extended-docker" >}}
+
 {{< repo
 id="hugojapan"
 name="ja"

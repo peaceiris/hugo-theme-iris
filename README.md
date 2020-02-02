@@ -180,6 +180,7 @@ The following actions are useful to deploy your site to GitHub Pages using GitHu
 
 ```md
 {{< repo id="peaceiris" name="actions-gh-pages" >}}
+
 {{< repo id="peaceiris" name="actions-hugo" >}}
 ```
 
