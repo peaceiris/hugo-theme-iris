@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.11.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.10.1...v0.11.0) (2020-02-03)
+
+
+### chore
+
+* [ImgBot] Optimize images (#103) ([0dee4f7](https://github.com/peaceiris/hugo-theme-iris/commit/0dee4f7ead781b3054a1250512932debd77be938)), closes [#103](https://github.com/peaceiris/hugo-theme-iris/issues/103)
+
+### docs
+
+* Add mermaid shortcode ([69a4e9f](https://github.com/peaceiris/hugo-theme-iris/commit/69a4e9f83e0df99b34f55d42f956c5aba90097cb))
+* Add reveal.js to features ([febc584](https://github.com/peaceiris/hugo-theme-iris/commit/febc5849ba32c22737148b632dc5807484d26f09))
+
+### feat
+
+* Add revealjs (#104) ([2401f64](https://github.com/peaceiris/hugo-theme-iris/commit/2401f640f358951635f7af0202fa236cdaf6f14d)), closes [#104](https://github.com/peaceiris/hugo-theme-iris/issues/104) [#29](https://github.com/peaceiris/hugo-theme-iris/issues/29)
+
+### fix
+
+* Add revealjs-v3.9.2/lib ([9c4ef64](https://github.com/peaceiris/hugo-theme-iris/commit/9c4ef6417a5e50d39b25dd26e5381537220e4b53))
+* mermaid example ([9d2cae5](https://github.com/peaceiris/hugo-theme-iris/commit/9d2cae583f92d4e53625522af8343f7c9dfa6716))
+
+
+
 ## [0.10.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.10.0...v0.10.1) (2020-02-03)
 
 
