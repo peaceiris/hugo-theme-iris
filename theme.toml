@@ -27,8 +27,8 @@ tags = [
 ]
 features = [
   "mathjax",
+  "mermaid",
   # "reveal.js",
-  # "mermaid",
   # "netlify-cms"
 ]
 
