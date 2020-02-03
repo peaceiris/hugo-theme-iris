@@ -5,7 +5,7 @@
     {{ with $.Params.slide }}
       <div class="reveal">
         <div class="slides">
-          {{- range (split $.RawContent "---") -}}
+          {{- range (split $.RawContent "---\n") -}}
             <section data-markdown>
               <script type="text/template">
                 {{- . -}}

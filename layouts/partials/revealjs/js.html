@@ -1,13 +1,11 @@
-{{ $js := resources.Get "revealjs-v3.9.2/js/reveal.js" }}
-{{ $secureJS := $js | resources.Fingerprint "sha512" }}
-<script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+<script src="/revealjs-v3.9.2/js/reveal.js"></script>
 
-{{ $marked := resources.Get "revealjs-v3.9.2/plugin/markdown/marked.js" }}
-{{ $markdown := resources.Get "revealjs-v3.9.2/plugin/markdown/markdown.js" }}
-{{ $highlight := resources.Get "revealjs-v3.9.2/plugin/highlight/highlight.js" }}
-{{ $zoom := resources.Get "revealjs-v3.9.2/plugin/zoom-js/zoom.js" }}
-{{ $notes := resources.Get "revealjs-v3.9.2/plugin/notes/notes.js" }}
-{{ $math := resources.Get "revealjs-v3.9.2/plugin/math/math.js" }}
+{{ $marked := "/revealjs-v3.9.2/plugin/markdown/marked.js" }}
+{{ $markdown := "/revealjs-v3.9.2/plugin/markdown/markdown.js" }}
+{{ $highlight := "/revealjs-v3.9.2/plugin/highlight/highlight.js" }}
+{{ $zoom := "/revealjs-v3.9.2/plugin/zoom-js/zoom.js" }}
+{{ $notes := "/revealjs-v3.9.2/plugin/notes/notes.js" }}
+{{ $math := "/revealjs-v3.9.2/plugin/math/math.js" }}
 <script>
   Reveal.initialize({
     markdown: {
@@ -15,20 +13,20 @@
     },
     dependencies: [
       // Interpret Markdown in <section> elements
-      { src: '{{ $marked.Permalink }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: '{{ $markdown.Permalink }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '{{ $marked }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '{{ $markdown }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 
       // Syntax highlight for <code> elements
-      // { src: '{{ $highlight.Permalink }}', async: true },
+      { src: '{{ $highlight }}', async: true },
 
       // Zoom in and out with Alt+click
-      // { src: '{{ $zoom.Permalink }}', async: true },
+      { src: '{{ $zoom }}', async: true },
 
       // Speaker notes
-      // { src: '{{ $notes.Permalink }}', async: true },
+      { src: '{{ $notes }}', async: true },
 
       // MathJax
-      // { src: '{{ $math.Permalink }}', async: true }
+      { src: '{{ $math }}', async: true }
     ]
   });
 </script>
