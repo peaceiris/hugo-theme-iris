@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.10.0...v0.10.1) (2020-02-03)
+
+
+### docs
+
+* Add mermaid to feature ([f4e26d3](https://github.com/peaceiris/hugo-theme-iris/commit/f4e26d36effdfd301cb1dbb3fda24ad073830b2d))
+* Add mermaid to feature ([e9dfb35](https://github.com/peaceiris/hugo-theme-iris/commit/e9dfb35e788e5444fe8364ebb494a21106742a95))
+
+### fix
+
+* Add mermaid shortcode ([55668dd](https://github.com/peaceiris/hugo-theme-iris/commit/55668ddc4bf022531eb0404700f5c77927b1b5e8))
+
+
+
 # [0.10.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.9.0...v0.10.0) (2020-02-03)
 
 
