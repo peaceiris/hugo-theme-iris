@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.10.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.9.0...v0.10.0) (2020-02-03)
+
+
+### chore
+
+* remove unused js ([17d410a](https://github.com/peaceiris/hugo-theme-iris/commit/17d410aef04ac4699690f797813903638e645f41))
+
+### feat
+
+* Add mermaid ([d234a90](https://github.com/peaceiris/hugo-theme-iris/commit/d234a9024fb65267d918c09651b301c6d8c576de))
+
+
+
 # [0.9.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.8.4...v0.9.0) (2020-02-03)
 
 
