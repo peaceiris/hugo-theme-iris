@@ -1,0 +1,32 @@
+<script src="/revealjs-v3.9.2/js/reveal.js"></script>
+
+{{ $marked := "/revealjs-v3.9.2/plugin/markdown/marked.js" }}
+{{ $markdown := "/revealjs-v3.9.2/plugin/markdown/markdown.js" }}
+{{ $highlight := "/revealjs-v3.9.2/plugin/highlight/highlight.js" }}
+{{ $zoom := "/revealjs-v3.9.2/plugin/zoom-js/zoom.js" }}
+{{ $notes := "/revealjs-v3.9.2/plugin/notes/notes.js" }}
+{{ $math := "/revealjs-v3.9.2/plugin/math/math.js" }}
+<script>
+  Reveal.initialize({
+    markdown: {
+      smartypants: true
+    },
+    dependencies: [
+      // Interpret Markdown in <section> elements
+      { src: '{{ $marked }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '{{ $markdown }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+      // Syntax highlight for <code> elements
+      { src: '{{ $highlight }}', async: true },
+
+      // Zoom in and out with Alt+click
+      { src: '{{ $zoom }}', async: true },
+
+      // Speaker notes
+      { src: '{{ $notes }}', async: true },
+
+      // MathJax
+      { src: '{{ $math }}', async: true }
+    ]
+  });
+</script>
