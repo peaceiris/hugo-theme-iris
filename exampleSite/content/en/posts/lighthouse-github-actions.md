@@ -7,7 +7,6 @@ eyecatch: images/lighthouse-github-actions.jpg
 # tags: ["GitHub Actions"]
 # toc: true
 # math: true
-# mermaid: true
 # weight: 1
 twitter:
   username: piris314
