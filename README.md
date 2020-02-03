@@ -55,7 +55,7 @@ This repository includes the [Hugo] theme.
 
 ### Features
 
-- Dark theme
+- Dark Theme
 - Responsive
 - Support Multilingual
 - [PageSpeed Insights Scores: Good](https://developers.google.com/speed/pagespeed/insights/?hl=EN&url=https%3A%2F%2Fhugothemeiris.peaceiris.app%2F)
@@ -71,7 +71,7 @@ This repository includes the [Hugo] theme.
 ### Roadmap
 
 - Netlify, Netlify CMS
-- Writing slides using Markdown. ([reveal.js])
+- [reveal.js]: Writing slides using Markdown.
 - [MathJax]: Beautiful math in all browsers.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
 - Categories, Tags, Authors
