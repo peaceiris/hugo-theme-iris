@@ -26,8 +26,8 @@ tags = [
   # "slide"
 ]
 features = [
+  "mathjax",
   # "reveal.js",
-  # "mathjax",
   # "mermaid",
   # "netlify-cms"
 ]
