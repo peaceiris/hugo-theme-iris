@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.9.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.8.4...v0.9.0) (2020-02-03)
+
+
+### docs
+
+* Add mathjax to feature ([e72a5e8](https://github.com/peaceiris/hugo-theme-iris/commit/e72a5e8d0bf36e5bd2c2b2564148e350d3bb7ebb))
+* update ([baa4c9e](https://github.com/peaceiris/hugo-theme-iris/commit/baa4c9e62fbecdcfe53e6231c786b1a625fee392))
+
+### feat
+
+* Add MathJax ([78340ba](https://github.com/peaceiris/hugo-theme-iris/commit/78340ba3df2bd39d5c3c34d933678af1f084eb6d))
+
+
+
 ## [0.8.4](https://github.com/peaceiris/hugo-theme-iris/compare/v0.8.3...v0.8.4) (2020-02-02)
 
 
