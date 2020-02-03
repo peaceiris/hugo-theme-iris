@@ -44,6 +44,7 @@ sequenceDiagram
 
 ### Output
 
+```
 {{< mermaid >}}
 sequenceDiagram
   participant Alice
@@ -57,3 +58,4 @@ sequenceDiagram
   John->>Bob: How about you?
   Bob-->>John: Jolly good!
 {{< /mermaid >}}
+```
