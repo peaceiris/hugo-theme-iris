@@ -1,0 +1,13 @@
+{{ with $.Params.math }}
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+
+  {{ $js := resources.Get "js/mathjax-v3.0.0-tex-mml-chtml.js" }}
+  {{ $secureJS := $js | resources.Fingerprint "sha512" }}
+  <script async type="text/javascript" id="MathJax-script" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+{{ end }}

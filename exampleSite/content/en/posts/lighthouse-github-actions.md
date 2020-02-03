@@ -6,7 +6,7 @@ publishdate: 2019-10-01T01:00:00.000Z
 eyecatch: images/lighthouse-github-actions.jpg
 # tags: ["GitHub Actions"]
 # toc: true
-# mathjax: true
+# math: true
 # mermaid: true
 # weight: 1
 twitter:
