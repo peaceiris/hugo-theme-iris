@@ -68,12 +68,12 @@ This repository includes the [Hugo] theme.
 - Open Graph Protocol, OGP Images
 - Table of Contents
 - [MathJax]: Beautiful math in all browsers.
+- [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
 
 ### Roadmap
 
 - Netlify, Netlify CMS
 - [reveal.js]: Writing slides using Markdown.
-- [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
 - Categories, Tags, Authors
 - Font Awesome
 
