@@ -1,7 +1,4 @@
-{{ $hasMermaid := findRE "<code class=\"language-mermaid\" data-lang=\"mermaid\">" .Content }}
-
-{{ with $hasMermaid }}
-
+{{ with $.Params.mermaid }}
   {{ $js := resources.Get "js/mermaid-v8.4.6.min.js" }}
   {{ $secureJS := $js | resources.Fingerprint "sha512" }}
   <script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>

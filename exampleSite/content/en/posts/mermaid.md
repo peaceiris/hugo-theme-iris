@@ -7,6 +7,7 @@ publishdate: 2020-01-02T01:00:00.000Z
 # tags: ["hugo"]
 toc: true
 # math: true
+mermaid: true
 # weight: 1
 twitter:
   username: piris314
@@ -25,10 +26,9 @@ twitter:
 
 ### Input
 
-Set language type `mermaid`.
+Use `mermaid` shortcode.
 
-<pre>
-```mermaid
+```md
 sequenceDiagram
   participant Alice
   participant Bob
@@ -41,11 +41,10 @@ sequenceDiagram
   John->>Bob: How about you?
   Bob-->>John: Jolly good!
 ```
-</pre>
 
 ### Output
 
-```mermaid
+{{< mermaid >}}
 sequenceDiagram
   participant Alice
   participant Bob
@@ -57,4 +56,4 @@ sequenceDiagram
   John-->>Alice: Great!
   John->>Bob: How about you?
   Bob-->>John: Jolly good!
-```
+{{< /mermaid >}}
