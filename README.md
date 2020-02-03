@@ -70,11 +70,11 @@ This repository includes the [Hugo] theme.
 - Table of Contents
 - [MathJax]: Beautiful math in all browsers.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
+- [reveal.js]: Writing slides using Markdown.
 
 ### Roadmap
 
 - Netlify, Netlify CMS
-- [reveal.js]: Writing slides using Markdown.
 - Categories, Tags, Authors
 - Font Awesome
 
