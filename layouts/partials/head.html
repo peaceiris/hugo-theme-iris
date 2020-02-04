@@ -2,8 +2,10 @@
   {{ partial "head/general" . }}
 
   {{ with $.Params.slide }}
-    <link rel="stylesheet" href="/revealjs-v3.9.2/css/reveal.css">
-    <link rel="stylesheet" href="/revealjs-v3.9.2/css/theme/white.css">
+    {{ $cssMain := relURL "/revealjs-v3.9.2/css/reveal.css" }}
+    {{ $cssTheme := relURL "/revealjs-v3.9.2/css/theme/white.css" }}
+    <link rel="stylesheet" href="{{ $cssMain }}">
+    <link rel="stylesheet" href="{{ $cssTheme }}">
   {{ else }}
   <style>
     {{ $bulmaCSS := resources.Get "scss/bulma.scss" | toCSS | minify }}
