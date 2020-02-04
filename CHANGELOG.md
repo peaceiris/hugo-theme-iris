@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.0...v0.11.1) (2020-02-04)
+
+
+### fix
+
+* Add refURL cf. #105 ([7044a63](https://github.com/peaceiris/hugo-theme-iris/commit/7044a634e230b87e9fc3b57ebabdc3ebf5aa7470)), closes [#105](https://github.com/peaceiris/hugo-theme-iris/issues/105)
+
+
+
 # [0.11.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.10.1...v0.11.0) (2020-02-03)
 
 
