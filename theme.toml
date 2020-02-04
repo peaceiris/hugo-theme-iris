@@ -19,16 +19,16 @@ tags = [
   # "font-awesome",
   "flexbox",
   # "search",
-  # "presentation",
+  "presentation",
   "bulma",
   # "fontawesome",
   "netlify",
-  # "slide"
+  "slide"
 ]
 features = [
   "mathjax",
   "mermaid",
-  # "reveal.js",
+  "reveal.js",
   # "netlify-cms"
 ]
 
