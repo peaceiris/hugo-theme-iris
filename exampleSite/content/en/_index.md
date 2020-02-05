@@ -52,9 +52,9 @@ date: 2020-01-01T23:00:00.000Z
 
 
 
-## Projects
+## Shortcodes
 
-### OSS
+### repo
 
 {{< repo id="peaceiris" name="actions-gh-pages" >}}
 
