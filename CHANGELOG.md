@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.1...v0.11.2) (2020-02-06)
+
+
+### chore
+
+* Add ISSUE_TEMPLATE/config.yml ([b6e9cb0](https://github.com/peaceiris/hugo-theme-iris/commit/b6e9cb08754e2afc5d1db1cbcf0eb28ba81063a8))
+* Add presentation, slide, and reveal.js ([b66ed3c](https://github.com/peaceiris/hugo-theme-iris/commit/b66ed3cbc202d09ada2c1a79213ea51ed6c4d390))
+
+### ci
+
+* deploy ([2ce0d52](https://github.com/peaceiris/hugo-theme-iris/commit/2ce0d52c0ee5739a0428fad6d5bac12a44e51dfd))
+* fix ([dbe8043](https://github.com/peaceiris/hugo-theme-iris/commit/dbe804381710b0d9d269e1d3be473ed4f41b6f66))
+* use peaceiris/actions-gh-pages@v3 ([21045f2](https://github.com/peaceiris/hugo-theme-iris/commit/21045f20e56fe452a447f5b61ab0b9108ce8089c))
+* use peaceiris/actions-gh-pages@v3 ([9b37fb6](https://github.com/peaceiris/hugo-theme-iris/commit/9b37fb6b9ef4475c8a5505a91fa731f5df6864d5))
+
+### deps
+
+* bump hugo from 0.63.2 to 0.64.0 ([5307eb4](https://github.com/peaceiris/hugo-theme-iris/commit/5307eb474add16d442be6690ccc8f61f45a6b3dd))
+* update ([515a2bf](https://github.com/peaceiris/hugo-theme-iris/commit/515a2bf98fe9cd0bd8b55d34d0bf0f5adc35548a))
+
+### docs
+
+* bump peaceiris/actions-gh-pages from v2 to v3 ([9c155a9](https://github.com/peaceiris/hugo-theme-iris/commit/9c155a9e72a69a8b1f309ecf354d968e7481c3e3))
+* fix example ([1d13867](https://github.com/peaceiris/hugo-theme-iris/commit/1d13867c56db1b78a830d41208d6b83c136a3df6))
+* remove lighthouse-github-actions.md ([cf66d33](https://github.com/peaceiris/hugo-theme-iris/commit/cf66d33db63e79b07a8449e3da2673e677cf499c))
+
+
+
 ## [0.11.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.0...v0.11.1) (2020-02-04)
 
 
