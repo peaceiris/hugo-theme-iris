@@ -26,11 +26,10 @@ This deploy action can be combined simply and freely with [Static Site Generator
 
 ```yaml
 - name: Deploy
-  uses: peaceiris/actions-gh-pages@v2
-  env:
-    ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-    PUBLISH_BRANCH: gh-pages
-    PUBLISH_DIR: ./public
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+    publish_dir: ./public
 ```
 
 The above example step will deploy `./public` directory to `gh-pages` branch.
@@ -44,11 +43,10 @@ Creat YAML file `.github/workflows/gh-pages.yml` and push to your remote default
 
 ```yaml
 - name: Deploy
-  uses: peaceiris/actions-gh-pages@v2
-  env:
-    ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-    PUBLISH_BRANCH: gh-pages
-    PUBLISH_DIR: ./public
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+    publish_dir: ./public
 ```
 
 ### Deploy to master branch
@@ -57,9 +55,9 @@ For `<username>.github.io` repository.
 
 ```yaml
 - name: Deploy
-  uses: peaceiris/actions-gh-pages@v2
-  env:
-    ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-    PUBLISH_BRANCH: master
-    PUBLISH_DIR: ./public
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+    publish_branch: master
+    publish_dir: ./public
 ```
