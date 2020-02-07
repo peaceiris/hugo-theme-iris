@@ -1,12 +1,12 @@
-{{ $revealjs := relURL "/revealjs-v3.9.2/js/reveal.js" }}
+{{ $revealjs := absURL "/revealjs-v3.9.2/js/reveal.js" }}
 <script src="{{ $revealjs }}"></script>
 
-{{ $marked := relURL "/revealjs-v3.9.2/plugin/markdown/marked.js" }}
-{{ $markdown := relURL "/revealjs-v3.9.2/plugin/markdown/markdown.js" }}
-{{ $highlight := relURL "/revealjs-v3.9.2/plugin/highlight/highlight.js" }}
-{{ $zoom := relURL "/revealjs-v3.9.2/plugin/zoom-js/zoom.js" }}
-{{ $notes := relURL "/revealjs-v3.9.2/plugin/notes/notes.js" }}
-{{ $math := relURL "/revealjs-v3.9.2/plugin/math/math.js" }}
+{{ $marked := absURL "/revealjs-v3.9.2/plugin/markdown/marked.js" }}
+{{ $markdown := absURL "/revealjs-v3.9.2/plugin/markdown/markdown.js" }}
+{{ $highlight := absURL "/revealjs-v3.9.2/plugin/highlight/highlight.js" }}
+{{ $zoom := absURL "/revealjs-v3.9.2/plugin/zoom-js/zoom.js" }}
+{{ $notes := absURL "/revealjs-v3.9.2/plugin/notes/notes.js" }}
+{{ $math := absURL "/revealjs-v3.9.2/plugin/math/math.js" }}
 <script>
   Reveal.initialize({
     markdown: {

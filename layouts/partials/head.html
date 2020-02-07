@@ -2,8 +2,8 @@
   {{ partial "head/general" . }}
 
   {{ with $.Params.slide }}
-    {{ $cssMain := relURL "/revealjs-v3.9.2/css/reveal.css" }}
-    {{ $cssTheme := relURL "/revealjs-v3.9.2/css/theme/white.css" }}
+    {{ $cssMain := absURL "/revealjs-v3.9.2/css/reveal.css" }}
+    {{ $cssTheme := absURL "/revealjs-v3.9.2/css/theme/white.css" }}
     <link rel="stylesheet" href="{{ $cssMain }}">
     <link rel="stylesheet" href="{{ $cssTheme }}">
   {{ else }}
