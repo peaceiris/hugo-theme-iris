@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.2...v0.11.3) (2020-02-07)
+
+
+### chore
+
+* fix newline ([07f17bc](https://github.com/peaceiris/hugo-theme-iris/commit/07f17bcb15da092090bc936fccd0326ad3399822))
+
+### docs
+
+* Add link to GitHub ([6c82bb3](https://github.com/peaceiris/hugo-theme-iris/commit/6c82bb31716669ff441276b2ee413ffb6ed31985))
+* update ([c9fe45b](https://github.com/peaceiris/hugo-theme-iris/commit/c9fe45b093f7c4fa6ae6ffcf68971ef4b7b32117))
+* update ([ee87b0b](https://github.com/peaceiris/hugo-theme-iris/commit/ee87b0b67d068f005a5cb2d4758a38bd10d5f6db))
+
+### fix
+
+* Change relURL to absURL ([9a0f0dd](https://github.com/peaceiris/hugo-theme-iris/commit/9a0f0dd343e8c16d45bb52c8c2dcc0a3feb398ad))
+
+
+
 ## [0.11.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.1...v0.11.2) (2020-02-06)
 
 
