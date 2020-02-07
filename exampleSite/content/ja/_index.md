@@ -8,7 +8,7 @@ date: 2020-01-25T23:00:00.000Z
 
 ## Hugo IRIS Theme について
 
-View source code on GitHub.
+ソースコードは GitHub にて管理されています。
 
 {{< repo id="peaceiris" name="hugo-theme-iris" >}}
 
