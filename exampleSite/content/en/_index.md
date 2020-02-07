@@ -9,6 +9,7 @@ date: 2020-01-01T23:00:00.000Z
 ## About Hugo IRIS Theme
 
 View source code on GitHub.
+<br>
 
 {{< repo id="peaceiris" name="hugo-theme-iris" >}}
 
