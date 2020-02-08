@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.4](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.3...v0.11.4) (2020-02-08)
+
+
+### deps
+
+* bump mathjax from v3.0.0 to v3.0.1 ([37ea814](https://github.com/peaceiris/hugo-theme-iris/commit/37ea814899c80730497de1137407b4ebeedd84ab))
+
+
+
 ## [0.11.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.2...v0.11.3) (2020-02-07)
 
 
