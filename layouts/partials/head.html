@@ -13,7 +13,7 @@
     {{ $bulmaCSS := resources.Get "scss/bulma.scss" | toCSS | minify }}
     {{ $bulmaCSS.Content | safeCSS }}
 
-    {{ $syntaxCSS := resources.Get "css/syntax.css" | toCSS | minify }}
+    {{ $syntaxCSS := resources.Get "theme/css/syntax.css" | toCSS | minify }}
     {{ $syntaxCSS.Content | safeCSS }}
 
     {{ $themeCSS := resources.Get "scss/style.scss" | toCSS | minify }}
