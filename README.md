@@ -98,7 +98,7 @@ cd ./themes/hugo-theme-iris
 git checkout vx.x.x
 cd ../..
 git commit "Add theme"
-cp -r ./themes/hugo-theme-iris/exampleSite/{assets,config,content,data,static} .
+cp -r ./themes/hugo-theme-iris/exampleSite/{assets,config,content,data,i18n,static} .
 vim ./config/_default/config.yaml  # uncomment 'theme: hugo-theme-iris'
 hugo server
 ```
