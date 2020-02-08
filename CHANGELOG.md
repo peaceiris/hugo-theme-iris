@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.5](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.4...v0.11.5) (2020-02-08)
+
+
+### fix
+
+* dropdown content color ([4a38396](https://github.com/peaceiris/hugo-theme-iris/commit/4a383969555b69a01f734c56e18af9fd4103e367))
+
+
+
 ## [0.11.4](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.3...v0.11.4) (2020-02-08)
 
 
