@@ -77,6 +77,7 @@ This repository includes the [Hugo] theme.
 - Netlify, Netlify CMS
 - Categories, Tags, Authors
 - Font Awesome
+- Related posts, Next post
 
 
 
