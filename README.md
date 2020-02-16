@@ -74,6 +74,7 @@ This repository includes the [Hugo] theme.
 
 ### Roadmap
 
+- JSON-LD
 - Netlify, Netlify CMS
 - Categories, Tags, Authors
 - Font Awesome
