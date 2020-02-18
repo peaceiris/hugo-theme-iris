@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.6](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.5...v0.11.6) (2020-02-18)
+
+
+### chore
+
+* make data ([e729259](https://github.com/peaceiris/hugo-theme-iris/commit/e729259d49d38a1e34f12f6693a6ad70bd173f73))
+
+### deps
+
+* bump hugo from 0.64.0 to 0.64.1 (#109) ([62f3e3c](https://github.com/peaceiris/hugo-theme-iris/commit/62f3e3c674254888b29f72ff520ff0e510b1d218)), closes [#109](https://github.com/peaceiris/hugo-theme-iris/issues/109)
+
+### docs
+
+* add i18n ([ef14dac](https://github.com/peaceiris/hugo-theme-iris/commit/ef14dac7f4b13648f38ffe310a0143fcaf484123))
+* Add JSON-LD to Roadmap ([69578c8](https://github.com/peaceiris/hugo-theme-iris/commit/69578c809402bc1a18e844432f48123d72355eae))
+* update Roadmap ([07b74f3](https://github.com/peaceiris/hugo-theme-iris/commit/07b74f3d19d2ca185d68d98c350aaa6e7f7e052c))
+
+### fix
+
+* image render hook ([133339a](https://github.com/peaceiris/hugo-theme-iris/commit/133339a69b889b581b5cc30041e114708cf3a1b8))
+
+
+
 ## [0.11.5](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.4...v0.11.5) (2020-02-08)
 
 
