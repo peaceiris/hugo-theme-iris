@@ -1,12 +1,22 @@
-{{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
-{{ $small := $image.Resize "480x jpg" }}
-{{ $medium := $image.Resize "768x jpg" }}
-{{ $large := $image.Resize "1024x jpg" }}
-{{ $alt := .PlainText | safeHTML }}
-
-<picture>
-  <source media="(max-width: 480px)" srcset="{{ $small.RelPermalink }} 480w">
-  <source media="(max-width: 768px)" srcset="{{ $medium.RelPermalink }} 768w">
-  <source media="(max-width: 1024px)" srcset="{{ $large.RelPermalink }} 1024w">
-  <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}" decoding="async" loading="lazy">
-</picture>
+{{ with resources.Get (printf "%s" ($.Destination | safeURL)) }}
+  {{ $image := . }}
+  {{ $small := .Resize "480x jpg" }}
+  {{ $medium := .Resize "768x jpg" }}
+  {{ $large := .Resize "1024x jpg" }}
+  {{ $alt := $.PlainText | safeHTML }}
+  {{ $caption := "" }}
+  {{ with $.Title }}
+    {{ $caption = . | safeHTML }}
+  {{ end }}
+  <figure>
+    <picture>
+      <source media="(max-width: 480px)" srcset="{{ $small.RelPermalink }} 480w">
+      <source media="(max-width: 768px)" srcset="{{ $medium.RelPermalink }} 768w">
+      <source media="(max-width: 1024px)" srcset="{{ $large.RelPermalink }} 1024w">
+      <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}" decoding="async" loading="lazy">
+    </picture>
+    {{ with $caption }}
+      <figcaption class="has-text-centered">{{ . | markdownify }}</figcaption>
+    {{ end }}
+  </figure>
+{{ end }}

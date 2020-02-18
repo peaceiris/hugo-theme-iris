@@ -35,6 +35,24 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 
 
+## Images
+
+### Markdown
+
+```md
+![Hugo IRIS Theme](images/screenshot.jpg)
+
+![Hugo IRIS Theme](images/screenshot.jpg "This is the screenshot")
+```
+
+### Output
+
+![Hugo IRIS Theme](images/screenshot.jpg)
+
+![Hugo IRIS Theme](images/screenshot.jpg "This is the screenshot")
+
+
+
 ## Blockquotes
 
 The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
