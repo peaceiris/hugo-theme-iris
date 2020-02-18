@@ -8,7 +8,7 @@
   {{ with $.Title }}
     {{ $caption = . | safeHTML }}
   {{ end }}
-  <figure>
+  <figure class="image container">
     <picture>
       <source media="(max-width: 480px)" srcset="{{ $small.RelPermalink }} 480w">
       <source media="(max-width: 768px)" srcset="{{ $medium.RelPermalink }} 768w">
