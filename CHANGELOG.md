@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.7](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.6...v0.11.7) (2020-02-18)
+
+
+### chore
+
+* [ImgBot] Optimize images (#111) ([c23d9c0](https://github.com/peaceiris/hugo-theme-iris/commit/c23d9c0b215262ef0a6f957b56c6c2641549c80e)), closes [#111](https://github.com/peaceiris/hugo-theme-iris/issues/111)
+* Add --navigateToChanged ([9ab8e92](https://github.com/peaceiris/hugo-theme-iris/commit/9ab8e9285c878cbe9c05ba636db46ef6a054f273))
+
+### fix
+
+* Add margin to image ([4f70f29](https://github.com/peaceiris/hugo-theme-iris/commit/4f70f2950898df41493e6c602415ef9920d8b266))
+
+
+
 ## [0.11.6](https://github.com/peaceiris/hugo-theme-iris/compare/v0.11.5...v0.11.6) (2020-02-18)
 
 
