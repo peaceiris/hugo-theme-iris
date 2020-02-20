@@ -1,16 +1,16 @@
 [build]
-publish = "public"
-command = "npm run build:netlify"
+publish = "exampleSite/public"
+command = "cd ./exampleSite && hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL 'https://hugothemeiris.peaceiris.app/'"
 
-# [context.production.environment]
-# HUGO_VERSION = ""
+[context.production.environment]
+HUGO_VERSION = "0.64.1"
 
-[context.deploy-preview]
-command = "npm run build -- -b $DEPLOY_PRIME_URL --environment staging"
+# [context.deploy-preview]
+# command = "npm run build -- -b $DEPLOY_PRIME_URL --environment staging"
 # [context.deploy-preview.environment]
-# HUGO_VERSION = ""
+# HUGO_VERSION = "0.64.1"
 
-[context.branch-deploy]
-command = "npm run build -- -b $DEPLOY_PRIME_URL"
+# [context.branch-deploy]
+# command = "npm run build -- -b $DEPLOY_PRIME_URL"
 # [context.branch-deploy.environment]
-# HUGO_VERSION = ""
+# HUGO_VERSION = "0.64.1"
