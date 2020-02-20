@@ -5,6 +5,7 @@
 ![deploy status](https://github.com/peaceiris/hugo-theme-iris/workflows/Deploy/badge.svg?branch=master&event=push)
 [![hugo themes](https://img.shields.io/static/v1?label=Hugo%20Themes&message=IRIS&color=blueviolet)](https://themes.gohugo.io/hugo-theme-iris/)
 [![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugothemeiris.peaceiris.app/report.html)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/14bd550b-53c2-49f0-a8a0-d4e2a18bfe8f/deploy-status)](https://app.netlify.com/sites/hugothemeiris/deploys)
 
 <h2 align="center">
 Hugo IRIS Theme
