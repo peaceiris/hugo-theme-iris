@@ -1,6 +1,6 @@
 [build]
 base = "exampleSite/"
-publish = "exampleSite/public"
+publish = "public"
 command = "hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL 'https://hugothemeiris.netlify.com'"
 
 [context.production.environment]
