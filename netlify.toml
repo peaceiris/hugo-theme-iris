@@ -4,14 +4,14 @@ publish = "public"
 command = "hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL 'https://hugothemeiris.netlify.com'"
 
 [context.production.environment]
-HUGO_VERSION = "0.65.0"
+HUGO_VERSION = "0.65.1"
 
 # [context.deploy-preview]
 # command = "npm run build -- -b $DEPLOY_PRIME_URL --environment staging"
 # [context.deploy-preview.environment]
-# HUGO_VERSION = "0.65.0"
+# HUGO_VERSION = "0.65.1"
 
 # [context.branch-deploy]
 # command = "npm run build -- -b $DEPLOY_PRIME_URL"
 # [context.branch-deploy.environment]
-# HUGO_VERSION = "0.65.0"
+# HUGO_VERSION = "0.65.1"
