@@ -1,1 +1,3 @@
-<a class="button is-pulled-right" href="{{ .Site.Params.repo.URL }}/edit/{{ .Site.Params.repo.branch }}/{{ .Site.Params.repo.contentDir }}/{{ .Language }}/{{ .File.Path }}">Edit</a>
+{{ with $.Site.Params.repo }}
+<a class="button is-pulled-right" href="{{ .URL }}/edit/{{ .branch }}/{{ .contentDir }}/{{ .Language }}/{{ .File.Path }}">Edit</a>
+{{ end }}
