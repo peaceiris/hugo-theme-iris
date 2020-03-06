@@ -75,6 +75,7 @@ This repository includes the [Hugo] theme.
 
 ### Roadmap
 
+- Share Buttons
 - JSON-LD
 - Netlify, Netlify CMS
 - Categories, Tags, Authors
