@@ -50,5 +50,5 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./public
           keep_files: true
-          user_name: GitHub Actions
+          user_name: github-actions
           user_email: 'github-actions[bot]@users.noreply.github.com'
