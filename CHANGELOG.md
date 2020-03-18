@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.12.1...v0.12.2) (2020-03-18)
+
+
+### ci
+
+* set update_schedule live ([b6d7f1f](https://github.com/peaceiris/hugo-theme-iris/commit/b6d7f1f303a298fd91f7b4c6fa508f7671585402))
+
+### deps
+
+* bump hub 2.14.1 to 2.14.2 ([f421e6f](https://github.com/peaceiris/hugo-theme-iris/commit/f421e6f3b82b6e985b4720af7d5fa6665f0a2809))
+* bump hugo from 0.67.0 to 0.67.1 (#119) ([d25e38a](https://github.com/peaceiris/hugo-theme-iris/commit/d25e38aa564595f2c87b063fa5283a3d920ab488)), closes [#119](https://github.com/peaceiris/hugo-theme-iris/issues/119)
+* bump husky from 4.2.1 to 4.2.3 (#120) ([dc4526d](https://github.com/peaceiris/hugo-theme-iris/commit/dc4526d0082d8a936e79452ea752b36bcd7dd59c)), closes [#120](https://github.com/peaceiris/hugo-theme-iris/issues/120)
+* bump lint-staged from 10.0.7 to 10.0.8 (#123) ([1298ef9](https://github.com/peaceiris/hugo-theme-iris/commit/1298ef9c237b1338ec5aeec0e9cbf3789a6ae19d)), closes [#123](https://github.com/peaceiris/hugo-theme-iris/issues/123)
+* bump open from 7.0.2 to 7.0.3 (#121) ([d2fdb66](https://github.com/peaceiris/hugo-theme-iris/commit/d2fdb66715b8c5ebbfd45001d19c927258015130)), closes [#121](https://github.com/peaceiris/hugo-theme-iris/issues/121)
+* bump wait-on from 4.0.0 to 4.0.1 (#122) ([d7b42f3](https://github.com/peaceiris/hugo-theme-iris/commit/d7b42f346474d50e662efc458e6312212073e543)), closes [#122](https://github.com/peaceiris/hugo-theme-iris/issues/122)
+
+
+
 ## [0.12.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.12.0...v0.12.1) (2020-03-09)
 
 
