@@ -20,7 +20,7 @@ date: 2020-01-25T23:00:00.000Z
 {{< table >}}
 | Key | Value |
 |---|---|
-| Static Site Generator | Hugo |
+| 静的サイトジェネレーター | Hugo |
 | Language | Go |
 {{< /table >}}
 
