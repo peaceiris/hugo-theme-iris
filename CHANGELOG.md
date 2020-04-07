@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.4](https://github.com/peaceiris/hugo-theme-iris/compare/v0.12.3...v0.12.4) (2020-04-07)
+
+
+### ci
+
+* Add automerged_updates ([cbefb25](https://github.com/peaceiris/hugo-theme-iris/commit/cbefb25ab4d758d229361e68804f0b506af5a1a8))
+
+### deps
+
+* bump lint-staged from 10.1.1 to 10.1.2 (#128) ([9d0f7f0](https://github.com/peaceiris/hugo-theme-iris/commit/9d0f7f065503894b648238cb00cba79ca8c90c8e)), closes [#128](https://github.com/peaceiris/hugo-theme-iris/issues/128)
+* npm audit fix ([472ae0e](https://github.com/peaceiris/hugo-theme-iris/commit/472ae0ed31ba8e56b528ebc90d3c28ae0e682eeb))
+
+
+
 ## [0.12.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.12.2...v0.12.3) (2020-04-02)
 
 
