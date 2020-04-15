@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.7](https://github.com/peaceiris/hugo-theme-iris/compare/v0.12.6...v0.12.7) (2020-04-15)
+
+
+### fix
+
+* edit button path ([dada32c](https://github.com/peaceiris/hugo-theme-iris/commit/dada32cb17837719d3bb7c00a4282991b2fbc651))
+
+
+
 ## [0.12.6](https://github.com/peaceiris/hugo-theme-iris/compare/v0.12.5...v0.12.6) (2020-04-15)
 
 
