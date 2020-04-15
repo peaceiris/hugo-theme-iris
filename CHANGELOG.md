@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.13.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.12.7...v0.13.0) (2020-04-15)
+
+
+### refactor
+
+* Enhance project structure (#134) ([8d69893](https://github.com/peaceiris/hugo-theme-iris/commit/8d69893386e6206a56661642d6312e89df14de72)), closes [#134](https://github.com/peaceiris/hugo-theme-iris/issues/134)
+
+
+
 ## [0.12.7](https://github.com/peaceiris/hugo-theme-iris/compare/v0.12.6...v0.12.7) (2020-04-15)
 
 
