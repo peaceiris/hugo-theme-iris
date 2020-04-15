@@ -38,7 +38,7 @@ jobs:
         run: |
           export BASE_URL="https://hugothemeiris.peaceiris.app"
           make data
-          hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL "${BASE_URL}"
+          hugo --gc --minify --themesDir ../../ --baseURL "${BASE_URL}"
           wget -O ./public/report.html "${BASE_URL}/report.html" || true
 
       - name: Deploy
