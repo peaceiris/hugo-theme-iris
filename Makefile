@@ -21,12 +21,7 @@ data:
 
 .PHONY: bumphugo
 bumphugo:
-	export TARGET_FILES=".env netlify.toml theme.toml"
-	export HUGO_VERSION_LATEST=$(curl -s "https://api.github.com/repos/gohugoio/hugo/releases/latest" | jq -r '.tag_name')
-	export HUGO_VERSION_CURRENT=$(. ./.env && echo ${HUGO_VERSION})
-	sed -i "s/${HUGO_VERSION_CURRENT}/${HUGO_VERSION_LATEST}/g" ${TARGET_FILES}
-	git add ${TARGET_FILES}
-	git commit -m "deps: bump hugo from ${HUGO_VERSION_CURRENT} to ${HUGO_VERSION_LATEST}"
+	bash ./scripts/bump_hugo.sh
 
 .PHONY: build
 build:

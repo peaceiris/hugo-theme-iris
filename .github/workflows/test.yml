@@ -17,7 +17,7 @@ jobs:
   skipci:
     runs-on: ubuntu-18.04
     steps:
-      - run: echo "[Skip CI] ${{ contains(github.event.head_commit.message, '[skip ci]') }}"
+      - run: echo "[skip ci] ${{ contains(github.event.head_commit.message, '[skip ci]') }}"
 
   test:
     runs-on: ubuntu-18.04
