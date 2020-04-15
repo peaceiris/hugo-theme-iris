@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.13.0...v0.13.1) (2020-04-15)
+
+
+### ci
+
+* fix build ([78dc09c](https://github.com/peaceiris/hugo-theme-iris/commit/78dc09cc9ea75fcad25e65b3292b5131f690b1be))
+
+### fix
+
+* path to MathJax fonts ([16964a3](https://github.com/peaceiris/hugo-theme-iris/commit/16964a369b531a3c13964e0a59104bb09beda543))
+
+
+
 # [0.13.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.12.7...v0.13.0) (2020-04-15)
 
 
