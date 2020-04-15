@@ -21,15 +21,15 @@ data:
 
 .PHONY: build
 build:
-	$(eval opt := --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL $(BASE_URL))
+	$(eval opt := --gc --minify --themesDir ../../ --baseURL $(BASE_URL))
 	$(DOCKER_COMPOSE) run --rm hugo $(opt)
 
 .PHONY: test
 test:
-	$(eval opt := --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL $(BASE_URL) --renderToMemory)
+	$(eval opt := --gc --minify --themesDir ../../ --baseURL $(BASE_URL) --renderToMemory)
 	$(DOCKER_COMPOSE) run --rm hugo $(opt)
 
 .PHONY: buildgha
 buildgha:
 	cd ./exampleSite && \
-		hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL $(BASE_URL)
+		hugo --gc --minify --themesDir ../../ --baseURL $(BASE_URL)

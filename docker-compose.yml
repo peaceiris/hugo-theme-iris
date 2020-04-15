@@ -8,17 +8,15 @@ services:
     ports:
       - 1313:1313
     volumes:
-      - ${PWD}:/src
+      - ${PWD}:/src/hugo-theme-iris
     stdin_open: true
     tty: true
-    working_dir: /src/exampleSite
+    working_dir: /src/hugo-theme-iris/exampleSite
     command:
       - server
       - --navigateToChanged
       - --bind=0.0.0.0
       - --buildDrafts
       - --themesDir
-      - ../
-      - --layoutDir
-      - ../layouts
+      - ../../
       - --i18n-warnings
