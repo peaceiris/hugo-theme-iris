@@ -2,10 +2,12 @@
   {{ partial "head/general" . }}
 
   {{ with $.Params.slide }}
-    {{ $cssMain := absURL "/revealjs-v3.9.2/css/reveal.css" }}
-    {{ $cssTheme := absURL "/revealjs-v3.9.2/css/theme/white.css" }}
-    <link rel="stylesheet" href="{{ $cssMain }}">
-    <link rel="stylesheet" href="{{ $cssTheme }}">
+  <style>
+    {{ $cssMain := resources.Get "revealjs-v3.9.2/css/reveal.css" | toCSS | minify }}
+    {{ $cssMain.Content | safeCSS }}
+    {{ $cssTheme := resources.Get "revealjs-v3.9.2/css/theme/white.css" | toCSS | minify }}
+    {{ $cssTheme.Content | safeCSS }}
+  </style>
   {{ else }}
   <style>
     {{ $bulmaCSS := resources.Get "scss/bulma.scss" | toCSS | minify }}
