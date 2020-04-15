@@ -18,6 +18,8 @@ hugo:
 data:
 	curl 'https://api.github.com/users/peaceiris/repos?per_page=100&page=1' > ./exampleSite/data/github/peaceiris.json
 	# curl 'https://api.github.com/users/hugojapan/repos?per_page=100&page=1' > ./exampleSite/data/github/hugojapan.json
+	git add ./exampleSite/data/github/peaceiris.json
+	git commit -m "chore: update data"
 
 .PHONY: bumphugo
 bumphugo:
