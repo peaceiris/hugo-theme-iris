@@ -1,7 +1,7 @@
 [build]
 base = "exampleSite/"
 publish = "public"
-command = "hugo --gc --minify --themesDir ../ --layoutDir ../layouts --baseURL 'https://hugothemeiris.netlify.com'"
+command = "hugo --gc --minify --themesDir ../../ --baseURL 'https://hugothemeiris.netlify.com'"
 
 [context.production.environment]
 HUGO_VERSION = "0.69.0"
