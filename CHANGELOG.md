@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.5](https://github.com/peaceiris/hugo-theme-iris/compare/v0.12.4...v0.12.5) (2020-04-15)
+
+
+### chore
+
+* update data ([aaf1c73](https://github.com/peaceiris/hugo-theme-iris/commit/aaf1c7380752ac9c3fbde56c86d9d3fd3c01face))
+
+### ci
+
+* delete stale workflow ([d000abc](https://github.com/peaceiris/hugo-theme-iris/commit/d000abc0978f9cfecde1bc24956a44d46300d65c))
+
+### deps
+
+* bump hugo from 0.68.3 to 0.69.0 ([1a9ca80](https://github.com/peaceiris/hugo-theme-iris/commit/1a9ca80a20283b0c24f4c1500291096f8b41eb5e))
+* bump husky from 4.2.3 to 4.2.4 (#131) ([9dcbbce](https://github.com/peaceiris/hugo-theme-iris/commit/9dcbbce76468fa268025d01c253eaab932e37d4f)), closes [#131](https://github.com/peaceiris/hugo-theme-iris/issues/131)
+* bump husky from 4.2.4 to 4.2.5 (#132) ([5e81c02](https://github.com/peaceiris/hugo-theme-iris/commit/5e81c02c6e7c4c74390085713f51f63bb3cfdc5f)), closes [#132](https://github.com/peaceiris/hugo-theme-iris/issues/132)
+* bump lint-staged from 10.1.2 to 10.1.3 (#130) ([2bde992](https://github.com/peaceiris/hugo-theme-iris/commit/2bde9920b592b48d90b0d02aa278770f250ba2a8)), closes [#130](https://github.com/peaceiris/hugo-theme-iris/issues/130)
+* bump wait-on from 4.0.1 to 4.0.2 (#129) ([5894e06](https://github.com/peaceiris/hugo-theme-iris/commit/5894e061db11269eb1f6002973f08c4cac099ede)), closes [#129](https://github.com/peaceiris/hugo-theme-iris/issues/129)
+
+### fix
+
+* path to revealjs ([5a04800](https://github.com/peaceiris/hugo-theme-iris/commit/5a048009ce8d9602265c40b36d68a832c8c043ed))
+
+
+
 ## [0.12.4](https://github.com/peaceiris/hugo-theme-iris/compare/v0.12.3...v0.12.4) (2020-04-07)
 
 
