@@ -37,7 +37,6 @@ npm ci
 
 npm run build
 RESOURCES_DIR="resources"
-cp -r "./exampleSite/${RESOURCES_DIR}" .
 if [ -n "$(git diff ${RESOURCES_DIR})" ]; then
   git add "${RESOURCES_DIR}"
   git commit -m "chore(release): update ${RESOURCES_DIR}"

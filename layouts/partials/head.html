@@ -10,13 +10,13 @@
   </style>
   {{ else }}
   <style>
-    {{ $bulmaCSS := resources.Get "scss/bulma.scss" | toCSS | minify }}
+    {{ $bulmaCSS := resources.Get "theme/scss/bulma.scss" | toCSS | minify }}
     {{ $bulmaCSS.Content | safeCSS }}
 
-    {{ $syntaxCSS := resources.Get "css/syntax.css" | toCSS | minify }}
+    {{ $syntaxCSS := resources.Get "theme/css/syntax.css" | toCSS | minify }}
     {{ $syntaxCSS.Content | safeCSS }}
 
-    {{ $themeCSS := resources.Get "scss/style.scss" | toCSS | minify }}
+    {{ $themeCSS := resources.Get "theme/scss/style.scss" | toCSS | minify }}
     {{ $themeCSS.Content | safeCSS }}
   </style>
   {{ end }}
