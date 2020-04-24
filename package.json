@@ -7,8 +7,8 @@
     "start": "run-p client server",
     "server": "make up",
     "client": "wait-on http://localhost:1313 && open http://localhost:1313",
-    "build": "make build",
-    "test": "make test",
+    "build": "cd ./exampleSite && hugo --gc --themesDir ../../ --baseURL https://hugothemeiris.peaceiris.app/",
+    "test": "cd ./exampleSite && hugo --gc --themesDir ../../ --baseURL https://hugothemeiris.peaceiris.app/ --renderToMemory && :",
     "release": "standard-version",
     "update-deps": "(git diff 'HEAD@{1}' --name-only | grep 'package-lock.json' > /dev/null) && npm ci || :"
   },
