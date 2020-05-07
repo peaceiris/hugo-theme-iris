@@ -10,7 +10,11 @@
   </style>
   {{ else }}
   <style>
-    {{ $bulmaCSS := resources.Get "theme/scss/bulma.scss" | toCSS | minify }}
+    {{ $bulmaCSS := resources.Get "theme/scss/bulma.scss" | toCSS }}
+    {{ $bulmaCSS = $bulmaCSS | resources.PostCSS }}
+    {{ if hugo.IsProduction }}
+      {{ $bulmaCSS = $bulmaCSS | minify | resources.PostProcess }}
+    {{ end }}
     {{ $bulmaCSS.Content | safeCSS }}
 
     {{ $syntaxCSS := resources.Get "theme/css/syntax.css" | toCSS | minify }}

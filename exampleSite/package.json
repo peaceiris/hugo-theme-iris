@@ -1,0 +1,15 @@
+{
+  "name": "examplesite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "autoprefixer": "^9.7.6"
+  }
+}
