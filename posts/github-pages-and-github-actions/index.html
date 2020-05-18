@@ -16,7 +16,7 @@ Creat YAML file <code>.github/workflows/gh-pages.yml</code> and push to your rem
 </span><span class=w>  </span><span class=k>with</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=k>deploy_key</span><span class=p>:</span><span class=w> </span>${{<span class=w> </span>secrets.ACTIONS_DEPLOY_KEY<span class=w> </span>}}<span class=w>
 </span><span class=w>    </span><span class=k>publish_dir</span><span class=p>:</span><span class=w> </span>./public<span class=w>
-</span></code></pre></div><h3 class="title is-3" id=deploy-to-master-branch>Deploy to master branch</h3><p>For <code>&lt;username>.github.io</code> repository.</p><div class=highlight><pre class=chroma><code class=language-yaml data-lang=yaml>- <span class=k>name</span><span class=p>:</span><span class=w> </span>Deploy<span class=w>
+</span></code></pre></div><h3 id=deploy-to-master-branch>Deploy to master branch</h3><p>For <code>&lt;username>.github.io</code> repository.</p><div class=highlight><pre class=chroma><code class=language-yaml data-lang=yaml>- <span class=k>name</span><span class=p>:</span><span class=w> </span>Deploy<span class=w>
 </span><span class=w>  </span><span class=k>uses</span><span class=p>:</span><span class=w> </span>peaceiris/actions-gh-pages@v3<span class=w>
 </span><span class=w>  </span><span class=k>with</span><span class=p>:</span><span class=w>
 </span><span class=w>    </span><span class=k>deploy_key</span><span class=p>:</span><span class=w> </span>${{<span class=w> </span>secrets.ACTIONS_DEPLOY_KEY<span class=w> </span>}}<span class=w>
