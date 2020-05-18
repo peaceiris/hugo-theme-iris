@@ -2,6 +2,51 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.14.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.13.1...v0.14.0) (2020-05-18)
+
+
+### chore
+
+* [ImgBot] Optimize images (#145) ([79430aa](https://github.com/peaceiris/hugo-theme-iris/commit/79430aa06f2880571ff95d784598c320656bc16b)), closes [#145](https://github.com/peaceiris/hugo-theme-iris/issues/145)
+
+### ci
+
+* Delete netlify.toml ([fc767e7](https://github.com/peaceiris/hugo-theme-iris/commit/fc767e73415003e5828f9bae1fd9d89e4320510b))
+* fix build.command ([2123231](https://github.com/peaceiris/hugo-theme-iris/commit/2123231c95bf4594494eb2c29fe64cbdb9c2db87))
+* Pin script version with tag ([ea5dbc4](https://github.com/peaceiris/hugo-theme-iris/commit/ea5dbc47607c8a072b5bc7022b7c050648bed660))
+
+### deps
+
+* bump hugo from 0.69.0 to 0.69.1 ([852c3fe](https://github.com/peaceiris/hugo-theme-iris/commit/852c3feb10df371c4dcb19530cb027a06e96e47f))
+* bump hugo from 0.69.1 to 0.69.2 (#140) ([3afdfa4](https://github.com/peaceiris/hugo-theme-iris/commit/3afdfa42e6c6eb354eb8312a98328ce8de5cc1ae)), closes [#140](https://github.com/peaceiris/hugo-theme-iris/issues/140)
+* bump hugo from 0.69.2 to 0.70.0 ([d37c100](https://github.com/peaceiris/hugo-theme-iris/commit/d37c1002f0a1bb7b99a9456c39d690c0a08bfc06))
+* bump hugo from 0.70.0 to 0.71.0 ([43d3995](https://github.com/peaceiris/hugo-theme-iris/commit/43d399511ac687616275437982c2f0776176dd66))
+* bump lint-staged from 10.1.3 to 10.1.4 (#135) ([1fa5648](https://github.com/peaceiris/hugo-theme-iris/commit/1fa5648cec33b9b43d3561a80829fe07172eb3e8)), closes [#135](https://github.com/peaceiris/hugo-theme-iris/issues/135)
+* bump lint-staged from 10.1.4 to 10.1.5 (#136) ([6ecbf8b](https://github.com/peaceiris/hugo-theme-iris/commit/6ecbf8b823b105103926b4e5e8742e9a144a51d7)), closes [#136](https://github.com/peaceiris/hugo-theme-iris/issues/136)
+* bump lint-staged from 10.1.5 to 10.1.6 (#137) ([c7629c0](https://github.com/peaceiris/hugo-theme-iris/commit/c7629c0657e7c5a237e3174c401835d501c9d76e)), closes [#137](https://github.com/peaceiris/hugo-theme-iris/issues/137)
+* bump lint-staged from 10.1.6 to 10.1.7 (#138) ([c0831a4](https://github.com/peaceiris/hugo-theme-iris/commit/c0831a4e7fa33d62b0b84ea62112f60f79dfa392)), closes [#138](https://github.com/peaceiris/hugo-theme-iris/issues/138)
+* bump lint-staged from 10.1.7 to 10.2.0 (#141) ([072d412](https://github.com/peaceiris/hugo-theme-iris/commit/072d412c99f478aa5b0331e11576c0396921caad)), closes [#141](https://github.com/peaceiris/hugo-theme-iris/issues/141)
+* bump lint-staged from 10.2.0 to 10.2.1 (#142) ([b7ca3bb](https://github.com/peaceiris/hugo-theme-iris/commit/b7ca3bb82e5cb2aa4da16e28f78edf1e582ae04f)), closes [#142](https://github.com/peaceiris/hugo-theme-iris/issues/142)
+* bump lint-staged from 10.2.1 to 10.2.2 (#143) ([9d31412](https://github.com/peaceiris/hugo-theme-iris/commit/9d31412fa313e6be132938a6150ff6e55a42d7f3)), closes [#143](https://github.com/peaceiris/hugo-theme-iris/issues/143)
+* bump open from 7.0.3 to 7.0.4 (#148) ([644f3d6](https://github.com/peaceiris/hugo-theme-iris/commit/644f3d67021dfa394271f12f461da45b98ad9542)), closes [#148](https://github.com/peaceiris/hugo-theme-iris/issues/148)
+* bump standard-version from 7.1.0 to 8.0.0 (#147) ([ac3e01c](https://github.com/peaceiris/hugo-theme-iris/commit/ac3e01cb2622814f0e1079c300283f9d02a684f5)), closes [#147](https://github.com/peaceiris/hugo-theme-iris/issues/147)
+* bump wait-on from 4.0.2 to 5.0.0 (#146) ([13c7eef](https://github.com/peaceiris/hugo-theme-iris/commit/13c7eef89792e731bd407da3865fef911a3539e4)), closes [#146](https://github.com/peaceiris/hugo-theme-iris/issues/146)
+
+### docs
+
+* remove Netlify Status badge ([537e166](https://github.com/peaceiris/hugo-theme-iris/commit/537e1662ded60e9848871df4e1ed062bd134f7dd))
+* update screenshot and thumbnail images ([094fc85](https://github.com/peaceiris/hugo-theme-iris/commit/094fc859a9b167fc025e58f1e341c089a449401d)), closes [#144](https://github.com/peaceiris/hugo-theme-iris/issues/144)
+
+### feat
+
+* Add render hooks for headings (#149) ([495d341](https://github.com/peaceiris/hugo-theme-iris/commit/495d34146d358e6949c0c103b7a69a87e8dd8fc3)), closes [#149](https://github.com/peaceiris/hugo-theme-iris/issues/149)
+
+### fix
+
+* Render hooks for headings ([adfd164](https://github.com/peaceiris/hugo-theme-iris/commit/adfd16479e7d4d90bcc458304824edc3e43ec051))
+
+
+
 ## [0.13.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.13.0...v0.13.1) (2020-04-15)
 
 
