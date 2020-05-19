@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.14.0...v0.14.1) (2020-05-19)
+
+
+### deps
+
+* bump lint-staged from 10.2.2 to 10.2.4 (#150) ([ae15718](https://github.com/peaceiris/hugo-theme-iris/commit/ae15718b65ee3892457badfc1633ad2b01225bdb)), closes [#150](https://github.com/peaceiris/hugo-theme-iris/issues/150)
+
+### fix
+
+* render-heading (#151) ([36dd86a](https://github.com/peaceiris/hugo-theme-iris/commit/36dd86a4514ac152a8cb2c98b8e60bcc856f95cb)), closes [#151](https://github.com/peaceiris/hugo-theme-iris/issues/151)
+
+
+
 # [0.14.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.13.1...v0.14.0) (2020-05-18)
 
 
