@@ -22,6 +22,9 @@
   "lint-staged": {
     "**/*": [
       "npm test"
+    ],
+    "README.md": [
+      "npx doctoc@1.4.0 --github"
     ]
   },
   "repository": {
