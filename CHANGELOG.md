@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.15.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.14.1...v0.15.0) (2020-05-20)
+
+
+### feat
+
+* Migrate to GitHub GraphQL API for repo shortcode (#153) ([5988037](https://github.com/peaceiris/hugo-theme-iris/commit/5988037bc31a31a5cb15e8dfb7d3b07c38c6aac9)), closes [#153](https://github.com/peaceiris/hugo-theme-iris/issues/153)
+
+### fix
+
+* move fetch_data.sh under exampleSite/scripts ([87c7e2b](https://github.com/peaceiris/hugo-theme-iris/commit/87c7e2b126bd5601910911679d86fd0cde8b7c00))
+
+
+
 ## [0.14.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.14.0...v0.14.1) (2020-05-19)
 
 
