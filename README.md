@@ -148,8 +148,46 @@ The following actions are useful to deploy your site to GitHub Pages using GitHu
 - [peaceiris/actions-hugo: GitHub Actions for Hugo](https://github.com/peaceiris/actions-hugo)
 - [peaceiris/actions-gh-pages: GitHub Actions for GitHub Pages](https://github.com/peaceiris/actions-gh-pages)
 
+Here is an example workflow `.github/workflows/gh-pages.yml` to deploy your site to `gh-pages` branch at a project repository.
+For the first deployment, we have to do this operation: [First Deployment with `GITHUB_TOKEN` - peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-first-deployment-with-github_token)
+
+An example workflow for a user repository (like `peaceiris/peaceiris.github.io`) is available at the README of the `peaceiris/actions-gh-pages`.
+
 ```yaml
-# An example workflow: TBW
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.71.0"
+          extended: true
+
+      - name: Fetch data
+        run: |
+          export GH_USER_ID="peaceiris"
+          bash ./scripts/fetch_data.sh "${{ secrets.GITHUB_TOKEN }}" "${GH_USER_ID}" | \
+            jq . > "./data/github/${GH_USER_ID}.json"
+
+      - run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 
