@@ -215,7 +215,6 @@ For more details: [scripts/fetch_data.sh](./exampleSite/scripts/fetch_data.sh)
 
 ```sh
 cd ./your_hugo_project
-mkdir -p ./data/github
 export GH_PAT="github_personal_access_token"
 export GH_USER_ID="peaceiris"
 bash ./scripts/fetch_data.sh "${GH_PAT}" "${GH_USER_ID}" | jq . > "./data/github/${GH_USER_ID}.json"
