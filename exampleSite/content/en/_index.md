@@ -68,13 +68,6 @@ View source code on GitHub.
 
 {{< repo id="peaceiris" name="hugo-extended-docker" >}}
 
-{{< repo
-id="hugojapan"
-name="ja"
-fullname="Hugo Japan"
-description="Hugo Japanese Documentation"
-lang="Markdown" >}}
-
 
 
 <!-- Internal References -->

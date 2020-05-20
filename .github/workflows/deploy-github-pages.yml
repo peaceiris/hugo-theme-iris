@@ -37,7 +37,9 @@ jobs:
         working-directory: ./exampleSite
         run: |
           export BASE_URL="https://hugothemeiris.peaceiris.app"
-          make data
+          export GH_USER_ID="peaceiris"
+          bash ./scripts/fetch_data.sh "${{ secrets.GITHUB_TOKEN }}" "${GH_USER_ID}" | \
+            jq . > "./data/github/${GH_USER_ID}.json"
           hugo --gc --minify --themesDir ../../ --baseURL "${BASE_URL}"
           wget -O ./public/report.html "${BASE_URL}/report.html" || true
 
