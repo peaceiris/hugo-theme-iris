@@ -109,21 +109,21 @@ hugo server
 
 
 
-## Hugo Modules
+## Customize Theme
 
-Get and Update.
+TBW.
 
-```sh
-hugo mod get -u github.com/peaceiris/hugo-theme-iris
-```
+### config
 
-`config/_default/config.yaml`
+### content
 
-```yaml
-module:
-  imports:
-    - path: github.com/peaceiris/hugo-theme-iris
-```
+### assets
+
+### data
+
+### i18n
+
+### static
 
 
 
@@ -141,6 +141,10 @@ The following actions are useful to deploy your site to GitHub Pages using GitHu
 
 - [peaceiris/actions-hugo: GitHub Actions for Hugo](https://github.com/peaceiris/actions-hugo)
 - [peaceiris/actions-gh-pages: GitHub Actions for GitHub Pages](https://github.com/peaceiris/actions-gh-pages)
+
+```yaml
+# An example workflow: TBW
+```
 
 
 
