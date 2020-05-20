@@ -201,7 +201,7 @@ sequenceDiagram
 
 Run the following script to get the latest repository data.
 
-Here is [an example bash script](./exampleSite/scripts/fetch_data.sh).
+For more details: [scripts/fetch_data.sh](./exampleSite/scripts/fetch_data.sh)
 
 ```sh
 cd ./your_hugo_project
