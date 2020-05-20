@@ -100,7 +100,7 @@ git submodule add https://github.com/peaceiris/hugo-theme-iris.git ./themes/hugo
 cd ./themes/hugo-theme-iris
 git checkout vx.x.x
 cd ../..
-git commit "Add theme"
+git commit -m "Add theme"
 cp -r ./themes/hugo-theme-iris/exampleSite/{config,content,data,static} .
 hugo server
 ```

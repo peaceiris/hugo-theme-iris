@@ -67,6 +67,6 @@ jobs:
           mkdir ./homepage && cd ./homepage
           git init
           git submodule add https://github.com/peaceiris/hugo-theme-iris.git ./themes/hugo-theme-iris
-          git commit "Add theme"
+          git commit -m "Add theme"
           cp -r ./themes/hugo-theme-iris/exampleSite/{config,content,data,i18n,static} .
           hugo
