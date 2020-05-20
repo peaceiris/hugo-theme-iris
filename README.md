@@ -93,15 +93,13 @@ You can find the minimum supported Hugo version in [theme.toml] `min_version`. U
 
 ### Initialize New Hugo Project
 
+Here is [the setup script](./scripts/setup.sh).
+
 ```sh
-mkdir ./homepage && cd ./homepage
-git init
-git submodule add https://github.com/peaceiris/hugo-theme-iris.git ./themes/hugo-theme-iris
-cd ./themes/hugo-theme-iris
-git checkout vx.x.x
-cd ../..
-git commit -m "Add theme"
-cp -r ./themes/hugo-theme-iris/exampleSite/{config,content,data,static} .
+mkdir ./homepage
+wget https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/scripts/setup.sh
+bash ./setup.sh ./homepage
+cd ./homepage
 hugo server
 ```
 
@@ -210,7 +208,7 @@ cd ./your_hugo_project
 mkdir -p ./data/github
 export GH_PAT="github_personal_access_token"
 export GH_USER_ID="peaceiris"
-bash ./path/to/fetch_data.sh "${GH_PAT}" "${GH_USER_ID}" | jq . > "./data/github/${GH_USER_ID}.json"
+bash ./scripts/fetch_data.sh "${GH_PAT}" "${GH_USER_ID}" | jq . > "./data/github/${GH_USER_ID}.json"
 ```
 
 We can show a repository card like as follows.
