@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.15.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.15.0...v0.15.1) (2020-05-20)
+
+
+### chore
+
+* Add doctoc hook ([e0450f5](https://github.com/peaceiris/hugo-theme-iris/commit/e0450f5edebc08a6a49437efaec1b4df14239ee5))
+
+### ci
+
+* add Setup Git step ([75d46c1](https://github.com/peaceiris/hugo-theme-iris/commit/75d46c166a9a64dfd6893d250714d1348cf05811))
+* Add test-setup job ([f5fc1e1](https://github.com/peaceiris/hugo-theme-iris/commit/f5fc1e132c54d9b28ecc05e39a2b827b9cdbc1da))
+* fix ([18e8dab](https://github.com/peaceiris/hugo-theme-iris/commit/18e8dab0bff704feccff167a072962f64ba6ac09))
+* fix setup script ([bd16beb](https://github.com/peaceiris/hugo-theme-iris/commit/bd16beb09f0153c6f3840f97931a9ad77ff3f9dd))
+* fix setup script ([ebed381](https://github.com/peaceiris/hugo-theme-iris/commit/ebed381acbd182b5e1e2e7328a2b04aed3d31e3e))
+
+### docs
+
+* Add Customize Theme section ([6bf3728](https://github.com/peaceiris/hugo-theme-iris/commit/6bf3728eeff2fb1d8a5671444d779f6b3050c2ca))
+* enhance link text ([5d1d813](https://github.com/peaceiris/hugo-theme-iris/commit/5d1d813e40527e41b28d50aec1695a425885677a))
+
+### feat
+
+* Add scripts/setup.sh (#155) ([ac516f5](https://github.com/peaceiris/hugo-theme-iris/commit/ac516f5c7200f9b9c47fa1b379c25d8b34ac929d)), closes [#155](https://github.com/peaceiris/hugo-theme-iris/issues/155)
+
+
+
 # [0.15.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.14.1...v0.15.0) (2020-05-20)
 
 
