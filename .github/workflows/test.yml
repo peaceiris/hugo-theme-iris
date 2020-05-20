@@ -48,3 +48,26 @@ jobs:
 
       - name: Build Testing with Docker
         run: make build
+
+  test-setup:
+    runs-on: ubuntu-18.04
+    if: |
+      contains(github.event.head_commit.message, '[skip ci]') == false &&
+      github.ref == 'refs/heads/master'
+    steps:
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Create a new Hugo project
+        run: |
+          cd ${HOME}
+          mkdir ./
+          mkdir ./homepage && cd ./homepage
+          git init
+          git submodule add https://github.com/peaceiris/hugo-theme-iris.git ./themes/hugo-theme-iris
+          git commit "Add theme"
+          cp -r ./themes/hugo-theme-iris/exampleSite/{config,content,data,i18n,static} .
+          hugo
