@@ -51,25 +51,32 @@ jobs:
 
   test-setup:
     runs-on: ubuntu-18.04
-    if: |
-      contains(github.event.head_commit.message, '[skip ci]') == false &&
-      github.ref == 'refs/heads/master'
+    if: contains(github.event.head_commit.message, '[skip ci]') == false
     steps:
+      - uses: actions/checkout@v2
+
+      - name: Read .env
+        id: hugo_version
+        run: |
+          . ./.env
+          echo "::set-output name=hugo_version::${HUGO_VERSION}"
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "latest"
+          hugo-version: "${{ steps.hugo_version.outputs.hugo_version }}"
           extended: true
+
       - name: Setup Git
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
+
       - name: Create a new Hugo project
         run: |
-          cd ${HOME}
-          mkdir ./homepage && cd ./homepage
-          git init
-          git submodule add https://github.com/peaceiris/hugo-theme-iris.git ./themes/hugo-theme-iris
-          git commit -m "Add theme"
-          cp -r ./themes/hugo-theme-iris/exampleSite/{config,content,data,static} .
+          cd ~
+          mkdir ./homepage
+          wget https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/scripts/setup.sh
+          bash ./setup.sh ./homepage
+          cd ./homepage
           hugo
