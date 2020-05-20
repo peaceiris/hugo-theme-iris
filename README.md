@@ -220,6 +220,8 @@ export GH_USER_ID="peaceiris"
 bash ./scripts/fetch_data.sh "${GH_PAT}" "${GH_USER_ID}" | jq . > "./data/github/${GH_USER_ID}.json"
 ```
 
+Using `jq` is optional.
+
 We can show a repository card like as follows.
 
 ```md
