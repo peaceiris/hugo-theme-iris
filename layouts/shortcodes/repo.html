@@ -11,14 +11,16 @@
 {{ $JSONdata := .Page.Site.Data }}
 {{ $githubData := (index $JSONdata "github") }}
 {{ $userData := (index $githubData $id) }}
-{{ range where $userData "name" $repoName }}
-  {{ $name = .name }}
-  {{ $fullname = .full_name }}
-  {{ $url = .html_url }}
-  {{ $description = .description }}
-  {{ $stars = .stargazers_count }}
-  {{ $forks = .forks }}
-  {{ $lang = .language }}
+{{ range $userData.data.user.repositories.nodes }}
+  {{ if eq .name $repoName }}
+    {{ $name = .name }}
+    {{ $fullname = .nameWithOwner }}
+    {{ $url = .url }}
+    {{ $description = .description }}
+    {{ $stars = .stargazers.totalCount }}
+    {{ $forks = .forkCount }}
+    {{ $lang = .primaryLanguage.name }}
+  {{ end }}
 {{ end }}
 
 {{ with .Get "fullname" }}

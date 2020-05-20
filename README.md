@@ -202,6 +202,20 @@ sequenceDiagram
 
 ### repo
 
+Run the following script to get the latest repository data.
+
+Here is [an example bash script](./scripts/fetch_data.sh).
+
+```sh
+cd ./your_hugo_project
+mkdir -p ./data/github
+export GH_PAT="github_personal_access_token"
+export GH_USER_ID="peaceiris"
+bash ./path/to/fetch_data.sh "${GH_PAT}" "${GH_USER_ID}" | jq . > "./data/github/${GH_USER_ID}.json"
+```
+
+We can show a repository card like as follows.
+
 ```md
 {{< repo id="peaceiris" name="actions-gh-pages" >}}
 
