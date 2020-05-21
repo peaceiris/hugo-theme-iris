@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.15.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.15.1...v0.15.2) (2020-05-21)
+
+
+### docs
+
+* Add example GitHub Actions workflow ([d8b3aba](https://github.com/peaceiris/hugo-theme-iris/commit/d8b3aba831efc610cc6b24cf9d995044fc790034))
+* enhance script ([187d430](https://github.com/peaceiris/hugo-theme-iris/commit/187d43079e61740570d6c25d085468b7adde6d50))
+* update shortcode_repo.jpg ([3addc28](https://github.com/peaceiris/hugo-theme-iris/commit/3addc28ef1b53f3f15566bfae0c9391fd3004523))
+* update TOC ([6018333](https://github.com/peaceiris/hugo-theme-iris/commit/6018333983c829f44b2e78d6d641b0804a82b5e7))
+* Using jq is optional ([9a77c50](https://github.com/peaceiris/hugo-theme-iris/commit/9a77c5071729306ba3eb0d377698fccd48bff926))
+
+### fix
+
+* repo shortcode ([c8c92f5](https://github.com/peaceiris/hugo-theme-iris/commit/c8c92f5a851aaf04c65cc0840baf5ee1b9be06a1))
+
+
+
 ## [0.15.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.15.0...v0.15.1) (2020-05-20)
 
 
