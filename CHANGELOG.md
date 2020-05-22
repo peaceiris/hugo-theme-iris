@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.16.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.15.2...v0.16.0) (2020-05-22)
+
+
+### deps
+
+* bump lint-staged from 10.2.4 to 10.2.6 (#157) ([17a7fd0](https://github.com/peaceiris/hugo-theme-iris/commit/17a7fd01f145ba6a68abfbd653d273972c74136a)), closes [#157](https://github.com/peaceiris/hugo-theme-iris/issues/157)
+
+### feat
+
+* Add circle shortcode (#158) ([acd2b3f](https://github.com/peaceiris/hugo-theme-iris/commit/acd2b3f11fe51f4d769f10fae8706a4fc7e300ba)), closes [#158](https://github.com/peaceiris/hugo-theme-iris/issues/158) [#152](https://github.com/peaceiris/hugo-theme-iris/issues/152)
+
+
+
 ## [0.15.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.15.1...v0.15.2) (2020-05-21)
 
 
