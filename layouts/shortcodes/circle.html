@@ -1,0 +1,14 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+
+<br>
+  <figure class="image is-180x180 container">
+    <img
+      class="is-rounded"
+      src="{{ $src | absURL }}"
+      alt="{{ $alt | safeHTML }}"
+      decoding="async"
+      loading="lazy"
+    />
+  </figure>
+<br>
