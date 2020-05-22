@@ -8,6 +8,8 @@ date: 2020-01-01T23:00:00.000Z
 
 ## About Hugo IRIS Theme
 
+{{< circle src="/images/logo.jpg" alt="hugo-theme-iris logo" >}}
+
 View source code on GitHub.
 
 <br>

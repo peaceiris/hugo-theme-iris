@@ -39,6 +39,7 @@ Hugo IRIS Theme
   - [Netlify](#netlify)
   - [GitHub Pages using Actions](#github-pages-using-actions)
 - [Shortcodes](#shortcodes)
+  - [circle](#circle)
   - [button](#button)
   - [li](#li)
   - [mermaid](#mermaid)
@@ -193,6 +194,16 @@ jobs:
 
 
 ## Shortcodes
+
+### circle
+
+If your logo image is located at `static/images/logo.jpg`.
+
+```md
+{{< circle src="/images/logo.jpg" alt="hugo-theme-iris logo" >}}
+```
+
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_circle.jpg" alt="Shortcode mermaid">
 
 ### button
 
