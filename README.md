@@ -45,6 +45,8 @@ Hugo IRIS Theme
   - [mermaid](#mermaid)
   - [repo](#repo)
   - [table](#table)
+- [How to Update the Theme](#how-to-update-the-theme)
+  - [Git submodule](#git-submodule)
 - [Special Thanks](#special-thanks)
 - [Changelog](#changelog)
 - [Maintainer](#maintainer)
@@ -295,6 +297,24 @@ We can show a repository card like as follows.
 | Mouse out | Mouse over |
 |---|---|
 | ![Shortcode table mouse out](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_table_2.jpg) |
+
+
+
+## How to Update the Theme
+
+### Git submodule
+
+```sh
+cd ./themes/hugo-theme-iris
+git fetch
+git checkout v0.x.y
+git branch
+# * (HEAD detached at v0.x.y)
+cd ../..
+git add themes/hugo-theme-iris
+git commit -m "deps: bump hugo-theme-iris to v0.x.y"
+git push origin master
+```
 
 
 
