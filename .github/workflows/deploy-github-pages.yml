@@ -13,7 +13,7 @@ jobs:
   skipci:
     runs-on: ubuntu-18.04
     steps:
-      - run: echo "[Skip CI] ${{ contains(github.event.head_commit.message, '[skip ci]') }}"
+      - run: echo "[skip ci] ${{ contains(github.event.head_commit.message, '[skip ci]') }}"
 
   deploy:
     runs-on: ubuntu-18.04
@@ -40,7 +40,11 @@ jobs:
           export GH_USER_ID="peaceiris"
           bash ./scripts/fetch_data.sh "${{ secrets.GITHUB_TOKEN }}" "${GH_USER_ID}" | \
             jq . > "./data/github/${GH_USER_ID}.json"
-          hugo --gc --minify --themesDir ../../ --baseURL "${BASE_URL}"
+          hugo --minify \
+            --themesDir ../../ \
+            --baseURL "${BASE_URL}" \
+            --i18n-warnings --path-warnings --debug \
+            --templateMetrics --templateMetricsHints
           wget -O ./public/report.html "${BASE_URL}/report.html" || true
 
       - name: Deploy

@@ -7,9 +7,6 @@ on:
     paths-ignore:
       - "*.md"
   pull_request:
-    types:
-      - opened
-      - synchronize
     paths-ignore:
       - "*.md"
 
@@ -37,8 +34,7 @@ jobs:
           hugo-version: "${{ steps.hugo_version.outputs.hugo_version }}"
           extended: true
 
-      - name: Build Testing
-        run: make buildgha
+      - run: make cibuild
 
   test-docker:
     runs-on: ubuntu-18.04

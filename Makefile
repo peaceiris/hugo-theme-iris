@@ -20,15 +20,27 @@ bumphugo:
 
 .PHONY: build
 build:
-	$(eval opt := --gc --minify --themesDir ../../ --baseURL $(BASE_URL))
+	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL))
 	$(DOCKER_COMPOSE) run --rm hugo $(opt)
 
 .PHONY: test
 test:
-	$(eval opt := --gc --minify --themesDir ../../ --baseURL $(BASE_URL) --renderToMemory)
+	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL) \
+		--renderToMemory --i18n-warnings --path-warnings --debug)
 	$(DOCKER_COMPOSE) run --rm hugo $(opt)
 
-.PHONY: buildgha
-buildgha:
+.PHONY: metrics
+metrics:
+	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL) \
+		--renderToMemory --i18n-warnings --path-warnings --debug \
+		--templateMetrics --templateMetricsHints)
+	$(DOCKER_COMPOSE) run --rm hugo $(opt)
+
+.PHONY: cibuild
+cibuild:
 	cd ./exampleSite && \
-		hugo --gc --minify --themesDir ../../ --baseURL $(BASE_URL)
+		hugo --minify \
+			--themesDir ../../ \
+			--baseURL $(BASE_URL) \
+			--i18n-warnings --path-warnings --debug \
+			--templateMetrics --templateMetricsHints
