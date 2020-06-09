@@ -1,21 +1,3 @@
 # https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners
 
-/.dependabot/ @peaceiris
-/.dockerignore @peaceiris
-/.editorconfig @peaceiris
-/.env @peaceiris
-/.github/ @peaceiris
-/.gitignore @peaceiris
-/.imgbotconfig @peaceiris
-/CONTRIBUTING.md @peaceiris
-/LICENSE @peaceiris
-/Makefile @peaceiris
-/README.md @peaceiris
-/archetypes/ @peaceiris
-/docker-compose.yml @peaceiris
-/exampleSite/ @peaceiris
-/images/ @peaceiris
-/layouts/ @peaceiris
-/netlify.toml @peaceiris
-/release.sh @peaceiris
-/theme.toml @peaceiris
+* @peaceiris
