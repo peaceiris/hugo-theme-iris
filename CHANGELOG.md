@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.16.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.16.0...v0.16.1) (2020-06-19)
+
+
+### chore
+
+* Simplify scope of peaceiris ([d1b7df6](https://github.com/peaceiris/hugo-theme-iris/commit/d1b7df6aa2a586329c2135f2da738e5168d60f79))
+
+### ci
+
+* Add metrics task ([5f928f9](https://github.com/peaceiris/hugo-theme-iris/commit/5f928f95227d8cea89abac29da7dd79a5fb4bc09))
+* add package-ecosystem github-actions ([a8154b5](https://github.com/peaceiris/hugo-theme-iris/commit/a8154b5b93876b53259f57cab5d31218caff6e71))
+* bump actions/setup-node from v1 to v2.0.0 (#166) ([ab0a6d1](https://github.com/peaceiris/hugo-theme-iris/commit/ab0a6d12cb6778c532a1e615d72079d7e71d82a8)), closes [#166](https://github.com/peaceiris/hugo-theme-iris/issues/166)
+* bump actions/upload-artifact from v1 to v2.0.1 (#167) ([b1fbe98](https://github.com/peaceiris/hugo-theme-iris/commit/b1fbe98980dcd81e6369edd8e425a3ba068f7361)), closes [#167](https://github.com/peaceiris/hugo-theme-iris/issues/167)
+* Update Dependabot config file (#160) ([2986d01](https://github.com/peaceiris/hugo-theme-iris/commit/2986d01537ac791f0235ea91b41083ab12df2999)), closes [#160](https://github.com/peaceiris/hugo-theme-iris/issues/160)
+* use deploy_key ([5217297](https://github.com/peaceiris/hugo-theme-iris/commit/521729727e172a3da3172fcb0956507492f46f26))
+* use github_token ([8a7fef0](https://github.com/peaceiris/hugo-theme-iris/commit/8a7fef00833a62d26f94ab837dd032119ce8e35a))
+
+### deps
+
+* bump hugo from 0.71.0 to 0.71.1 ([c306d59](https://github.com/peaceiris/hugo-theme-iris/commit/c306d59c637be31fa74518cabed4f7a62f048b44))
+* bump hugo from 0.71.1 to 0.72.0 ([511a27d](https://github.com/peaceiris/hugo-theme-iris/commit/511a27dca2557e7d9c52f35d8574c47d2f96df39))
+* bump lint-staged from 10.2.10 to 10.2.11 (#165) ([75ab693](https://github.com/peaceiris/hugo-theme-iris/commit/75ab6935a10ddc53177c1df3634cd24980e565a7)), closes [#165](https://github.com/peaceiris/hugo-theme-iris/issues/165)
+* bump lint-staged from 10.2.6 to 10.2.7 (#159) ([fcbcc38](https://github.com/peaceiris/hugo-theme-iris/commit/fcbcc38bf28648a8eef57625e4aa01e9b2e874a1)), closes [#159](https://github.com/peaceiris/hugo-theme-iris/issues/159)
+* bump lint-staged from 10.2.7 to 10.2.8 (#161) ([aa662a2](https://github.com/peaceiris/hugo-theme-iris/commit/aa662a248ca3889c5c275b50262cf19e1270b393)), closes [#161](https://github.com/peaceiris/hugo-theme-iris/issues/161)
+* bump lint-staged from 10.2.8 to 10.2.9 (#162) ([a4e12c0](https://github.com/peaceiris/hugo-theme-iris/commit/a4e12c0c44bfa86f822ae69635f01ff9a8cdac08)), closes [#162](https://github.com/peaceiris/hugo-theme-iris/issues/162)
+* bump lint-staged from 10.2.9 to 10.2.10 (#164) ([0338f99](https://github.com/peaceiris/hugo-theme-iris/commit/0338f99d0fcf0233f766db75d0d61227d1c6ba4b)), closes [#164](https://github.com/peaceiris/hugo-theme-iris/issues/164)
+* bump wait-on from 5.0.0 to 5.0.1 (#163) ([6d5ba22](https://github.com/peaceiris/hugo-theme-iris/commit/6d5ba22e616515c952773ce3a862a4a13693e556)), closes [#163](https://github.com/peaceiris/hugo-theme-iris/issues/163)
+
+### docs
+
+* Add How to Update the Theme ([26c7f6e](https://github.com/peaceiris/hugo-theme-iris/commit/26c7f6e0f852bc029b2dd95ba52b5d6541534749)), closes [#152](https://github.com/peaceiris/hugo-theme-iris/issues/152)
+* Add logo image ([ff32e63](https://github.com/peaceiris/hugo-theme-iris/commit/ff32e63dccb3b76e25f44b09e3fc08b19e56d076))
+* udpate ([8ca3a6a](https://github.com/peaceiris/hugo-theme-iris/commit/8ca3a6a80b3e852d5485c40a3ed37add6f9c8f56))
+* update ([e25bd1a](https://github.com/peaceiris/hugo-theme-iris/commit/e25bd1a062ff6cb695fd0293c3a47872d5c93c33))
+
+### fix
+
+* add margin to p tag ([6088a13](https://github.com/peaceiris/hugo-theme-iris/commit/6088a13fbf75b94ee63415b8c8a7315e4c54f6bd))
+
+
+
 # [0.16.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.15.2...v0.16.0) (2020-05-22)
 
 
