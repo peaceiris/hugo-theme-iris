@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.16.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.16.1...v0.16.2) (2020-06-19)
+
+
+### fix
+
+* add margin to buttons class ([5faad11](https://github.com/peaceiris/hugo-theme-iris/commit/5faad11a74d2a012b3b64ba488485b045938ed77))
+
+
+
 ## [0.16.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.16.0...v0.16.1) (2020-06-19)
 
 
