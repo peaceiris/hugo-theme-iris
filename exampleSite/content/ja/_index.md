@@ -39,6 +39,8 @@ date: 2020-01-25T23:00:00.000Z
 
 ### サイト内
 
+ブログを言語ごとに管理することができます。
+
 <div class="buttons">
   {{< button href="./posts/" txt="All Posts" >}}
 </div>
