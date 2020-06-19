@@ -4,6 +4,10 @@ pre {
   margin: 1rem 0rem;
 }
 
-p {
+p:not([class]) {
+  margin: 1rem 0rem;
+}
+
+.buttons {
   margin: 1rem 0rem;
 }

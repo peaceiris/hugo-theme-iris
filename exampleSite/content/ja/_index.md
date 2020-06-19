@@ -47,6 +47,8 @@ date: 2020-01-25T23:00:00.000Z
 
 ### サイト外
 
+このようにボタン形式のリンクを一覧表示することができます。
+
 <div class="buttons">
   {{< button href="https://gohugo.io/" txt="Hugo Homepage" >}}
   {{< button href="https://github.com/gohugoio/" txt="Hugo GitHub" >}}

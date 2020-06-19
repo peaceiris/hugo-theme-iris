@@ -1,1 +1,1 @@
-pre{margin:1rem 0}p{margin:1rem 0}
+pre{margin:1rem 0}p:not([class]){margin:1rem 0}.buttons{margin:1rem 0}
