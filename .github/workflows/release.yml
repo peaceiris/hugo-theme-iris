@@ -30,6 +30,6 @@ jobs:
           RELEASE_NAME="$(jq -r '.name' ./package.json)"
           sed -i "1i${RELEASE_NAME} ${TAG_NAME}\n" ./release_notes.md
           ./bin/hub release create \
-            --draft \
             --file ./release_notes.md \
             "${TAG_NAME}"
+          # --draft \
