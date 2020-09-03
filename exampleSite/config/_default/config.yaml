@@ -38,6 +38,7 @@ languages:
     params:
       author: peaceiris
       description: Hugo IRIS Theme Demo Site
+      publishdate: '2020-01-01'
       twitter:
         username: piris314
       ogp:
@@ -53,6 +54,7 @@ languages:
     params:
       author: peaceiris
       description: Hugo IRIS テーマデモサイト
+      publishdate: '2020-01-01'
       twitter:
         username: piris314
       ogp:

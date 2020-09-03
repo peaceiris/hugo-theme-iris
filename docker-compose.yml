@@ -13,4 +13,4 @@ services:
     stdin_open: true
     tty: true
     working_dir: /src/hugo-theme-iris/exampleSite
-    entrypoint: sh
+    entrypoint: bash
