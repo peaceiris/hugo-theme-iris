@@ -1,7 +1,7 @@
 {{ if ne $.Site.Params.hugoenv "production" }}
   {{ $targetURL := $.Permalink }}
   {{ if $.Site.IsServer }}
-    {{ $targetRelURL := ($.Page.Permalink | absURL) }}
+    {{ $targetRelURL := .Page.Permalink | relURL }}
     {{ $targetURL = delimit (slice $.Site.Params.stagingURL $targetRelURL) "" }}
   {{ end }}
 
@@ -21,13 +21,6 @@
         rel="noopener noreferrer"
         class="dropdown-item"
         >Page Speed Insights</a
-      >
-      <a
-        href="https://search.google.com/structured-data/testing-tool#url={{ $targetURL }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="dropdown-item"
-        >JSON-LD</a
       >
       <a
         href="https://search.google.com/test/rich-results?url={{ $targetURL }}"
