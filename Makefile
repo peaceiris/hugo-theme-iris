@@ -8,7 +8,9 @@ BASE_URL := https://hugothemeiris.peaceiris.app/
 .PHONY: up
 up:
 	# $(OPEN_BROWSER)
-	$(DOCKER_COMPOSE) run --rm hugo server --navigateToChanged --bind=0.0.0.0 --buildDrafts --themesDir ../../ --i18n-warnings
+	$(DOCKER_COMPOSE) up -d
+	$(DOCKER_COMPOSE) exec hugo hugo \
+		server --navigateToChanged --bind=0.0.0.0 --buildDrafts --themesDir ../../ --i18n-warnings
 
 .PHONY: hugo
 hugo:
@@ -21,20 +23,20 @@ bumphugo:
 .PHONY: build
 build:
 	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL))
-	$(DOCKER_COMPOSE) run --rm hugo $(opt)
+	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo  hugo $(opt)
 
 .PHONY: test
 test:
 	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL) \
 		--renderToMemory --i18n-warnings --path-warnings --debug)
-	$(DOCKER_COMPOSE) run --rm hugo $(opt)
+	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: metrics
 metrics:
 	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL) \
 		--renderToMemory --i18n-warnings --path-warnings --debug \
 		--templateMetrics --templateMetricsHints)
-	$(DOCKER_COMPOSE) run --rm hugo $(opt)
+	$(DOCKER_COMPOSE) run --rm hugo hugo $(opt)
 
 .PHONY: cibuild
 cibuild:
