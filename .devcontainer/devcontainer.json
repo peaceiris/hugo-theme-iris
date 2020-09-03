@@ -37,7 +37,7 @@
   "forwardPorts": [1313],
 
   // Specifies a command that should be run after the container has been created.
-  "postCreateCommand": "npm ci",
+  // "postCreateCommand": "npm ci",
 
   // Comment out the next line to run as root instead.
   // "remoteUser": "runner"
