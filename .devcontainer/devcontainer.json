@@ -1,0 +1,44 @@
+{
+  "name": "Hugo",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "hugo",
+  "shutdownAction": "none",
+  "workspaceFolder": "/src/hugo-theme-iris",
+
+  // Use 'settings' to set *default* container specific settings.json values on container create.
+  "settings": {
+      "terminal.integrated.shell.linux": "/bin/sh"
+  },
+
+  // Add the IDs of extensions you want installed when the container is created in the array below.
+  "extensions": [
+    "bungcip.better-toml",
+    "christian-kohler.path-intellisense",
+    "dbaeumer.vscode-eslint",
+    "donjayamanne.githistory",
+    "eamodio.gitlens",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "firsttris.vscode-jest-runner",
+    "GitHub.vscode-pull-request-github",
+    "golang.go",
+    "lfs.vscode-emacs-friendly",
+    "mechatroner.rainbow-csv",
+    "ms-azuretools.vscode-docker",
+    "oderwat.indent-rainbow",
+    "redhat.vscode-yaml",
+    "shd101wyy.markdown-preview-enhanced",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "wmaurer.change-case",
+    "yzhang.markdown-all-in-one",
+  ],
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [1313],
+
+  // Specifies a command that should be run after the container has been created.
+  "postCreateCommand": "npm ci",
+
+  // Comment out the next line to run as root instead.
+  // "remoteUser": "runner"
+}
