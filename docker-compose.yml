@@ -13,11 +13,4 @@ services:
     stdin_open: true
     tty: true
     working_dir: /src/hugo-theme-iris/exampleSite
-    command:
-      - server
-      - --navigateToChanged
-      - --bind=0.0.0.0
-      - --buildDrafts
-      - --themesDir
-      - ../../
-      - --i18n-warnings
+    entrypoint: sh

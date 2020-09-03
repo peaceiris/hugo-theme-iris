@@ -8,7 +8,7 @@ BASE_URL := https://hugothemeiris.peaceiris.app/
 .PHONY: up
 up:
 	# $(OPEN_BROWSER)
-	$(DOCKER_COMPOSE) up
+	$(DOCKER_COMPOSE) run --rm hugo server --navigateToChanged --bind=0.0.0.0 --buildDrafts --themesDir ../../ --i18n-warnings
 
 .PHONY: hugo
 hugo:
