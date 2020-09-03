@@ -23,7 +23,7 @@ bumphugo:
 .PHONY: build
 build:
 	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL))
-	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo  hugo $(opt)
+	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: test
 test:
@@ -36,7 +36,7 @@ metrics:
 	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL) \
 		--renderToMemory --i18n-warnings --path-warnings --debug \
 		--templateMetrics --templateMetricsHints)
-	$(DOCKER_COMPOSE) run --rm hugo hugo $(opt)
+	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: cibuild
 cibuild:
