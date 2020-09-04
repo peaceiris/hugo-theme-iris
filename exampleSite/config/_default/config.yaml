@@ -28,6 +28,11 @@ markup:
     renderer:
       unsafe: true
 
+minify:
+  tdewolff:
+    xml:
+      keepWhitespace: true
+
 # Configure Languages
 DefaultContentLanguage: en
 languages:
