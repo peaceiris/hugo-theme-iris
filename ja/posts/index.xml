@@ -1,3 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>記事 on Hugo IRIS テーマ</title><link>https://hugothemeiris.peaceiris.app/ja/posts/</link><description>Recent content in 記事 on Hugo IRIS テーマ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 30 Sep 2019 08:00:00 +0000</lastBuildDate><atom:link href="https://hugothemeiris.peaceiris.app/ja/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub Pages and GitHub Actions</title><link>https://hugothemeiris.peaceiris.app/ja/posts/github-pages-and-github-actions/</link><pubDate>Fri, 01 Nov 2019 01:00:00 +0000</pubDate><guid>https://hugothemeiris.peaceiris.app/ja/posts/github-pages-and-github-actions/</guid><description>GitHub Actions for GitHub Pages GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators peaceiris/actions-gh-pages
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>記事 on Hugo IRIS テーマ</title>
+<link>https://hugothemeiris.peaceiris.app/ja/posts/</link>
+<description>Recent content in 記事 on Hugo IRIS テーマ</description>
+<generator>Hugo -- gohugo.io</generator>
+<language>ja-jp</language>
+<lastBuildDate>Mon, 30 Sep 2019 08:00:00 +0000</lastBuildDate>
+<atom:link href="https://hugothemeiris.peaceiris.app/ja/posts/index.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>GitHub Pages and GitHub Actions</title>
+<link>https://hugothemeiris.peaceiris.app/ja/posts/github-pages-and-github-actions/</link>
+<pubDate>Fri, 01 Nov 2019 01:00:00 +0000</pubDate>
+<guid>https://hugothemeiris.peaceiris.app/ja/posts/github-pages-and-github-actions/</guid>
+<description>GitHub Actions for GitHub Pages GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators peaceiris/actions-gh-pages
 This is a GitHub Action to deploy your static files to GitHub Pages. This deploy action can be combined simply and freely with Static Site Generators (Hugo, mdBook, MkDocs, Gatsby, GitBook, etc.).
-- name:Deployuses:peaceiris/actions-gh-pages@v3with:deploy_key:${{secrets.ACTIONS_DEPLOY_KEY}}publish_dir:./publicThe above example step will deploy ./public directory to gh-pages branch.</description></item></channel></rss>
+- name:Deployuses:peaceiris/actions-gh-pages@v3with:deploy_key:${{secrets.ACTIONS_DEPLOY_KEY}}publish_dir:./publicThe above example step will deploy ./public directory to gh-pages branch.</description>
+</item>
+</channel>
+</rss>
