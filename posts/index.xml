@@ -5,8 +5,7 @@
 <description>Recent content in Posts on Hugo IRIS Theme</description>
 <generator>Hugo -- gohugo.io</generator>
 <language>en-us</language>
-<lastBuildDate>Mon, 30 Sep 2019 08:00:00 +0000</lastBuildDate>
-<atom:link href="https://hugothemeiris.peaceiris.app/posts/index.xml" rel="self" type="application/rss+xml"/>
+<lastBuildDate>Mon, 30 Sep 2019 08:00:00 +0000</lastBuildDate><atom:link href="https://hugothemeiris.peaceiris.app/posts/index.xml" rel="self" type="application/rss+xml"/>
 <item>
 <title>Reveal.js Support</title>
 <link>https://hugothemeiris.peaceiris.app/posts/revealjs/</link>
@@ -41,7 +40,7 @@ Basic Example Input $$\sum_{i=0}^n i^2=\frac{(n^2+n)(2n+1)}{6} $$ Output $$ \sum
 <guid>https://hugothemeiris.peaceiris.app/posts/github-pages-and-github-actions/</guid>
 <description>GitHub Actions for GitHub Pages GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators peaceiris/actions-gh-pages
 This is a GitHub Action to deploy your static files to GitHub Pages. This deploy action can be combined simply and freely with Static Site Generators (Hugo, mdBook, MkDocs, Gatsby, GitBook, etc.).
-- name:Deployuses:peaceiris/actions-gh-pages@v3with:deploy_key:${{secrets.ACTIONS_DEPLOY_KEY}}publish_dir:./publicThe above example step will deploy ./public directory to gh-pages branch.</description>
+- name:Deployuses:peaceiris/actions-gh-pages@v3with:deploy_key:${{ secrets.ACTIONS_DEPLOY_KEY }}publish_dir:./publicThe above example step will deploy .</description>
 </item>
 <item>
 <title>Emoji Support</title>
