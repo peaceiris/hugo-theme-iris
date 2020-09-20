@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.18.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.17.1...v0.18.0) (2020-09-20)
+
+
+### chore
+
+* revert image ([ad2af1e](https://github.com/peaceiris/hugo-theme-iris/commit/ad2af1e6f1e3e225b6c2e0914409dd9268b5fa81))
+* update resources ([66f8a89](https://github.com/peaceiris/hugo-theme-iris/commit/66f8a89b601f29ea27d5000712a0fcad95458069))
+
+### ci
+
+* comment out --draft ([b364abc](https://github.com/peaceiris/hugo-theme-iris/commit/b364abcc32f092e816dcac7bd13f1acb800e6890))
+
+### deps
+
+* bump hugo from 0.74.3 to 0.75.0 ([65b2f2c](https://github.com/peaceiris/hugo-theme-iris/commit/65b2f2c00715b74a25795a9a6a7cc99191242359))
+* bump hugo from 0.75.0 to 0.75.1 ([84e2e78](https://github.com/peaceiris/hugo-theme-iris/commit/84e2e78ea20a021cfc9d6feff55174fb6cde96d7))
+* bump husky from 4.2.5 to 4.3.0 (#195) ([9cd047e](https://github.com/peaceiris/hugo-theme-iris/commit/9cd047e37cbb2fb79eaf41fb19a33746452aecf1)), closes [#195](https://github.com/peaceiris/hugo-theme-iris/issues/195)
+* bump lint-staged from 10.2.13 to 10.3.0 (#193) ([5f7f4c1](https://github.com/peaceiris/hugo-theme-iris/commit/5f7f4c147ebb833603d344099784857372ed14f6)), closes [#193](https://github.com/peaceiris/hugo-theme-iris/issues/193)
+* bump lint-staged from 10.3.0 to 10.4.0 (#196) ([baa251c](https://github.com/peaceiris/hugo-theme-iris/commit/baa251c1edbbd918b48620d05385c821546a8c89)), closes [#196](https://github.com/peaceiris/hugo-theme-iris/issues/196)
+
+### feat
+
+* github-sponsors-list shortcode (#197) ([90f4fe5](https://github.com/peaceiris/hugo-theme-iris/commit/90f4fe5d92e0bae8cb413b239bca31e00cd78c93)), closes [#197](https://github.com/peaceiris/hugo-theme-iris/issues/197)
+
+
+
 ## [0.17.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.17.0...v0.17.1) (2020-09-03)
 
 
