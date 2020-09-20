@@ -3,22 +3,30 @@
 # fail on unset variables and command errors
 set -eu -o pipefail # -x: is for debugging
 
-export QUERY_GRAPHQL="
-{
-  user(login: \"$2\") {
+gh api graphql -F owner="$1" -f query='
+query($owner: String!) {
+  user(login: $owner) {
+    login
+    sponsorshipsAsMaintainer(first: 99) {
+      nodes {
+        sponsor {
+          login
+        }
+      }
+    }
     repositories(orderBy: {field: STARGAZERS, direction: DESC}, first: 50, affiliations: OWNER, privacy: PUBLIC, isFork: false) {
       nodes {
-        nameWithOwner,
+        nameWithOwner
         owner {
           login
-        },
-        name,
-        description,
-        url,
+        }
+        name
+        description
+        url
         primaryLanguage {
           name
-        },
-        forkCount,
+        }
+        forkCount
         stargazers {
           totalCount
         }
@@ -26,9 +34,4 @@ export QUERY_GRAPHQL="
     }
   }
 }
-"
-export QUERY_JSON="$(echo ${QUERY_GRAPHQL} | tr -d "\n" | tr -d " " | sed 's/"/\\"/g')"
-curl -s -H "Authorization: token $1" \
-  -X POST \
-  -d "{\"query\":\"query${QUERY_JSON}\"}" \
-  https://api.github.com/graphql
+'

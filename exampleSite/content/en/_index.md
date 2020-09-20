@@ -71,6 +71,10 @@ View source code on GitHub.
 
 {{< repo id="peaceiris" name="hugo-extended-docker" >}}
 
+### GitHub Sponsors List
+
+{{< github-sponsors-list id="peaceiris" >}}
+
 
 
 <!-- Internal References -->

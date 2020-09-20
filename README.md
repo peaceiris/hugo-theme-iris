@@ -44,6 +44,7 @@ Hugo IRIS Theme
   - [li](#li)
   - [mermaid](#mermaid)
   - [repo](#repo)
+  - [github-sponsors-list](#github-sponsors-list)
   - [table](#table)
 - [How to Update the Theme](#how-to-update-the-theme)
   - [Git submodule](#git-submodule)
@@ -261,17 +262,22 @@ sequenceDiagram
 ### repo
 
 Run the following script to get the latest repository data.
+The script requires the [gh] command.
+
+[gh]: https://github.com/cli/cli
 
 For more details: [scripts/fetch_data.sh](./exampleSite/scripts/fetch_data.sh)
 
 ```sh
-cd ./your_hugo_project
-export GH_PAT="github_personal_access_token"
-export GH_USER_ID="peaceiris"
-bash ./scripts/fetch_data.sh "${GH_PAT}" "${GH_USER_ID}" | jq . > "./data/github/${GH_USER_ID}.json"
+brew install gh
+gh auth login
 ```
 
-Using `jq` is optional.
+```sh
+cd ./your_hugo_project
+export GH_USER_ID="peaceiris"
+bash ./scripts/fetch_data.sh "${GH_USER_ID}" > "./data/github/${GH_USER_ID}.json"
+```
 
 We can show a repository card like as follows.
 
@@ -282,6 +288,16 @@ We can show a repository card like as follows.
 ```
 
 <img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_repo.jpg" alt="Shortcode repo">
+
+### github-sponsors-list
+
+Please follow the instruction as the same as the `repo` shortcode.
+
+```md
+{{< github-sponsors-list id="peaceiris" >}}
+```
+
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_github-sponsors-list.jpg" alt="Shortcode github-sponsors-list">
 
 ### table
 

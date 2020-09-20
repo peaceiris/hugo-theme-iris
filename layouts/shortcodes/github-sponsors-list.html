@@ -1,0 +1,24 @@
+{{ $id := .Get "id" }}
+{{ $JSONdata := .Page.Site.Data }}
+{{ $githubData := (index $JSONdata "github") }}
+{{ $userData := (index $githubData $id) }}
+<div class="columns is-multiline is-mobile is-centered">
+{{ range $userData.data.user.sponsorshipsAsMaintainer.nodes }}
+  {{ $sponsorID := .sponsor.login }}
+  {{ $sponsorURL := delimit (slice "https://github.com/" $sponsorID) "" | safeURL }}
+  <div class="column is-3-mobile is-2-tablet">
+    <a href="{{ $sponsorURL }}" rel="noopener noreferrer" target="_blank">
+      <figure class="image is-64x64">
+        <img
+          class="is-rounded"
+          alt="{{ $sponsorID }} | GitHub"
+          src="{{ $sponsorURL }}.png"
+          decoding="async"
+          loading="lazy"
+        />
+      </figure>
+      <figcaption>{{ print $sponsorID }}</figcaption>
+    </a>
+  </div>
+{{ end }}
+</div>
