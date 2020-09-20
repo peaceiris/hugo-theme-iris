@@ -5,10 +5,10 @@ on:
     branches:
       - master
     paths-ignore:
-      - '*.md'
+      - 'README.md'
   pull_request:
     paths-ignore:
-      - '*.md'
+      - 'README.md'
   schedule:
     - cron: "13 13 * * *"
 
