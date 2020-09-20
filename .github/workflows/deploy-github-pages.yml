@@ -6,6 +6,9 @@ on:
       - master
     paths-ignore:
       - '*.md'
+  pull_request:
+    paths-ignore:
+      - '*.md'
   schedule:
     - cron: "13 13 * * *"
 
@@ -35,11 +38,12 @@ jobs:
 
       - name: Build
         working-directory: ./exampleSite
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           export BASE_URL="https://hugothemeiris.peaceiris.app"
           export GH_USER_ID="peaceiris"
-          bash ./scripts/fetch_data.sh "${{ secrets.GITHUB_TOKEN }}" "${GH_USER_ID}" | \
-            jq . > "./data/github/${GH_USER_ID}.json"
+          bash ./scripts/fetch_data.sh "${GH_USER_ID}" > "./data/github/${GH_USER_ID}.json"
           hugo --minify \
             --themesDir ../../ \
             --baseURL "${BASE_URL}" \
@@ -49,6 +53,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.6.4
+        if: github.event_name != 'pull_request'
         with:
           #deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}

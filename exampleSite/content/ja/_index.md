@@ -68,6 +68,9 @@ date: 2020-01-25T23:00:00.000Z
 
 {{< repo id="peaceiris" name="hugo-extended-docker" >}}
 
+### GitHub Sponsors List
+
+{{< github-sponsors-list id="peaceiris" >}}
 
 
 
