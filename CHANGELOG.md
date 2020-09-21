@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.19.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.18.0...v0.19.0) (2020-09-21)
+
+
+### ci
+
+* fix paths-ignore ([a20e71b](https://github.com/peaceiris/hugo-theme-iris/commit/a20e71b8e0770dbc15be424cc800047c92f338cf))
+* fix paths-ignore ([19306f8](https://github.com/peaceiris/hugo-theme-iris/commit/19306f83dc20f51e7622043b06ad6e07d80dafdc))
+
+### docs
+
+* bump hugo from 0.71.0 to 0.75.1 ([89e8b73](https://github.com/peaceiris/hugo-theme-iris/commit/89e8b733fa08ec2d7a891573c6d0d6d7ebfe0900))
+
+### feat
+
+* canonical param (#198) ([b43ee39](https://github.com/peaceiris/hugo-theme-iris/commit/b43ee398879afb21da7107d265c6f735e6e3021e)), closes [#198](https://github.com/peaceiris/hugo-theme-iris/issues/198)
+
+
+
 # [0.18.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.17.1...v0.18.0) (2020-09-20)
 
 
