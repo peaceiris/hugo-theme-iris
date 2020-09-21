@@ -28,6 +28,9 @@ Hugo IRIS Theme
 - [Getting Started](#getting-started)
   - [Get Hugo](#get-hugo)
   - [Initialize New Hugo Project](#initialize-new-hugo-project)
+- [Params](#params)
+  - [Site](#site)
+  - [Post Page Front Matter](#post-page-front-matter)
 - [Customize Theme](#customize-theme)
   - [config](#config)
   - [content](#content)
@@ -116,6 +119,31 @@ hugo server
 - http://localhost:1313/
 
 *Customize your site! ʕ◔ϖ◔ʔ*
+
+
+
+## Params
+
+### Site
+
+TBW.
+
+### Post Page Front Matter
+
+```yaml
+title:
+description:
+publishdate: 2020-01-01T01:00:00.000Z
+# draft: true
+eyecatch: images/eyecatch.jpg
+toc: true
+# math: true
+# weight: 1
+twitter:
+  username: piris314
+  hashtags: ["Hugo"]
+canonicalURL:
+```
 
 
 

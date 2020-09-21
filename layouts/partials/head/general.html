@@ -41,3 +41,7 @@
 
 <!-- Open Graph Protocol (OGP) -->
 {{ partial "head/ogp" . }}
+
+{{ with .Page.Params.canonicalURL }}
+<link rel="canonical" href="{{ . | safeURL }}">
+{{ end }}
