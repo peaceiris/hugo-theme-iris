@@ -28,9 +28,9 @@ Hugo IRIS Theme
 - [Getting Started](#getting-started)
   - [Get Hugo](#get-hugo)
   - [Initialize New Hugo Project](#initialize-new-hugo-project)
-- [Params](#params)
-  - [Site](#site)
-  - [Post Page Front Matter](#post-page-front-matter)
+  - [Create a Post Page](#create-a-post-page)
+  - [Create a Slide Page](#create-a-slide-page)
+- [Site Params](#site-params)
 - [Customize Theme](#customize-theme)
   - [config](#config)
   - [content](#content)
@@ -88,11 +88,12 @@ This repository includes the [Hugo] theme.
 ### Roadmap
 
 - Share Buttons
-- JSON-LD
 - Netlify, Netlify CMS
 - Categories, Tags, Authors
 - Font Awesome
 - Related posts, next and previous post
+
+<div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
 
 
 
@@ -120,30 +121,27 @@ hugo server
 
 *Customize your site! ʕ◔ϖ◔ʔ*
 
+### Create a Post Page
+
+```sh
+hugo new posts/new.md
+```
+
+### Create a Slide Page
+
+```sh
+hugo new --kind slide posts/new-slide.md
+```
+
+<div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
 
 
-## Params
 
-### Site
+## Site Params
 
 TBW.
 
-### Post Page Front Matter
-
-```yaml
-title:
-description:
-publishdate: 2020-01-01T01:00:00.000Z
-# draft: true
-eyecatch: images/eyecatch.jpg
-toc: true
-# math: true
-# weight: 1
-twitter:
-  username: piris314
-  hashtags: ["Hugo"]
-canonicalURL:
-```
+<div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
 
 
 
@@ -162,6 +160,8 @@ TBW.
 ### i18n
 
 ### static
+
+<div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
 
 
 
@@ -221,6 +221,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
+
+<div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
 
 
 
@@ -342,6 +344,8 @@ Please follow the instruction as the same as the `repo` shortcode.
 |---|---|
 | ![Shortcode table mouse out](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_table_2.jpg) |
 
+<div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
+
 
 
 ## How to Update the Theme
@@ -360,6 +364,8 @@ git commit -m "deps: bump hugo-theme-iris to v0.x.y"
 git push origin master
 ```
 
+<div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
+
 
 
 ## Special Thanks
@@ -370,6 +376,8 @@ git push origin master
 <!-- - [MathJax] -->
 <!-- - [mermaid] -->
 <!-- - Font Awesome -->
+
+<div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
 
 
 
@@ -401,9 +409,7 @@ You can find more detail in our [Contributing Guide].
 
 ---
 
-<div align="right">
-<a href="#table-of-contents">Back to TOC ☝️</a>
-</div>
+<div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
 
 
 

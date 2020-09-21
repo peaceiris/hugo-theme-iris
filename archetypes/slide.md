@@ -5,7 +5,7 @@ publishdate: {{ .Date }}
 # draft: true
 eyecatch: images/eyecatch.jpg
 toc: true
-# math: true
+slide: true
 # weight: 1
 # canonicalURL:
 ---
