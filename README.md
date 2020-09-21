@@ -30,7 +30,6 @@ Hugo IRIS Theme
   - [Initialize New Hugo Project](#initialize-new-hugo-project)
   - [Create a Post Page](#create-a-post-page)
   - [Create a Slide Page](#create-a-slide-page)
-- [Site Params](#site-params)
 - [Customize Theme](#customize-theme)
   - [config](#config)
   - [content](#content)
@@ -132,14 +131,6 @@ hugo new posts/new.md
 ```sh
 hugo new --kind slide posts/new-slide.md
 ```
-
-<div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
-
-
-
-## Site Params
-
-TBW.
 
 <div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
 
