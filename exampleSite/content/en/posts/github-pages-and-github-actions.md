@@ -11,6 +11,7 @@ toc: true
 twitter:
   username: piris314
   hashtags: ["GitHubActions"]
+canonicalURL: https://github.com/peaceiris/actions-gh-pages
 ---
 
 
