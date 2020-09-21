@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.20.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.19.0...v0.20.0) (2020-09-21)
+
+
+### feat
+
+* Add archetypes ([dab6d07](https://github.com/peaceiris/hugo-theme-iris/commit/dab6d07193aa0b91d67f5692ac612ae83aef409e))
+
+
+
 # [0.19.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.18.0...v0.19.0) (2020-09-21)
 
 
