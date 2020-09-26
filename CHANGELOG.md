@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.20.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.20.0...v0.20.1) (2020-09-26)
+
+
+### docs
+
+* remove Site Params ([66be637](https://github.com/peaceiris/hugo-theme-iris/commit/66be637988b6ea14f300e4bc34b346009bf002d3))
+
+### feat
+
+* set p tag line-height to 1.8rem ([3bc52e5](https://github.com/peaceiris/hugo-theme-iris/commit/3bc52e5e7f461d7f626fff8be67c651effd9631f))
+
+
+
 # [0.20.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.19.0...v0.20.0) (2020-09-21)
 
 
