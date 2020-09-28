@@ -202,8 +202,7 @@ jobs:
       - name: Fetch data
         run: |
           export GH_USER_ID="peaceiris"
-          bash ./scripts/fetch_data.sh "${{ secrets.GITHUB_TOKEN }}" "${GH_USER_ID}" | \
-            jq . > "./data/github/${GH_USER_ID}.json"
+          bash ./scripts/fetch_data.sh "${GH_USER_ID}" > "./data/github/${GH_USER_ID}.json"
 
       - run: hugo --minify
 
