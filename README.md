@@ -1,11 +1,3 @@
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-theme-iris/blob/master/LICENSE)
-[![release](https://img.shields.io/github/release/peaceiris/hugo-theme-iris.svg)](https://github.com/peaceiris/hugo-theme-iris/releases/latest)
-[![release date](https://img.shields.io/github/release-date/peaceiris/hugo-theme-iris.svg)](https://github.com/peaceiris/hugo-theme-iris/releases)
-[![release feed](https://img.shields.io/badge/release-feed-yellow)](https://github.com/peaceiris/hugo-theme-iris/releases.atom)
-![deploy status](https://github.com/peaceiris/hugo-theme-iris/workflows/Deploy/badge.svg?branch=master&event=push)
-[![hugo themes](https://img.shields.io/static/v1?label=Hugo%20Themes&message=IRIS&color=blueviolet)](https://themes.gohugo.io/hugo-theme-iris/)
-[![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugothemeiris.peaceiris.app/report.html)
-
 <h2 align="center">
 Hugo IRIS Theme
 </h2>
@@ -13,6 +5,14 @@ Hugo IRIS Theme
 <div align="center">
 <img src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/images/tn.png" alt="thumbnail" width="500px">
 </div>
+
+[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-theme-iris/blob/master/LICENSE)
+[![release](https://img.shields.io/github/release/peaceiris/hugo-theme-iris.svg)](https://github.com/peaceiris/hugo-theme-iris/releases/latest)
+[![release date](https://img.shields.io/github/release-date/peaceiris/hugo-theme-iris.svg)](https://github.com/peaceiris/hugo-theme-iris/releases)
+[![release feed](https://img.shields.io/badge/release-feed-yellow)](https://github.com/peaceiris/hugo-theme-iris/releases.atom)
+![deploy status](https://github.com/peaceiris/hugo-theme-iris/workflows/Deploy/badge.svg?branch=master&event=push)
+[![hugo themes](https://img.shields.io/static/v1?label=Hugo%20Themes&message=IRIS&color=blueviolet)](https://themes.gohugo.io/hugo-theme-iris/)
+[![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugothemeiris.peaceiris.app/report.html)
 
 
 
