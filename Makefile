@@ -32,6 +32,12 @@ test:
 		--renderToMemory --i18n-warnings --path-warnings --debug)
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
+.PHONY: npm-test
+npm-test:
+	cd ./exampleSite && \
+	hugo --minify --themesDir ../../ --baseURL $(BASE_URL) \
+		--renderToMemory --i18n-warnings --path-warnings --debug
+
 .PHONY: metrics
 metrics:
 	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL) \
