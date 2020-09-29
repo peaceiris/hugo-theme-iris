@@ -14,7 +14,8 @@ up:
 
 .PHONY: hugo
 hugo:
-	$(DOCKER_COMPOSE) run --rm hugo $(cmd)
+	# make hugo cmd="version"
+	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
 
 .PHONY: bumphugo
 bumphugo:
