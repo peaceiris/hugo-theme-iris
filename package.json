@@ -7,7 +7,8 @@
     "start": "run-p client server",
     "server": "make up",
     "client": "wait-on http://localhost:1313 && open http://localhost:1313",
-    "build": "make build",
+    "up": "make npm-up",
+    "build": "make npm-build",
     "test": "make npm-test",
     "release": "standard-version",
     "update-deps": "(git diff 'HEAD@{1}' --name-only | grep 'package-lock.json' > /dev/null) && npm ci || :"
