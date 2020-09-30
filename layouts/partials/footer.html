@@ -1,11 +1,11 @@
 <footer class="footer hero is-dark is-bold">
-  <div class="content has-text-centered">
+  <div class="content has-text-centered container">
     © {{ with .Site.Params.footer.copyright.year }}{{ . }}{{ else }}{{ now.Format "2006" }}{{ end }}
     {{ with .Site.Params.footer.copyright.link }}<a href="{{ . }}" rel="noopener noreferrer" target=_blank>{{ end }}
     {{ with .Site.Params.footer.copyright.name }}{{ . }}{{ end }}
     {{ if .Site.Params.footer.copyright.link }}</a>{{ end }}
   </div>
-  <div class="content has-text-centered">
+  <div class="content has-text-centered container">
     Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target=_blank><i>Hugo</i></a> and <a href="https://github.com/peaceiris/hugo-theme-iris" rel="noopener noreferrer" target=_blank><i>Iris Theme</i></a>
     <!-- Latest build: -->
     {{/* {{ now.Format "2006-01-02 15:04:05" }} ({{ .GitInfo.AbbreviatedHash }}) */}}
