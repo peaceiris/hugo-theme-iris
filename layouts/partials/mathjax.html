@@ -1,5 +1,5 @@
 {{ with $.Params.math }}
-  <script>
+  <script defer>
     MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -9,5 +9,5 @@
 
   {{ $js := resources.Get "theme/js/mathjax-v3.0.1-tex-mml-chtml.js" }}
   {{ $secureJS := $js | resources.Fingerprint "sha512" }}
-  <script async type="text/javascript" id="MathJax-script" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+  <script defer type="text/javascript" id="MathJax-script" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 {{ end }}
