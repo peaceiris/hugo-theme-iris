@@ -26,7 +26,8 @@ Hugo IRIS Theme
   - [Features](#features)
   - [Roadmap](#roadmap)
 - [Getting Started](#getting-started)
-  - [Get Hugo](#get-hugo)
+  - [Install Hugo](#install-hugo)
+  - [Install Go](#install-go)
   - [Initialize New Hugo Project](#initialize-new-hugo-project)
   - [Create a Post Page](#create-a-post-page)
   - [Create a Slide Page](#create-a-slide-page)
@@ -99,11 +100,17 @@ This repository includes the [Hugo] theme.
 
 ## Getting Started
 
-### Get Hugo
+### Install Hugo
 
 You can find the minimum supported Hugo version in [theme.toml] `min_version`. Using Hugo extended version is desirable.
 
 [theme.toml]: https://github.com/peaceiris/hugo-theme-iris/blob/master/theme.toml
+
+### Install Go
+
+This theme depends on Hugo Modules.
+
+- [Download and install - The Go Programming Language](https://golang.org/doc/install)
 
 ### Initialize New Hugo Project
 

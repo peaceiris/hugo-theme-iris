@@ -24,7 +24,7 @@
     "**/*": [
       "npm test"
     ],
-    "README.md": [
+    "{README,CONTRIBUTING}.md": [
       "npx doctoc@1.4.0 --github"
     ]
   },
