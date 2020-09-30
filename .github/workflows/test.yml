@@ -34,6 +34,13 @@ jobs:
           hugo-version: "${{ steps.hugo_version.outputs.hugo_version }}"
           extended: true
 
+      - uses: actions/cache@v2
+        with:
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
       - run: make cibuild
 
   test-docker:
@@ -62,6 +69,13 @@ jobs:
         with:
           hugo-version: "${{ steps.hugo_version.outputs.hugo_version }}"
           extended: true
+
+      - uses: actions/cache@v2
+        with:
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
 
       - name: Setup Git
         run: |
