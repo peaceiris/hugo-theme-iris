@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import "./bulma-0.7.5/utilities/_all.sass";
-@import "./bulma-0.7.5/base/_all.sass";
+@import "../../mod/bulma/utilities/_all.sass";
+@import "../../mod/bulma/base/_all.sass";
 
 $tablet: 760px;
 $dimensions: 16 24 32 48 64 96 128 180 256;
@@ -9,50 +9,50 @@ $dimensions: 16 24 32 48 64 96 128 180 256;
 // ====================
 // components
 // ====================
-// @import "./bulma-0.7.5/components/_all.sass";
+// @import "../../mod/bulma/components/_all.sass";
 
 $breadcrumb-item-hover-color: gold;
 $breadcrumb-item-active-color: $grey-lighter;
-@import "./bulma-0.7.5/components/breadcrumb.sass";
+@import "../../mod/bulma/components/breadcrumb.sass";
 
 $card-color: $grey-lighter;
 $card-header-color: skyblue;
 $card-background-color: $grey-dark;
 $card-footer-border-top: 1px solid $grey-darker;
-@import "./bulma-0.7.5/components/card.sass";
+@import "../../mod/bulma/components/card.sass";
 
 $dropdown-content-background-color: $grey-dark;
 $dropdown-item-color: $grey-lighter;
-@import "./bulma-0.7.5/components/dropdown.sass";
-// @import "./bulma-0.7.5/components/level.sass";
-// @import "./bulma-0.7.5/components/list.sass";
-// @import "./bulma-0.7.5/components/media.sass";
-// @import "./bulma-0.7.5/components/menu.sass";
-// @import "./bulma-0.7.5/components/message.sass";
-// @import "./bulma-0.7.5/components/modal.sass";
-// @import "./bulma-0.7.5/components/navbar.sass";
-// @import "./bulma-0.7.5/components/pagination.sass";
-// @import "./bulma-0.7.5/components/panel.sass";
-// @import "./bulma-0.7.5/components/tabs.sass";
+@import "../../mod/bulma/components/dropdown.sass";
+// @import "../../mod/bulma/components/level.sass";
+// @import "../../mod/bulma/components/list.sass";
+// @import "../../mod/bulma/components/media.sass";
+// @import "../../mod/bulma/components/menu.sass";
+// @import "../../mod/bulma/components/message.sass";
+// @import "../../mod/bulma/components/modal.sass";
+// @import "../../mod/bulma/components/navbar.sass";
+// @import "../../mod/bulma/components/pagination.sass";
+// @import "../../mod/bulma/components/panel.sass";
+// @import "../../mod/bulma/components/tabs.sass";
 
 // ====================
 // elements
 // ====================
-// @import "./bulma-0.7.5/elements/_all.sass";
-// @import "./bulma-0.7.5/elements/box.sass";
+// @import "../../mod/bulma/elements/_all.sass";
+// @import "../../mod/bulma/elements/box.sass";
 
 $button-color: $grey-lighter;
 $button-background-color: $grey-dark;
 $button-hover-color: skyblue;
-@import "./bulma-0.7.5/elements/button.sass";
-@import "./bulma-0.7.5/elements/container.sass";
-@import "./bulma-0.7.5/elements/content.sass";
-// @import "./bulma-0.7.5/elements/form.sass";
-// @import "./bulma-0.7.5/elements/icon.sass";
-@import "./bulma-0.7.5/elements/image.sass";
-// @import "./bulma-0.7.5/elements/notification.sass";
-@import "./bulma-0.7.5/elements/other.sass";
-// @import "./bulma-0.7.5/elements/progress.sass";
+@import "../../mod/bulma/elements/button.sass";
+@import "../../mod/bulma/elements/container.sass";
+@import "../../mod/bulma/elements/content.sass";
+// @import "../../mod/bulma/elements/form.sass";
+// @import "../../mod/bulma/elements/icon.sass";
+@import "../../mod/bulma/elements/image.sass";
+// @import "../../mod/bulma/elements/notification.sass";
+@import "../../mod/bulma/elements/other.sass";
+// @import "../../mod/bulma/elements/progress.sass";
 
 $table-color: $grey-lighter;
 $table-head-cell-color: gold;
@@ -61,33 +61,33 @@ $table-background-color: $grey-dark;
 $table-striped-row-even-background-color: $grey-dark;
 $table-row-hover-background-color: sienna;
 $table-striped-row-even-hover-background-color: sienna;
-@import "./bulma-0.7.5/elements/table.sass";
+@import "../../mod/bulma/elements/table.sass";
 
-@import "./bulma-0.7.5/elements/tag.sass";
-@import "./bulma-0.7.5/elements/title.sass";
+@import "../../mod/bulma/elements/tag.sass";
+@import "../../mod/bulma/elements/title.sass";
 
 // ====================
 // form
 // ====================
-// @import "./bulma-0.7.5/form/_all.sass";
-// @import "./bulma-0.7.5/form/checkbox-radio.sass";
-// @import "./bulma-0.7.5/form/file.sass";
-// @import "./bulma-0.7.5/form/input-textarea.sass";
-// @import "./bulma-0.7.5/form/select.sass";
-// @import "./bulma-0.7.5/form/shared.sass";
-// @import "./bulma-0.7.5/form/tools.sass";
+// @import "../../mod/bulma/form/_all.sass";
+// @import "../../mod/bulma/form/checkbox-radio.sass";
+// @import "../../mod/bulma/form/file.sass";
+// @import "../../mod/bulma/form/input-textarea.sass";
+// @import "../../mod/bulma/form/select.sass";
+// @import "../../mod/bulma/form/shared.sass";
+// @import "../../mod/bulma/form/tools.sass";
 
 // ====================
 // grid
 // ====================
-// @import "./bulma-0.7.5/grid/_all.sass";
-@import "./bulma-0.7.5/grid/columns.sass";
-// @import "./bulma-0.7.5/grid/tiles.sass";
+// @import "../../mod/bulma/grid/_all.sass";
+@import "../../mod/bulma/grid/columns.sass";
+// @import "../../mod/bulma/grid/tiles.sass";
 
 // ====================
 // layout
 // ====================
-@import "./bulma-0.7.5/layout/_all.sass";
+@import "../../mod/bulma/layout/_all.sass";
 
 // ====================
 // Iris theme

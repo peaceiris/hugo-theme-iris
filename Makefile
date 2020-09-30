@@ -12,6 +12,11 @@ up:
 	$(DOCKER_COMPOSE) exec hugo hugo \
 		server --navigateToChanged --bind=0.0.0.0 --buildDrafts --themesDir ../../ --i18n-warnings
 
+.PHONY: npm-up
+npm-up:
+	cd ./exampleSite && \
+	hugo server --navigateToChanged --bind=0.0.0.0 --buildDrafts --themesDir ../../ --i18n-warnings
+
 .PHONY: hugo
 hugo:
 	# make hugo cmd="version"
@@ -26,11 +31,22 @@ build:
 	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL))
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
+.PHONY: npm-build
+npm-build:
+	cd ./exampleSite && \
+	hugo --minify --themesDir ../../ --baseURL $(BASE_URL)
+
 .PHONY: test
 test:
 	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL) \
 		--renderToMemory --i18n-warnings --path-warnings --debug)
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
+
+.PHONY: npm-test
+npm-test:
+	cd ./exampleSite && \
+	hugo --minify --themesDir ../../ --baseURL $(BASE_URL) \
+		--renderToMemory --i18n-warnings --path-warnings --debug
 
 .PHONY: metrics
 metrics:
