@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.21.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.20.1...v0.21.0) (2020-09-30)
+
+
+### chore
+
+* use docker image containing Node.js (#201) ([53b6cd4](https://github.com/peaceiris/hugo-theme-iris/commit/53b6cd42b61c5514a3918311cc936ae579afbedb)), closes [#201](https://github.com/peaceiris/hugo-theme-iris/issues/201)
+
+### ci
+
+* add go.mod and go.sum (#205) ([c51e07c](https://github.com/peaceiris/hugo-theme-iris/commit/c51e07c58db8c5cb32c786ae9fa2842ce8dbf153)), closes [#205](https://github.com/peaceiris/hugo-theme-iris/issues/205)
+
+### deps
+
+* bump open from 7.2.1 to 7.3.0 (#204) ([f8f2556](https://github.com/peaceiris/hugo-theme-iris/commit/f8f255683f4422732cb09c391f4b394f22214146)), closes [#204](https://github.com/peaceiris/hugo-theme-iris/issues/204)
+* peaceiris/hugo-mod-bulma (#202) ([60f4c96](https://github.com/peaceiris/hugo-theme-iris/commit/60f4c96313b51693c4db98ea57037bdb6298da48)), closes [#202](https://github.com/peaceiris/hugo-theme-iris/issues/202)
+
+### docs
+
+* change badges position ([cb24e23](https://github.com/peaceiris/hugo-theme-iris/commit/cb24e23e308c380bfe6f68a7b6b8782274d68456))
+* update workflow ([4fbb704](https://github.com/peaceiris/hugo-theme-iris/commit/4fbb704835444953793f24564f376a7a094d8abc))
+
+
+
 ## [0.20.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.20.0...v0.20.1) (2020-09-26)
 
 
