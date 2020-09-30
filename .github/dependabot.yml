@@ -22,6 +22,7 @@ updates:
   commit-message:
     prefix: ci
 
+# TODO: cannot detect updates of Hugo Modules
 - package-ecosystem: "gomod"
   directory: "/exampleSite"
   schedule:
