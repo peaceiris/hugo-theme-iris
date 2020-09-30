@@ -83,6 +83,7 @@ This repository includes the [Hugo] theme.
 - [MathJaX]: Beautiful math in all browsers.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
 - [reveal.js]: Writing slides using Markdown.
+- JSON-LD
 
 ### Roadmap
 
