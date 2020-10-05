@@ -49,8 +49,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: actions/cache@v2
+        with:
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
       - name: Build Testing with Docker
-        run: make build
+        run: |
+          export HUGO_CACHEDIR=/tmp/hugo_cache
+          make build
 
   test-setup:
     runs-on: ubuntu-18.04
