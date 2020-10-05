@@ -1,0 +1,3 @@
+module:
+  imports:
+    - path: github.com/peaceiris/hugo-mod-bulma
