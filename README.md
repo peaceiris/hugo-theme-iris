@@ -117,10 +117,10 @@ This theme depends on Hugo Modules.
 Here is [the setup script](./scripts/setup.sh).
 
 ```sh
-mkdir ./homepage
+mkdir homepage
 wget https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/scripts/setup.sh
-bash ./setup.sh ./homepage "your_github_id"
-cd ./homepage
+bash ./setup.sh homepage "your_github_id"
+cd homepage
 hugo server
 ```
 

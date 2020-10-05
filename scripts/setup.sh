@@ -6,6 +6,7 @@ set -eu -o pipefail # -x: is for debugging
 cd $1
 git init
 wget https://github.com/peaceiris/hugo-theme-iris/archive/master.zip
+unzip master.zip
 rm master.zip
 cp -r ./hugo-theme-iris-master/exampleSite/{config,content,data,scripts,static} .
 rm -rf hugo-theme-iris-master
