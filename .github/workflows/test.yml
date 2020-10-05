@@ -85,8 +85,8 @@ jobs:
       - name: Create a new Hugo project
         run: |
           cd ~
-          mkdir ./homepage
+          mkdir homepage
           wget https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/scripts/setup.sh
-          bash ./setup.sh ./homepage "peaceiris"
-          cd ./homepage
+          bash ./setup.sh "homepage" "peaceiris"
+          cd homepage
           hugo
