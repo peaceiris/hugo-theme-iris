@@ -1,9 +1,8 @@
 baseURL: "https://example.com"
-theme: hugo-theme-iris
 
 module:
   imports:
-    - path: github.com/peaceiris/hugo-mod-bulma
+    - path: github.com/peaceiris/hugo-theme-iris
 
 # googleAnalytics: UA-123-45
 disqusShortname: hugothemeiris
