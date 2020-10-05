@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.21.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.21.1...v0.21.2) (2020-10-05)
+
+
+### chore
+
+* add todo ([49d67a4](https://github.com/peaceiris/hugo-theme-iris/commit/49d67a4bc46da00cb612ad4eed07bd54e1d99319))
+* update extensions ([048a9b7](https://github.com/peaceiris/hugo-theme-iris/commit/048a9b75ac2e33faabff7fedd9031095eb790133))
+
+### ci
+
+* add actions/cache for hugo_cache (#208) ([4d17e68](https://github.com/peaceiris/hugo-theme-iris/commit/4d17e68611b281c058ee8d29aebd68cfafd54fe2)), closes [#208](https://github.com/peaceiris/hugo-theme-iris/issues/208)
+* add gomod ([856c069](https://github.com/peaceiris/hugo-theme-iris/commit/856c069d2b2d050c768ebdad40af3748c21a04ad))
+* bump actions/setup-node from v2.1.1 to v2.1.2 (#210) ([28fb30e](https://github.com/peaceiris/hugo-theme-iris/commit/28fb30e425bc84188521979c8cf2c1d4b18ff2d1)), closes [#210](https://github.com/peaceiris/hugo-theme-iris/issues/210)
+* bump actions/upload-artifact from v2.1.4 to v2.2.0 (#209) ([864351a](https://github.com/peaceiris/hugo-theme-iris/commit/864351ac2512f69c910b35132de8756e234186fb)), closes [#209](https://github.com/peaceiris/hugo-theme-iris/issues/209)
+
+### deps
+
+* import peaceiris/hugo-theme-iris ([619bd19](https://github.com/peaceiris/hugo-theme-iris/commit/619bd19e9e73e2fe13fd663214481e6f29e8c6fa))
+* inport peaceiris/hugo-mod-bulma ([fcfb1d3](https://github.com/peaceiris/hugo-theme-iris/commit/fcfb1d3f2cad3794e26ea30f09c845d2f19308aa))
+
+### docs
+
+* add Install Go ([e92b410](https://github.com/peaceiris/hugo-theme-iris/commit/e92b410d4ccad3b3e4261185bb7f34c951f03ade))
+* add JSON-LD to Features ([e4113a6](https://github.com/peaceiris/hugo-theme-iris/commit/e4113a61e7376bf5ad2995c21e960aa7a317336a))
+* update Special Thanks ([df076d4](https://github.com/peaceiris/hugo-theme-iris/commit/df076d4bebc6b189600bb90ee9ba2df3ecc758e6))
+
+### refactor
+
+* add defer ([a1de541](https://github.com/peaceiris/hugo-theme-iris/commit/a1de541b1f225b9a08a208bf3101f542e72288ab))
+
+
+
 ## [0.21.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.21.0...v0.21.1) (2020-09-30)
 
 
