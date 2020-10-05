@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.21.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.21.2...v0.21.3) (2020-10-05)
+
+
+### chore
+
+* add budparr.language-hugo-vscode ([c7603a2](https://github.com/peaceiris/hugo-theme-iris/commit/c7603a2050c51be295b89c4d3e9c021356a634b7))
+* add public ([4a0607f](https://github.com/peaceiris/hugo-theme-iris/commit/4a0607f62142370482d8254de01c6dff32a12309))
+* bump theme ([b5d88a7](https://github.com/peaceiris/hugo-theme-iris/commit/b5d88a7bf902dc343a42f141485f241b484c3e81))
+* change toml to yaml ([e9bb850](https://github.com/peaceiris/hugo-theme-iris/commit/e9bb8507824d85f3e9320db0661269f9ec3f47a6))
+* use pre-release ([62e570e](https://github.com/peaceiris/hugo-theme-iris/commit/62e570e00c4aabc0f320b05c07fee0a3985c5be5))
+
+### ci
+
+* fix path ([fcbf0af](https://github.com/peaceiris/hugo-theme-iris/commit/fcbf0aff693ff0018c957b7d323c7d698bf8af3a))
+* use hugo modules ([ec99358](https://github.com/peaceiris/hugo-theme-iris/commit/ec9935846afea7c2791bd7c20a49d2f7c75f707c))
+
+### deps
+
+* bump hugo-mod-bulma from 0.1.1 to 0.1.2 ([d8d9593](https://github.com/peaceiris/hugo-theme-iris/commit/d8d9593f06ecdb79551fee5f5c393a28dbe9e5b9))
+* bump theme ([3b57315](https://github.com/peaceiris/hugo-theme-iris/commit/3b5731583dc55c44f59e7f994f98295b79f7bc67))
+* hugo mod get -u && tidy ([bd037a0](https://github.com/peaceiris/hugo-theme-iris/commit/bd037a081c76c5d3575f872ceb5bf999989ac0be))
+
+### docs
+
+* update How to Update the Theme ([9c6ded8](https://github.com/peaceiris/hugo-theme-iris/commit/9c6ded83c3839b5b60ee3cccfde18999892067be))
+
+### fix
+
+* add unzip ([df1c69b](https://github.com/peaceiris/hugo-theme-iris/commit/df1c69b9d8628907912412cc414ab8f595c82c1d))
+
+
+
 ## [0.21.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.21.1...v0.21.2) (2020-10-05)
 
 
