@@ -5,7 +5,11 @@ set -eu -o pipefail # -x: is for debugging
 
 cd $1
 git init
-git submodule add https://github.com/peaceiris/hugo-theme-iris.git ./themes/hugo-theme-iris
-cp -r ./themes/hugo-theme-iris/exampleSite/{config,content,data,scripts,static,go.mod,go.sum} .
+wget https://github.com/peaceiris/hugo-theme-iris/archive/master.zip
+rm master.zip
+cp -r ./hugo-theme-iris-master/exampleSite/{config,content,data,scripts,static} .
+rm -rf hugo-theme-iris-master
+hugo mod init "github.com/$2/$1"
+hugo mod get -u github.com/peaceiris/hugo-theme-iris
 git add .
 git commit -m "Add hugo-theme-iris"

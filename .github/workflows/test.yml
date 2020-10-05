@@ -87,6 +87,6 @@ jobs:
           cd ~
           mkdir ./homepage
           wget https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/scripts/setup.sh
-          bash ./setup.sh ./homepage
+          bash ./setup.sh ./homepage "peaceiris"
           cd ./homepage
           hugo
