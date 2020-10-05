@@ -1,5 +1,3 @@
 github.com/jgthms/bulma v0.0.0-20200928223852-9928dba42d75/go.mod h1:89FLBKXYFKfOKAoDeUT26V0pHGwzr205cMXAEqtAVOI=
-github.com/peaceiris/hugo-mod-bulma v0.1.1 h1:mfxv5TX9mSoT72WwGi6y2LeiSjVE7TV1dU659fih+90=
-github.com/peaceiris/hugo-mod-bulma v0.1.1/go.mod h1:Oldyip8pv+p8c94jOprxEJ+0+IzDyYi3t/kpZ3txDnM=
-github.com/peaceiris/hugo-mod-bulma v0.1.2-0.20201005101452-93a0a4dcd380 h1:Sg0WK8MYmXGA8ULiR5RlKghOntYshQEcXs56WoMDnE4=
-github.com/peaceiris/hugo-mod-bulma v0.1.2-0.20201005101452-93a0a4dcd380/go.mod h1:Oldyip8pv+p8c94jOprxEJ+0+IzDyYi3t/kpZ3txDnM=
+github.com/peaceiris/hugo-mod-bulma v0.1.2 h1:NeOSqatA04bkJxewIjFdEoQlhfBBDtoSl0fh0NS4k+g=
+github.com/peaceiris/hugo-mod-bulma v0.1.2/go.mod h1:Oldyip8pv+p8c94jOprxEJ+0+IzDyYi3t/kpZ3txDnM=
