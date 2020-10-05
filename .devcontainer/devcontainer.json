@@ -12,6 +12,7 @@
 
   // Add the IDs of extensions you want installed when the container is created in the array below.
   "extensions": [
+    "budparr.language-hugo-vscode",
     "bungcip.better-toml",
     "christian-kohler.path-intellisense",
     "donjayamanne.githistory",
