@@ -50,7 +50,6 @@ Hugo IRIS Theme
   - [github-sponsors-list](#github-sponsors-list)
   - [table](#table)
 - [How to Update the Theme](#how-to-update-the-theme)
-  - [Git submodule](#git-submodule)
 - [Special Thanks](#special-thanks)
 - [Changelog](#changelog)
 - [Maintainer](#maintainer)
@@ -348,18 +347,9 @@ Please follow the instruction as the same as the `repo` shortcode.
 
 ## How to Update the Theme
 
-### Git submodule
-
 ```sh
-cd ./themes/hugo-theme-iris
-git fetch
-git checkout v0.x.y
-git branch
-# * (HEAD detached at v0.x.y)
-cd ../..
-git add themes/hugo-theme-iris
-git commit -m "deps: bump hugo-theme-iris to v0.x.y"
-git push origin master
+cd your_hugo_project
+hugo mod get -u && hugo mod tidy && hugo mod verify
 ```
 
 <div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
