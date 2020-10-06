@@ -362,7 +362,7 @@ hugo mod get -u && hugo mod tidy && hugo mod verify
 - [Bulma] via [peaceiris/hugo-mod-bulma](https://github.com/peaceiris/hugo-mod-bulma)
 - [reveal.js] via [peaceiris/hugo-mod-revealjs](https://github.com/peaceiris/hugo-mod-revealjs)
 - [MathJaX]
-- [mermaid]
+- [mermaid] via [peaceiris/hugo-mod-mermaidjs](https://github.com/peaceiris/hugo-mod-mermaidjs)
 
 <!-- - Font Awesome -->
 
