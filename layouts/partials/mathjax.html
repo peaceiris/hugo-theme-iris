@@ -1,13 +1,11 @@
-{{ with $.Params.math }}
-  <script defer>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    };
-  </script>
+<script defer>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
 
-  {{ $js := resources.Get "mod/mathjax/tex-mml-chtml.js" }}
-  {{ $secureJS := $js | resources.Fingerprint "sha512" }}
-  <script defer type="text/javascript" id="MathJax-script" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
-{{ end }}
+{{ $js := resources.Get "mod/mathjax/tex-mml-chtml.js" }}
+{{ $secureJS := $js | resources.Fingerprint "sha512" }}
+<script defer type="text/javascript" id="MathJax-script" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
