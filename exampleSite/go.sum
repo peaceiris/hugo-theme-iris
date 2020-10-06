@@ -3,7 +3,6 @@ github.com/jgthms/bulma v0.0.0-20200928223852-9928dba42d75/go.mod h1:89FLBKXYFKf
 github.com/mathjax/MathJax v0.0.0-20200912194947-c8292351190c/go.mod h1:bgp6XP7Dtl25/x6vVIPVe2mkOCrg8wMk/A9gl0FzJLA=
 github.com/mermaid-js/mermaid v0.0.0-20200930172342-4dc805d25add/go.mod h1:pGJSm9DYANtp59DADJgNzFh1uIpkn5xaH3ZBdv1VNTI=
 github.com/peaceiris/hugo-mod-bulma v0.1.2/go.mod h1:Oldyip8pv+p8c94jOprxEJ+0+IzDyYi3t/kpZ3txDnM=
-github.com/peaceiris/hugo-mod-mathjax v0.1.0/go.mod h1:NTn10syjBq7EVnZACmoOlZlg+D3MXLDo9jOLdq5Bm5g=
 github.com/peaceiris/hugo-mod-mathjax v0.1.1/go.mod h1:NTn10syjBq7EVnZACmoOlZlg+D3MXLDo9jOLdq5Bm5g=
 github.com/peaceiris/hugo-mod-mermaidjs v0.1.0/go.mod h1:Cpvadqzfa8Pqyi+/rSxI1tdH8xmBsSCtu04kyKu82xM=
 github.com/peaceiris/hugo-mod-revealjs v0.1.1/go.mod h1:MgoGZ76lUsbOrZcFg6aCT5l96fSU/P/b4dvtSGTCAEc=
