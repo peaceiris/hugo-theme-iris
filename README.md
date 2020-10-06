@@ -360,9 +360,10 @@ hugo mod get -u && hugo mod tidy && hugo mod verify
 
 - [Hugo]
 - [Bulma] via [peaceiris/hugo-mod-bulma](https://github.com/peaceiris/hugo-mod-bulma)
-- [reveal.js]
+- [reveal.js] via [peaceiris/hugo-mod-revealjs](https://github.com/peaceiris/hugo-mod-revealjs)
 - [MathJaX]
 - [mermaid]
+
 <!-- - Font Awesome -->
 
 <div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
