@@ -4,9 +4,9 @@
 
   {{ with $.Params.slide }}
   <style>
-    {{ $cssMain := resources.Get "revealjs-v3.9.2/css/reveal.css" | toCSS | minify }}
+    {{ $cssMain := resources.Get "mod/revealjs/dist/reveal.css" | toCSS | minify }}
     {{ $cssMain.Content | safeCSS }}
-    {{ $cssTheme := resources.Get "revealjs-v3.9.2/css/theme/white.css" | toCSS | minify }}
+    {{ $cssTheme := resources.Get "mod/revealjs/dist/theme/white.css" | toCSS | minify }}
     {{ $cssTheme.Content | safeCSS }}
   </style>
   {{ else }}

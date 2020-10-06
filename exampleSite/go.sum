@@ -1,4 +1,6 @@
+github.com/hakimel/reveal.js v0.0.0-20200529101028-bd19860b4d6e/go.mod h1:vIoaZ8tJbfDF30DhKf6Dia5ykePO0tETa9Posw8UrOE=
 github.com/jgthms/bulma v0.0.0-20200928223852-9928dba42d75/go.mod h1:89FLBKXYFKfOKAoDeUT26V0pHGwzr205cMXAEqtAVOI=
 github.com/peaceiris/hugo-mod-bulma v0.1.2/go.mod h1:Oldyip8pv+p8c94jOprxEJ+0+IzDyYi3t/kpZ3txDnM=
+github.com/peaceiris/hugo-mod-revealjs v0.1.1/go.mod h1:MgoGZ76lUsbOrZcFg6aCT5l96fSU/P/b4dvtSGTCAEc=
 github.com/peaceiris/hugo-theme-iris v0.21.3-0.20201005102807-d8d9593f06ec h1:nNCEH8mZle3ntkud+XhAfk2jG2CfWfupNhv5BGNpJJY=
 github.com/peaceiris/hugo-theme-iris v0.21.3-0.20201005102807-d8d9593f06ec/go.mod h1:zMVFWJu9wpYWnC28q7eQjoJIfmnDR2eoKVY8RItcWRc=

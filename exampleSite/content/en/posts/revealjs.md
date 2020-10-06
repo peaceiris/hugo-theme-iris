@@ -5,9 +5,6 @@ publishdate: 2020-01-03T01:00:00.000Z
 # draft: true
 # eyecatch: images/mermaid.jpg
 # tags: ["hugo"]
-# toc: true
-# math: true
-# mermaid: true
 slide: true
 # weight: 1
 twitter:
