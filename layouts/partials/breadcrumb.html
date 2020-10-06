@@ -13,15 +13,15 @@
 
   {{- if eq .node .start -}}
     <li class="is-active">
-      <button class="button is-dark is-outlined is-focused">
+      <p class="is-dark is-focused">
         <a href="#" aria-current="page">{{- .node.LinkTitle -}}</a>
-      </button>
+      </p>
     </li>
   {{- else -}}
     <li>
-      <button class="button is-dark">
+      <p class="is-dark">
         <a href="{{- .node.Permalink -}}">{{- .node.LinkTitle -}}</a>
-      </button>
+      </p>
     </li>
   {{- end -}}
 {{- end -}}
