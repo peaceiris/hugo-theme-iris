@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.23.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.22.0...v0.23.0) (2020-10-06)
+
+
+### chore
+
+* remove assets/revealjs-v3.9.2 ([f2e03f0](https://github.com/peaceiris/hugo-theme-iris/commit/f2e03f0852163326ab3dcd380cd47f213f5d1b5c))
+* ugo mod tidy ([c266fa4](https://github.com/peaceiris/hugo-theme-iris/commit/c266fa4c3f70cc40a39f9e4abf8778d7ce56d7d2))
+* update resources ([bcab51c](https://github.com/peaceiris/hugo-theme-iris/commit/bcab51ce15a02abd648bf56f3898b0408bea164a))
+
+### deps
+
+* import mathjax/MathJax 3.1.2 ([0bac8df](https://github.com/peaceiris/hugo-theme-iris/commit/0bac8dff8270fe4543089b6970a4cddb4d0f5b0b)), closes [#207](https://github.com/peaceiris/hugo-theme-iris/issues/207)
+* import peaceiris/hugo-mod-mermaidjs 0.1.0 ([afcdb28](https://github.com/peaceiris/hugo-theme-iris/commit/afcdb2807b03a8df14185d6b1b47ec0322c16dec)), closes [#194](https://github.com/peaceiris/hugo-theme-iris/issues/194)
+* ugo mod tidy ([715dedb](https://github.com/peaceiris/hugo-theme-iris/commit/715dedb2960750131a1d3f9b3885bf1872668a9a))
+
+### docs
+
+* add link to peaceiris/hugo-mod-mermaidjs ([09b3b9e](https://github.com/peaceiris/hugo-theme-iris/commit/09b3b9e04bbc1212c801caf6936218f0cd042481))
+* add link to peaceiris/hugo-mod-revealjs ([36274f5](https://github.com/peaceiris/hugo-theme-iris/commit/36274f52920cb10b3fb40b087dd127ce385404b4))
+* fix typo MathJax ([ae8e66e](https://github.com/peaceiris/hugo-theme-iris/commit/ae8e66e7b47f96e8355e9832327fcf4a708ca63d))
+
+### feat
+
+* import revealjs 4.0.2 ([998640a](https://github.com/peaceiris/hugo-theme-iris/commit/998640a852f4508945bd5e4e5826a7866414bf2f)), closes [#156](https://github.com/peaceiris/hugo-theme-iris/issues/156)
+
+
+
 # [0.22.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.21.3...v0.22.0) (2020-10-06)
 
 
