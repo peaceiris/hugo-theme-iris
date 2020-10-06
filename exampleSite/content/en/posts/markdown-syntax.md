@@ -2,6 +2,7 @@
 title: Markdown Syntax Guide
 date: 2019-09-25T23:00:00.000Z
 description: Sample article showcasing basic Markdown syntax and formatting for HTML elements.
+toc: true
 ---
 
 

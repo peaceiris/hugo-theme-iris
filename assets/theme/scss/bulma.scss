@@ -117,12 +117,20 @@ p:not([class]) {
   margin: 1rem 0rem;
 }
 
-a {
+a.normal-link {
   text-decoration: none;
   color: skyblue;
 }
-a:hover {
+a.normal-link:hover {
   text-decoration: underline;
+  color: skyblue;
+}
+a {
+  text-decoration: underline;
+  color: skyblue;
+}
+a:hover {
+  text-decoration: none;
   color: gold;
 }
 a:visited {

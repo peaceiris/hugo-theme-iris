@@ -7,7 +7,7 @@
   {{ $sponsorID := .sponsor.login }}
   {{ $sponsorURL := delimit (slice "https://github.com/" $sponsorID) "" | safeURL }}
   <div class="column is-3-mobile is-2-tablet">
-    <a href="{{ $sponsorURL }}" rel="noopener noreferrer" target="_blank">
+    <a href="{{ $sponsorURL }}" rel="noopener noreferrer" target="_blank" class="normal-link">
       <figure class="image is-64x64">
         <img
           class="is-rounded"
