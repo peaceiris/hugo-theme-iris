@@ -181,15 +181,13 @@ The following actions are useful to deploy your site to GitHub Pages using GitHu
 Here is an example workflow `.github/workflows/gh-pages.yml` to deploy your site to `gh-pages` branch at a project repository.
 For the first deployment, we have to do this operation: [First Deployment with `GITHUB_TOKEN` - peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-first-deployment-with-github_token)
 
-An example workflow for a user repository (like `peaceiris/peaceiris.github.io`) is available at the README of the `peaceiris/actions-gh-pages`.
-
 ```yaml
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
