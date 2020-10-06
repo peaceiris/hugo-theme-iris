@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.23.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.23.0...v0.23.1) (2020-10-06)
+
+
+### docs
+
+* rename master to main ([31ff3ac](https://github.com/peaceiris/hugo-theme-iris/commit/31ff3ac4bf8d79abd071f91ee4e111fe4655799e))
+
+### feat
+
+* use partialCached (#213) ([e6d8904](https://github.com/peaceiris/hugo-theme-iris/commit/e6d89049b7f3e050e9e0ce7ba315f91485e568f2)), closes [#213](https://github.com/peaceiris/hugo-theme-iris/issues/213)
+
+
+
 # [0.23.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.22.0...v0.23.0) (2020-10-06)
 
 
