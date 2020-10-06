@@ -2,14 +2,14 @@
   <section class="hero is-dark is-bold">
     <div class="hero-body columns is-desktop">
       <div class="column is-8 is-offset-2">
-        <h1 class="title">
+        <h1 class="title is-spaced">
           {{ if .IsHome }}
             {{ .Site.Title }}
           {{ else }}
             {{ .Title }}
           {{ end }}
         </h1>
-        <p class="subtitle has-text-grey">
+        <p class="subtitle is-6">
           {{ if .IsHome }}
             {{ .Site.Params.description }}
           {{ else }}
