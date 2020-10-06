@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.22.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.21.3...v0.22.0) (2020-10-06)
+
+
+### chore
+
+* Add HUGO_CACHEDIR for hugo_cache ([4ebbf63](https://github.com/peaceiris/hugo-theme-iris/commit/4ebbf6330a7c99296e9b425d961878555a43e9c9))
+
+### ci
+
+* fix HUGO_CACHEDIR (#211) ([114b1f2](https://github.com/peaceiris/hugo-theme-iris/commit/114b1f2456a08c8813adce57db82e7a1e263beef)), closes [#211](https://github.com/peaceiris/hugo-theme-iris/issues/211)
+
+### fix
+
+* breadcrumb html ([9d7dd95](https://github.com/peaceiris/hugo-theme-iris/commit/9d7dd953459d22531a5a38d3434dcd4465a8b629))
+* breadcrumb style ([028039f](https://github.com/peaceiris/hugo-theme-iris/commit/028039f5cb86f0a318590fc76551c5172d404596))
+* font size (#212) ([f77d43e](https://github.com/peaceiris/hugo-theme-iris/commit/f77d43e2864193527344fb3c62825b60888a76a3)), closes [#212](https://github.com/peaceiris/hugo-theme-iris/issues/212)
+* link style ([871b525](https://github.com/peaceiris/hugo-theme-iris/commit/871b525ed1c326f479221074d6e9774ba70ad0f4))
+* post list ([76ec799](https://github.com/peaceiris/hugo-theme-iris/commit/76ec7996e6fbbfeb01e4699900bd717f1b15536c))
+
+
+
 ## [0.21.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.21.2...v0.21.3) (2020-10-05)
 
 
