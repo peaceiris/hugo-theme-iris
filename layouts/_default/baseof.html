@@ -14,22 +14,26 @@
           {{- end -}}
         </div>
       </div>
-      {{ partial "revealjs/js" . }}
+      {{ partialCached "revealjs/js" . }}
     {{ else }}
       {{ partial "header.html" . }}
       <section class="hero is-dark is-large">
         <div class="columns">
           <div class="column is-8 is-offset-2">
-            {{ partial "check-tools" . }}
-            {{ partial "lang-button" . }}
-            {{ partial "edit-button" . }}
+            {{ partialCached "check-tools" . }}
+            {{ partialCached "lang-button" . }}
+            {{ partialCached "edit-button" . }}
             {{ block "main" . }}{{ end }}
           </div>
         </div>
       </section>
-      {{ partial "footer" . }}
+      {{ partialCached "footer" . }}
     {{ end }}
-    {{ partial "mathjax" . }}
-    {{ partial "mermaid" . }}
+    {{ with $.Params.math }}
+      {{ partialCached "mathjax" . }}
+    {{ end }}
+    {{ with $.Params.mermaid }}
+      {{ partialCached "mermaid" . }}
+    {{ end }}
   </body>
 </html>

@@ -113,7 +113,7 @@ This theme depends on Hugo Modules.
 
 ### Initialize New Hugo Project
 
-Here is [the setup script](./scripts/setup.sh).
+Here is [the setup script](https://github.com/peaceiris/hugo-theme-iris/blob/master/scripts/setup.sh).
 
 ```sh
 mkdir homepage
@@ -291,7 +291,7 @@ The script requires the [gh] command.
 
 [gh]: https://github.com/cli/cli
 
-For more details: [scripts/fetch_data.sh](./exampleSite/scripts/fetch_data.sh)
+For more details: [scripts/fetch_data.sh](https://github.com/peaceiris/hugo-theme-iris/blob/master/exampleSite/scripts/fetch_data.sh)
 
 ```sh
 brew install gh
