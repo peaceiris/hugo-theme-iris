@@ -80,7 +80,7 @@ This repository includes the [Hugo] theme.
 - Google Analytics
 - Open Graph Protocol, OGP Images
 - Table of Contents
-- [MathJaX]: Beautiful math in all browsers.
+- [MathJax]: Beautiful math in all browsers.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
 - [reveal.js]: Writing slides using Markdown.
 - JSON-LD
@@ -361,7 +361,7 @@ hugo mod get -u && hugo mod tidy && hugo mod verify
 - [Hugo]
 - [Bulma] via [peaceiris/hugo-mod-bulma](https://github.com/peaceiris/hugo-mod-bulma)
 - [reveal.js] via [peaceiris/hugo-mod-revealjs](https://github.com/peaceiris/hugo-mod-revealjs)
-- [MathJaX]
+- [MathJax]
 - [mermaid] via [peaceiris/hugo-mod-mermaidjs](https://github.com/peaceiris/hugo-mod-mermaidjs)
 
 <!-- - Font Awesome -->
@@ -409,5 +409,5 @@ You can find more detail in our [Contributing Guide].
 [Hugo]: https://gohugo.io/
 [Bulma]: https://bulma.io/
 [reveal.js]: https://github.com/hakimel/reveal.js/
-[MathJaX]: https://www.mathjax.org/
+[MathJax]: https://www.mathjax.org/
 [mermaid]: https://github.com/knsv/mermaid
