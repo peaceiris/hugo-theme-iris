@@ -1,6 +1,9 @@
 github.com/hakimel/reveal.js v0.0.0-20200529101028-bd19860b4d6e/go.mod h1:vIoaZ8tJbfDF30DhKf6Dia5ykePO0tETa9Posw8UrOE=
 github.com/jgthms/bulma v0.0.0-20200928223852-9928dba42d75/go.mod h1:89FLBKXYFKfOKAoDeUT26V0pHGwzr205cMXAEqtAVOI=
+github.com/mermaid-js/mermaid v0.0.0-20200930172342-4dc805d25add/go.mod h1:pGJSm9DYANtp59DADJgNzFh1uIpkn5xaH3ZBdv1VNTI=
 github.com/peaceiris/hugo-mod-bulma v0.1.2 h1:NeOSqatA04bkJxewIjFdEoQlhfBBDtoSl0fh0NS4k+g=
 github.com/peaceiris/hugo-mod-bulma v0.1.2/go.mod h1:Oldyip8pv+p8c94jOprxEJ+0+IzDyYi3t/kpZ3txDnM=
+github.com/peaceiris/hugo-mod-mermaidjs v0.1.0 h1:bcfA3a2XIcEeUoB9Jbq0DiZHm5OPOYaGoyzaVJw717o=
+github.com/peaceiris/hugo-mod-mermaidjs v0.1.0/go.mod h1:Cpvadqzfa8Pqyi+/rSxI1tdH8xmBsSCtu04kyKu82xM=
 github.com/peaceiris/hugo-mod-revealjs v0.1.1 h1:/qfttPl00x/FtDrrbiRmsLxZkRk5EUVyVH+OD0hqej4=
 github.com/peaceiris/hugo-mod-revealjs v0.1.1/go.mod h1:MgoGZ76lUsbOrZcFg6aCT5l96fSU/P/b4dvtSGTCAEc=

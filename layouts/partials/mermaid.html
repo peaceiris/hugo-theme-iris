@@ -1,5 +1,5 @@
 {{ with $.Params.mermaid }}
-  {{ $js := resources.Get "theme/js/mermaid-v8.4.6.min.js" }}
+  {{ $js := resources.Get "mod/mermaidjs/mermaid.min.js" }}
   {{ $secureJS := $js | resources.Fingerprint "sha512" }}
   <script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
   <script>
