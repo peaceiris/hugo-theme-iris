@@ -3,9 +3,9 @@ version: "3"
 services:
   hugo:
     container_name: hugo_theme_iris
-    # image: "peaceiris/hugo:v${HUGO_VERSION}"
-    image: peaceiris/hugo:v${HUGO_VERSION}-full # Hugo Modules and Node.js
-    # image: peaceiris/hugo:v0.75.1-full # workaround for Codespaces
+    # image: "ghcr.io/peaceiris/hugo:v${HUGO_VERSION}"
+    image: ghcr.io/peaceiris/hugo:v${HUGO_VERSION}-full # Hugo Modules and Node.js
+    # image: ghcr.io/peaceiris/hugo:v0.75.1-full # workaround for Codespaces
     ports:
       - 1313:1313
     volumes:
