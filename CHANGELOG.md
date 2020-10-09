@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.23.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.23.1...v0.23.2) (2020-10-09)
+
+
+### chore
+
+* add .gitignore ([86812bc](https://github.com/peaceiris/hugo-theme-iris/commit/86812bc7a2ae1270a11cf223f16a1836ce53d537))
+* change docker hub to ghcr.io ([ccceb93](https://github.com/peaceiris/hugo-theme-iris/commit/ccceb937d3448409413c43fedc6a30647b1f2d7f))
+* update data ([599a540](https://github.com/peaceiris/hugo-theme-iris/commit/599a540ea1e85a442136d70232e54deed41d05dd))
+
+### ci
+
+* bump peaceiris/actions-gh-pages from v3.6.4 to v3.7.0 (#215) ([da865d7](https://github.com/peaceiris/hugo-theme-iris/commit/da865d7fd96b0bacdb86159c47bbc8ca116484f7)), closes [#215](https://github.com/peaceiris/hugo-theme-iris/issues/215)
+* bump peaceiris/actions-hugo from v2.4.12 to v2.4.13 (#214) ([20c18f0](https://github.com/peaceiris/hugo-theme-iris/commit/20c18f04d18ebac0833ecc3c1c111458dc872c89)), closes [#214](https://github.com/peaceiris/hugo-theme-iris/issues/214)
+
+### deps
+
+* bump hugo from 0.75.1 to 0.76.0 ([c0e4659](https://github.com/peaceiris/hugo-theme-iris/commit/c0e46596062f8f7b81c6a2d571ea3297aa113f40))
+* bump hugo from 0.76.0 to 0.76.2 ([f427eda](https://github.com/peaceiris/hugo-theme-iris/commit/f427eda46b99a063a1690d39ea91c65e138a3a11))
+* bump hugo from 0.76.2 to 0.76.3 ([80fdb40](https://github.com/peaceiris/hugo-theme-iris/commit/80fdb40eed2bfa1a089d20ca15ee1a0a5000485d))
+* bump hugo-mod-mermaidjs from 0.1.0 to 0.2.0 ([f08ad9c](https://github.com/peaceiris/hugo-theme-iris/commit/f08ad9c32b36448fe63b04a62d0e74c528255884))
+* update ([f1dd256](https://github.com/peaceiris/hugo-theme-iris/commit/f1dd256dacda7b93913f3328f1eb65ab1faa88fe))
+
+
+
 ## [0.23.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.23.0...v0.23.1) (2020-10-06)
 
 
