@@ -1,4 +1,6 @@
 {{ with $.Site.Params.repo }}
 <!-- TODO: is-pulled-right does not work -->
-<a class="button is-pulled-right normal-link" href="{{ .URL }}/edit/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $.File.Path }}">Edit</a>
+<a class="button is-pulled-right normal-link" href="{{ .URL }}/edit/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $.File.Path }}">
+  <i class="fas fa-sm fa-fw fa-edit"></i>&nbsp;Edit
+</a>
 {{ end }}

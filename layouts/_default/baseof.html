@@ -35,5 +35,7 @@
     {{ with $.Params.mermaid }}
       {{ partialCached "mermaid" . }}
     {{ end }}
+
+    {{ partialCached "fontawesome" . }}
   </body>
 </html>
