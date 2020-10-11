@@ -22,9 +22,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Read .nvmrc
+        run: echo "::set-output name=NVMRC::$(cat .nvmrc)"
+        id: nvm
+
       - uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
       - name: Read .env
         id: hugo_version
@@ -56,9 +60,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Read .nvmrc
+        run: echo "::set-output name=NVMRC::$(cat .nvmrc)"
+        id: nvm
+
       - uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
       - uses: actions/cache@v2
         with:
@@ -87,9 +95,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Read .nvmrc
+        run: echo "::set-output name=NVMRC::$(cat .nvmrc)"
+        id: nvm
+
       - uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
       - name: Read .env
         id: hugo_version
