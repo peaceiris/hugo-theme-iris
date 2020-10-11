@@ -47,6 +47,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugo-
 
+      - run: npm ci
       - run: make cibuild
 
   test-docker:
@@ -63,6 +64,8 @@ jobs:
           key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.sum') }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-hugo-
+
+      - run: npm ci
 
       - name: Build Testing with Docker
         run: |
