@@ -58,8 +58,8 @@ metrics:
 .PHONY: cibuild
 cibuild:
 	cd ./exampleSite && \
-	hugo --minify \
-		--themesDir ../../ \
-		--baseURL $(BASE_URL) \
-		--i18n-warnings --path-warnings --debug \
-		--templateMetrics --templateMetricsHints
+		hugo --minify \
+			--themesDir ../../ \
+			--baseURL $(BASE_URL) \
+			--i18n-warnings --path-warnings --debug \
+			--templateMetrics --templateMetricsHints

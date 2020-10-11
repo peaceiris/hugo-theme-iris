@@ -38,14 +38,10 @@ jobs:
 
       - uses: actions/cache@v2
         with:
-          path: |
-            /tmp/hugo_cache
-            **/node_modules
-          key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.sum') }}-${{ hashFiles('**/package-lock.json') }}
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
-            ${{ runner.os }}-hugo-
-
-      - run: npm ci
+            ${{ runner.os }}-hugomod-
 
       - name: Build
         working-directory: ./exampleSite

@@ -22,14 +22,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Read .nvmrc
-        run: echo "::set-output name=NVMRC::$(cat .nvmrc)"
-        id: nvm
-
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
-
       - name: Read .env
         id: hugo_version
         run: |
@@ -44,14 +36,11 @@ jobs:
 
       - uses: actions/cache@v2
         with:
-          path: |
-            /tmp/hugo_cache
-            **/node_modules
-          key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.sum') }}-${{ hashFiles('**/package-lock.json') }}
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
-            ${{ runner.os }}-hugo-
+            ${{ runner.os }}-hugomod-
 
-      - run: npm ci
       - run: make cibuild
 
   test-docker:
@@ -60,24 +49,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Read .nvmrc
-        run: echo "::set-output name=NVMRC::$(cat .nvmrc)"
-        id: nvm
-
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
-
       - uses: actions/cache@v2
         with:
-          path: |
-            /tmp/hugo_cache
-            **/node_modules
-          key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.sum') }}-${{ hashFiles('**/package-lock.json') }}
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
-            ${{ runner.os }}-hugo-
-
-      - run: npm ci
+            ${{ runner.os }}-hugomod-
 
       - name: Build Testing with Docker
         run: |
@@ -95,14 +72,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Read .nvmrc
-        run: echo "::set-output name=NVMRC::$(cat .nvmrc)"
-        id: nvm
-
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
-
       - name: Read .env
         id: hugo_version
         run: |
@@ -117,12 +86,10 @@ jobs:
 
       - uses: actions/cache@v2
         with:
-          path: |
-            /tmp/hugo_cache
-            **/node_modules
-          key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.sum') }}-${{ hashFiles('**/package-lock.json') }}
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
-            ${{ runner.os }}-hugo-
+            ${{ runner.os }}-hugomod-
 
       - name: Setup Git
         run: |
@@ -136,5 +103,4 @@ jobs:
           cd ~
           bash ./setup.sh "homepage" "peaceiris"
           cd homepage
-          npm ci
           hugo
