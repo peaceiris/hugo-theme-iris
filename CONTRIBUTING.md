@@ -29,12 +29,8 @@ Nothing? Then, open a new issue first, and discuss problems or proposals.
 git clone https://github.com/<username>/hugo-theme-iris.git
 cd ./hugo-theme-iris
 
-# (3) Install dependencies
-npm ci
-
-# (4) Start Hugo Server
-make up     # with Docker
-npm run up  # with local Hugo
+# (3) Start Hugo Server with Docker.
+make up
 ```
 
 

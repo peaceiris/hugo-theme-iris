@@ -84,13 +84,13 @@ This repository includes the [Hugo] theme.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
 - [reveal.js]: Writing slides using Markdown.
 - JSON-LD
-- Font Awesome
 
 ### Roadmap
 
 - Share Buttons
 - Netlify, Netlify CMS
 - Categories, Tags, Authors
+- Font Awesome
 - Related posts, next and previous post
 
 <div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
@@ -361,7 +361,8 @@ hugo mod get -u && hugo mod tidy && hugo mod verify
 - [reveal.js] via [peaceiris/hugo-mod-revealjs](https://github.com/peaceiris/hugo-mod-revealjs)
 - [MathJax] via [peaceiris/hugo-mod-mathjax](https://github.com/peaceiris/hugo-mod-mathjax)
 - [mermaid] via [peaceiris/hugo-mod-mermaidjs](https://github.com/peaceiris/hugo-mod-mermaidjs)
-- [Font Awesome](https://fontawesome.com/)
+
+<!-- - Font Awesome -->
 
 <div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
 

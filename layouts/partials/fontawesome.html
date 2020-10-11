@@ -1,8 +1,0 @@
-{{ $fontawesomeJS := resources.Get "theme/js/fontawesome.js" | js.Build | minify }}
-{{ $fontawesomeSecureJS := $fontawesomeJS | resources.Fingerprint "sha512" }}
-<script
-  defer
-  type="text/javascript"
-  src="{{ $fontawesomeSecureJS.Permalink }}"
-  integrity="{{ $fontawesomeSecureJS.Data.Integrity }}">
-</script>

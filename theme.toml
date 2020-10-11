@@ -16,12 +16,12 @@ tags = [
   "fast",
   "mobile",
   "syntax-highlighting",
-  "font-awesome",
+  # "font-awesome",
   "flexbox",
   # "search",
   "presentation",
   "bulma",
-  "fontawesome",
+  # "fontawesome",
   "netlify",
   "slide"
 ]
