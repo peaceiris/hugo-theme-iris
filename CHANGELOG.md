@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.23.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.23.2...v0.23.3) (2020-10-12)
+
+
+### ci
+
+* add matrix.extended (#216) ([0ad837b](https://github.com/peaceiris/hugo-theme-iris/commit/0ad837be72af2112e45a049375ef8a5a736a4e1c)), closes [#216](https://github.com/peaceiris/hugo-theme-iris/issues/216)
+* use local setup.sh (#217) ([8a14304](https://github.com/peaceiris/hugo-theme-iris/commit/8a14304c18e39c244af9bf35b742c2ef35e5f3b0)), closes [#217](https://github.com/peaceiris/hugo-theme-iris/issues/217)
+
+### deps
+
+* bump hugo from 0.76.3 to 0.76.4 ([df88052](https://github.com/peaceiris/hugo-theme-iris/commit/df8805289c642e9762768d02577548db3eb49838))
+* bump reveal.js from 4.0.2 to 4.1.0 ([cd5ced3](https://github.com/peaceiris/hugo-theme-iris/commit/cd5ced330e2c565913de36b7351da482536238d8))
+* bump reveal.js from 4.0.2 to 4.1.0 ([4725d6f](https://github.com/peaceiris/hugo-theme-iris/commit/4725d6fb538a32870ad723fbf958a3ea1d472948))
+* update ([ec028a8](https://github.com/peaceiris/hugo-theme-iris/commit/ec028a8ca2704d99c0bda24b961cc85627578e95))
+
+### feat
+
+* fontawesome (#218) ([32e07b9](https://github.com/peaceiris/hugo-theme-iris/commit/32e07b90e3a925b7afbceea7f4916fbf2d760a52)), closes [#218](https://github.com/peaceiris/hugo-theme-iris/issues/218) [#177](https://github.com/peaceiris/hugo-theme-iris/issues/177)
+* Revert fontawesome #218 (#219) ([589e170](https://github.com/peaceiris/hugo-theme-iris/commit/589e1703ce1bdfd7bb47dbfe58ccadd1379cbe9c)), closes [#218](https://github.com/peaceiris/hugo-theme-iris/issues/218) [#219](https://github.com/peaceiris/hugo-theme-iris/issues/219)
+
+
+
 ## [0.23.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.23.1...v0.23.2) (2020-10-09)
 
 
