@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.24.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.23.3...v0.24.0) (2020-10-14)
+
+
+### ci
+
+* bump peaceiris/actions-gh-pages from v3.7.0 to v3.7.1 (#222) ([3e1556b](https://github.com/peaceiris/hugo-theme-iris/commit/3e1556bdea345b8eee9b7a65c2fb042a57c7a3f1)), closes [#222](https://github.com/peaceiris/hugo-theme-iris/issues/222)
+* use gh ([70e6193](https://github.com/peaceiris/hugo-theme-iris/commit/70e61933a8a5aae07bb7f97aa8522e54a8e7d12e))
+
+### feat
+
+* check .HasShortcode mermaid (#223) ([dc4889d](https://github.com/peaceiris/hugo-theme-iris/commit/dc4889defd3027708e70536072eb7f976c4d838a)), closes [#223](https://github.com/peaceiris/hugo-theme-iris/issues/223)
+
+
+
 ## [0.23.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.23.2...v0.23.3) (2020-10-12)
 
 
