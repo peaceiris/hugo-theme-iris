@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.24.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.1...v0.24.2) (2020-10-14)
+
+
+### ci
+
+* set draft and prerelease to false ([928604e](https://github.com/peaceiris/hugo-theme-iris/commit/928604eecee9a037f5865058ebde480d290b1cf4))
+
+### feat
+
+* console-log partial ([939406d](https://github.com/peaceiris/hugo-theme-iris/commit/939406ddd370772045f80a04011942022bfa1be4))
+
+### fix
+
+* partialCached to partial ([3993b65](https://github.com/peaceiris/hugo-theme-iris/commit/3993b652a437ede4684962866707b9e56b7e39a5))
+
+
+
 ## [0.24.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.0...v0.24.1) (2020-10-14)
 
 
