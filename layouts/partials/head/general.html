@@ -1,7 +1,9 @@
 {{ hugo.Generator }}
 
 <!-- Google Analytics -->
-{{ template "_internal/google_analytics_async.html" . }}
+{{ if hugo.IsProduction }}
+  {{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
 
 <!-- cf. https://github.com/joshbuchea/HEAD -->
 <meta charset="utf-8">
