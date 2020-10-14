@@ -22,12 +22,12 @@
           <div class="column is-8 is-offset-2">
             {{ partialCached "check-tools" . }}
             {{ partial "lang-button" . }}
-            {{ partialCached "edit-button" . }}
+            {{ partial "edit-button" . }}
             {{ block "main" . }}{{ end }}
           </div>
         </div>
       </section>
-      {{ partialCached "footer" . }}
+      {{ partial "footer" . }}
     {{ end }}
     {{ if $.Params.math }}
       {{ partialCached "mathjax" . }}
