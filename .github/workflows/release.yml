@@ -20,5 +20,4 @@ jobs:
           RELEASE_NAME="$(jq -r '.name' ./package.json)"
           gh release create "${TAG_NAME}" \
             --notes-file ./release_notes.md \
-            --title "${RELEASE_NAME} ${TAG_NAME}" \
-            --draft
+            --title "${RELEASE_NAME} ${TAG_NAME}"
