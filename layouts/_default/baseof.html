@@ -29,10 +29,10 @@
       </section>
       {{ partialCached "footer" . }}
     {{ end }}
-    {{ with $.Params.math }}
+    {{ if $.Params.math }}
       {{ partialCached "mathjax" . }}
     {{ end }}
-    {{ with .HasShortcode "mermaid" }}
+    {{ if .HasShortcode "mermaid" }}
       {{ partialCached "mermaid" . }}
     {{ end }}
   </body>

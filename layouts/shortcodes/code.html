@@ -5,7 +5,7 @@
 {{ $lang := or (.Get "lang") "" }}
 <div class="code-block">
     {{ with $title }}
-    <div class="code-block-title">{{.}}</div>
+    <div class="code-block-title">{{ . }}</div>
     <span class="code-block-lang">{{ $lang }}</span>
     {{ end }}
     <div class="code-block-body">

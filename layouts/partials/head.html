@@ -2,7 +2,7 @@
   {{ partial "head/general" . }}
   {{ partial "head/json-ld" . }}
 
-  {{ with $.Params.slide }}
+  {{ if $.Params.slide }}
   <style>
     {{ $cssMain := resources.Get "mod/revealjs/dist/reveal.css" | toCSS | minify }}
     {{ $cssMain.Content | safeCSS }}
