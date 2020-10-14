@@ -21,7 +21,7 @@
         <div class="columns">
           <div class="column is-8 is-offset-2">
             {{ partialCached "check-tools" . }}
-            {{ partialCached "lang-button" . }}
+            {{ partial "lang-button" . }}
             {{ partialCached "edit-button" . }}
             {{ block "main" . }}{{ end }}
           </div>
