@@ -11,16 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "${GITHUB_CONTEXT}"
-
-      - name: Install github/hub
-        run: |
-          export HUB_VERSION="2.14.2"
-          curl -fsSL https://github.com/github/hub/raw/v${HUB_VERSION}/script/get | bash -s "${HUB_VERSION}"
-
       - name: Create release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -28,8 +18,7 @@ jobs:
           TAG_NAME="${GITHUB_REF##refs/tags/}"
           echo "See [CHANGELOG.md](https://github.com/${GITHUB_REPOSITORY}/blob/${TAG_NAME}/CHANGELOG.md) for more details." > ./release_notes.md
           RELEASE_NAME="$(jq -r '.name' ./package.json)"
-          sed -i "1i${RELEASE_NAME} ${TAG_NAME}\n" ./release_notes.md
-          ./bin/hub release create \
-            --file ./release_notes.md \
-            "${TAG_NAME}"
-          # --draft \
+          gh release create "${TAG_NAME}" \
+            --notes-file ./release_notes.md \
+            --title "${RELEASE_NAME} ${TAG_NAME}" \
+            --draft
