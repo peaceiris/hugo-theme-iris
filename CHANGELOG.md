@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.24.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.0...v0.24.1) (2020-10-14)
+
+
+### ci
+
+* remove --draft ([ec5c65c](https://github.com/peaceiris/hugo-theme-iris/commit/ec5c65c3a4d02a7f4c210b38b4a1de273981539d))
+* use peaceiris/workflows/create-release-npm ([dbaa782](https://github.com/peaceiris/hugo-theme-iris/commit/dbaa7821e958f18f0dc13217a8b5b5e544e5b625))
+
+### feat
+
+* add hugo.Version ([1433de9](https://github.com/peaceiris/hugo-theme-iris/commit/1433de900eec89c4294eb535768e10e0c6af8d0a))
+* check hugo.IsProduction for Google Analytics ([ede8b12](https://github.com/peaceiris/hugo-theme-iris/commit/ede8b12896fc2712f1967ba88ddf7f002051c99c)), closes [#114](https://github.com/peaceiris/hugo-theme-iris/issues/114)
+
+### refactor
+
+* replace 'with' with 'if' ([1f5c906](https://github.com/peaceiris/hugo-theme-iris/commit/1f5c90602a062b27661b68952aa9e26bc9f50dc9))
+
+
+
 # [0.24.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.23.3...v0.24.0) (2020-10-14)
 
 
