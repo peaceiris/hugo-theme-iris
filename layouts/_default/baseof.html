@@ -32,7 +32,7 @@
     {{ with $.Params.math }}
       {{ partialCached "mathjax" . }}
     {{ end }}
-    {{ with $.Params.mermaid }}
+    {{ with .HasShortcode "mermaid" }}
       {{ partialCached "mermaid" . }}
     {{ end }}
   </body>

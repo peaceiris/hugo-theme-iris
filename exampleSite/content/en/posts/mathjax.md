@@ -7,7 +7,6 @@ publishdate: 2020-01-01T01:00:00.000Z
 # tags: ["hugo"]
 toc: true
 math: true
-# mermaid: true
 # weight: 1
 twitter:
   username: piris314
