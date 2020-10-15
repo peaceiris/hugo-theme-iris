@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.24.5](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.4...v0.24.5) (2020-10-15)
+
+
+### ci
+
+* bump peaceiris/workflows from 0.6.2 to 0.7.0 ([fb9819f](https://github.com/peaceiris/hugo-theme-iris/commit/fb9819f1577f322144996ca29e6303cf92679ea4))
+
+### deps
+
+* bump hugo from 0.76.4 to 0.76.5 ([ed9fe2f](https://github.com/peaceiris/hugo-theme-iris/commit/ed9fe2fc14a46479f38c5ec8810e178689fb9a27))
+
+
+
 ## [0.24.4](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.3...v0.24.4) (2020-10-14)
 
 
