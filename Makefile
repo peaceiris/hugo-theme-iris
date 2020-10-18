@@ -28,13 +28,13 @@ bumphugo:
 
 .PHONY: build
 build:
-	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL))
+	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL) --cleanDestinationDir)
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-build
 npm-build:
 	cd ./exampleSite && \
-	hugo --minify --themesDir ../../ --baseURL $(BASE_URL)
+	hugo --minify --themesDir ../../ --baseURL $(BASE_URL) --cleanDestinationDir
 
 .PHONY: test
 test:
@@ -61,5 +61,6 @@ cibuild:
 		hugo --minify \
 			--themesDir ../../ \
 			--baseURL $(BASE_URL) \
+			--cleanDestinationDir \
 			--i18n-warnings --path-warnings --debug \
 			--templateMetrics --templateMetricsHints
