@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.24.6](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.5...v0.24.6) (2020-10-18)
+
+
+### chore
+
+* add --cleanDestinationDir ([a2c9cba](https://github.com/peaceiris/hugo-theme-iris/commit/a2c9cbad238a6225f791f003b286b4543128b1f5))
+
+### ci
+
+* bump peaceiris/actions-gh-pages from v3.7.1 to v3.7.2 (#224) ([c60a822](https://github.com/peaceiris/hugo-theme-iris/commit/c60a822e03df6869ffbd991a7cae2b3686526e57)), closes [#224](https://github.com/peaceiris/hugo-theme-iris/issues/224)
+
+### fix
+
+* partialCached to partial ([f347dac](https://github.com/peaceiris/hugo-theme-iris/commit/f347dacb33c86cacf08fc258617f7c3a37ad08f0))
+
+
+
 ## [0.24.5](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.4...v0.24.5) (2020-10-15)
 
 
