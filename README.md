@@ -347,7 +347,10 @@ Please follow the instruction as the same as the `repo` shortcode.
 
 ```sh
 cd your_hugo_project
-hugo mod get -u && hugo mod tidy && hugo mod verify
+hugo mod get -u hugo mod get -u github.com/peaceiris/hugo-theme-iris
+hugo mod tidy && hugo mod verify
+git add go.mod go.sum
+git commit -m "deps: bump hugo-theme-iris"
 ```
 
 <div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
