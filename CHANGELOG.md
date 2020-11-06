@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.24.7](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.6...v0.24.7) (2020-11-06)
+
+
+### ci
+
+* bump peaceiris/actions-gh-pages from v3.7.2 to v3.7.3 (#226) ([c2377f5](https://github.com/peaceiris/hugo-theme-iris/commit/c2377f5ecc627828e87e77d440a616bf290d06a7)), closes [#226](https://github.com/peaceiris/hugo-theme-iris/issues/226)
+
+### deps
+
+* bump hugo from 0.76.5 to 0.77.0 ([15a3143](https://github.com/peaceiris/hugo-theme-iris/commit/15a3143f54b1d27e3618537fe84f70bb4db3668e))
+* bump hugo from 0.77.0 to 0.78.0 ([77574c5](https://github.com/peaceiris/hugo-theme-iris/commit/77574c55459fc5992d0a689347c3781cdf7d6dfa))
+* bump hugo from 0.78.0 to 0.78.1 ([f9b37bd](https://github.com/peaceiris/hugo-theme-iris/commit/f9b37bd6260e7480cd6a26639e7d7cede7c5b1c1))
+* bump hugo-mod-mermaidjs from 0.2.0 to 0.3.0 ([4586626](https://github.com/peaceiris/hugo-theme-iris/commit/4586626a199d30d58ae5380f3bd2e30bd3deb79a))
+* update devDependencies ([a9ea8eb](https://github.com/peaceiris/hugo-theme-iris/commit/a9ea8eb45a9c090e073ffa677f1a065a4fcc3316))
+
+### docs
+
+* update How to Update the Theme ([3275d17](https://github.com/peaceiris/hugo-theme-iris/commit/3275d17b66489cc032300188ca3d02ba68157bf8))
+
+
+
 ## [0.24.6](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.5...v0.24.6) (2020-10-18)
 
 
