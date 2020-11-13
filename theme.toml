@@ -3,7 +3,7 @@ license = "MIT"
 licenselink = "https://github.com/peaceiris/hugo-theme-iris/blob/master/LICENSE"
 description = "Hugo Iris Theme - Portfolio and Blog"
 homepage = "https://github.com/peaceiris/hugo-theme-iris"
-min_version = "0.78.1"
+min_version = "0.78.2"
 tags = [
   "blog",
   "responsive",
