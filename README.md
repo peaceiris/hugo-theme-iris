@@ -3,7 +3,7 @@ Hugo IRIS Theme
 </h2>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/images/tn.png" alt="thumbnail" width="500px">
+  <img src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/images/tn.png" alt="Hugo Iris Theme thumbnail" width="500px">
 </div>
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-theme-iris/blob/master/LICENSE)
@@ -13,6 +13,8 @@ Hugo IRIS Theme
 ![deploy status](https://github.com/peaceiris/hugo-theme-iris/workflows/Deploy/badge.svg?branch=master&event=push)
 [![hugo themes](https://img.shields.io/static/v1?label=Hugo%20Themes&message=IRIS&color=blueviolet)](https://themes.gohugo.io/hugo-theme-iris/)
 [![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugothemeiris.peaceiris.app/report.html)
+
+[Go to the demo site](https://hugothemeiris.peaceiris.app/).
 
 
 
@@ -62,9 +64,7 @@ Hugo IRIS Theme
 
 ## Overview
 
-This repository includes the [Hugo] theme.
-
-- [Demo site on GitHub Pages](https://hugothemeiris.peaceiris.app/)
+This repository includes a [Hugo] theme.
 
 ### Features
 
