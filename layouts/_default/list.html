@@ -13,7 +13,16 @@
         <a href="{{ .Permalink }}" class="normal-link">
           <div class="card">
             <div class="card-content">
-              <h2 class="title">{{ .Title }}</h2>
+              {{ $title := "" }}
+              {{ with .Title }}
+                {{ $title = . }}
+              {{ else }}
+                {{ $firstH1 := findRE "<h1.*?>(.|\n)*?</h1>" .Content 1 }}
+                {{ range first 1 $firstH1 }}
+                  {{ $title = . | plainify }}
+                {{ end }}
+              {{ end }}
+              <h2 class="title">{{ $title }}</h2>
               <p>{{ .Description }}</p>
               <!-- TODO: is-pulled-right does not work -->
               <p>{{ .Date.Format "2006-01-02" }}{{ partial "badges/slide" . }}</p>

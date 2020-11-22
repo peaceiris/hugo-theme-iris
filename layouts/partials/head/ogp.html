@@ -14,10 +14,19 @@
 {{ end }}
 
 {{ $title := "" }}
+{{ with $.Title }}
+  {{ $title = . }}
+{{ else }}
+  {{ $firstH1 := findRE "<h1.*?>(.|\n)*?</h1>" $.Content 1 }}
+  {{ range first 1 $firstH1 }}
+    {{ $title = . | plainify }}
+  {{ end }}
+{{ end }}
+
 {{ if $.IsHome }}
   {{ $title = $.Site.Params.Title | safeHTML }}
 {{ else }}
-  {{ $title = $.Title | safeHTML }}
+  {{ $title = $title | safeHTML }}
 {{ end }}
 
 <!-- OGP: Open Graph Protocol -->

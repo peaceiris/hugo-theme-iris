@@ -11,6 +11,16 @@
   {{ end }}
 {{ end }}
 
+{{ $h1 := "" }}
+{{ with $.Title }}
+  {{ $h1 = . }}
+{{ else }}
+  {{ $firstH1 := findRE "<h1.*?>(.|\n)*?</h1>" $.Content 1 }}
+  {{ range first 1 $firstH1 }}
+    {{ $h1 = . | plainify }}
+  {{ end }}
+{{ end }}
+
 <script type="application/ld+json">
   {
     "@context" : "http://schema.org",
@@ -19,8 +29,8 @@
       "@type": "WebPage",
       "@id": {{ $.Site.BaseURL }}
     },
-    "name" : {{ .Title }},
-    "headline" : {{ .Title }},
+    "name" : {{ $h1 }},
+    "headline" : {{ $h1 }},
     "description" : {{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }},
     "inLanguage" : {{ $.Site.Language.Lang }},
     "image": {{ $OGPImage }},

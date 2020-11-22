@@ -1,5 +1,7 @@
 {{ $content := .Content }}
 
+{{ $content := replaceRE "<h1.*?>(.|\n)*?</h1>" "" $.Content }}
+
 {{ $hasH2 := findRE "</h2>" $content }}
 {{ if $hasH2 }}
   {{ $content = $content | replaceRE "<h2 " "</section><section class=\"section\"><h2 class=\"title is-3\" " }}
