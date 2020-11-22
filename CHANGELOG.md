@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.24.8](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.7...v0.24.8) (2020-11-22)
+
+
+### ci
+
+* bump actions/upload-artifact from v2.2.0 to v2.2.1 (#230) ([5420cb7](https://github.com/peaceiris/hugo-theme-iris/commit/5420cb7b398fc8b0716cac2d6ec8a6345e73bd87)), closes [#230](https://github.com/peaceiris/hugo-theme-iris/issues/230)
+
+### deps
+
+* bump hugo from 0.78.1 to 0.78.2 (#229) ([9201445](https://github.com/peaceiris/hugo-theme-iris/commit/9201445906b0f6a2ba95b84b95ad6c75108cba76)), closes [#229](https://github.com/peaceiris/hugo-theme-iris/issues/229)
+
+### docs
+
+* put link to demo on top ([e0c3067](https://github.com/peaceiris/hugo-theme-iris/commit/e0c3067638a90caa33524245becaca40fe5f7360))
+* remove instagram_simple (#233) ([176c116](https://github.com/peaceiris/hugo-theme-iris/commit/176c11627b91f1b2397362444f7fb1921f05da31)), closes [#233](https://github.com/peaceiris/hugo-theme-iris/issues/233)
+
+### feat
+
+* Autocomplete title with h1 (#234) ([6ae6ee3](https://github.com/peaceiris/hugo-theme-iris/commit/6ae6ee3a98958ccbe4577558a2cad406cfb6f7e3)), closes [#234](https://github.com/peaceiris/hugo-theme-iris/issues/234)
+
+
+
 ## [0.24.7](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.6...v0.24.7) (2020-11-06)
 
 
