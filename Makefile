@@ -15,7 +15,7 @@ up:
 .PHONY: npm-up
 npm-up:
 	cd ./exampleSite && \
-	hugo server --navigateToChanged --bind=0.0.0.0 --buildDrafts --themesDir ../../ --i18n-warnings
+	hugo server --navigateToChanged --buildDrafts --themesDir ../../ --i18n-warnings
 
 .PHONY: hugo
 hugo:
