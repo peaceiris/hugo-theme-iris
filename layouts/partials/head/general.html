@@ -37,7 +37,20 @@
 <!-- Feed, RSS -->
 <link rel="alternate" type="application/rss+xml" href="{{ .Site.RSSLink }}" title="{{ with .Site.Title }}{{ . }}{{ end }}">
 
-<title>{{ with .Title }}{{ . }}{{ end }}</title>
+{{ $title := "" }}
+{{ with $.Title }}
+  {{ $title = . }}
+{{ else }}
+  {{ $firstH1 := findRE "<h1.*?>(.|\n)*?</h1>" $.Content 1 }}
+  {{ range first 1 $firstH1 }}
+    {{ $title = . | plainify }}
+  {{ end }}
+{{ end }}
+
+{{ if $.IsHome }}
+  {{ $title = $.Site.Params.Title | safeHTML }}
+{{ end }}
+<title>{{ $title }}</title>
 <meta name="author" content="{{ with .Site.Params.author }}{{ . }}{{ end }}">
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
 
