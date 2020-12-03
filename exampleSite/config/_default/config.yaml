@@ -68,6 +68,6 @@ languages:
       ogp:
         siteName: Hugo Theme Iris
         image: images/ogp.jpg
-        locale: js-JP
+        locale: ja-JP
     title: Hugo IRIS テーマ
     weight: 2
