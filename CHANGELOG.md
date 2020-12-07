@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.24.9](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.8...v0.24.9) (2020-12-07)
+
+
+### ci
+
+* pin actions/checkout to v2 ([4d6fcf9](https://github.com/peaceiris/hugo-theme-iris/commit/4d6fcf941b1741de375b636e6046b6f16d003c4d))
+
+### deps
+
+* bump hugo from 0.78.2 to 0.79.0 ([75ed44f](https://github.com/peaceiris/hugo-theme-iris/commit/75ed44f564302f63d89e56ee485cd5b82763dac0))
+* bump hugo-mod-mermaidjs from 0.3.0 to 0.4.0 ([0acc03a](https://github.com/peaceiris/hugo-theme-iris/commit/0acc03a03eea346187b5acd8f1eb344d255bba2e))
+
+### feat
+
+* Change thinsp to nbsp ([2e3833a](https://github.com/peaceiris/hugo-theme-iris/commit/2e3833af76b517bf79d7ffb609c23d9571bc843c))
+
+### fix
+
+* ja locale ([37fb24b](https://github.com/peaceiris/hugo-theme-iris/commit/37fb24b6b0ea1fd326af3a10a8a786926c76154a))
+
+
+
 ## [0.24.8](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.7...v0.24.8) (2020-11-22)
 
 
