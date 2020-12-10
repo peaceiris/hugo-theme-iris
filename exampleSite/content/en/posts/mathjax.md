@@ -1,6 +1,6 @@
 ---
-title: MathJax Support
-description: Beautiful math in all browsers
+title: MathJax Support $E=mc^2$
+description: Beautiful math in all browsers $E=mc^2$
 publishdate: 2020-01-01T01:00:00.000Z
 # draft: true
 # eyecatch: images/mathjax.jpg

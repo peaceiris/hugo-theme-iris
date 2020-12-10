@@ -1,4 +1,8 @@
 {{ define "main" }}
+
+{{ $math := false }}
+{{ $hasDollar := false }}
+
 <main>
   <article>
     <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
@@ -23,7 +27,16 @@
                 {{ end }}
               {{ end }}
               <h2 class="title">{{ $title }}</h2>
+              {{ if (findRE "\\$$" $title) }}
+                {{ $hasDollar = true }}
+              {{ end }}
               <p>{{ .Description }}</p>
+              {{ if (findRE "\\$$" .Description) }}
+                {{ $hasDollar = true }}
+              {{ end }}
+              {{ if .Params.math }}
+                {{ $math = true }}
+              {{ end }}
               <!-- TODO: is-pulled-right does not work -->
               <p>{{ .Date.Format "2006-01-02" }}{{ partial "badges/slide" . }}</p>
             </div>
@@ -33,4 +46,9 @@
     </div>
   {{ end }}
 </main>
+
+{{ if and $math $hasDollar }}
+  {{ partialCached "mathjax" . }}
+{{ end }}
+
 {{ end }}
