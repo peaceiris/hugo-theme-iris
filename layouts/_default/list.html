@@ -16,6 +16,7 @@
       <div class="column is-10-tablet is-offset-1-tablet is-8-desktop is-offset-2-desktop">
         <a href="{{ .Permalink }}" class="normal-link">
           <div class="card">
+            {{ partial "eyecatch" . }}
             <div class="card-content">
               {{ $title := "" }}
               {{ with .Title }}

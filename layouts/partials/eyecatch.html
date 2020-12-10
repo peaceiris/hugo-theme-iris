@@ -1,15 +1,11 @@
 {{ if .Params.eyecatch }}
   {{ $image := resources.Get .Params.eyecatch }}
   {{ $imageHash := $image | resources.Fingerprint "sha512" }}
-  <div class="columns">
-    <div class="column is-8 is-offset-2">
-      <img
-        class=""
-        src="{{- $imageHash.Permalink -}}"
-        alt="{{ $.Params.Description }}"
-        decoding="async"
-        loading="lazy"
-      />
-    </div>
-  </div>
+  <img
+    class=""
+    src="{{- $imageHash.Permalink -}}"
+    alt="{{ $.Params.Description }}"
+    decoding="async"
+    loading="lazy"
+  />
 {{ end }}
