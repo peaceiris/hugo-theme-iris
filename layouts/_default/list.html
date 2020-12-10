@@ -28,11 +28,11 @@
                 {{ end }}
               {{ end }}
               <h2 class="title">{{ $title }}</h2>
-              {{ if (findRE "\\$$" $title) }}
+              {{ if (findRE "$$" $title) }}
                 {{ $hasDollar = true }}
               {{ end }}
               <p>{{ .Description }}</p>
-              {{ if (findRE "\\$$" .Description) }}
+              {{ if (findRE "$$" .Description) }}
                 {{ $hasDollar = true }}
               {{ end }}
               {{ if .Params.math }}
