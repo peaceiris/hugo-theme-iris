@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.25.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.9...v0.25.0) (2020-12-10)
+
+
+### feat
+
+* auto enable math in posts (#241) ([141e407](https://github.com/peaceiris/hugo-theme-iris/commit/141e4077b7fc08e6edd21b02b13162e3161cb41c)), closes [#241](https://github.com/peaceiris/hugo-theme-iris/issues/241)
+* eyecatching image on posts (#242) ([247df81](https://github.com/peaceiris/hugo-theme-iris/commit/247df816eb41d541f31644434f39c4166903ee74)), closes [#242](https://github.com/peaceiris/hugo-theme-iris/issues/242)
+
+
+
 ## [0.24.9](https://github.com/peaceiris/hugo-theme-iris/compare/v0.24.8...v0.24.9) (2020-12-07)
 
 
