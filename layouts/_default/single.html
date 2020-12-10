@@ -1,6 +1,12 @@
 {{ define "main" }}
-  {{ partial "eyecatch" . }}
+  <div class="columns">
+    <div class="column is-8 is-offset-2">
+      {{ partial "eyecatch" . }}
+    </div>
+  </div>
+
   {{ partial "content" . }}
+
   <section class="section">
     {{ template "_internal/disqus.html" . }}
   </section>
