@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.25.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.25.1...v0.25.2) (2020-12-11)
+
+
+### ci
+
+* bump actions/setup-node from v2.1.2 to v2.1.3 (#244) ([da93028](https://github.com/peaceiris/hugo-theme-iris/commit/da9302802f9f532f8fc9d2f8f972085fc4b03952)), closes [#244](https://github.com/peaceiris/hugo-theme-iris/issues/244)
+
+### fix
+
+* section.section padding ([814ffd7](https://github.com/peaceiris/hugo-theme-iris/commit/814ffd77a1f56edd4e84136b2eac73cab87c2c65))
+
+
+
 ## [0.25.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.25.0...v0.25.1) (2020-12-10)
 
 
