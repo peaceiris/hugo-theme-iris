@@ -23,7 +23,6 @@ Hugo IRIS Theme
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Overview](#overview)
   - [Features](#features)
   - [Roadmap](#roadmap)
@@ -51,6 +50,7 @@ Hugo IRIS Theme
   - [repo](#repo)
   - [github-sponsors-list](#github-sponsors-list)
   - [table](#table)
+  - [math](#math)
 - [How to Update the Theme](#how-to-update-the-theme)
 - [Special Thanks](#special-thanks)
 - [Changelog](#changelog)
@@ -338,6 +338,20 @@ Please follow the instruction as the same as the `repo` shortcode.
 | Mouse out | Mouse over |
 |---|---|
 | ![Shortcode table mouse out](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_table_2.jpg) |
+
+### math
+
+See also [the example page](https://hugothemeiris.peaceiris.app/posts/math/).
+
+When you use the ampersand sign `&`, you need to use the following math shortcode.
+
+```md
+{{</* math */>}}
+\begin{vmatrix}a & b\\
+c & d
+\end{vmatrix}
+{{</* /math */>}}
+```
 
 <div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
 

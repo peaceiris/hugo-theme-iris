@@ -50,3 +50,27 @@ $$
 $$
 \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
 $$
+
+
+
+## Math Shortcode
+
+See also [this thread](https://discourse.gohugo.io/t/use-goldmark-mathjax-extension/25721).
+
+### Input
+
+```md
+{{</* math */>}}
+\begin{vmatrix}a & b\\
+c & d
+\end{vmatrix}
+{{</* /math */>}}
+```
+
+### Output
+
+{{< math >}}
+\begin{vmatrix}a & b\\
+c & d
+\end{vmatrix}
+{{< /math >}}
