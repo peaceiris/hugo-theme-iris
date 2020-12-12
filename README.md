@@ -45,7 +45,6 @@ Hugo IRIS Theme
 - [Shortcodes](#shortcodes)
   - [circle](#circle)
   - [button](#button)
-  - [li](#li)
   - [mermaid](#mermaid)
   - [repo](#repo)
   - [github-sponsors-list](#github-sponsors-list)
@@ -245,24 +244,6 @@ If your logo image is located at `static/images/logo.jpg`.
 ```
 
 <img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_button.jpg" alt="Shortcode button">
-
-### li
-
-```md
-{{< li >}}
-- Hugo
-- Golang
-- Static Site Generators
-{{< /li >}}
-
-{{< li >}}
-1. Hugo
-1. Golang
-1. Static Site Generators
-{{< /li >}}
-```
-
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_li.jpg" alt="Shortcode li">
 
 ### mermaid
 

@@ -7,6 +7,11 @@
   {{ $content = $content | replaceRE "<h2 " "</section><section class=\"section\"><h2 class=\"title is-3\" " }}
 {{ end }}
 
+{{ $content = $content | replaceRE "<ul>\n<li>" "<div class=\"content\"><ul><li>" }}
+{{ $content = $content | replaceRE "</li>\n</ul>" "</li></ul></div>" }}
+{{ $content = $content | replaceRE "<ol>\n<li>" "<div class=\"content\"><ol><li>" }}
+{{ $content = $content | replaceRE "</li>\n</ol>" "</li></ol></div>" }}
+
 <section class="section">
   {{ partial "toc" . }}
   {{ $content | safeHTML }}

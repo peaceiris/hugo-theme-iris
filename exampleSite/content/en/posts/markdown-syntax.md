@@ -135,27 +135,21 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 ### Ordered List
 
-{{< li >}}
 1. First item
 2. Second item
 3. Third item
-{{< /li >}}
 
 ### Unordered List
 
-{{< li >}}
 * List item
 * Another item
 * And another item
-{{< /li >}}
 
 ### Nested list
 
-{{< li >}}
 * Item
   1. First Sub-item
   2. Second Sub-item
-{{< /li >}}
 
 
 
