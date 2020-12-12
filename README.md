@@ -327,11 +327,11 @@ See also [the example page](https://hugothemeiris.peaceiris.app/posts/math/).
 When you use the ampersand sign `&`, you need to use the following math shortcode.
 
 ```md
-{{</* math */>}}
+{{< math >}}
 \begin{vmatrix}a & b\\
 c & d
 \end{vmatrix}
-{{</* /math */>}}
+{{< /math >}}
 ```
 
 <div align="right"><a href="#table-of-contents">Back to TOC ☝️</a></div>
