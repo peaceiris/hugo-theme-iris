@@ -28,10 +28,8 @@ date: 2020-01-25T23:00:00.000Z
 
 ### キーワード
 
-{{< li >}}
 - Golang, Go 言語
 - Static Site Generators
-{{< /li >}}
 
 
 

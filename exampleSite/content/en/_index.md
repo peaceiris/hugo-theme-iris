@@ -28,17 +28,13 @@ View source code on GitHub.
 
 ### Keywords
 
-{{< li >}}
 - Hugo
 - Golang
 - Static Site Generators
-{{< /li >}}
 
-{{< li >}}
 1. Hugo
-1. Golang
-1. Static Site Generators
-{{< /li >}}
+2. Golang
+3. Static Site Generators
 
 
 
