@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.26.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.25.2...v0.26.0) (2020-12-12)
+
+
+### docs
+
+* Fix serves images with low resolution ([fabe196](https://github.com/peaceiris/hugo-theme-iris/commit/fabe1961431cde6dcf3e5a028dd89686d8658b73))
+
+### feat
+
+* Deprecate li shortcode (#247) ([402c4ec](https://github.com/peaceiris/hugo-theme-iris/commit/402c4ecfd00e726e74adbc4c91798a8bc904a95f)), closes [#247](https://github.com/peaceiris/hugo-theme-iris/issues/247) [#240](https://github.com/peaceiris/hugo-theme-iris/issues/240)
+* math shortcode (#246) ([76562b4](https://github.com/peaceiris/hugo-theme-iris/commit/76562b46831110439416785d3dd38d1783317d08)), closes [#246](https://github.com/peaceiris/hugo-theme-iris/issues/246)
+
+
+
 ## [0.25.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.25.1...v0.25.2) (2020-12-11)
 
 
