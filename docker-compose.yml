@@ -4,7 +4,7 @@ services:
   hugo:
     container_name: hugo_theme_iris
     # image: "ghcr.io/peaceiris/hugo:v${HUGO_VERSION}"
-    image: ghcr.io/peaceiris/hugo:v${HUGO_VERSION}-full # Hugo Modules and Node.js
+    image: ghcr.io/peaceiris/hugo:dartsass # Hugo Modules and Node.js
     # image: ghcr.io/peaceiris/hugo:v0.75.1-full # workaround for Codespaces
     ports:
       - 1313:1313
