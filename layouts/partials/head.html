@@ -2,22 +2,24 @@
   {{ partial "head/general" . }}
   {{ partial "head/json-ld" . }}
 
+  {{ $sassOptions := (dict "transpiler" "dartsass") }}
+
   {{ if $.Params.slide }}
   <style>
-    {{ $cssMain := resources.Get "mod/revealjs/dist/reveal.css" | toCSS | minify }}
+    {{ $cssMain := resources.Get "mod/revealjs/dist/reveal.css" | toCSS $sassOptions | minify }}
     {{ $cssMain.Content | safeCSS }}
-    {{ $cssTheme := resources.Get "mod/revealjs/dist/theme/white.css" | toCSS | minify }}
+    {{ $cssTheme := resources.Get "mod/revealjs/dist/theme/white.css" | toCSS $sassOptions | minify }}
     {{ $cssTheme.Content | safeCSS }}
   </style>
   {{ else }}
   <style>
-    {{ $bulmaCSS := resources.Get "theme/scss/bulma.scss" | toCSS | minify }}
+    {{ $bulmaCSS := resources.Get "theme/scss/bulma.scss" | toCSS $sassOptions | minify }}
     {{ $bulmaCSS.Content | safeCSS }}
 
-    {{ $syntaxCSS := resources.Get "theme/css/syntax.css" | toCSS | minify }}
+    {{ $syntaxCSS := resources.Get "theme/css/syntax.css" | toCSS $sassOptions | minify }}
     {{ $syntaxCSS.Content | safeCSS }}
 
-    {{ $themeCSS := resources.Get "theme/scss/style.scss" | toCSS | minify }}
+    {{ $themeCSS := resources.Get "theme/scss/style.scss" | toCSS $sassOptions | minify }}
     {{ $themeCSS.Content | safeCSS }}
   </style>
   {{ end }}
