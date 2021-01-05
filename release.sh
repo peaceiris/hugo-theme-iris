@@ -34,16 +34,6 @@ git pull origin master
 git pull origin --tags
 
 npm ci
-
-npm run build
-RESOURCES_DIR="resources"
-if [ -n "$(git diff ${RESOURCES_DIR})" ]; then
-  git add "${RESOURCES_DIR}"
-  git commit -m "chore(release): update ${RESOURCES_DIR}"
-else
-  print_info "skip add and commit for ${RESOURCES_DIR}"
-fi
-
 npm run release -- --release-as "${RELEASE_TYPE}" --preset eslint
 
 TAG_NAME="v$(jq -r '.version' ./package.json)"
