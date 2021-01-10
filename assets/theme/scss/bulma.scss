@@ -2,6 +2,8 @@
 
 @import "../../mod/bulma/utilities/_all.sass";
 @import "../../mod/bulma/base/_all.sass";
+@import "../../mod/bulma/helpers/float.sass";
+@import "../../mod/bulma/helpers/color.sass";
 
 $tablet: 760px;
 $dimensions: 16 24 32 48 64 96 128 180 256;
