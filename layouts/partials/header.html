@@ -27,7 +27,7 @@
           {{ end }}
         </p>
         {{ partial "breadcrumb" . }}
-        <p class="has-text-grey-light is-pulled-right">Lastmod: {{ .Lastmod.Format "2006-01-02" }}</p>
+        <p class="has-text-grey-light is-pulled-right">{{ i18n "lastmod" . }}: {{ .Lastmod.Format "2006-01-02" }}</p>
       </div>
     </div>
   </section>

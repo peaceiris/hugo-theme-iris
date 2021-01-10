@@ -43,6 +43,21 @@ jobs:
 
       - run: make cibuild
 
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.1.11
+        with:
+          publish-dir: './exampleSite/public'
+          production-branch: master
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
+
   test-docker:
     runs-on: ubuntu-18.04
     if: contains(github.event.head_commit.message, '[skip ci]') == false

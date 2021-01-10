@@ -60,7 +60,7 @@ cibuild:
 	cd ./exampleSite && \
 		hugo --minify \
 			--themesDir ../../ \
-			--baseURL $(BASE_URL) \
+			--baseURL '/' \
 			--cleanDestinationDir \
 			--i18n-warnings --path-warnings --debug \
 			--templateMetrics --templateMetricsHints
