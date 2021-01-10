@@ -54,7 +54,7 @@ jobs:
           hugo --minify \
             --themesDir ../../ \
             --baseURL "${BASE_URL}" \
-            --i18n-warnings --path-warnings \
+            --i18n-warnings --path-warnings
           wget -O ./public/report.html "${BASE_URL}/report.html" || true
 
       - name: Vercel
