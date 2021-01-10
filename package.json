@@ -10,6 +10,7 @@
     "up": "make npm-up",
     "build": "make npm-build",
     "test": "make npm-test",
+    "vercel": "vercel exampleSite/public",
     "release": "standard-version",
     "update-deps": "(git diff 'HEAD@{1}' --name-only | grep 'package-lock.json' > /dev/null) && npm ci || :"
   },
@@ -44,6 +45,7 @@
     "npm-run-all": "^4.1.5",
     "open": "^7.3.1",
     "standard-version": "^9.1.0",
+    "vercel": "^21.0.1",
     "wait-on": "^5.2.1"
   }
 }
