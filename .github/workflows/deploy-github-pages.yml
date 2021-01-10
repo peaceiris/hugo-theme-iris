@@ -64,6 +64,7 @@ jobs:
         run: |
           ls -la ./exampleSite/public
           npm run vercel -- --token="${{ secrets.VERCEL_TOKEN }}"
+          ls -la ./exampleSite/public
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.7.3
