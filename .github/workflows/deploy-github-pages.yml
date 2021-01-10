@@ -55,13 +55,15 @@ jobs:
             --themesDir ../../ \
             --baseURL "${BASE_URL}" \
             --i18n-warnings --path-warnings
-          wget -O ./public/report.html "${BASE_URL}/report.html" || true
+          wget --quiet -O ./public/report.html "${BASE_URL}/report.html" || true
 
       - name: Vercel
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: npm run vercel -- --token="${{ secrets.VERCEL_TOKEN }}"
+        run: |
+          ls -la ./exampleSite/public
+          npm run vercel -- --token="${{ secrets.VERCEL_TOKEN }}"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.7.3
