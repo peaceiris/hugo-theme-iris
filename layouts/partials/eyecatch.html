@@ -1,11 +1,12 @@
 {{ if .Params.eyecatch }}
   {{ $image := resources.Get .Params.eyecatch }}
   {{ $imageHash := $image | resources.Fingerprint "sha512" }}
-  <img
-    class=""
-    src="{{- $imageHash.Permalink -}}"
-    alt="{{ $.Params.Description }}"
-    decoding="async"
-    loading="lazy"
-  />
+  <figure class="image container">
+    <img
+      src="{{ $imageHash.Permalink }}"
+      alt="{{ $.Params.Description }}"
+      decoding="async"
+      loading="lazy"
+    />
+  </figure>
 {{ end }}
