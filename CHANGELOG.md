@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.27.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.26.0...v0.27.0) (2021-01-11)
+
+
+### ci
+
+* bump actions/setup-node from v2.1.3 to v2.1.4 (#249) ([699bbce](https://github.com/peaceiris/hugo-theme-iris/commit/699bbce9651a665de1521541f29779fbf87c2b55)), closes [#249](https://github.com/peaceiris/hugo-theme-iris/issues/249)
+* bump actions/upload-artifact from v2.2.1 to v2.2.2 (#265) ([ba79912](https://github.com/peaceiris/hugo-theme-iris/commit/ba799121b25aefda9dad442ed2bd39e0eaef31c8)), closes [#265](https://github.com/peaceiris/hugo-theme-iris/issues/265)
+* bump peaceiris/workflows from v0.7.0 to v0.8.1 (#260) ([c201613](https://github.com/peaceiris/hugo-theme-iris/commit/c201613d58d7007939f55cf6c08ce5ec58aa1539)), closes [#260](https://github.com/peaceiris/hugo-theme-iris/issues/260)
+* remove --debug --templateMetrics --templateMetricsHints ([f071914](https://github.com/peaceiris/hugo-theme-iris/commit/f0719141e11257a28a565d4c5859da41e5d98aeb))
+
+### deps
+
+* bump hugo from 0.79.0 to 0.79.1 ([409b43a](https://github.com/peaceiris/hugo-theme-iris/commit/409b43a18cdb7db79adcfa770fe5d5098668b74f))
+* bump hugo from 0.79.1 to 0.80.0 (#263) ([483614f](https://github.com/peaceiris/hugo-theme-iris/commit/483614f7a1b6d73436610429ec923547cbd1445a)), closes [#263](https://github.com/peaceiris/hugo-theme-iris/issues/263)
+
+### feat
+
+* Add lastmod to header (#268) ([fbcf863](https://github.com/peaceiris/hugo-theme-iris/commit/fbcf863d2a9ddfa7e2c7912e14ebfed7309a44a1)), closes [#268](https://github.com/peaceiris/hugo-theme-iris/issues/268)
+* i18n lastmod (#270) ([7f14bc6](https://github.com/peaceiris/hugo-theme-iris/commit/7f14bc6ce64699717fb85c44e66e5e01ce10540a)), closes [#270](https://github.com/peaceiris/hugo-theme-iris/issues/270)
+* Support external images (#271) ([f7cf460](https://github.com/peaceiris/hugo-theme-iris/commit/f7cf46018746aaa02abe324a040be111945e4d33)), closes [#271](https://github.com/peaceiris/hugo-theme-iris/issues/271)
+
+
+
 # [0.26.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.25.2...v0.26.0) (2020-12-12)
 
 
