@@ -21,6 +21,8 @@ jobs:
     if: contains(github.event.head_commit.message, '[skip ci]') == false
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Read .env
         id: hugo_version
