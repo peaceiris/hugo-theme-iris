@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.28.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.27.0...v0.28.0) (2021-01-13)
+
+
+### ci
+
+* Set fetch-depth to 0 ([7c55301](https://github.com/peaceiris/hugo-theme-iris/commit/7c55301cad8e36d8db31164f62b4c730fb164c8b))
+
+### feat
+
+* hero-head (#273) ([008d66d](https://github.com/peaceiris/hugo-theme-iris/commit/008d66dadcdc2233aeb8cef4c0041364758654e4)), closes [#273](https://github.com/peaceiris/hugo-theme-iris/issues/273)
+* Put lang and edit buttons into hero-foot (#272) ([8a1de98](https://github.com/peaceiris/hugo-theme-iris/commit/8a1de982ba31d4ca63f162a1dff3e0a4bf02c849)), closes [#272](https://github.com/peaceiris/hugo-theme-iris/issues/272)
+
+
+
 # [0.27.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.26.0...v0.27.0) (2021-01-11)
 
 
