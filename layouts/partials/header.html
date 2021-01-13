@@ -10,6 +10,7 @@
 
 <header>
   <section class="hero is-dark is-bold">
+    <!-- Hero content: will be in the middle -->
     <div class="hero-body columns is-desktop">
       <div class="column is-8 is-offset-2">
         <h1 class="title is-spaced">
@@ -28,6 +29,15 @@
         </p>
         {{ partial "breadcrumb" . }}
         <p class="has-text-grey-light is-pulled-right">{{ i18n "lastmod" . }}: {{ .Lastmod.Format "2006-01-02" }}</p>
+      </div>
+    </div>
+
+    <!-- Hero footer: will stick at the bottom -->
+    <div class="hero-foot columns is-desktop">
+      <div class="column is-8 is-offset-2">
+        {{ partial "lang-button" . }}
+        {{ partial "edit-button" . }}
+        {{ partial "check-tools" . }}
       </div>
     </div>
   </section>
