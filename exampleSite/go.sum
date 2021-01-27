@@ -1,8 +1,10 @@
 github.com/hakimel/reveal.js v0.0.0-20201012095104-0582f57517c9/go.mod h1:vIoaZ8tJbfDF30DhKf6Dia5ykePO0tETa9Posw8UrOE=
 github.com/jgthms/bulma v0.0.0-20200928223852-9928dba42d75/go.mod h1:89FLBKXYFKfOKAoDeUT26V0pHGwzr205cMXAEqtAVOI=
+github.com/jgthms/bulma v0.0.0-20210126190202-c5edaea84f28/go.mod h1:89FLBKXYFKfOKAoDeUT26V0pHGwzr205cMXAEqtAVOI=
 github.com/mathjax/MathJax v0.0.0-20200912194947-c8292351190c/go.mod h1:bgp6XP7Dtl25/x6vVIPVe2mkOCrg8wMk/A9gl0FzJLA=
 github.com/mermaid-js/mermaid v8.8.5-0.20210121183421-3c5da00230a5+incompatible/go.mod h1:pGJSm9DYANtp59DADJgNzFh1uIpkn5xaH3ZBdv1VNTI=
 github.com/peaceiris/hugo-mod-bulma v0.1.2/go.mod h1:Oldyip8pv+p8c94jOprxEJ+0+IzDyYi3t/kpZ3txDnM=
+github.com/peaceiris/hugo-mod-bulma v0.2.0/go.mod h1:sjw6OFwTiXqh6S26Wk6GYjlSlwgKjYZ06+Bj29FLIqQ=
 github.com/peaceiris/hugo-mod-mathjax v0.1.1/go.mod h1:NTn10syjBq7EVnZACmoOlZlg+D3MXLDo9jOLdq5Bm5g=
 github.com/peaceiris/hugo-mod-mermaidjs v0.5.0/go.mod h1:OmVUZM92FWgDVTt4uZ2qawHGNRRsSMU6uexWMDKjp4o=
 github.com/peaceiris/hugo-mod-revealjs v0.2.0/go.mod h1:j0j0jS675O/rIk2kBdyTbkQebg9wYSriFfDZG+SkHYs=
