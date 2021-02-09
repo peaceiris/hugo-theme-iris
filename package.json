@@ -10,15 +10,7 @@
     "up": "make npm-up",
     "build": "make npm-build",
     "test": "make npm-test",
-    "release": "standard-version",
-    "update-deps": "(git diff 'HEAD@{1}' --name-only | grep 'package-lock.json' > /dev/null) && npm ci || :"
-  },
-  "husky": {
-    "skipCI": true,
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "post-merge": "npm run update-deps; git remote prune origin"
-    }
+    "release": "standard-version"
   },
   "lint-staged": {
     "**/*": [
