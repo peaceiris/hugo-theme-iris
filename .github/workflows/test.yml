@@ -11,14 +11,8 @@ on:
       - "README.md"
 
 jobs:
-  skipci:
-    runs-on: ubuntu-18.04
-    steps:
-      - run: echo "[skip ci] ${{ contains(github.event.head_commit.message, '[skip ci]') }}"
-
   test:
     runs-on: ubuntu-18.04
-    if: contains(github.event.head_commit.message, '[skip ci]') == false
     steps:
       - uses: actions/checkout@v2
         with:
@@ -62,7 +56,6 @@ jobs:
 
   test-docker:
     runs-on: ubuntu-18.04
-    if: contains(github.event.head_commit.message, '[skip ci]') == false
     steps:
       - uses: actions/checkout@v2
 
@@ -80,7 +73,6 @@ jobs:
 
   test-setup:
     runs-on: ubuntu-18.04
-    if: contains(github.event.head_commit.message, '[skip ci]') == false
     strategy:
       matrix:
         extended:
