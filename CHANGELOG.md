@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.29.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.28.0...v0.29.0) (2021-03-08)
+
+
+### chore
+
+* add .envrc for direnv ([89e8099](https://github.com/peaceiris/hugo-theme-iris/commit/89e809975ef6cf872d17cf39d91ff26950207b74))
+
+### ci
+
+* bump actions/cache from v2 to v2.1.4 (#282) ([2027d80](https://github.com/peaceiris/hugo-theme-iris/commit/2027d802ab9cddc0889fb0998cca9a4a671add82)), closes [#282](https://github.com/peaceiris/hugo-theme-iris/issues/282)
+* bump actions/setup-node from v2.1.4 to v2.1.5 (#292) ([3f2587f](https://github.com/peaceiris/hugo-theme-iris/commit/3f2587f3f86ea33b91f27bd1cf51b985f19a47e2)), closes [#292](https://github.com/peaceiris/hugo-theme-iris/issues/292)
+* bump nwtgck/actions-netlify from v1.1.11 to v1.1.12 (#274) ([ef16acd](https://github.com/peaceiris/hugo-theme-iris/commit/ef16acdf84c929a5a84022c3751553a2b1c7deed)), closes [#274](https://github.com/peaceiris/hugo-theme-iris/issues/274)
+* bump nwtgck/actions-netlify from v1.1.12 to v1.1.13 (#280) ([4f8988b](https://github.com/peaceiris/hugo-theme-iris/commit/4f8988bc796f41af69931f7cfc3ae822cc0519fe)), closes [#280](https://github.com/peaceiris/hugo-theme-iris/issues/280)
+* Fix husky post-merge ([d5e73d9](https://github.com/peaceiris/hugo-theme-iris/commit/d5e73d9ad1c91d937605f11374ff149bc5088282))
+* Migrate husky from v4 to v5 ([a1eccc5](https://github.com/peaceiris/hugo-theme-iris/commit/a1eccc5951c2db2a285f1a841355c19fe0023409))
+* Migrate husky from v4 to v5 ([f75a833](https://github.com/peaceiris/hugo-theme-iris/commit/f75a8339dde0f4479dafbde2ecb4da45bc6b50ca))
+* remove husky lint-staged ([297ab36](https://github.com/peaceiris/hugo-theme-iris/commit/297ab36d3b67e7f89109b69a87003d65dda5be46))
+* Remove skipci job ([3701935](https://github.com/peaceiris/hugo-theme-iris/commit/3701935dcf510c691a2aa7bf876bab0d19397508))
+* Set enable-commit-comment to false ([fbe33ec](https://github.com/peaceiris/hugo-theme-iris/commit/fbe33ec765173b758a503499804376b377d8fff4))
+
+### deps
+
+* bump hugo from 0.80.0 to 0.81.0 (#289) ([8057b5e](https://github.com/peaceiris/hugo-theme-iris/commit/8057b5e2db0b2df990d7366838e1db426a5f83e2)), closes [#289](https://github.com/peaceiris/hugo-theme-iris/issues/289)
+* Bump hugo-mod-mermaidjs from 0.4.0 to 0.5.0 (#278) ([3334ce7](https://github.com/peaceiris/hugo-theme-iris/commit/3334ce7c8b83cdb9d214f37ddeec69b724a6abc5)), closes [#278](https://github.com/peaceiris/hugo-theme-iris/issues/278)
+* Bump hugo-mod-mermaidjs from 0.5.0 to 0.6.0 (#288) ([922714a](https://github.com/peaceiris/hugo-theme-iris/commit/922714aa8cdeddb69f9c6a32748ff8de8be3bc19)), closes [#288](https://github.com/peaceiris/hugo-theme-iris/issues/288)
+* Bump npm to v7 ([dc1cad3](https://github.com/peaceiris/hugo-theme-iris/commit/dc1cad347b7d9f67db5f53ad5126f33dfb2ef8a3))
+* Bump npm to v7 ([5e7e45b](https://github.com/peaceiris/hugo-theme-iris/commit/5e7e45b6660f46120d506446437b25a4ae55dd7e))
+* Bump peaceiris/hugo-mod-bulma from 0.1.2 to 0.2.0 (#279) ([6f43b1d](https://github.com/peaceiris/hugo-theme-iris/commit/6f43b1dbec1c0b266656026b6da2aea104af9bc0)), closes [#279](https://github.com/peaceiris/hugo-theme-iris/issues/279)
+
+### feat
+
+* Add h3 style (#297) ([5f68c58](https://github.com/peaceiris/hugo-theme-iris/commit/5f68c58e7d41252feffe7f55078133e8ca50e63a)), closes [#297](https://github.com/peaceiris/hugo-theme-iris/issues/297)
+
+### fix
+
+* remove invalid class ([793aa74](https://github.com/peaceiris/hugo-theme-iris/commit/793aa74a9195303b94b74a616a196316da163f04))
+
+
+
 # [0.28.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.27.0...v0.28.0) (2021-01-13)
 
 
