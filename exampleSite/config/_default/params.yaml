@@ -14,3 +14,5 @@ icon:
   favicon: /favicon/favicon64.ico
   x180: /favicon/apple-icon-180x180.jpg
   mstile: /favicon/ms-icon-150x150.jpg
+
+disableBreadcrumbNavigation: true
