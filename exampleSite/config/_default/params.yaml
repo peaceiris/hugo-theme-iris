@@ -3,24 +3,16 @@ repo:
   branch: master
   contentDir: exampleSite/content
 
-# revealjs code highlight
-# highlightStyle: solarized-light
-
-highlightStyle: monokai
-
 themeColor: "#ffffff" # smart phone's browser tab color
 
 footer:
   copyright:
-    # year: 2020
     name: peaceiris
     link: "https://peaceiris.com/"
-
-font:
-  # URL: "https://fonts.googleapis.com/css?family=Noto+Sans+JP"
-  # family: "Noto Sans JP"
 
 icon:
   favicon: /favicon/favicon64.ico
   x180: /favicon/apple-icon-180x180.jpg
   mstile: /favicon/ms-icon-150x150.jpg
+
+# disableBreadcrumbNavigation: true

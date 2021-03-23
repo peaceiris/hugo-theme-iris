@@ -52,7 +52,9 @@
             {{ .Description }}
           {{ end }}
         </p>
-        {{ partial "breadcrumb" . }}
+        {{ if (not $.Site.Params.disableBreadcrumbNavigation) }}
+          {{ partial "breadcrumb" . }}
+        {{ end }}
         <p class="has-text-grey-light is-pulled-right">{{ i18n "lastmod" . }}: {{ .Lastmod.Format "2006-01-02" }}</p>
       </div>
     </div>
