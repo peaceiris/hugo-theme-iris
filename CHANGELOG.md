@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.29.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.29.0...v0.29.1) (2021-03-23)
+
+
+### chore
+
+* Add lint-staged, husky v5 ([f2b7bdf](https://github.com/peaceiris/hugo-theme-iris/commit/f2b7bdffdc940f21e036ce3162202cab190e8892))
+* hugo mod tidy verify ([6b577b5](https://github.com/peaceiris/hugo-theme-iris/commit/6b577b55d5a6a23b663b91c1de9de74e5cc4b1ba))
+
+### deps
+
+* Add .nvmrc with node 12.21.0 ([13b88f9](https://github.com/peaceiris/hugo-theme-iris/commit/13b88f9828dee5fd95ff76e42e4c6f83d416c53e))
+* bump hugo from 0.81.0 to 0.82.0 (#301) ([1eacc52](https://github.com/peaceiris/hugo-theme-iris/commit/1eacc52758e7e596871509e18eb90772d62dcf9f)), closes [#301](https://github.com/peaceiris/hugo-theme-iris/issues/301)
+* Bump hugo-mod-mermaidjs from 0.6.0 to 0.7.0 (#304) ([c0eced7](https://github.com/peaceiris/hugo-theme-iris/commit/c0eced75df15d0dd9bb23194aeebc5758188fd9f)), closes [#304](https://github.com/peaceiris/hugo-theme-iris/issues/304)
+
+
+
 # [0.29.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.28.0...v0.29.0) (2021-03-08)
 
 
