@@ -38,6 +38,7 @@ jobs:
             ${{ runner.os }}-hugomod-
 
       - run: make cibuild
+      - run: env
 
       - name: Deploy to Netlify
         uses: peaceiris/actions-netlify@multiple-deploy-preview-urls
