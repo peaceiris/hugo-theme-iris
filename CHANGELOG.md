@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.30.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.29.1...v0.30.0) (2021-03-23)
+
+
+### feat
+
+* Parameter to disable Breadcrumb navigation (#305) ([17daa20](https://github.com/peaceiris/hugo-theme-iris/commit/17daa2099ddb6e2d2aa0991f4e2c444745de73da)), closes [#305](https://github.com/peaceiris/hugo-theme-iris/issues/305)
+
+
+
 ## [0.29.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.29.0...v0.29.1) (2021-03-23)
 
 
