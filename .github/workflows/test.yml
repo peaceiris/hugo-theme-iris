@@ -38,10 +38,6 @@ jobs:
             ${{ runner.os }}-hugomod-
 
       - run: make cibuild
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
 
       - name: Deploy to Netlify
         uses: peaceiris/actions-netlify@multiple-deploy-preview-urls
