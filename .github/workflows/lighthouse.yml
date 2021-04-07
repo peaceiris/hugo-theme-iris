@@ -28,7 +28,7 @@ jobs:
             'https://hugothemeiris.peaceiris.app'
 
       - name: Upload result
-        uses: actions/upload-artifact@v2.2.2
+        uses: actions/upload-artifact@v2.2.3
         with:
           name: lighthouse-report
           path: report.html
