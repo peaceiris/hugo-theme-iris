@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.30.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.30.0...v0.30.1) (2021-04-23)
+
+
+### ci
+
+* bump actions/cache from v2.1.4 to v2.1.5 (#316) ([9003d3f](https://github.com/peaceiris/hugo-theme-iris/commit/9003d3f46c95550d6f74fb30ce1e1fba82b18499)), closes [#316](https://github.com/peaceiris/hugo-theme-iris/issues/316)
+* bump actions/upload-artifact from v2.2.2 to v2.2.3 (#313) ([ef78c95](https://github.com/peaceiris/hugo-theme-iris/commit/ef78c95c19ead20d172a0b42754ae99dcdacc558)), closes [#313](https://github.com/peaceiris/hugo-theme-iris/issues/313)
+* bump peaceiris/actions-gh-pages from v3.7.3 to v3.8.0 (#307) ([4007450](https://github.com/peaceiris/hugo-theme-iris/commit/4007450a4a97132655aadbf5b709da2392bfafb7)), closes [#307](https://github.com/peaceiris/hugo-theme-iris/issues/307)
+
+### deps
+
+* bump hugo from 0.82.0 to 0.82.1 ([ee0eb68](https://github.com/peaceiris/hugo-theme-iris/commit/ee0eb6837e22d30b79aa50ea7953228ad5c4b13b))
+* Bump node from 12.21.0 to 12.22.0 (#310) ([690e77c](https://github.com/peaceiris/hugo-theme-iris/commit/690e77c804e7eb9afe13f76687fabbd77fcc4d78)), closes [#310](https://github.com/peaceiris/hugo-theme-iris/issues/310)
+* Bump node from 12.22.0 to 12.22.1 (#317) ([1936897](https://github.com/peaceiris/hugo-theme-iris/commit/193689712a03d227365b1bb8e2b7db20f1a81bb5)), closes [#317](https://github.com/peaceiris/hugo-theme-iris/issues/317)
+* Bump peaceiris/hugo-mod-mathjax from 0.1.1 to 0.1.2 (#319) ([891ea00](https://github.com/peaceiris/hugo-theme-iris/commit/891ea003487a47d44485b1c68ba100603376d38e)), closes [#319](https://github.com/peaceiris/hugo-theme-iris/issues/319)
+
+
+
 # [0.30.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.29.1...v0.30.0) (2021-03-23)
 
 
