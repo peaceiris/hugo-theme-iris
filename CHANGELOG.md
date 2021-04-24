@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.30.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.30.1...v0.30.2) (2021-04-24)
+
+
+### deps
+
+* Bump peaceiris/hugo-mod-mathjax from 0.1.2 to 0.1.3 (#320) ([6313cfe](https://github.com/peaceiris/hugo-theme-iris/commit/6313cfebda6281008c4b4328b828dededa8dae88)), closes [#320](https://github.com/peaceiris/hugo-theme-iris/issues/320)
+
+
+
 ## [0.30.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.30.0...v0.30.1) (2021-04-23)
 
 
