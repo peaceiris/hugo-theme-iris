@@ -1,12 +1,18 @@
 {
   "name": "hugo-theme-iris",
   "version": "0.30.2",
-  "description": "Hugo IRIS Theme - Portfolio and Blog",
   "private": true,
-  "engines": {
-    "node": ">=14.16.1",
-    "npm": ">=7.11.1"
+  "description": "Hugo IRIS Theme - Portfolio and Blog",
+  "homepage": "https://github.com/peaceiris/hugo-theme-iris#readme",
+  "bugs": {
+    "url": "https://github.com/peaceiris/hugo-theme-iris/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://peaceiris@github.com/peaceiris/hugo-theme-iris.git"
+  },
+  "license": "MIT",
+  "author": "peaceiris",
   "scripts": {
     "postinstall": "npx husky install",
     "start": "run-p client server",
@@ -25,16 +31,6 @@
       "npx doctoc@2.0.0 --github"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://peaceiris@github.com/peaceiris/hugo-theme-iris.git"
-  },
-  "author": "peaceiris",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/peaceiris/hugo-theme-iris/issues"
-  },
-  "homepage": "https://github.com/peaceiris/hugo-theme-iris#readme",
   "devDependencies": {
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
@@ -42,5 +38,9 @@
     "open": "^8.0.7",
     "standard-version": "^9.2.0",
     "wait-on": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=14.16.1",
+    "npm": ">=7.11.1"
   }
 }
