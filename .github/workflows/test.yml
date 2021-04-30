@@ -40,7 +40,7 @@ jobs:
       - run: make cibuild
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.1.13
+        uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: './exampleSite/public'
           production-branch: master
