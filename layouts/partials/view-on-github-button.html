@@ -1,0 +1,5 @@
+{{ with $.Site.Params.repo }}
+  <a class="button is-pulled-right" href="{{ .URL }}/blob/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $.File.Path }}">
+    {{ i18n "view_on_github" }}
+  </a>
+{{ end }}
