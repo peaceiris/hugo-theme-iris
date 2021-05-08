@@ -87,6 +87,7 @@ jobs:
 
   test-setup:
     runs-on: ubuntu-18.04
+    if: github.ref == 'refs/heads/master'
     timeout-minutes: 5
     strategy:
       matrix:
