@@ -14,14 +14,14 @@
   "license": "MIT",
   "author": "peaceiris",
   "scripts": {
-    "build": "make npm-build",
-    "client": "wait-on http://localhost:1313 && open http://localhost:1313",
     "postinstall": "npx husky install",
-    "release": "standard-version",
-    "server": "make up",
     "start": "run-p client server",
+    "server": "make up",
+    "client": "wait-on http://localhost:1313 && open http://localhost:1313",
+    "up": "make npm-up",
+    "build": "make npm-build",
     "test": "make npm-test",
-    "up": "make npm-up"
+    "release": "standard-version"
   },
   "lint-staged": {
     "**/*": [
@@ -30,9 +30,6 @@
     "{README,CONTRIBUTING}.md": [
       "npx doctoc@2.0.0 --github"
     ]
-  },
-  "dependencies": {
-    "mermaid": "^8.9.3"
   },
   "devDependencies": {
     "husky": "^6.0.0",
@@ -46,17 +43,7 @@
     "node": ">=14.16.1",
     "npm": ">=7.11.1"
   },
-  "comments": {
-    "dependencies": {
-      "mermaid": "project"
-    },
-    "devDependencies": {
-      "husky": "project",
-      "lint-staged": "project",
-      "npm-run-all": "project",
-      "open": "project",
-      "standard-version": "project",
-      "wait-on": "project"
-    }
+  "dependencies": {
+    "mermaid": "^8.9.3"
   }
 }

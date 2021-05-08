@@ -2,5 +2,4 @@ module:
   imports:
     - path: github.com/peaceiris/hugo-mod-bulma
     - path: github.com/peaceiris/hugo-mod-revealjs
-    - path: github.com/peaceiris/hugo-mod-mermaidjs
     - path: github.com/peaceiris/hugo-mod-mathjax

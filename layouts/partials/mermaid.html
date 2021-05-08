@@ -1,4 +1,6 @@
-{{ $js := resources.Get "mod/mermaidjs/mermaid.min.js" }}
+<!-- https://github.com/mermaid-js/mermaid -->
+
+{{ $js := resources.Get "theme/js/mermaid/mermaid.min.js" }}
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
 <script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 <script>
