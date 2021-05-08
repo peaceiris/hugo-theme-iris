@@ -6,6 +6,8 @@ module:
   mounts:
     - source: "node_modules/mermaid/dist"
       target: "assets/theme/js/mermaid"
+    - source: "node_modules/mermaid/dist/mermaid.min.js.map"
+      target: "static/theme/js/mermaid/mermaid.min.js.map"
 
 # googleAnalytics: UA-123-45
 disqusShortname: hugothemeiris

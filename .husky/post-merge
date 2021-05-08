@@ -1,3 +1,4 @@
 npm ci
 git remote prune origin
 make hugo-mod-npm-pack
+make npmci
