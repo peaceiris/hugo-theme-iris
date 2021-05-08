@@ -29,6 +29,7 @@ Hugo IRIS Theme
 - [Getting Started](#getting-started)
   - [Install Hugo](#install-hugo)
   - [Install Go](#install-go)
+  - [Install Node.js](#install-nodejs)
   - [Initialize New Hugo Project](#initialize-new-hugo-project)
   - [Create a Post Page](#create-a-post-page)
   - [Create a Slide Page](#create-a-slide-page)
@@ -109,6 +110,18 @@ You can find the minimum supported Hugo version in [theme.toml] `min_version`. U
 This theme depends on Hugo Modules.
 
 - [Download and install - The Go Programming Language](https://golang.org/doc/install)
+
+```sh
+brew install go
+```
+
+### Install Node.js
+
+[Node.js](https://nodejs.org/en/)
+
+```sh
+brew install node
+```
 
 ### Initialize New Hugo Project
 
@@ -200,7 +213,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.75.1"
+          hugo-version: "0.83.1"
           extended: true
 
       - name: Fetch data
@@ -358,7 +371,7 @@ git commit -m "deps: bump hugo-theme-iris"
 - [Bulma] via [peaceiris/hugo-mod-bulma](https://github.com/peaceiris/hugo-mod-bulma)
 - [reveal.js] via [peaceiris/hugo-mod-revealjs](https://github.com/peaceiris/hugo-mod-revealjs)
 - [MathJax] via [peaceiris/hugo-mod-mathjax](https://github.com/peaceiris/hugo-mod-mathjax)
-- [mermaid] via [peaceiris/hugo-mod-mermaidjs](https://github.com/peaceiris/hugo-mod-mermaidjs)
+- [mermaid] via `npm`
 
 <!-- - Font Awesome -->
 

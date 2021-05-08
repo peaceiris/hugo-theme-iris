@@ -73,3 +73,8 @@ cibuild:
 npmci:
 	cd ./exampleSite && \
 		npm ci
+
+.PHONY: hugo-mod-npm-pack
+hugo-mod-npm-pack:
+	cd ./exampleSite && \
+		hugo mod npm pack && npx sort-package-json

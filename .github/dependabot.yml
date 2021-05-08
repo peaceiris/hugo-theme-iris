@@ -11,6 +11,17 @@ updates:
   commit-message:
     prefix: deps(npm)
 
+- package-ecosystem: npm
+  directory: "/exampleSite"
+  schedule:
+    interval: daily
+    time: '11:00'
+    timezone: Japan
+  labels:
+  - "dependencies-npm"
+  commit-message:
+    prefix: deps(npm)
+
 - package-ecosystem: "github-actions"
   directory: "/"
   schedule:
