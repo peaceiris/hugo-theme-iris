@@ -107,7 +107,7 @@ You can find the minimum supported Hugo version in [theme.toml] `min_version`. U
 
 ### Install Go
 
-This theme depends on Hugo Modules.
+This theme depends on [Hugo Modules](https://gohugo.io/hugo-modules/use-modules/).
 
 - [Download and install - The Go Programming Language](https://golang.org/doc/install)
 
@@ -117,7 +117,7 @@ brew install go
 
 ### Install Node.js
 
-[Node.js](https://nodejs.org/en/)
+This theme depends on [Node.js](https://nodejs.org/en/) to install JavaScript libraries.
 
 ```sh
 brew install node
@@ -221,6 +221,7 @@ jobs:
           export GH_USER_ID="peaceiris"
           bash ./scripts/fetch_data.sh "${GH_USER_ID}" > "./data/github/${GH_USER_ID}.json"
 
+      - run: npm ci
       - run: hugo --minify
 
       - name: Deploy
