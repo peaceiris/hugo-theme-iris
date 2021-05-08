@@ -56,6 +56,7 @@ Hugo IRIS Theme
 - [Maintainer](#maintainer)
 - [Contributing](#contributing)
 - [License](#license)
+- [Development](#development)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -391,6 +392,12 @@ You can find more detail in our [Contributing Guide].
 - [MIT License - peaceiris/hugo-theme-iris](https://github.com/peaceiris/hugo-theme-iris/blob/master/LICENSE)
 
 
+
+## Development
+
+```sh
+{{ partial "console-log" $hoge }}
+```
 
 ---
 
