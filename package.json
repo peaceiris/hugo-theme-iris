@@ -45,18 +45,5 @@
   "engines": {
     "node": ">=14.16.1",
     "npm": ">=7.11.1"
-  },
-  "comments": {
-    "dependencies": {
-      "mermaid": "project"
-    },
-    "devDependencies": {
-      "husky": "project",
-      "lint-staged": "project",
-      "npm-run-all": "project",
-      "open": "project",
-      "standard-version": "project",
-      "wait-on": "project"
-    }
   }
 }

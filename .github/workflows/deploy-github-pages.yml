@@ -20,6 +20,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Read .nvmrc
+        run: echo "::set-output name=NVMRC::$(cat .nvmrc)"
+        id: nvm
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+
       - name: Read .env
         id: hugo_version
         run: |
@@ -38,6 +47,8 @@ jobs:
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
+
+      - run: make npmci
 
       - name: Build
         working-directory: ./exampleSite

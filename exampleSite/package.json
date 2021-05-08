@@ -1,43 +1,48 @@
 {
-  "name": "hugo-theme-iris",
-  "version": "0.30.2",
-  "private": true,
-  "description": "Hugo IRIS Theme - Portfolio and Blog",
-  "homepage": "https://github.com/peaceiris/hugo-theme-iris#readme",
+  "author": "peaceiris",
   "bugs": {
     "url": "https://github.com/peaceiris/hugo-theme-iris/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://peaceiris@github.com/peaceiris/hugo-theme-iris.git"
-  },
-  "license": "MIT",
-  "author": "peaceiris",
-  "scripts": {
-    "build": "make npm-build",
-    "client": "wait-on http://localhost:1313 && open http://localhost:1313",
-    "start": "run-p client server"
-  },
-  "dependencies": {
-    "mermaid": "^8.9.3"
-  },
-  "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "open": "^8.0.7",
-    "wait-on": "^5.3.0"
-  },
-  "engines": {
-    "node": ">=14.16.1",
-    "npm": ">=7.11.1"
   },
   "comments": {
     "dependencies": {
       "mermaid": "project"
     },
     "devDependencies": {
+      "husky": "project",
+      "lint-staged": "project",
       "npm-run-all": "project",
       "open": "project",
+      "standard-version": "project",
       "wait-on": "project"
     }
-  }
+  },
+  "dependencies": {
+    "mermaid": "^8.9.3"
+  },
+  "description": "Hugo IRIS Theme - Portfolio and Blog",
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "npm-run-all": "^4.1.5",
+    "open": "^8.0.7",
+    "standard-version": "^9.3.0",
+    "wait-on": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=14.16.1",
+    "npm": ">=7.11.1"
+  },
+  "homepage": "https://github.com/peaceiris/hugo-theme-iris#readme",
+  "license": "MIT",
+  "name": "hugo-theme-iris",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://peaceiris@github.com/peaceiris/hugo-theme-iris.git"
+  },
+  "scripts": {
+    "client": "wait-on http://localhost:1313 && open http://localhost:1313",
+    "start": "run-p client server"
+  },
+  "version": "0.30.2"
 }

@@ -26,6 +26,10 @@ hugo:
 bumphugo:
 	bash ./scripts/bump_hugo.sh
 
+.PHONY: docker-npm-ci
+docker-npm-ci:
+	$(DOCKER_COMPOSE) run --rm --entrypoint=npm hugo ci
+
 .PHONY: build
 build:
 	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL) --cleanDestinationDir)
@@ -64,3 +68,8 @@ cibuild:
 			--cleanDestinationDir \
 			--i18n-warnings --path-warnings --debug \
 			--templateMetrics --templateMetricsHints
+
+.PHONY: npmci
+npmci:
+	cd ./exampleSite && \
+		npm ci

@@ -8,9 +8,11 @@ git init
 wget https://github.com/peaceiris/hugo-theme-iris/archive/master.zip
 unzip master.zip
 rm master.zip
-cp -r ./hugo-theme-iris-master/exampleSite/{config,content,data,scripts,static,.gitignore} .
+cp -r ./hugo-theme-iris-master/exampleSite/{config,content,data,scripts,static,.gitignore,package.hugo.json} .
 rm -rf hugo-theme-iris-master
 hugo mod init "github.com/$2/$1"
 hugo mod get -u github.com/peaceiris/hugo-theme-iris
+hugo mod npm pack
+npm install
 git add .
 git commit -m "Add hugo-theme-iris"

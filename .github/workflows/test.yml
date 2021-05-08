@@ -13,10 +13,20 @@ on:
 jobs:
   test:
     runs-on: ubuntu-18.04
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
+      - name: Read .nvmrc
+        run: echo "::set-output name=NVMRC::$(cat .nvmrc)"
+        id: nvm
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
       - name: Read .env
         id: hugo_version
@@ -37,6 +47,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugomod-
 
+      - run: make npmci
       - run: make cibuild
 
       - name: Deploy to Netlify
@@ -52,10 +63,10 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 1
 
   test-docker:
     runs-on: ubuntu-18.04
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
 
@@ -66,13 +77,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugomod-
 
-      - name: Build Testing with Docker
-        run: |
-          export HUGO_CACHEDIR=/tmp/hugo_cache
-          make build
+      - name: npm ci
+        run: make docker-npm-ci
+
+      - name: Build
+        env:
+          HUGO_CACHEDIR: '/tmp/hugo_cache'
+        run: make build
 
   test-setup:
     runs-on: ubuntu-18.04
+    timeout-minutes: 5
     strategy:
       matrix:
         extended:

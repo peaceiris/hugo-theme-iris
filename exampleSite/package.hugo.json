@@ -14,22 +14,11 @@
   "license": "MIT",
   "author": "peaceiris",
   "scripts": {
-    "postinstall": "npx husky install",
-    "start": "run-p client server",
-    "server": "make up",
     "client": "wait-on http://localhost:1313 && open http://localhost:1313",
-    "up": "make npm-up",
-    "build": "make npm-build",
-    "test": "make npm-test",
-    "release": "standard-version"
+    "start": "run-p client server"
   },
-  "lint-staged": {
-    "**/*": [
-      "npm test"
-    ],
-    "{README,CONTRIBUTING}.md": [
-      "npx doctoc@2.0.0 --github"
-    ]
+  "dependencies": {
+    "mermaid": "^8.9.3"
   },
   "devDependencies": {
     "husky": "^6.0.0",
@@ -42,8 +31,5 @@
   "engines": {
     "node": ">=14.16.1",
     "npm": ">=7.11.1"
-  },
-  "dependencies": {
-    "mermaid": "^8.9.3"
   }
 }
