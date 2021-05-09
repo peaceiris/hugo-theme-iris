@@ -5,13 +5,14 @@
 
 <main>
   <article>
-    <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
     <section class="section">
       {{ partial "content" . }}
     </section>
   </article>
-  <!-- Ranges through content/posts/*.md -->
-  {{ range .Pages }}
+
+  {{ $paginator := .Paginate .Pages }}
+
+  {{ range $paginator.Pages }}
     <div class="columns">
       <div class="column is-10-tablet is-offset-1-tablet is-8-desktop is-offset-2-desktop">
         <a href="{{ .Permalink }}" class="normal-link">
@@ -45,6 +46,32 @@
       </div>
     </div>
   {{ end }}
+
+  <section class="section">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+      {{ if $paginator.HasPrev }}
+        <a class="pagination-previous" href="{{ $paginator.Prev.URL }}">Previous</a>
+      {{ end }}
+      {{ if $paginator.HasNext }}
+        <a class="pagination-next" href="{{ $paginator.Next.URL }}">Next</a>
+      {{ end }}
+      <ul class="pagination-list">
+        {{ if ne $paginator.PageNumber 1 }}
+          <li><a href="{{ $paginator.First.URL }}" class="pagination-link" aria-label="Goto page 1">{{ $paginator.First.PageNumber }}</a></li>
+          {{ if gt $paginator.PageNumber 2 }}
+            <li><span class="pagination-ellipsis">&hellip;</span></li>
+          {{ end }}
+        {{ end }}
+        <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">{{ $paginator.PageNumber }}</a></li>
+        {{ if ne $paginator.PageNumber $paginator.TotalPages }}
+          {{ if ne (sub $paginator.TotalPages 1) $paginator.PageNumber }}
+            <li><span class="pagination-ellipsis">&hellip;</span></li>
+          {{ end }}
+          <li><a href="{{ $paginator.Last.URL }}" class="pagination-link" aria-label="Goto page 86">{{ $paginator.Last.PageNumber }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </section>
 </main>
 
 {{ if and $math $hasDollar }}
