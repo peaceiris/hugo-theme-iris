@@ -1,1 +1,22 @@
 # menu
+main:
+  - identifier: posts
+    name: posts
+    pre: ""
+    url: "/posts/"
+    weight: 1
+  - identifier: repository
+    name: repository
+    pre: ""
+    url: "https://github.com/peaceiris/hugo-theme-iris"
+    weight: 2
+  - identifier: author
+    name: author
+    pre: ""
+    url: "https://peaceiris.com"
+    weight: 3
+  - identifier: hugo-site
+    name: Hugo
+    pre: ""
+    url: "https://gohugo.io/"
+    weight: 4
