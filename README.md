@@ -71,19 +71,26 @@ This repository includes a [Hugo] theme.
 - Dark Theme
 - Responsive
 - Support Multilingual
-- [PageSpeed Insights Scores: Good](https://developers.google.com/speed/pagespeed/insights/?hl=EN&url=https%3A%2F%2Fhugothemeiris.peaceiris.app%2F)
-- [Lighthouse Scores: Good](https://hugothemeiris.peaceiris.app/report.html)
-- Breadcrumb List
-- Syntax Highlighting
-- Eye-catching Image
+- SEO
+  - Google Analytics
+  - Open Graph Protocol
+  - JSON-LD
+- Performance
+  - [PageSpeed Insights Scores: Good](https://developers.google.com/speed/pagespeed/insights/?hl=EN&url=https%3A%2F%2Fhugothemeiris.peaceiris.app%2F)
+  - [Lighthouse Scores: Good](https://hugothemeiris.peaceiris.app/report.html)
+- Contents
+  - Breadcrumb List
+  - Syntax Highlighting
+  - Table of Contents
+  - [MathJax]: Beautiful math in all browsers.
+  - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
+  - [reveal.js]: Writing slides using Markdown.
+- Image
+  - Responsive
+  - Eye-catching Image
+  - OGP Image
+  - WebP: requiring a Hugo extended version
 - Disqus Comment System
-- Google Analytics
-- Open Graph Protocol, OGP Images
-- Table of Contents
-- [MathJax]: Beautiful math in all browsers.
-- [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
-- [reveal.js]: Writing slides using Markdown.
-- JSON-LD
 - Keyboard Shortcut: Press `?` (`Shift+/`) to show help modal.
 
 ### Roadmap
