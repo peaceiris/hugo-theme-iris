@@ -73,6 +73,11 @@ jobs:
 
   test-setup:
     runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        extended:
+          - true
+          - false
     steps:
       - uses: actions/checkout@v2
 
@@ -86,7 +91,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2.4.13
         with:
           hugo-version: "${{ steps.hugo_version.outputs.hugo_version }}"
-          extended: true
+          extended: ${{ matrix.extended }}
 
       - uses: actions/cache@v2.1.5
         with:
