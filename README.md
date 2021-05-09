@@ -71,10 +71,12 @@ This repository includes a [Hugo] theme.
 - Dark Theme
 - Responsive
 - Support Multilingual
+- Pagination
 - SEO
   - Google Analytics
   - Open Graph Protocol
   - JSON-LD
+  - Canonical URL on header
 - Performance
   - [PageSpeed Insights Scores: Good](https://developers.google.com/speed/pagespeed/insights/?hl=EN&url=https%3A%2F%2Fhugothemeiris.peaceiris.app%2F)
   - [Lighthouse Scores: Good](https://hugothemeiris.peaceiris.app/report.html)
@@ -82,6 +84,7 @@ This repository includes a [Hugo] theme.
   - Breadcrumb List
   - Syntax Highlighting
   - Table of Contents
+  - Random Post List
   - [MathJax]: Beautiful math in all browsers.
   - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
   - [reveal.js]: Writing slides using Markdown.
