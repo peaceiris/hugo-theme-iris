@@ -1,11 +1,65 @@
 <!-- https://github.com/jaywcjlove/hotkeys -->
 
+<div class="modal" id="keyboard-shortcut-help-modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head has-background-grey-darker">
+      <p class="modal-card-title has-text-light">Keyboard Shortcuts</p>
+      <button class="delete" aria-label="close" onclick="toggleActive(keyboardShortcutHelpModal);"></button>
+    </header>
+    <section class="modal-card-body has-background-grey-dark has-text-grey-light">
+      <table class="table is-striped is-hoverable">
+        <thead>
+          <tr>
+            <th>Command</th>
+            <th>Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="has-text-grey-light">? (Shift+/)</th>
+            <td>Bring up this help modal</td>
+          </tr>
+          <tr>
+            <th class="has-text-grey-light">g+h</th>
+            <td>Go to Home</td>
+          </tr>
+          <tr>
+            <th class="has-text-grey-light">g+p</th>
+            <td>Go to Posts</td>
+          </tr>
+          <tr>
+            <th class="has-text-grey-light">g+e</th>
+            <td>Go to Editor on GitHub</td>
+          </tr>
+          <tr>
+            <th class="has-text-grey-light">g+s</th>
+            <td>Go to Source on GitHub</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <footer class="modal-card-foot has-background-grey-darker has-text-grey">
+      Press ? (Shift+/) to close this help modal.
+    </footer>
+  </div>
+</div>
+
 {{ $js := resources.Get "mod/hotkeys/hotkeys.min.js" }}
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
 <script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 <script>
-  hotkeys('g+h, g+p, g+e, g+s', function (event, handler){
+  var keyboardShortcutHelpModal = document.getElementById("keyboard-shortcut-help-modal");
+
+  function toggleActive(obj) {
+    obj.classList.toggle("is-active");
+  }
+
+  hotkeys('shift+/, g+h, g+p, g+e, g+s', function (event, handler){
     switch (handler.key) {
+      case 'shift+/':
+        toggleActive(keyboardShortcutHelpModal);
+        break;
       case 'g+h':
         window.location.href = '{{ relLangURL "/" }}';
         break;

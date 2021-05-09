@@ -84,6 +84,7 @@ This repository includes a [Hugo] theme.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
 - [reveal.js]: Writing slides using Markdown.
 - JSON-LD
+- Keyboard shortcut
 
 ### Roadmap
 
@@ -360,6 +361,7 @@ git commit -m "deps: bump hugo-theme-iris"
 - [reveal.js] via [peaceiris/hugo-mod-revealjs](https://github.com/peaceiris/hugo-mod-revealjs)
 - [MathJax] via [peaceiris/hugo-mod-mathjax](https://github.com/peaceiris/hugo-mod-mathjax)
 - [mermaid] via [peaceiris/hugo-mod-mermaidjs](https://github.com/peaceiris/hugo-mod-mermaidjs)
+- [jaywcjlove/hotkeys](https://github.com/jaywcjlove/hotkeys)
 
 <!-- - Font Awesome -->
 
