@@ -226,13 +226,13 @@ jobs:
 
 ### circle
 
-If your logo image is located at `static/images/logo.jpg`.
+If your logo image is located at `assets/images/logo.jpg`.
 
 ```md
-{{< circle src="/images/logo.jpg" alt="hugo-theme-iris logo" >}}
+{{< circle src="images/logo.jpg" alt="hugo-theme-iris logo" >}}
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_circle.jpg" alt="Shortcode mermaid">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_circle.jpg" alt="Shortcode mermaid">
 
 ### button
 
@@ -245,7 +245,7 @@ If your logo image is located at `static/images/logo.jpg`.
 </div>
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_button.jpg" alt="Shortcode button">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_button.jpg" alt="Shortcode button">
 
 ### mermaid
 
@@ -265,7 +265,7 @@ sequenceDiagram
 {{< /mermaid >}}
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_mermaid.jpg" alt="Shortcode mermaid">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_mermaid.jpg" alt="Shortcode mermaid">
 
 ### repo
 
@@ -295,7 +295,7 @@ We can show a repository card like as follows.
 {{< repo id="peaceiris" name="actions-hugo" >}}
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_repo.jpg" alt="Shortcode repo">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_repo.jpg" alt="Shortcode repo">
 
 ### github-sponsors-list
 
@@ -305,7 +305,7 @@ Please follow the instruction as the same as the `repo` shortcode.
 {{< github-sponsors-list id="peaceiris" >}}
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_github-sponsors-list.jpg" alt="Shortcode github-sponsors-list">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_github-sponsors-list.jpg" alt="Shortcode github-sponsors-list">
 
 ### table
 
@@ -320,7 +320,7 @@ Please follow the instruction as the same as the `repo` shortcode.
 
 | Mouse out | Mouse over |
 |---|---|
-| ![Shortcode table mouse out](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_table_2.jpg) |
+| ![Shortcode table mouse out](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_table_2.jpg) |
 
 ### math
 
