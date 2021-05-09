@@ -25,12 +25,13 @@
         </div>
       </section>
       {{ partial "footer" . }}
-    {{ end }}
-    {{ if $.Params.math }}
-      {{ partialCached "mathjax" . }}
-    {{ end }}
-    {{ if .HasShortcode "mermaid" }}
-      {{ partialCached "mermaid" . }}
+      {{ if $.Params.math }}
+        {{ partialCached "mathjax" . }}
+      {{ end }}
+      {{ if .HasShortcode "mermaid" }}
+        {{ partialCached "mermaid" . }}
+      {{ end }}
+      {{ partialCached "keyboard-shortcut" . }}
     {{ end }}
   </body>
 </html>
