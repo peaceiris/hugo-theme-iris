@@ -14,3 +14,5 @@ repository:
   other: リポジトリ
 author:
   other: 作者
+hugo:
+  other: Hugo
