@@ -1,14 +1,33 @@
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" }}
 
+{{ $image := resources.Get $src }}
+{{ $small := $image }}
+{{ $medium := $image }}
+{{ $large := $image }}
+{{ if hugo.IsExtended }}
+  {{ $small = $image.Resize "480x webp" }}
+  {{ $medium = $image.Resize "768x webp" }}
+  {{ $large = $image.Resize "1024x webp" }}
+{{ else }}
+  {{ $small = $image.Resize "480x jpg" }}
+  {{ $medium = $image.Resize "768x jpg" }}
+  {{ $large = $image.Resize "1024x jpg" }}
+{{ end }}
+
 <br>
   <figure class="image is-180x180 container">
-    <img
-      class="is-rounded"
-      src="{{ $src | absURL }}"
-      alt="{{ $alt | safeHTML }}"
-      decoding="async"
-      loading="lazy"
-    />
+    <picture>
+      <source media="(max-width: 480px)" srcset="{{ $small.RelPermalink }} 480w">
+      <source media="(max-width: 768px)" srcset="{{ $medium.RelPermalink }} 768w">
+      <source media="(max-width: 1024px)" srcset="{{ $large.RelPermalink }} 1024w">
+      <img
+        class="is-rounded"
+        src="{{ $image.RelPermalink }}"
+        alt="{{ $alt | safeHTML }}"
+        decoding="async"
+        loading="lazy"
+      />
+    </picture>
   </figure>
 <br>

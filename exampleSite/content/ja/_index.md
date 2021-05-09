@@ -8,7 +8,7 @@ date: 2020-01-25T23:00:00.000Z
 
 ## Hugo IRIS Theme について
 
-{{< circle src="/images/logo.jpg" alt="hugo-theme-iris logo" >}}
+{{< circle src="images/logo.jpg" alt="hugo-theme-iris logo" >}}
 
 ポートフォリオ・ブログ用の Hugo Theme です。
 ソースコードは GitHub にて管理されています。

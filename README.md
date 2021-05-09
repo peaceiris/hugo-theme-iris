@@ -71,19 +71,26 @@ This repository includes a [Hugo] theme.
 - Dark Theme
 - Responsive
 - Support Multilingual
-- [PageSpeed Insights Scores: Good](https://developers.google.com/speed/pagespeed/insights/?hl=EN&url=https%3A%2F%2Fhugothemeiris.peaceiris.app%2F)
-- [Lighthouse Scores: Good](https://hugothemeiris.peaceiris.app/report.html)
-- Breadcrumb List
-- Syntax Highlighting
-- Eye-catching Image
+- SEO
+  - Google Analytics
+  - Open Graph Protocol
+  - JSON-LD
+- Performance
+  - [PageSpeed Insights Scores: Good](https://developers.google.com/speed/pagespeed/insights/?hl=EN&url=https%3A%2F%2Fhugothemeiris.peaceiris.app%2F)
+  - [Lighthouse Scores: Good](https://hugothemeiris.peaceiris.app/report.html)
+- Contents
+  - Breadcrumb List
+  - Syntax Highlighting
+  - Table of Contents
+  - [MathJax]: Beautiful math in all browsers.
+  - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
+  - [reveal.js]: Writing slides using Markdown.
+- Image
+  - Responsive
+  - Eye-catching Image
+  - OGP Image
+  - WebP: requiring a Hugo extended version
 - Disqus Comment System
-- Google Analytics
-- Open Graph Protocol, OGP Images
-- Table of Contents
-- [MathJax]: Beautiful math in all browsers.
-- [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
-- [reveal.js]: Writing slides using Markdown.
-- JSON-LD
 - Keyboard Shortcut: Press `?` (`Shift+/`) to show help modal.
 
 ### Roadmap
@@ -226,13 +233,13 @@ jobs:
 
 ### circle
 
-If your logo image is located at `static/images/logo.jpg`.
+If your logo image is located at `assets/images/logo.jpg`.
 
 ```md
-{{< circle src="/images/logo.jpg" alt="hugo-theme-iris logo" >}}
+{{< circle src="images/logo.jpg" alt="hugo-theme-iris logo" >}}
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_circle.jpg" alt="Shortcode mermaid">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_circle.jpg" alt="Shortcode mermaid">
 
 ### button
 
@@ -245,7 +252,7 @@ If your logo image is located at `static/images/logo.jpg`.
 </div>
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_button.jpg" alt="Shortcode button">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_button.jpg" alt="Shortcode button">
 
 ### mermaid
 
@@ -265,7 +272,7 @@ sequenceDiagram
 {{< /mermaid >}}
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_mermaid.jpg" alt="Shortcode mermaid">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_mermaid.jpg" alt="Shortcode mermaid">
 
 ### repo
 
@@ -295,7 +302,7 @@ We can show a repository card like as follows.
 {{< repo id="peaceiris" name="actions-hugo" >}}
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_repo.jpg" alt="Shortcode repo">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_repo.jpg" alt="Shortcode repo">
 
 ### github-sponsors-list
 
@@ -305,7 +312,7 @@ Please follow the instruction as the same as the `repo` shortcode.
 {{< github-sponsors-list id="peaceiris" >}}
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_github-sponsors-list.jpg" alt="Shortcode github-sponsors-list">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_github-sponsors-list.jpg" alt="Shortcode github-sponsors-list">
 
 ### table
 
@@ -320,7 +327,7 @@ Please follow the instruction as the same as the `repo` shortcode.
 
 | Mouse out | Mouse over |
 |---|---|
-| ![Shortcode table mouse out](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/static/images/shortcode_table_2.jpg) |
+| ![Shortcode table mouse out](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_table_2.jpg) |
 
 ### math
 

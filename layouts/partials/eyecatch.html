@@ -1,12 +1,28 @@
 {{ if .Params.eyecatch }}
-  {{ $image := resources.Get .Params.eyecatch }}
-  {{ $imageHash := $image | resources.Fingerprint "sha512" }}
+  {{ $image := resources.Get (printf "%s" ($.Params.eyecatch | safeURL)) }}
+  {{ $small := $image }}
+  {{ $medium := $image }}
+  {{ $large := $image }}
+  {{ if hugo.IsExtended }}
+    {{ $small = $image.Resize "480x webp" }}
+    {{ $medium = $image.Resize "768x webp" }}
+    {{ $large = $image.Resize "1024x webp" }}
+  {{ else }}
+    {{ $small = $image.Resize "480x jpg" }}
+    {{ $medium = $image.Resize "768x jpg" }}
+    {{ $large = $image.Resize "1024x jpg" }}
+  {{ end }}
   <figure class="image container">
-    <img
-      src="{{ $imageHash.Permalink }}"
-      alt="{{ $.Params.Description }}"
-      decoding="async"
-      loading="lazy"
-    />
+    <picture>
+      <source media="(max-width: 480px)" srcset="{{ $small.RelPermalink }} 480w">
+      <source media="(max-width: 768px)" srcset="{{ $medium.RelPermalink }} 768w">
+      <source media="(max-width: 1024px)" srcset="{{ $large.RelPermalink }} 1024w">
+      <img
+        src="{{ $image.RelPermalink }}"
+        alt="{{ $.Params.Description }}"
+        decoding="async"
+        loading="lazy"
+      />
+    </picture>
   </figure>
 {{ end }}
