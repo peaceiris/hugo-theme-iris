@@ -10,4 +10,9 @@
   <section class="section">
     {{ template "_internal/disqus.html" . }}
   </section>
+
+  <section class="section">
+    <h2 class="title is-3">Random Recommended Posts</h2>
+    {{ partial "random-post-list" . }}
+  </section>
 {{ end }}
