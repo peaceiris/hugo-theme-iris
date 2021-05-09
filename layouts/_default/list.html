@@ -62,7 +62,7 @@
             <li><span class="pagination-ellipsis">&hellip;</span></li>
           {{ end }}
         {{ end }}
-        <li><a class="pagination-link is-current" aria-label="Page {{ $paginator.PageNumber }}" aria-current="page">{{ $paginator.PageNumber }}</a></li>
+        <li><a href="#!" class="pagination-link is-current" aria-label="Page {{ $paginator.PageNumber }}" aria-current="page">{{ $paginator.PageNumber }}</a></li>
         {{ if ne $paginator.PageNumber $paginator.TotalPages }}
           {{ if ne (sub $paginator.TotalPages 1) $paginator.PageNumber }}
             <li><span class="pagination-ellipsis">&hellip;</span></li>
