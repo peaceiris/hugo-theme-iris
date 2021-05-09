@@ -50,24 +50,24 @@
   <section class="section">
     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
       {{ if $paginator.HasPrev }}
-        <a class="pagination-previous" href="{{ $paginator.Prev.URL }}">Previous</a>
+        <a class="pagination-previous" href="{{ $paginator.Prev.URL | relLangURL }}">Previous</a>
       {{ end }}
       {{ if $paginator.HasNext }}
-        <a class="pagination-next" href="{{ $paginator.Next.URL }}">Next</a>
+        <a class="pagination-next" href="{{ $paginator.Next.URL | relLangURL }}">Next</a>
       {{ end }}
       <ul class="pagination-list">
         {{ if ne $paginator.PageNumber 1 }}
-          <li><a href="{{ $paginator.First.URL }}" class="pagination-link" aria-label="Goto page 1">{{ $paginator.First.PageNumber }}</a></li>
+          <li><a href="{{ $paginator.First.URL | relLangURL }}" class="pagination-link" aria-label="Goto page 1">{{ $paginator.First.PageNumber }}</a></li>
           {{ if gt $paginator.PageNumber 2 }}
             <li><span class="pagination-ellipsis">&hellip;</span></li>
           {{ end }}
         {{ end }}
-        <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">{{ $paginator.PageNumber }}</a></li>
+        <li><a class="pagination-link is-current" aria-label="Page {{ $paginator.PageNumber }}" aria-current="page">{{ $paginator.PageNumber }}</a></li>
         {{ if ne $paginator.PageNumber $paginator.TotalPages }}
           {{ if ne (sub $paginator.TotalPages 1) $paginator.PageNumber }}
             <li><span class="pagination-ellipsis">&hellip;</span></li>
           {{ end }}
-          <li><a href="{{ $paginator.Last.URL }}" class="pagination-link" aria-label="Goto page 86">{{ $paginator.Last.PageNumber }}</a></li>
+          <li><a href="{{ $paginator.Last.URL | relLangURL }}" class="pagination-link" aria-label="Goto page {{ $paginator.Last.PageNumber }}">{{ $paginator.Last.PageNumber }}</a></li>
         {{ end }}
       </ul>
     </nav>
