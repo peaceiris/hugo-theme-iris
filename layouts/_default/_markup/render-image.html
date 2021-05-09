@@ -5,9 +5,18 @@
 
 {{ with resources.Get (printf "%s" ($.Destination | safeURL)) }}
   {{ $image := . }}
-  {{ $small := .Resize "480x jpg" }}
-  {{ $medium := .Resize "768x jpg" }}
-  {{ $large := .Resize "1024x jpg" }}
+  {{ $small := . }}
+  {{ $medium := . }}
+  {{ $large := . }}
+  {{ if hugo.IsExtended }}
+    {{ $small = .Resize "480x webp" }}
+    {{ $medium = .Resize "768x webp" }}
+    {{ $large = .Resize "1024x webp" }}
+  {{ else }}
+    {{ $small = .Resize "480x jpg" }}
+    {{ $medium = .Resize "768x jpg" }}
+    {{ $large = .Resize "1024x jpg" }}
+  {{ end }}
   <figure class="image container">
     <picture>
       <source media="(max-width: 480px)" srcset="{{ $small.RelPermalink }} 480w">
