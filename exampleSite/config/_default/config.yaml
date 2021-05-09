@@ -7,7 +7,7 @@ module:
 # googleAnalytics: UA-123-45
 disqusShortname: hugothemeiris
 
-# paginate: 3
+paginate: 3
 canonifyURLs: true
 enableRobotsTXT: true
 pluralizeListTitles: false
