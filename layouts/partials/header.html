@@ -26,9 +26,11 @@
           </div>
           <div id="hero-head-navbar-menu" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item" href="{{ "/posts" | relLangURL }}">
-                {{ i18n "posts" }}
-              </a>
+              {{ range .Site.Menus.main }}
+                <a class="navbar-item" href="{{ .URL | relLangURL }}">
+                  {{ i18n .Name }}
+                </a>
+              {{ end }}
             </div>
           </div>
         </div>
