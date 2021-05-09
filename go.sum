@@ -1,5 +1,7 @@
 github.com/hakimel/reveal.js v0.0.0-20201012095104-0582f57517c9 h1:EASRKLLInqlmhkfeIA9jwvwrCrjjfNGV7K1VR2QxhSk=
 github.com/hakimel/reveal.js v0.0.0-20201012095104-0582f57517c9/go.mod h1:vIoaZ8tJbfDF30DhKf6Dia5ykePO0tETa9Posw8UrOE=
+github.com/jaywcjlove/hotkeys v3.8.3+incompatible h1:9b6/y7HTG+boP1f/JFozadnTHD8KA3ZPiLoAnYLXp/o=
+github.com/jaywcjlove/hotkeys v3.8.3+incompatible/go.mod h1:B8sgoHCreUIgvVuJaI5mfsyw/gFV+c+OlJfNbLpdtzQ=
 github.com/jgthms/bulma v0.0.0-20210126190202-c5edaea84f28 h1:l23nUHHqgeVca6FSjUvTTYy0zbQkvXL5v3gsFxoOT3c=
 github.com/jgthms/bulma v0.0.0-20210126190202-c5edaea84f28/go.mod h1:89FLBKXYFKfOKAoDeUT26V0pHGwzr205cMXAEqtAVOI=
 github.com/mathjax/MathJax v0.0.0-20210423185613-be11806df1ae h1:MRvvIZfWnWglW4eQLZi+nYQgYBq7oueB82zfSisN5LQ=

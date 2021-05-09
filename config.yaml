@@ -4,3 +4,7 @@ module:
     - path: github.com/peaceiris/hugo-mod-revealjs
     - path: github.com/peaceiris/hugo-mod-mermaidjs
     - path: github.com/peaceiris/hugo-mod-mathjax
+    - path: github.com/jaywcjlove/hotkeys
+      mounts:
+        - source: dist
+          target: assets/mod/hotkeys
