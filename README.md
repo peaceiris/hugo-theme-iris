@@ -84,7 +84,7 @@ This repository includes a [Hugo] theme.
 - [mermaid]: Generation of diagram and flowchart from text in a similar manner as markdown.
 - [reveal.js]: Writing slides using Markdown.
 - JSON-LD
-- Keyboard shortcut
+- Keyboard Shortcut: Press `?` (`Shift+/`) to show help modal.
 
 ### Roadmap
 
