@@ -1,0 +1,23 @@
+<div class="columns is-multiline is-mobile is-centered">
+  {{ range first 2 (shuffle $.Site.RegularPages) }}
+    <div class="column is-6-desktop">
+      <a href="{{ .RelPermalink }}" rel="nofollow">
+
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              {{ .Title }}
+            </p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">
+              {{ .Description }}
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div>
+  {{ end }}
+</div>
