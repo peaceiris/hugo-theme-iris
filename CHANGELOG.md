@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.31.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.30.2...v0.31.0) (2021-05-09)
+
+
+### chore
+
+* npm audit fix ([9ef3404](https://github.com/peaceiris/hugo-theme-iris/commit/9ef3404840dfa5a9bc68b2f023b3ff0af9c5aaa9))
+* npx sort-package-json ([773ddcb](https://github.com/peaceiris/hugo-theme-iris/commit/773ddcbf6186f28e3c9eeb34a7003572a1d3ab61))
+
+### ci
+
+* bump nwtgck/actions-netlify from v1.1.13 to v1.2 (#323) ([a22be36](https://github.com/peaceiris/hugo-theme-iris/commit/a22be363c61c0dc4a2a48faa858990ff0852949b)), closes [#323](https://github.com/peaceiris/hugo-theme-iris/issues/323)
+
+### deps
+
+* bump hugo from 0.82.1 to 0.83.0 ([800669c](https://github.com/peaceiris/hugo-theme-iris/commit/800669cb93eedc56f83028c981ea91f8094e7279))
+* bump hugo from 0.83.0 to 0.83.1 ([a0993de](https://github.com/peaceiris/hugo-theme-iris/commit/a0993de19a3f32b8213d4ab77d481e151b32e101))
+* Bump node from 12.22.1 to 14.16.1 (#321) ([8de0338](https://github.com/peaceiris/hugo-theme-iris/commit/8de03380451a9ef28a3aa9996063d61c6960d0b2)), closes [#321](https://github.com/peaceiris/hugo-theme-iris/issues/321)
+
+### docs
+
+* update Features ([120b90e](https://github.com/peaceiris/hugo-theme-iris/commit/120b90e90a85bbf560c25972a0ed2f99d2b7fb47))
+
+### feat
+
+* Add view-on-github-button (#326) ([f4cf568](https://github.com/peaceiris/hugo-theme-iris/commit/f4cf568c7666353c6b15ce40992ee6e51df4679e)), closes [#326](https://github.com/peaceiris/hugo-theme-iris/issues/326)
+* Canonical URL on header (#335) ([85f139b](https://github.com/peaceiris/hugo-theme-iris/commit/85f139b71caf74d2080ebf91f4721136e0965f32)), closes [#335](https://github.com/peaceiris/hugo-theme-iris/issues/335) [#322](https://github.com/peaceiris/hugo-theme-iris/issues/322)
+* Convert image to WebP (#334) ([d462238](https://github.com/peaceiris/hugo-theme-iris/commit/d46223836bfba14e96b083073f7c918e5d4693ae)), closes [#334](https://github.com/peaceiris/hugo-theme-iris/issues/334)
+* Custom header links (#336) ([dae65f1](https://github.com/peaceiris/hugo-theme-iris/commit/dae65f15586ce38af22d5075576b60e7bb229a74)), closes [#336](https://github.com/peaceiris/hugo-theme-iris/issues/336) [#332](https://github.com/peaceiris/hugo-theme-iris/issues/332)
+* Hide lang button with single lang mode (#330) ([da8f1de](https://github.com/peaceiris/hugo-theme-iris/commit/da8f1de70ad823fe5e20bd257d0e4e3e13b7ee95)), closes [#330](https://github.com/peaceiris/hugo-theme-iris/issues/330)
+* Keyboard shortcut (#331) ([63f3cf7](https://github.com/peaceiris/hugo-theme-iris/commit/63f3cf78a39fdab8c0b28d3c97b8d23ee8a1d407)), closes [#331](https://github.com/peaceiris/hugo-theme-iris/issues/331) [#327](https://github.com/peaceiris/hugo-theme-iris/issues/327)
+* Pagination (#338) ([57b2236](https://github.com/peaceiris/hugo-theme-iris/commit/57b223603b71b81589530abef8c8335b3a63717b)), closes [#338](https://github.com/peaceiris/hugo-theme-iris/issues/338) [#254](https://github.com/peaceiris/hugo-theme-iris/issues/254)
+* Random Post List (#337) ([06a5402](https://github.com/peaceiris/hugo-theme-iris/commit/06a540281f6e9704be1e55af8309530805cddc08)), closes [#337](https://github.com/peaceiris/hugo-theme-iris/issues/337) [#251](https://github.com/peaceiris/hugo-theme-iris/issues/251)
+
+### fix
+
+* Add hugo i18n ([f5a5af4](https://github.com/peaceiris/hugo-theme-iris/commit/f5a5af4887a364d40b51e4f8a2c87d6020a563ae))
+* Fix name of hugo ([47c462b](https://github.com/peaceiris/hugo-theme-iris/commit/47c462bd3a20746c32729039e25a528957af4411))
+
+
+
 ## [0.30.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.30.1...v0.30.2) (2021-04-24)
 
 
