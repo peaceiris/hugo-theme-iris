@@ -16,7 +16,7 @@ main:
     url: "https://peaceiris.com"
     weight: 3
   - identifier: hugo-site
-    name: Hugo
+    name: hugo
     pre: ""
     url: "https://gohugo.io/"
     weight: 4
