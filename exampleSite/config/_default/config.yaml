@@ -55,6 +55,9 @@ languages:
         locale: en-US
     title: Hugo IRIS Theme
     weight: 1
+    font:
+      url: 'https://fonts.googleapis.com/css2?family=Goblin+One&display=swap'
+      fontFamily: "'Goblin One', cursive"
   ja:
     contentDir: content/ja
     languageName: 日本語
@@ -71,3 +74,6 @@ languages:
         locale: ja-JP
     title: Hugo IRIS テーマ
     weight: 2
+    font:
+      url: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap'
+      fontFamily: "'Noto Sans JP', sans-serif"

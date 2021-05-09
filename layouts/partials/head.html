@@ -2,6 +2,10 @@
   {{ partial "head/general" . }}
   {{ partial "head/json-ld" . }}
 
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="{{ $.Site.Params.font.url | safeURL }}" rel="stylesheet">
+
   {{ if $.Params.slide }}
   <style>
     {{ $cssMain := resources.Get "mod/revealjs/dist/reveal.css" | toCSS | minify }}
@@ -19,6 +23,8 @@
 
     {{ $themeCSS := resources.Get "theme/scss/style.scss" | toCSS | minify }}
     {{ $themeCSS.Content | safeCSS }}
+
+    font-family: {{ $.Site.Params.font.fontFamily | safeCSS }};
   </style>
   {{ end }}
 </head>
