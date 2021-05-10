@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.31.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.31.0...v0.31.1) (2021-05-10)
+
+
+### ci
+
+* Drop non-extended setup test ([0d2cd33](https://github.com/peaceiris/hugo-theme-iris/commit/0d2cd3355edc287c93468dbc90be6223d1683c77))
+
+### deps
+
+* update devDependencies ([6a22ff6](https://github.com/peaceiris/hugo-theme-iris/commit/6a22ff6672208b14cbc3bd7e8381eeccc4bdc1aa))
+
+### fix
+
+* Add assets, remove scripts ([099cfb3](https://github.com/peaceiris/hugo-theme-iris/commit/099cfb313b1995a3efd19ea315b8175c7777fe95))
+* eyecatching image layout (#341) ([a9d7deb](https://github.com/peaceiris/hugo-theme-iris/commit/a9d7debaacaeaee6d6583506424dcd2d2a00bbf3)), closes [#341](https://github.com/peaceiris/hugo-theme-iris/issues/341)
+
+
+
 # [0.31.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.30.2...v0.31.0) (2021-05-09)
 
 
