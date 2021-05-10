@@ -12,7 +12,5 @@
 {{ $content = $content | replaceRE "<ol>\n<li>" "<div class=\"content\"><ol><li>" }}
 {{ $content = $content | replaceRE "</li>\n</ol>" "</li></ol></div>" }}
 
-<section class="section">
-  {{ partial "toc" . }}
-  {{ $content | safeHTML }}
-</section>
+{{ partial "toc" . }}
+{{ $content | safeHTML }}
