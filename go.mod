@@ -6,6 +6,6 @@ require (
 	github.com/jaywcjlove/hotkeys v3.8.3+incompatible // indirect
 	github.com/peaceiris/hugo-mod-bulma v0.2.0 // indirect
 	github.com/peaceiris/hugo-mod-mathjax v0.1.3 // indirect
-	github.com/peaceiris/hugo-mod-mermaidjs v0.7.0 // indirect
+	github.com/peaceiris/hugo-mod-mermaidjs v0.9.0 // indirect
 	github.com/peaceiris/hugo-mod-revealjs v0.2.0 // indirect
 )
