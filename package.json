@@ -21,6 +21,7 @@
     "up": "make npm-up",
     "build": "make npm-build",
     "test": "make npm-test",
+    "test:e2e": "jest --detectOpenHandles --forceExit",
     "release": "standard-version"
   },
   "lint-staged": {
@@ -33,6 +34,8 @@
   },
   "devDependencies": {
     "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "jest-playwright-preset": "^1.5.2",
     "lint-staged": "^11.0.0",
     "npm-run-all": "^4.1.5",
     "open": "^8.0.8",
@@ -42,5 +45,8 @@
   "engines": {
     "node": ">=14.16.1",
     "npm": ">=7.11.1"
+  },
+  "dependencies": {
+    "playwright-chromium": "^1.10.0"
   }
 }
