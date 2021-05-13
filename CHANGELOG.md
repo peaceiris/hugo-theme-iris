@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.31.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.31.1...v0.31.2) (2021-05-13)
+
+
+### ci
+
+* bump actions/checkout from 2 to 2.3.4 (#344) ([4404a7c](https://github.com/peaceiris/hugo-theme-iris/commit/4404a7cf32624e10e45798df3516900b1fd389a7)), closes [#344](https://github.com/peaceiris/hugo-theme-iris/issues/344)
+* bump nwtgck/actions-netlify from 1.2 to 1.2.2 (#345) ([3b64a19](https://github.com/peaceiris/hugo-theme-iris/commit/3b64a1914a19f3a261ec2acafdb20f7a6970f295)), closes [#345](https://github.com/peaceiris/hugo-theme-iris/issues/345)
+
+### deps
+
+* Bump hugo-mod-mermaidjs from 0.7.0 to 0.9.0 (#343) ([fead9a5](https://github.com/peaceiris/hugo-theme-iris/commit/fead9a51a3e8b04ca7ac0a98c2e65b30886f22a5)), closes [#343](https://github.com/peaceiris/hugo-theme-iris/issues/343)
+
+### fix
+
+* Show large image by default (#347) ([e013e3b](https://github.com/peaceiris/hugo-theme-iris/commit/e013e3b6d9e0c368a09c065057ec419fb9e6627d)), closes [#347](https://github.com/peaceiris/hugo-theme-iris/issues/347)
+
+
+
 ## [0.31.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.31.0...v0.31.1) (2021-05-10)
 
 
