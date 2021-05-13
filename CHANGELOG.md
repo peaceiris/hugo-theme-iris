@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.31.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.31.2...v0.31.3) (2021-05-13)
+
+
+### fix
+
+* eyecatching image size (#348) ([d13cf7a](https://github.com/peaceiris/hugo-theme-iris/commit/d13cf7a793e70a89fdd0301556c9d05f3ddec298)), closes [#348](https://github.com/peaceiris/hugo-theme-iris/issues/348)
+
+
+
 ## [0.31.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.31.1...v0.31.2) (2021-05-13)
 
 
