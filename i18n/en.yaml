@@ -18,3 +18,5 @@ hugo:
   other: Hugo
 random_recommended_posts:
   other: Random Recommended Posts
+rss:
+  other: RSS

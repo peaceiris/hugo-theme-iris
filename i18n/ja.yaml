@@ -18,3 +18,5 @@ hugo:
   other: Hugo
 random_recommended_posts:
   other: こちらもいかが？
+rss:
+  other: RSS

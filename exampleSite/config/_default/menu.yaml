@@ -20,3 +20,8 @@ main:
     pre: ""
     url: "https://gohugo.io/"
     weight: 4
+  - identifier: rss
+    name: rss
+    pre: ""
+    url: "/index.xml"
+    weight: 5
