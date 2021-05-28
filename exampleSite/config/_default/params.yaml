@@ -1,6 +1,6 @@
 repo:
   URL: "https://github.com/peaceiris/hugo-theme-iris"
-  branch: master
+  branch: main
   contentDir: exampleSite/content
 
 themeColor: "#ffffff" # smart phone's browser tab color

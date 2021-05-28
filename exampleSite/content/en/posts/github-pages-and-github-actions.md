@@ -50,7 +50,7 @@ Creat YAML file `.github/workflows/gh-pages.yml` and push to your remote default
     publish_dir: ./public
 ```
 
-### Deploy to master branch
+### Deploy to main branch
 
 For `<username>.github.io` repository.
 
@@ -59,6 +59,6 @@ For `<username>.github.io` repository.
   uses: peaceiris/actions-gh-pages@v3
   with:
     deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-    publish_branch: master
+    publish_branch: main
     publish_dir: ./public
 ```

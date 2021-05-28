@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - main
     paths-ignore:
       - "README.md"
   pull_request:
@@ -46,7 +46,7 @@ jobs:
         uses: nwtgck/actions-netlify@v1.2.2
         with:
           publish-dir: './exampleSite/public'
-          production-branch: master
+          production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
           enable-pull-request-comment: true
@@ -73,7 +73,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         with:
           #deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -84,7 +84,7 @@ jobs:
 
   lighthouse:
     needs: deploy
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-18.04
     timeout-minutes: 2
     steps:
