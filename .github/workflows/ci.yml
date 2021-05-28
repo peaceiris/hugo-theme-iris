@@ -1,4 +1,4 @@
-name: Test
+name: CI
 
 on:
   push:
@@ -9,10 +9,13 @@ on:
   pull_request:
     paths-ignore:
       - "README.md"
+  schedule:
+    - cron: "13 13 * * *"
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-18.04
+    timeout-minutes: 3
     steps:
       - uses: actions/checkout@v2.3.4
         with:
@@ -54,8 +57,75 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
 
+      - name: Build
+        working-directory: ./exampleSite
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          export BASE_URL="https://hugothemeiris.peaceiris.app"
+          export GH_USER_ID="peaceiris"
+          bash ./scripts/fetch_data.sh "${GH_USER_ID}" > "./data/github/${GH_USER_ID}.json"
+          hugo --minify --cleanDestinationDir \
+            --themesDir ../../ \
+            --baseURL "${BASE_URL}" \
+            --i18n-warnings --path-warnings
+          wget -O ./public/report.html "${BASE_URL}/report.html" || true
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.8.0
+        if: github.ref == 'refs/heads/master'
+        with:
+          #deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./exampleSite/public
+          allow_empty_commit: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+  lighthouse:
+    needs: deploy
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-18.04
+    timeout-minutes: 2
+    steps:
+      - uses: actions/setup-node@v2.1.5
+        with:
+          node-version: "14"
+
+      - name: Install lighthouse
+        run: sudo npm i -g lighthouse
+
+      - name: Run lighthouse
+        run: |
+          lighthouse \
+            --chrome-flags="--headless" \
+            --output html --output-path ./report.html \
+            'https://hugothemeiris.peaceiris.app'
+
+      - name: Upload result
+        uses: actions/upload-artifact@v2.2.3
+        with:
+          name: lighthouse-report
+          path: report.html
+
+      - name: Prepare assets
+        run: |
+          mkdir ./public
+          cp ./report.html ./public/report.html
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.8.0
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./public
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
   test-docker:
     runs-on: ubuntu-18.04
+    timeout-minutes: 2
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v2.3.4
 
@@ -73,6 +143,8 @@ jobs:
 
   test-setup:
     runs-on: ubuntu-18.04
+    timeout-minutes: 2
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     strategy:
       matrix:
         extended:
