@@ -3,7 +3,7 @@ include .env
 pwd := $(CURDIR)
 cmd := ""
 DOCKER_COMPOSE := docker-compose
-GH_USER_ID := $(GH_USER_ID)
+GH_USER_ID := peaceiris
 
 
 .PHONY: up

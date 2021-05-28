@@ -60,12 +60,9 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
 
-      - name: Build
+      - run: make cibuild-prod
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          export GH_USER_ID="peaceiris"
-          make cibuild-prod
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
