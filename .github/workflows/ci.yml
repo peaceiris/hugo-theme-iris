@@ -132,7 +132,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugomod-
 
-      - name: make build
+      - run: make build
 
   test-setup:
     runs-on: ubuntu-18.04
