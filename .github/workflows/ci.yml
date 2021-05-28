@@ -178,7 +178,7 @@ jobs:
 
   themes-preview:
     runs-on: ubuntu-18.04
-    timeout-minutes: 5
+    timeout-minutes: 3
     steps:
       - uses: actions/checkout@v2.3.4
         with:
@@ -210,7 +210,7 @@ jobs:
 
       - name: Build
         run: |
-          (cd ./_script && ./generateThemeSite.sh http://localhost:1313)
+          (cd ./_script && ./generateThemeSite.sh "/")
           hugo --baseURL "/" -s _script/hugoThemeSite/themeSite
 
       - name: Deploy to Netlify
