@@ -137,7 +137,7 @@ jobs:
   test-setup:
     runs-on: ubuntu-18.04
     timeout-minutes: 2
-    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    if: github.ref == 'refs/heads/main'
     strategy:
       matrix:
         extended:

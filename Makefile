@@ -10,12 +10,12 @@ GH_USER_ID := $(GH_USER_ID)
 up:
 	$(DOCKER_COMPOSE) up -d
 	$(DOCKER_COMPOSE) exec hugo hugo \
-		server --navigateToChanged --bind=0.0.0.0 --buildDrafts --themesDir ../../ --i18n-warnings
+		server --navigateToChanged --bind=0.0.0.0 --buildDrafts --i18n-warnings
 
 .PHONY: npm-up
 npm-up:
 	cd ./exampleSite && \
-	env HUGO_MODULE_REPLACEMENTS=$(HUGO_MODULE_REPLACEMENTS) hugo server --navigateToChanged --buildDrafts --themesDir ../../ --i18n-warnings
+	hugo server --navigateToChanged --buildDrafts --i18n-warnings
 
 .PHONY: hugo
 hugo:
@@ -28,29 +28,29 @@ bumphugo:
 
 .PHONY: build
 build:
-	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL) --cleanDestinationDir)
+	$(eval opt := --minify --baseURL $(BASE_URL) --cleanDestinationDir)
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-build
 npm-build:
 	cd ./exampleSite && \
-	hugo --minify --themesDir ../../ --baseURL $(BASE_URL) --cleanDestinationDir
+	hugo --minify --baseURL $(BASE_URL) --cleanDestinationDir
 
 .PHONY: test
 test:
-	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL) \
+	$(eval opt := --minify --baseURL $(BASE_URL) \
 		--renderToMemory --i18n-warnings --path-warnings --debug)
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-test
 npm-test:
 	cd ./exampleSite && \
-	hugo --minify --themesDir ../../ --baseURL $(BASE_URL) \
+	hugo --minify --baseURL $(BASE_URL) \
 		--renderToMemory --i18n-warnings --path-warnings --debug
 
 .PHONY: metrics
 metrics:
-	$(eval opt := --minify --themesDir ../../ --baseURL $(BASE_URL) \
+	$(eval opt := --minify --baseURL $(BASE_URL) \
 		--renderToMemory --i18n-warnings --path-warnings --debug \
 		--templateMetrics --templateMetricsHints)
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
@@ -59,7 +59,6 @@ metrics:
 cibuild:
 	cd ./exampleSite && \
 		hugo --minify \
-			--themesDir ../../ \
 			--baseURL '/' \
 			--cleanDestinationDir \
 			--i18n-warnings --path-warnings --debug \
@@ -70,7 +69,6 @@ cibuild-prod:
 	cd ./exampleSite && \
 		bash ./scripts/fetch_data.sh ${GH_USER_ID} > ./data/github/${GH_USER_ID}.json && \
 		hugo --minify --cleanDestinationDir \
-			--themesDir ../../ \
 			--baseURL ${BASE_URL} \
 			--i18n-warnings --path-warnings && \
 		wget -O ./public/report.html ${BASE_URL}/report.html || true
