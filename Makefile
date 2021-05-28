@@ -1,13 +1,13 @@
+include .env
+
 pwd := $(CURDIR)
 cmd := ""
 DOCKER_COMPOSE := docker-compose
-OPEN_BROWSER := open http://localhost:1313
-BASE_URL := https://hugothemeiris.peaceiris.app/
+GH_USER_ID := $(GH_USER_ID)
 
 
 .PHONY: up
 up:
-	# $(OPEN_BROWSER)
 	$(DOCKER_COMPOSE) up -d
 	$(DOCKER_COMPOSE) exec hugo hugo \
 		server --navigateToChanged --bind=0.0.0.0 --buildDrafts --themesDir ../../ --i18n-warnings
@@ -15,7 +15,7 @@ up:
 .PHONY: npm-up
 npm-up:
 	cd ./exampleSite && \
-	hugo server --navigateToChanged --buildDrafts --themesDir ../../ --i18n-warnings
+	env HUGO_MODULE_REPLACEMENTS=$(HUGO_MODULE_REPLACEMENTS) hugo server --navigateToChanged --buildDrafts --themesDir ../../ --i18n-warnings
 
 .PHONY: hugo
 hugo:
@@ -64,3 +64,13 @@ cibuild:
 			--cleanDestinationDir \
 			--i18n-warnings --path-warnings --debug \
 			--templateMetrics --templateMetricsHints
+
+.PHONY: cibuild-prod
+cibuild-prod:
+	cd ./exampleSite && \
+		bash ./scripts/fetch_data.sh ${GH_USER_ID} > ./data/github/${GH_USER_ID}.json && \
+		hugo --minify --cleanDestinationDir \
+			--themesDir ../../ \
+			--baseURL ${BASE_URL} \
+			--i18n-warnings --path-warnings && \
+		wget -O ./public/report.html ${BASE_URL}/report.html || true
