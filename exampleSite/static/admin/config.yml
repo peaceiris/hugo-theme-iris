@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: peaceiris/hugo-theme-iris
-  branch: master
+  branch: main
   # squash_merges: true
 
 media_folder: "static/images"

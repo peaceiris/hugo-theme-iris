@@ -3,14 +3,14 @@ Hugo IRIS Theme
 </h2>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/images/tn.png" alt="Hugo Iris Theme thumbnail" width="500px">
+  <img src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/images/tn.png" alt="Hugo Iris Theme thumbnail" width="500px">
 </div>
 
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-theme-iris/blob/master/LICENSE)
+[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-theme-iris/blob/main/LICENSE)
 [![release](https://img.shields.io/github/release/peaceiris/hugo-theme-iris.svg)](https://github.com/peaceiris/hugo-theme-iris/releases/latest)
 [![release date](https://img.shields.io/github/release-date/peaceiris/hugo-theme-iris.svg)](https://github.com/peaceiris/hugo-theme-iris/releases)
 [![release feed](https://img.shields.io/badge/release-feed-yellow)](https://github.com/peaceiris/hugo-theme-iris/releases.atom)
-![deploy status](https://github.com/peaceiris/hugo-theme-iris/workflows/CI/badge.svg?branch=master&event=push)
+![deploy status](https://github.com/peaceiris/hugo-theme-iris/workflows/CI/badge.svg?branch=main&event=push)
 [![hugo themes](https://img.shields.io/static/v1?label=Hugo%20Themes&message=IRIS&color=blueviolet)](https://themes.gohugo.io/hugo-theme-iris/)
 [![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugothemeiris.peaceiris.app/report.html)
 
@@ -114,7 +114,7 @@ This repository includes a [Hugo] theme.
 
 You can find the minimum supported Hugo version in [theme.toml] `min_version`. Using Hugo extended version is desirable.
 
-[theme.toml]: https://github.com/peaceiris/hugo-theme-iris/blob/master/theme.toml
+[theme.toml]: https://github.com/peaceiris/hugo-theme-iris/blob/main/theme.toml
 
 ### Install Go
 
@@ -124,11 +124,11 @@ This theme depends on Hugo Modules.
 
 ### Initialize New Hugo Project
 
-Here is [the setup script](https://github.com/peaceiris/hugo-theme-iris/blob/master/scripts/setup.sh).
+Here is [the setup script](https://github.com/peaceiris/hugo-theme-iris/blob/main/scripts/setup.sh).
 
 ```sh
 mkdir homepage
-wget https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/scripts/setup.sh
+wget https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/scripts/setup.sh
 bash ./setup.sh homepage "your_github_id"
 cd homepage
 hugo server
@@ -242,7 +242,7 @@ If your logo image is located at `assets/images/logo.jpg`.
 {{< circle src="images/logo.jpg" alt="hugo-theme-iris logo" >}}
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_circle.jpg" alt="Shortcode mermaid">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/exampleSite/assets/images/shortcode_circle.jpg" alt="Shortcode mermaid">
 
 ### button
 
@@ -255,7 +255,7 @@ If your logo image is located at `assets/images/logo.jpg`.
 </div>
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_button.jpg" alt="Shortcode button">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/exampleSite/assets/images/shortcode_button.jpg" alt="Shortcode button">
 
 ### mermaid
 
@@ -275,7 +275,7 @@ sequenceDiagram
 {{< /mermaid >}}
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_mermaid.jpg" alt="Shortcode mermaid">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/exampleSite/assets/images/shortcode_mermaid.jpg" alt="Shortcode mermaid">
 
 ### repo
 
@@ -284,7 +284,7 @@ The script requires the [gh] command.
 
 [gh]: https://github.com/cli/cli
 
-For more details: [scripts/fetch_data.sh](https://github.com/peaceiris/hugo-theme-iris/blob/master/exampleSite/scripts/fetch_data.sh)
+For more details: [scripts/fetch_data.sh](https://github.com/peaceiris/hugo-theme-iris/blob/main/exampleSite/scripts/fetch_data.sh)
 
 ```sh
 brew install gh
@@ -305,7 +305,7 @@ We can show a repository card like as follows.
 {{< repo id="peaceiris" name="actions-hugo" >}}
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_repo.jpg" alt="Shortcode repo">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/exampleSite/assets/images/shortcode_repo.jpg" alt="Shortcode repo">
 
 ### github-sponsors-list
 
@@ -315,7 +315,7 @@ Please follow the instruction as the same as the `repo` shortcode.
 {{< github-sponsors-list id="peaceiris" >}}
 ```
 
-<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_github-sponsors-list.jpg" alt="Shortcode github-sponsors-list">
+<img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/exampleSite/assets/images/shortcode_github-sponsors-list.jpg" alt="Shortcode github-sponsors-list">
 
 ### table
 
@@ -330,7 +330,7 @@ Please follow the instruction as the same as the `repo` shortcode.
 
 | Mouse out | Mouse over |
 |---|---|
-| ![Shortcode table mouse out](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/master/exampleSite/assets/images/shortcode_table_2.jpg) |
+| ![Shortcode table mouse out](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/exampleSite/assets/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/exampleSite/assets/images/shortcode_table_2.jpg) |
 
 ### math
 
@@ -381,7 +381,7 @@ git commit -m "deps: bump hugo-theme-iris"
 
 ## Changelog
 
-- [hugo-theme-iris/CHANGELOG.md](https://github.com/peaceiris/hugo-theme-iris/blob/master/CHANGELOG.md)
+- [hugo-theme-iris/CHANGELOG.md](https://github.com/peaceiris/hugo-theme-iris/blob/main/CHANGELOG.md)
 
 
 
@@ -401,7 +401,7 @@ You can find more detail in our [Contributing Guide].
 
 ## License
 
-- [MIT License - peaceiris/hugo-theme-iris](https://github.com/peaceiris/hugo-theme-iris/blob/master/LICENSE)
+- [MIT License - peaceiris/hugo-theme-iris](https://github.com/peaceiris/hugo-theme-iris/blob/main/LICENSE)
 
 
 
@@ -418,7 +418,7 @@ You can find more detail in our [Contributing Guide].
 
 
 <!-- Internal References -->
-[Contributing Guide]: https://github.com/peaceiris/hugo-theme-iris/blob/master/CONTRIBUTING.md
+[Contributing Guide]: https://github.com/peaceiris/hugo-theme-iris/blob/main/CONTRIBUTING.md
 
 <!-- External References -->
 [Hugo]: https://gohugo.io/

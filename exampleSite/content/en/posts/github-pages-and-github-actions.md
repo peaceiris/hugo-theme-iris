@@ -34,31 +34,3 @@ This deploy action can be combined simply and freely with [Static Site Generator
 ```
 
 The above example step will deploy `./public` directory to `gh-pages` branch.
-
-
-
-## Example Workflow
-
-Here is an example workflow for Hugo project.
-Creat YAML file `.github/workflows/gh-pages.yml` and push to your remote default branch.
-
-```yaml
-- name: Deploy
-  uses: peaceiris/actions-gh-pages@v3
-  with:
-    deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-    publish_dir: ./public
-```
-
-### Deploy to master branch
-
-For `<username>.github.io` repository.
-
-```yaml
-- name: Deploy
-  uses: peaceiris/actions-gh-pages@v3
-  with:
-    deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-    publish_branch: master
-    publish_dir: ./public
-```

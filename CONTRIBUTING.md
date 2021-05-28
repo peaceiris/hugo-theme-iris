@@ -3,7 +3,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Find Similar Issues or Pull Requests](#find-similar-issues-or-pull-requests)
 - [Develop](#develop)
 - [Create Commit and Push](#create-commit-and-push)
@@ -57,6 +56,6 @@ On Github.
 
 ```sh
 git remote add upstream https://github.com/peaceiris/hugo-theme-iris.git
-git checkout master
-git pull upstream master
+git checkout main
+git pull upstream main
 ```
