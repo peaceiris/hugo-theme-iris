@@ -56,7 +56,8 @@ This is a GitHub Action to deploy your static files to GitHub Pages. This deploy
 <link>https://hugothemeiris.peaceiris.app/posts/rich-content/</link>
 <pubDate>Sun, 29 Sep 2019 08:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.app/posts/rich-content/</guid>
-<description>&lt;p>Hugo ships with several &lt;a
+<description>&lt;h2 id="shortcodes" class="title is-5">Shortcodes&lt;/h2>
+&lt;p>Hugo ships with several &lt;a
 href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes"
 target="_blank" rel="noopener noreferrer">
 Built-in Shortcodes
