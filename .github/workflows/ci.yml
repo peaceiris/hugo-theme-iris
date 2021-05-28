@@ -211,7 +211,7 @@ jobs:
       - name: Build
         run: |
           (cd ./_script && ./generateThemeSite.sh http://localhost:1313)
-          hugo -s _script/hugoThemeSite/themeSite
+          hugo --baseURL "/" -s _script/hugoThemeSite/themeSite
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.2
