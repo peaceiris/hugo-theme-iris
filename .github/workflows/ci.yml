@@ -210,7 +210,7 @@ jobs:
 
       - name: Build
         run: |
-          (cd ./_script && ./generateThemeSite.sh "/theme/hugo-theme-iris")
+          (cd ./_script && ./generateThemeSite.sh "")
           hugo --baseURL "/" -s _script/hugoThemeSite/themeSite
 
       - name: Deploy to Netlify
