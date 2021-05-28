@@ -11,6 +11,8 @@ services:
     volumes:
       - ${PWD}:/src/hugo-theme-iris
       - ${HUGO_CACHEDIR}:/tmp/hugo_cache
+    environment:
+      - HUGO_MODULE_REPLACEMENTS
     stdin_open: true
     tty: true
     working_dir: /src/hugo-theme-iris/exampleSite

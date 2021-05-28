@@ -12,6 +12,9 @@ on:
   schedule:
     - cron: "13 13 * * *"
 
+env:
+  HUGO_CACHEDIR: /tmp/hugo_cache
+
 jobs:
   deploy:
     runs-on: ubuntu-18.04
@@ -35,7 +38,7 @@ jobs:
 
       - uses: actions/cache@v2.1.6
         with:
-          path: /tmp/hugo_cache
+          path: ${{ env.HUGO_CACHEDIR }}
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
@@ -58,18 +61,11 @@ jobs:
         timeout-minutes: 1
 
       - name: Build
-        working-directory: ./exampleSite
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          export BASE_URL="https://hugothemeiris.peaceiris.app"
           export GH_USER_ID="peaceiris"
-          bash ./scripts/fetch_data.sh "${GH_USER_ID}" > "./data/github/${GH_USER_ID}.json"
-          hugo --minify --cleanDestinationDir \
-            --themesDir ../../ \
-            --baseURL "${BASE_URL}" \
-            --i18n-warnings --path-warnings
-          wget -O ./public/report.html "${BASE_URL}/report.html" || true
+          make cibuild-prod
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
@@ -131,20 +127,17 @@ jobs:
 
       - uses: actions/cache@v2.1.6
         with:
-          path: /tmp/hugo_cache
+          path: ${{ env.HUGO_CACHEDIR }}
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
 
-      - name: Build Testing with Docker
-        run: |
-          export HUGO_CACHEDIR=/tmp/hugo_cache
-          make build
+      - run: make build
 
   test-setup:
     runs-on: ubuntu-18.04
     timeout-minutes: 2
-    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    if: github.ref == 'refs/heads/main'
     strategy:
       matrix:
         extended:
@@ -167,7 +160,7 @@ jobs:
 
       - uses: actions/cache@v2.1.6
         with:
-          path: /tmp/hugo_cache
+          path: ${{ env.HUGO_CACHEDIR }}
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
