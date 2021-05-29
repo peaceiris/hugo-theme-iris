@@ -175,3 +175,55 @@ jobs:
           bash ./setup.sh "homepage" "peaceiris"
           cd homepage
           hugo
+
+  themes-preview:
+    runs-on: ubuntu-18.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v2.3.4
+        with:
+          repository: gohugoio/hugoThemes
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2.5.0
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - uses: actions/cache@v2.1.6
+        with:
+          path: ${{ env.HUGO_CACHEDIR }}
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: Checkout hugo-iris-theme main
+        run: git submodule update --init --remote hugo-theme-iris
+
+      - name: Checkout hugo-iris-theme pull/${{ github.event.number }}
+        if: github.event_name == 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd hugo-theme-iris
+          gh pr checkout ${{ github.event.number }}
+
+      - name: Build
+        run: |
+          (cd ./_script && ./generateThemeSite.sh "https://hugo-theme-iris-themes-preview.netlify.app")
+          hugo -s _script/hugoThemeSite/themeSite
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2.2
+        with:
+          publish-dir: './_script/hugoThemeSite/themeSite/public'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: true
+          enable-commit-comment: false
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_THEMES_PREVIEW }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_THEMES_PREVIEW }}
+        timeout-minutes: 1

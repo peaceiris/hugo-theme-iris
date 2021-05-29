@@ -10,7 +10,7 @@
 {{ $content = $content | replaceRE "<ul>\n<li>" "<div class=\"content\"><ul><li>" }}
 {{ $content = $content | replaceRE "</li>\n</ul>" "</li></ul></div>" }}
 {{ $content = $content | replaceRE "<ol>\n<li>" "<div class=\"content\"><ol><li>" }}
-{{ $content = $content | replaceRE "</li>\n</ol>" "</li></ol></div>" }}
+{{ $content = $content | replaceRE "$.*</li>\n</ol>" "</li></ol></div>" }}
 
 {{ partial "toc" . }}
 {{ $content | safeHTML }}
