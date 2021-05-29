@@ -1,7 +1,7 @@
 <div class="columns is-multiline is-mobile is-centered">
   {{ range first 2 (shuffle $.Site.RegularPages) }}
     <div class="column is-6-desktop">
-      <a href="{{ .Permalink | absURL }}" rel="nofollow">
+      <a href="{{ .Permalink | absLangURL }}" rel="nofollow">
 
         <div class="card">
           <header class="card-header">

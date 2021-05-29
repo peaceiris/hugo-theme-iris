@@ -17,7 +17,7 @@
     </li>
   {{- else -}}
     <li>
-      <a href="{{- .node.Permalink | absURL -}}">{{- .node.LinkTitle -}}</a>
+      <a href="{{- .node.Permalink | absLangURL -}}">{{- .node.LinkTitle -}}</a>
     </li>
   {{- end -}}
 {{- end -}}
