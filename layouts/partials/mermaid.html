@@ -1,6 +1,6 @@
 {{ $js := resources.Get "mod/mermaidjs/mermaid.min.js" }}
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
-<script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+<script src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 <script>
   var config = {
     startOnLoad: true,
