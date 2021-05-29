@@ -1,26 +1,26 @@
 {{ $revealjs := resources.Get "mod/revealjs/dist/reveal.js" }}
 {{ $revealjsHash := $revealjs | resources.Fingerprint "sha512" }}
-<script src="{{ $revealjsHash.Permalink | absURL }}" integrity="{{ $revealjsHash.Data.Integrity }}"></script>
+<script src="{{ $revealjsHash.RelPermalink }}" integrity="{{ $revealjsHash.Data.Integrity }}"></script>
 
 {{ $markdown := resources.Get "mod/revealjs/plugin/markdown/markdown.js" }}
 {{ $markdownHash := $markdown | resources.Fingerprint "sha512" }}
-<script src="{{ $markdownHash.Permalink | absURL }}" integrity="{{ $markdownHash.Data.Integrity }}"></script>
+<script src="{{ $markdownHash.RelPermalink }}" integrity="{{ $markdownHash.Data.Integrity }}"></script>
 
 {{ $highlight := resources.Get "mod/revealjs/plugin/highlight/highlight.js" }}
 {{ $highlightHash := $highlight | resources.Fingerprint "sha512" }}
-<script src="{{ $highlightHash.Permalink | absURL }}" integrity="{{ $highlightHash.Data.Integrity }}"></script>
+<script src="{{ $highlightHash.RelPermalink }}" integrity="{{ $highlightHash.Data.Integrity }}"></script>
 
 {{ $zoom := resources.Get "mod/revealjs/plugin/zoom/zoom.js" }}
 {{ $zoomHash := $zoom | resources.Fingerprint "sha512" }}
-<script src="{{ $zoomHash.Permalink | absURL }}" integrity="{{ $zoomHash.Data.Integrity }}"></script>
+<script src="{{ $zoomHash.RelPermalink }}" integrity="{{ $zoomHash.Data.Integrity }}"></script>
 
 {{ $notes := resources.Get "mod/revealjs/plugin/notes/notes.js" }}
 {{ $notesHash := $notes | resources.Fingerprint "sha512" }}
-<script src="{{ $notesHash.Permalink | absURL }}" integrity="{{ $notesHash.Data.Integrity }}"></script>
+<script src="{{ $notesHash.RelPermalink }}" integrity="{{ $notesHash.Data.Integrity }}"></script>
 
 {{ $math := resources.Get "mod/revealjs/plugin/math/math.js" }}
 {{ $mathHash := $math | resources.Fingerprint "sha512" }}
-<script src="{{ $mathHash.Permalink | absURL }}" integrity="{{ $mathHash.Data.Integrity }}"></script>
+<script src="{{ $mathHash.RelPermalink }}" integrity="{{ $mathHash.Data.Integrity }}"></script>
 
 <script>
   Reveal.initialize({

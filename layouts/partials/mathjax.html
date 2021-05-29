@@ -8,4 +8,4 @@
 
 {{ $js := resources.Get "mod/mathjax/tex-mml-chtml.js" }}
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
-<script defer type="text/javascript" id="MathJax-script" src="{{ $secureJS.Permalink | absURL }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+<script defer type="text/javascript" id="MathJax-script" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>

@@ -19,10 +19,10 @@
   {{ end }}
   <figure class="image container">
     <picture>
-      <source media="(max-width: 480px)" srcset="{{ $small.Permalink | absURL }} 480w">
-      <source media="(max-width: 768px)" srcset="{{ $medium.Permalink | absURL }} 768w">
-      <source media="(max-width: 1024px)" srcset="{{ $large.Permalink | absURL }} 1024w">
-      <img src="{{ $large.Permalink | absURL }}" alt="{{ $caption }}" decoding="async" loading="lazy">
+      <source media="(max-width: 480px)" srcset="{{ $small.RelPermalink }} 480w">
+      <source media="(max-width: 768px)" srcset="{{ $medium.RelPermalink }} 768w">
+      <source media="(max-width: 1024px)" srcset="{{ $large.RelPermalink }} 1024w">
+      <img src="{{ $large.RelPermalink }}" alt="{{ $caption }}" decoding="async" loading="lazy">
     </picture>
     {{ with $caption }}
       <figcaption class="has-text-centered mt-2">{{ . }}</figcaption>
