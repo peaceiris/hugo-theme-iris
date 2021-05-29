@@ -212,6 +212,7 @@ jobs:
         run: |
           (cd ./_script && ./generateThemeSite.sh "https://hugo-theme-iris-themes-preview.netlify.app")
           hugo -s _script/hugoThemeSite/themeSite
+          echo 'User-agent: *\nDisallow: /' > ./_script/hugoThemeSite/themeSite/public/robots.txt
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.2
