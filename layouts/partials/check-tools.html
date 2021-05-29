@@ -1,7 +1,7 @@
 {{ if ne $.Site.Params.hugoenv "production" }}
-  {{ $targetURL := $.RelPermalink }}
+  {{ $targetURL := $.Permalink }}
   {{ if $.Site.IsServer }}
-    {{ $targetRelURL := .Page.RelPermalink | relURL }}
+    {{ $targetRelURL := .Page.Permalink | relURL }}
     {{ $targetURL = delimit (slice $.Site.Params.stagingURL $targetRelURL) "" }}
   {{ end }}
 
