@@ -12,9 +12,9 @@
 
   {{ $paginator := .Paginate .Pages }}
 
-  {{ range $paginator.Pages }}
-    <div class="columns">
-      <div class="column is-10-tablet is-offset-1-tablet is-8-desktop is-offset-2-desktop">
+  <div class="columns is-multiline">
+    {{ range $paginator.Pages }}
+      <div class="column is-half">
         <a href="{{ .Permalink }}" class="normal-link">
           <div class="card">
             {{ partial "eyecatch" . }}
@@ -44,8 +44,8 @@
           </div>
         </a>
       </div>
-    </div>
-  {{ end }}
+    {{ end }}
+  </div>
 
   <section class="section">
     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
