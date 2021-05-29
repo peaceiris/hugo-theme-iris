@@ -1,8 +1,8 @@
 {{ if ne $.Site.Params.hugoenv "production" }}
-  {{ $targetURL := $.RelPermalink }}
+  {{ $targetURL := $.Permalink | absURL }}
   {{ if $.Site.IsServer }}
-    {{ $targetRelURL := .Page.RelPermalink | relURL }}
-    {{ $targetURL = delimit (slice $.Site.Params.stagingURL $targetRelURL) "" }}
+    {{ $targetabsURL := .Page.Permalink | absURL | absURL }}
+    {{ $targetURL = delimit (slice $.Site.Params.stagingURL $targetabsURL) "" }}
   {{ end }}
 
 <div class="dropdown" id="checkTools">

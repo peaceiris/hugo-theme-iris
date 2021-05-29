@@ -15,7 +15,7 @@
       <nav class="navbar">
         <div class="container">
           <div class="navbar-brand">
-            <a class="navbar-item" href="{{ "/" | relLangURL }}">
+            <a class="navbar-item" href="{{ "/" | absLangURL }}">
               <img src="/images/brand.svg" alt="Logo">
             </a>
             <span class="navbar-burger has-text-grey" data-target="hero-head-navbar-menu">
@@ -27,7 +27,7 @@
           <div id="hero-head-navbar-menu" class="navbar-menu">
             <div class="navbar-end">
               {{ range .Site.Menus.main }}
-                <a class="navbar-item" href="{{ .URL | relLangURL }}">
+                <a class="navbar-item" href="{{ .URL | absLangURL }}">
                   {{ i18n .Name }}
                 </a>
               {{ end }}

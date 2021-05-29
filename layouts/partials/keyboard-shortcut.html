@@ -47,7 +47,7 @@
 
 {{ $js := resources.Get "mod/hotkeys/hotkeys.min.js" }}
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
-<script src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+<script src="{{ $secureJS.Permalink | absURL }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 <script>
   var keyboardShortcutHelpModal = document.getElementById("keyboard-shortcut-help-modal");
 
@@ -61,10 +61,10 @@
         toggleActive(keyboardShortcutHelpModal);
         break;
       case 'g+h':
-        window.location.href = '{{ relLangURL "/" }}';
+        window.location.href = '{{ absLangURL "/" }}';
         break;
       case 'g+p':
-        window.location.href = '{{ relLangURL "/posts" }}';
+        window.location.href = '{{ absLangURL "/posts" }}';
         break;
       {{ with $.Site.Params.repo }}
       case 'g+e':

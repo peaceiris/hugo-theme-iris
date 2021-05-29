@@ -12,7 +12,7 @@
       {{/* partial "console-log" $langPage */}}
       {{/* partial "console-log" (len .Translations) */}}
       {{ range $langPage.Translations }}
-        <a href="{{ .RelPermalink }}" class="dropdown-item normal-link">{{ .Language.LanguageName }}</a>
+        <a href="{{ .Permalink | absURL }}" class="dropdown-item normal-link">{{ .Language.LanguageName }}</a>
       {{ end }}
     </div>
   </div>

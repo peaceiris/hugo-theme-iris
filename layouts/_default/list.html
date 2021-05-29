@@ -15,7 +15,7 @@
   {{ range $paginator.Pages }}
     <div class="columns">
       <div class="column is-10-tablet is-offset-1-tablet is-8-desktop is-offset-2-desktop">
-        <a href="{{ .RelPermalink }}" class="normal-link">
+        <a href="{{ .Permalink | absURL }}" class="normal-link">
           <div class="card">
             {{ partial "eyecatch" . }}
             <div class="card-content">
@@ -50,14 +50,14 @@
   <section class="section">
     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
       {{ if $paginator.HasPrev }}
-        <a class="pagination-previous" href="{{ $paginator.Prev.URL | relLangURL }}">Previous</a>
+        <a class="pagination-previous" href="{{ $paginator.Prev.URL | absLangURL }}">Previous</a>
       {{ end }}
       {{ if $paginator.HasNext }}
-        <a class="pagination-next" href="{{ $paginator.Next.URL | relLangURL }}">Next</a>
+        <a class="pagination-next" href="{{ $paginator.Next.URL | absLangURL }}">Next</a>
       {{ end }}
       <ul class="pagination-list">
         {{ if ne $paginator.PageNumber 1 }}
-          <li><a href="{{ $paginator.First.URL | relLangURL }}" class="pagination-link" aria-label="Goto page 1">{{ $paginator.First.PageNumber }}</a></li>
+          <li><a href="{{ $paginator.First.URL | absLangURL }}" class="pagination-link" aria-label="Goto page 1">{{ $paginator.First.PageNumber }}</a></li>
           {{ if gt $paginator.PageNumber 2 }}
             <li><span class="pagination-ellipsis">&hellip;</span></li>
           {{ end }}
@@ -67,7 +67,7 @@
           {{ if ne (sub $paginator.TotalPages 1) $paginator.PageNumber }}
             <li><span class="pagination-ellipsis">&hellip;</span></li>
           {{ end }}
-          <li><a href="{{ $paginator.Last.URL | relLangURL }}" class="pagination-link" aria-label="Goto page {{ $paginator.Last.PageNumber }}">{{ $paginator.Last.PageNumber }}</a></li>
+          <li><a href="{{ $paginator.Last.URL | absLangURL }}" class="pagination-link" aria-label="Goto page {{ $paginator.Last.PageNumber }}">{{ $paginator.Last.PageNumber }}</a></li>
         {{ end }}
       </ul>
     </nav>
