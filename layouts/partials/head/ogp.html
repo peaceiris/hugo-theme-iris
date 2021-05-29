@@ -1,9 +1,9 @@
 {{ $imagePath := "" }}
 {{ if $.Params.eyecatch }}
   {{ $image := resources.Get $.Params.eyecatch }}
-  {{ $imagePath = ($image | resources.Fingerprint "sha512").Permalink | absLangURL }}
+  {{ $imagePath = ($image | resources.Fingerprint "sha512").Permalink | absURL }}
 {{ else }}
-  {{ $imagePath = $.Site.Params.ogp.image | absLangURL }}
+  {{ $imagePath = $.Site.Params.ogp.image | absURL }}
 {{ end }}
 
 {{ $description := "" }}
@@ -30,7 +30,7 @@
 {{ end }}
 
 <!-- OGP: Open Graph Protocol -->
-<meta property="og:url" content="{{ $.Permalink | absLangURL }}" />
+<meta property="og:url" content="{{ $.Permalink | absURL }}" />
 <meta property="og:site_name" content="{{ $.Site.Params.ogp.siteName }}" />
 <meta property="og:title" content="{{ $title }}" />
 <meta property="og:description" content="{{ $description }}" />
@@ -48,7 +48,7 @@
   <meta name="twitter:site" content="@{{ $.Site.Params.twitter.username }}" />
 {{ end }}
 
-<meta property="twitter:url" content="{{ $.Permalink | absLangURL }}" />
+<meta property="twitter:url" content="{{ $.Permalink | absURL }}" />
 <meta property="twitter:title" content="{{ $title }}" />
 <meta property="twitter:description" content="{{ $description }}" />
 <meta property="twitter:image" content="{{ $imagePath }}" />

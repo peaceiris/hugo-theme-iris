@@ -2,12 +2,12 @@
 
 {{ $OGPImage := "" }}
 {{ if .IsHome }}
-  {{ $OGPImage = $.Site.Params.ogp.image | absLangURL }}
+  {{ $OGPImage = $.Site.Params.ogp.image | absURL }}
 {{ else }}
   {{ with .Params.eyecatch }}
-    {{ $OGPImage = . | absLangURL }}
+    {{ $OGPImage = . | absURL }}
   {{ else }}
-    {{ $OGPImage = $.Site.Params.ogp.image | absLangURL }}
+    {{ $OGPImage = $.Site.Params.ogp.image | absURL }}
   {{ end }}
 {{ end }}
 
@@ -41,13 +41,13 @@
       "name": {{ $.Site.Params.author }},
       "logo": {
         "@type": "ImageObject",
-        "url": {{ $.Site.Params.ogp.image | absLangURL }}
+        "url": {{ $.Site.Params.ogp.image | absURL }}
       }
     },
     "copyrightYear" : {{ .Lastmod.Format "2006" }},
     "datePublished": {{ if .IsHome }}{{ $.Site.Params.PublishDate }}{{ else }}{{ .PublishDate.Format "2006-01-02" }}{{ end }},
     "dateModified" : {{ .Lastmod.Format "2006-01-02" }},
-    "url" : {{ .Permalink | absLangURL }},
+    "url" : {{ .Permalink | absURL }},
     "wordCount" : "{{ .WordCount }}",
     "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }}"Blog" ],
     "genre": [{{ range .Params.tags }}"{{ . }}",{{ end }}"Blog"],

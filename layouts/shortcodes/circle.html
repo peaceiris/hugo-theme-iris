@@ -18,12 +18,12 @@
 <br>
   <figure class="image is-180x180 container">
     <picture>
-      <source media="(max-width: 480px)" srcset="{{ $small.Permalink | absLangURL }} 480w">
-      <source media="(max-width: 768px)" srcset="{{ $medium.Permalink | absLangURL }} 768w">
-      <source media="(max-width: 1024px)" srcset="{{ $large.Permalink | absLangURL }} 1024w">
+      <source media="(max-width: 480px)" srcset="{{ $small.Permalink | absURL }} 480w">
+      <source media="(max-width: 768px)" srcset="{{ $medium.Permalink | absURL }} 768w">
+      <source media="(max-width: 1024px)" srcset="{{ $large.Permalink | absURL }} 1024w">
       <img
         class="is-rounded"
-        src="{{ $large.Permalink | absLangURL }}"
+        src="{{ $large.Permalink | absURL }}"
         alt="{{ $alt | safeHTML }}"
         decoding="async"
         loading="lazy"
