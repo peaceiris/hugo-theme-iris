@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.32.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.31.3...v0.32.0) (2021-05-29)
+
+
+### chore
+
+* Change default branch from master to main (#357) ([a9e3414](https://github.com/peaceiris/hugo-theme-iris/commit/a9e34140a33e4ee24a52e695b389b8b81fa5b61f)), closes [#357](https://github.com/peaceiris/hugo-theme-iris/issues/357)
+
+### ci
+
+* Add GH_USER_ID to Makefile ([3f08cfa](https://github.com/peaceiris/hugo-theme-iris/commit/3f08cfa5cd4f7c44739dff13a97842236493aa5c))
+* Add robots.txt (#360) ([9bc063e](https://github.com/peaceiris/hugo-theme-iris/commit/9bc063e6a07a1fec7414d159bb6a9474301d5a34)), closes [#360](https://github.com/peaceiris/hugo-theme-iris/issues/360)
+* Add themes-preview job (#359) ([ed563dc](https://github.com/peaceiris/hugo-theme-iris/commit/ed563dccf4699fe0827db47285bb4853ef608794)), closes [#359](https://github.com/peaceiris/hugo-theme-iris/issues/359)
+* bump actions/cache from 2.1.5 to 2.1.6 (#355) ([7ca6147](https://github.com/peaceiris/hugo-theme-iris/commit/7ca6147bc5d02ce889a24caf5a19b4ba23ebf260)), closes [#355](https://github.com/peaceiris/hugo-theme-iris/issues/355)
+* bump peaceiris/actions-hugo from 2.4.13 to 2.5.0 (#354) ([53c3c0f](https://github.com/peaceiris/hugo-theme-iris/commit/53c3c0fa608f43c6963c22e62b760cd2c58c781c)), closes [#354](https://github.com/peaceiris/hugo-theme-iris/issues/354)
+* Merge workflows (#356) ([22e7abc](https://github.com/peaceiris/hugo-theme-iris/commit/22e7abc8617a319ce18e7f8ccc6987d7d510c7a5)), closes [#356](https://github.com/peaceiris/hugo-theme-iris/issues/356)
+* Set HUGO_MODULE_REPLACEMENTS (#358) ([be4263a](https://github.com/peaceiris/hugo-theme-iris/commit/be4263a89e5395ac47da16e997f311bd19e627e7)), closes [#358](https://github.com/peaceiris/hugo-theme-iris/issues/358)
+
+### deps
+
+* Bump node from 14.16.1 to 14.17.0 (#351) ([ac7f8ee](https://github.com/peaceiris/hugo-theme-iris/commit/ac7f8ee79137d7e0bff1a849855d6083b20f5b4c)), closes [#351](https://github.com/peaceiris/hugo-theme-iris/issues/351)
+
+### docs
+
+* Use tweet shortcode not twitter_simple ([5ef2180](https://github.com/peaceiris/hugo-theme-iris/commit/5ef218071e1d974d51902b486683cb611f02494d))
+
+### feat
+
+* 2 columns post list (#361) ([088d84d](https://github.com/peaceiris/hugo-theme-iris/commit/088d84dc1046f7d6f252bd666871fae1364ce023)), closes [#361](https://github.com/peaceiris/hugo-theme-iris/issues/361)
+* RSS link in header (#349) ([4591d3c](https://github.com/peaceiris/hugo-theme-iris/commit/4591d3cd2a9a7c1db01c03dad2e5d24e6e5bb214)), closes [#349](https://github.com/peaceiris/hugo-theme-iris/issues/349)
+
+
+
 ## [0.31.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.31.2...v0.31.3) (2021-05-13)
 
 
