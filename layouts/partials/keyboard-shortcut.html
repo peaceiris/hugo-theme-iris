@@ -61,10 +61,10 @@
         toggleActive(keyboardShortcutHelpModal);
         break;
       case 'g+h':
-        window.location.href = '{{ absLangURL "/" }}';
+        window.location.href = '{{ "/" | absLangURL }}';
         break;
       case 'g+p':
-        window.location.href = '{{ absLangURL "/posts" }}';
+        window.location.href = '{{ "/posts" | absLangURL }}';
         break;
       {{ with $.Site.Params.repo }}
       case 'g+e':
