@@ -213,7 +213,7 @@ jobs:
           BASE_URL: https://hugo-theme-iris-themes-preview.netlify.app
         run: |
           (cd ./_script && ./generateThemeSite.sh "${BASE_URL}")
-          hugo -s _script/hugoThemeSite/themeSite --baseURL "${BASE_URL}"
+          hugo -s _script/hugoThemeSite/themeSite --baseURL "/"
           cat << EOF > ./_script/hugoThemeSite/themeSite/public/robots.txt
           User-agent: *
           Disallow: /
