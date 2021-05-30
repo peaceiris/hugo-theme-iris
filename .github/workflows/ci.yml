@@ -209,9 +209,11 @@ jobs:
           gh pr checkout ${{ github.event.number }}
 
       - name: Build
+        env:
+          BASE_URL: https://hugo-theme-iris-themes-preview.netlify.app
         run: |
-          (cd ./_script && ./generateThemeSite.sh "https://hugo-theme-iris-themes-preview.netlify.app")
-          hugo -s _script/hugoThemeSite/themeSite
+          (cd ./_script && ./generateThemeSite.sh "${BASE_URL}")
+          hugo -s _script/hugoThemeSite/themeSite --baseURL "/"
           cat << EOF > ./_script/hugoThemeSite/themeSite/public/robots.txt
           User-agent: *
           Disallow: /
