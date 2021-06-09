@@ -36,6 +36,10 @@
             <th class="has-text-grey-light">g+s</th>
             <td>Open Source page on GitHub in a new tab</td>
           </tr>
+          <tr>
+            <th class="has-text-grey-light">r</th>
+            <td>Reload page</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -76,6 +80,9 @@
         window.open('{{ .URL }}/blob/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $.File.Path }}', '_blank');
         break;
       {{ end }}
+      case 'r':
+        location.reload();
+        break;
       default:
         break;
     }
