@@ -7,5 +7,5 @@ require (
 	github.com/peaceiris/hugo-mod-bulma v0.2.0 // indirect
 	github.com/peaceiris/hugo-mod-mathjax v0.1.3 // indirect
 	github.com/peaceiris/hugo-mod-mermaidjs v0.9.0 // indirect
-	github.com/peaceiris/hugo-mod-revealjs v0.3.0 // indirect
+	github.com/peaceiris/hugo-mod-revealjs v0.4.0 // indirect
 )
