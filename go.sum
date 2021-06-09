@@ -1,5 +1,5 @@
-github.com/hakimel/reveal.js v0.0.0-20210520171245-48024a113773 h1:paG6pdy/PLT6pyRet0heBfhgoJkrgJtykfXzXn6s3Ms=
-github.com/hakimel/reveal.js v0.0.0-20210520171245-48024a113773/go.mod h1:vIoaZ8tJbfDF30DhKf6Dia5ykePO0tETa9Posw8UrOE=
+github.com/hakimel/reveal.js v0.0.0-20210609121455-a453ac08a820 h1:PlaA+trKnXBZGK86ECMaJ/fsG1XpXbyf3VA54Dvx34o=
+github.com/hakimel/reveal.js v0.0.0-20210609121455-a453ac08a820/go.mod h1:vIoaZ8tJbfDF30DhKf6Dia5ykePO0tETa9Posw8UrOE=
 github.com/jaywcjlove/hotkeys v3.8.5+incompatible h1:3W0dl/flS5pHC+kokD1L/I+IaTsZzBMo3NRyWMJp7Lg=
 github.com/jaywcjlove/hotkeys v3.8.5+incompatible/go.mod h1:B8sgoHCreUIgvVuJaI5mfsyw/gFV+c+OlJfNbLpdtzQ=
 github.com/jgthms/bulma v0.0.0-20210126190202-c5edaea84f28 h1:l23nUHHqgeVca6FSjUvTTYy0zbQkvXL5v3gsFxoOT3c=
@@ -14,5 +14,5 @@ github.com/peaceiris/hugo-mod-mathjax v0.1.3 h1:oHOnGDuw1EPS6N+BVvaZWYE7A/xs8upt
 github.com/peaceiris/hugo-mod-mathjax v0.1.3/go.mod h1:32b9e8/O0oQvj5sfyvCSNHDnrVD4eDzni6x7dAYFPKk=
 github.com/peaceiris/hugo-mod-mermaidjs v0.9.0 h1:McUfF8bAmVYnQv1iX+7ds25e9L44o/49vEbFAHQ71wA=
 github.com/peaceiris/hugo-mod-mermaidjs v0.9.0/go.mod h1:P49aHKrQgzZhguUe5Zd9rQDzsm4rzQZWyYMH7IGF8/I=
-github.com/peaceiris/hugo-mod-revealjs v0.3.0 h1:MqwGCo/zECF4CYgQjLsGmx9y+6DVbZA6leJ9/ipNmVM=
-github.com/peaceiris/hugo-mod-revealjs v0.3.0/go.mod h1:GSxxoLMHHrL+h+JkkrjQagN03/3yxegcd4FozLatRyg=
+github.com/peaceiris/hugo-mod-revealjs v0.4.0 h1:V0ko0Op3kDMTJ3Cuegb+Uyv3UwyYJtCLmb+K7bPiRvM=
+github.com/peaceiris/hugo-mod-revealjs v0.4.0/go.mod h1:XtjBQXghMXua1iwSngEoy4q0MV36q5+qmS0rrNAFJLg=
