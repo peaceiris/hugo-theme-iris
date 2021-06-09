@@ -36,6 +36,10 @@
             <th class="has-text-grey-light">g+s</th>
             <td>Open Source page on GitHub in a new tab</td>
           </tr>
+          <tr>
+            <th class="has-text-grey-light">r</th>
+            <td>Reload page</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -55,7 +59,7 @@
     obj.classList.toggle("is-active");
   }
 
-  hotkeys('shift+/, g+h, g+p, g+e, g+s', function (event, handler){
+  hotkeys('shift+/, g+h, g+p, g+e, g+s, r', function (event, handler){
     switch (handler.key) {
       case 'shift+/':
         toggleActive(keyboardShortcutHelpModal);
@@ -76,6 +80,9 @@
         window.open('{{ .URL }}/blob/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $.File.Path }}', '_blank');
         break;
       {{ end }}
+      case 'r':
+        window.location.reload();
+        break;
       default:
         break;
     }
