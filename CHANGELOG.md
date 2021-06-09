@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.33.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.32.0...v0.33.0) (2021-06-09)
+
+
+### ci
+
+* Fix baseURL (#363) ([bc3b3f0](https://github.com/peaceiris/hugo-theme-iris/commit/bc3b3f0f98e7b7d70a193fa0bb5c3205b3d2da2f)), closes [#363](https://github.com/peaceiris/hugo-theme-iris/issues/363)
+
+### deps
+
+* update dependencies (#362) ([d18a55f](https://github.com/peaceiris/hugo-theme-iris/commit/d18a55f75a814eaea7ba9e14bb4b465ecc0cff25)), closes [#362](https://github.com/peaceiris/hugo-theme-iris/issues/362)
+
+### feat
+
+* Reload page keyboard shortcut (#364) ([baf6998](https://github.com/peaceiris/hugo-theme-iris/commit/baf6998511102d788032617bbaf7bb57db131fbd)), closes [#364](https://github.com/peaceiris/hugo-theme-iris/issues/364)
+
+
+
 # [0.32.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.31.3...v0.32.0) (2021-05-29)
 
 
