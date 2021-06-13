@@ -1,7 +1,11 @@
 {{ $imagePath := "" }}
 {{ if $.Params.eyecatch }}
-  {{ $image := resources.Get $.Params.eyecatch }}
-  {{ $imagePath = ($image | resources.Fingerprint "sha512").Permalink }}
+  {{ with resources.Get $.Params.eyecatch }}
+    {{ $image := . }}
+    {{ $imagePath = ($image | resources.Fingerprint "sha512").Permalink }}
+  {{ else }}
+    {{ $imagePath = $.Params.eyecatch }}
+  {{ end }}
 {{ else }}
   {{ $imagePath = $.Site.Params.ogp.image | absURL }}
 {{ end }}

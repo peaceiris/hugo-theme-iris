@@ -3,7 +3,7 @@ title: MathJax Support $E=mc^2$
 description: Beautiful math in all browsers $E=mc^2$
 publishdate: 2020-01-01T01:00:00.000Z
 # draft: true
-# eyecatch: images/mathjax.jpg
+eyecatch: "https://user-images.githubusercontent.com/30958501/121796747-647b7b80-cc56-11eb-8490-52d5899e561c.jpg"
 # tags: ["hugo"]
 toc: true
 math: true

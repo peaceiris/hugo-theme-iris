@@ -3,7 +3,15 @@
   {{ $caption = . | safeHTML }}
 {{ end }}
 
-{{ with resources.Get (printf "%s" ($.Destination | safeURL)) }}
+{{ $hashedDestination := sha256 $.Destination }}
+{{ $extension := path.Ext $.Destination }}
+{{ $localPath := delimit (slice "images/" $hashedDestination $extension) "" }}
+{{ $imagePath := $.Destination }}
+{{ if (fileExists $localPath) }}
+  {{ $imagePath = $localPath }}
+{{ end }}
+
+{{ with resources.Get $imagePath }}
   {{ $image := . }}
   {{ $small := . }}
   {{ $medium := . }}
@@ -31,7 +39,7 @@
 {{ else }}
   <figure class="image container">
     <img
-      src="{{ $.Destination }}"
+      src="{{ $imagePath }}"
       alt="{{ $caption }}"
       decoding="async"
       loading="lazy"

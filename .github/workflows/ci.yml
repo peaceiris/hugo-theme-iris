@@ -43,6 +43,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugomod-
 
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: 'v1.x'
+
+      - run: make fetchdata
       - run: make cibuild
 
       - name: Deploy to Netlify
