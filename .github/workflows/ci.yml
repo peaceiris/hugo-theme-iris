@@ -48,6 +48,9 @@ jobs:
           deno-version: 'v1.x'
 
       - run: make fetchdata
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - run: make cibuild
 
       - name: Deploy to Netlify
@@ -66,8 +69,6 @@ jobs:
         timeout-minutes: 1
 
       - run: make cibuild-prod
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
