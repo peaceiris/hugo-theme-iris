@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.34.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.33.0...v0.34.0) (2021-06-13)
+
+
+### chore
+
+* add png ([4090c00](https://github.com/peaceiris/hugo-theme-iris/commit/4090c0096b2c4d50733ff62550104b2972552639))
+
+### ci
+
+* remove NETLIFY_AUTH_TOKEN_THEMES_PREVIEW (#367) ([3cee910](https://github.com/peaceiris/hugo-theme-iris/commit/3cee91090f35286ff3fa84962f5f2fac76fd7e92)), closes [#367](https://github.com/peaceiris/hugo-theme-iris/issues/367)
+
+### deps
+
+* update dependencies (#366) ([c8b289f](https://github.com/peaceiris/hugo-theme-iris/commit/c8b289f88196c10da184ea3cdf81c9e4f4343a5b)), closes [#366](https://github.com/peaceiris/hugo-theme-iris/issues/366)
+
+### feat
+
+* fetch remote images (#368) ([1379bb6](https://github.com/peaceiris/hugo-theme-iris/commit/1379bb6e5267bbeaa33e4c646cf690c026d26c91)), closes [#368](https://github.com/peaceiris/hugo-theme-iris/issues/368)
+* open menu link in new tab (#370) ([b673cdd](https://github.com/peaceiris/hugo-theme-iris/commit/b673cdd67cbcf7721dd92f96e82ac2c5cd603958)), closes [#370](https://github.com/peaceiris/hugo-theme-iris/issues/370)
+
+### fix
+
+* gitignore rule (#369) ([0d5ba91](https://github.com/peaceiris/hugo-theme-iris/commit/0d5ba91a93fbeb7eb70247db1f7d27ae28bfe3cf)), closes [#369](https://github.com/peaceiris/hugo-theme-iris/issues/369)
+
+
+
 # [0.33.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.32.0...v0.33.0) (2021-06-09)
 
 
