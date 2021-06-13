@@ -8,7 +8,7 @@ import {
   download,
   DownlodedFile,
 } from "https://deno.land/x/download@v1.0.1/mod.ts";
-import { ensureFile } from "https://deno.land/std@0.98.0/fs/mod.ts";
+import { exists } from "https://deno.land/std@0.98.0/fs/mod.ts";
 
 class Image {
   remoteUrl: string;
@@ -39,7 +39,7 @@ class Image {
       dir: this.saveDir,
     };
 
-    if (ensureFile(`${dst.dir}/${dst.file}`)) {
+    if (await exists(`${dst.dir}/${dst.file}`)) {
       console.log(`info: skip ${this.remoteUrl}`);
       return;
     }
