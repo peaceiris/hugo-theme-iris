@@ -3,11 +3,13 @@
   {{ $caption = . | safeHTML }}
 {{ end }}
 
-{{ $hashedDestination := sha256 $.Destination }}
-{{ $extension := path.Ext $.Destination }}
+{{ $imageSrc := $.Destination }}
+{{ $hashedDestination := sha256 $imageSrc }}
+{{ $extension := path.Ext $imageSrc }}
 {{ $localPath := delimit (slice "images/" $hashedDestination $extension) "" }}
-{{ $imagePath := $.Destination }}
-{{ if (fileExists $localPath) }}
+{{ $assetPath := delimit (slice "assets/" $localPath) "" }}
+{{ $imagePath := $imageSrc }}
+{{ if (fileExists $assetPath) }}
   {{ $imagePath = $localPath }}
 {{ end }}
 

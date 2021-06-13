@@ -1,12 +1,13 @@
 {{ with $.Params.eyecatch }}
 
-  {{ $hashedDestination := sha256 $.Params.eyecatch }}
-  {{ $extension := path.Ext $.Params.eyecatch }}
+  {{ $imageSrc := $.Params.eyecatch }}
+  {{ $hashedDestination := sha256 $imageSrc }}
+  {{ $extension := path.Ext $imageSrc }}
   {{ $localPath := delimit (slice "images/" $hashedDestination $extension) "" }}
   {{ $assetPath := delimit (slice "assets/" $localPath) "" }}
-  {{ $imagePath := $.Params.eyecatch }}
+  {{ $imagePath := $imageSrc }}
   {{ if (fileExists $assetPath) }}
-    {{ $imagePath = $localPath }}
+  {{ $imagePath = $localPath }}
   {{ end }}
 
   {{ with resources.Get $imagePath }}
