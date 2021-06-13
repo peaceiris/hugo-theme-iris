@@ -68,7 +68,7 @@ class Post {
     const markdownContent = await Deno.readTextFile(this.path);
     // https://docs.github.com/en/github/managing-your-work-on-github/file-attachments-on-issues-and-pull-requests
     const regexMarkdownImageLinks =
-      /https:\/\/user-images.githubusercontent.com\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+\.(png|gif|jpg|jpeg|mp4|mov)/gm;
+      /https:\/\/user-images.githubusercontent.com\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+\.(png|jpg|jpeg)/gm;
     const matches = markdownContent.match(regexMarkdownImageLinks);
     if (matches === null) return;
     for (const remoteUrl of matches) {
