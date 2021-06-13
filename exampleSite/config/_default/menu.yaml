@@ -10,16 +10,25 @@ main:
     pre: ""
     url: "https://github.com/peaceiris/hugo-theme-iris"
     weight: 2
+    params:
+      target: "_blank"
+      rel: "noopener noreferrer"
   - identifier: author
     name: author
     pre: ""
     url: "https://peaceiris.com"
     weight: 3
+    params:
+      target: "_blank"
+      rel: "noopener noreferrer"
   - identifier: hugo-site
     name: hugo
     pre: ""
     url: "https://gohugo.io/"
     weight: 4
+    params:
+      target: "_blank"
+      rel: "noopener noreferrer"
   - identifier: rss
     name: rss
     pre: ""
