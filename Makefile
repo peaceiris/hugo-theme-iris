@@ -67,8 +67,13 @@ cibuild:
 .PHONY: cibuild-prod
 cibuild-prod:
 	cd ./exampleSite && \
-		bash ./scripts/fetch_data.sh ${GH_USER_ID} > ./data/github/${GH_USER_ID}.json && \
 		hugo --minify --cleanDestinationDir \
 			--baseURL ${BASE_URL} \
 			--i18n-warnings --path-warnings && \
 		wget -O ./public/report.html ${BASE_URL}/report.html || true
+
+.PHONY: fetchdata
+fetchdata:
+	cd ./exampleSite && \
+		bash ./scripts/fetch_data.sh ${GH_USER_ID} > ./data/github/${GH_USER_ID}.json && \
+		deno run --allow-net --allow-read --allow-write --unstable scripts/fetch_images.ts

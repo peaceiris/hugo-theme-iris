@@ -3,7 +3,7 @@ title: GitHub Pages and GitHub Actions
 description: GitHub Actions による GitHub Pages へのデプロイ
 publishdate: 2019-11-01T01:00:00.000Z
 # draft: true
-eyecatch: images/github-pages-and-github-actions.jpg
+eyecatch: 'https://user-images.githubusercontent.com/30958501/121798925-0c4b7600-cc64-11eb-89eb-92d2e8f746db.jpg'
 # tags: ["GitHub Actions"]
 toc: true
 # math: true
