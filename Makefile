@@ -58,9 +58,8 @@ metrics:
 .PHONY: cibuild
 cibuild:
 	cd ./exampleSite && \
-		hugo --minify \
-			--baseURL '/' \
-			--cleanDestinationDir \
+		hugo --minify --cleanDestinationDir \
+			--environment "staging" \
 			--i18n-warnings --path-warnings --debug \
 			--templateMetrics --templateMetricsHints
 

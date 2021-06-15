@@ -1,10 +1,14 @@
-{{ if ne $.Site.Params.hugoenv "production" }}
+{{ if ne hugo.Environment "production" }}
   {{ $targetURL := $.Permalink }}
   {{ if $.Site.IsServer }}
     {{ $targetRelURL := .Page.Permalink | relURL }}
     {{ $targetURL = delimit (slice $.Site.Params.stagingURL $targetRelURL) "" }}
   {{ end }}
+  {{ block "checkTools" $targetURL }}
+  {{ end }}
+{{ end }}
 
+{{ define "checkTools" }}
 <div class="dropdown" id="checkTools">
   <div class="dropdown-trigger">
     <button class="button is-warning" aria-haspopup="true" aria-controls="dropdown-menu" onclick="toggleDropdownCheckTools();">
@@ -14,42 +18,42 @@
   <div class="dropdown-menu" id="dropdown-menu" role="menu">
     <div class="dropdown-content">
       <a
-        href="https://developers.google.com/speed/pagespeed/insights/?url={{ $targetURL }}"
+        href="https://developers.google.com/speed/pagespeed/insights/?url={{ . }}"
         target="_blank"
         rel="noopener noreferrer"
         class="dropdown-item normal-link"
         >Page Speed Insights</a
       >
       <a
-        href="https://search.google.com/test/rich-results?url={{ $targetURL }}"
+        href="https://search.google.com/test/rich-results?url={{ . }}"
         target="_blank"
         rel="noopener noreferrer"
         class="dropdown-item normal-link"
         >Rich result</a
       >
       <a
-        href="https://validator.w3.org/nu/?doc={{ $targetURL }}"
+        href="https://validator.w3.org/nu/?doc={{ . }}"
         target="_blank"
         rel="noopener noreferrer"
         class="dropdown-item normal-link"
         >Markup</a
       >
       <a
-        href="https://material.io/tools/resizer/#url={{ $targetURL }}"
+        href="https://material.io/tools/resizer/#url={{ . }}"
         target="_blank"
         rel="noopener noreferrer"
         class="dropdown-item normal-link"
         >RESIZER</a
       >
       <a
-        href="https://search.google.com/test/mobile-friendly?url={{ $targetURL }}"
+        href="https://search.google.com/test/mobile-friendly?url={{ . }}"
         target="_blank"
         rel="noopener noreferrer"
         class="dropdown-item normal-link"
         >Mobile</a
       >
       <a
-        href="https://developers.facebook.com/tools/debug/sharing/?q={{ $targetURL }}"
+        href="https://developers.facebook.com/tools/debug/sharing/?q={{ . }}"
         target="_blank"
         rel="noopener noreferrer"
         class="dropdown-item normal-link"
@@ -72,5 +76,4 @@
     obj.classList.toggle("is-active");
   }
 </script>
-
 {{ end }}
