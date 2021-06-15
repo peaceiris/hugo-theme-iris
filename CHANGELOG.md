@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.35.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.35.0...v0.35.1) (2021-06-15)
+
+
+### fix
+
+* check hugo.Environment ([e78e7e0](https://github.com/peaceiris/hugo-theme-iris/commit/e78e7e0cf7039d2a383f13efabbc90e1501b2f5a))
+* Do not show checkTools in production ([d68724a](https://github.com/peaceiris/hugo-theme-iris/commit/d68724ad013e02d892d9a4aedd2bb51bdd4726f9))
+
+
+
 # [0.35.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.34.0...v0.35.0) (2021-06-15)
 
 
