@@ -2,7 +2,7 @@
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
 <script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 <script>
-  var config = {
+  const mermaidConfig = {
     startOnLoad: true,
     flowchart: {
       useMaxWidth: true,
@@ -13,5 +13,5 @@
     securityLevel: "strict",
   };
 
-  mermaid.initialize(config);
+  mermaid.initialize(mermaidConfig);
 </script>

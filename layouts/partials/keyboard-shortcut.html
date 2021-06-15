@@ -53,7 +53,7 @@
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
 <script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 <script>
-  var keyboardShortcutHelpModal = document.getElementById("keyboard-shortcut-help-modal");
+  const keyboardShortcutHelpModal = document.getElementById("keyboard-shortcut-help-modal");
 
   function toggleActive(obj) {
     obj.classList.toggle("is-active");
