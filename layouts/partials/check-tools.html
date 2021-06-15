@@ -1,4 +1,4 @@
-{{ if ne $.Site.Params.hugoenv "production" }}
+{{ if ne hugo.Environment "production" }}
   {{ block "checkTools" . }}
   {{ end }}
 {{ end }}
