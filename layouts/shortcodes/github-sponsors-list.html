@@ -7,8 +7,8 @@
   {{ $sponsorID := .sponsor.login }}
   {{ $sponsorURL := delimit (slice "https://github.com/" $sponsorID) "" | safeURL }}
   <div class="column is-3-mobile is-2-tablet">
-    <a href="{{ $sponsorURL }}" rel="noopener noreferrer" target="_blank" class="normal-link">
-      <figure class="image is-64x64">
+    <figure class="image is-64x64">
+      <a href="{{ $sponsorURL }}" rel="noopener noreferrer" target="_blank" class="normal-link">
         <img
           class="is-rounded"
           alt="{{ $sponsorID }} | GitHub"
@@ -16,9 +16,9 @@
           decoding="async"
           loading="lazy"
         />
-      </figure>
+      </a>
       <figcaption>{{ print $sponsorID }}</figcaption>
-    </a>
+    </figure>
   </div>
 {{ end }}
 </div>
