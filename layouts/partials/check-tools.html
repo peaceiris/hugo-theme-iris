@@ -1,14 +1,3 @@
-{{ if ne hugo.Environment "production" }}
-  {{ $targetURL := $.Permalink }}
-  {{ if $.Site.IsServer }}
-    {{ $targetRelURL := .Page.Permalink | relURL }}
-    {{ $targetURL = delimit (slice $.Site.Params.stagingURL $targetRelURL) "" }}
-  {{ end }}
-  {{ block "checkTools" $targetURL }}
-  {{ end }}
-{{ end }}
-
-{{ define "checkTools" }}
 <div class="dropdown" id="checkTools">
   <div class="dropdown-trigger">
     <button class="button is-warning" aria-haspopup="true" aria-controls="dropdown-menu" onclick="toggleDropdownCheckTools();">
@@ -17,54 +6,27 @@
   </div>
   <div class="dropdown-menu" id="dropdown-menu" role="menu">
     <div class="dropdown-content">
-      <a
-        href="https://developers.google.com/speed/pagespeed/insights/?url={{ . }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="dropdown-item normal-link"
-        >Page Speed Insights</a
-      >
-      <a
-        href="https://search.google.com/test/rich-results?url={{ . }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="dropdown-item normal-link"
-        >Rich result</a
-      >
-      <a
-        href="https://validator.w3.org/nu/?doc={{ . }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="dropdown-item normal-link"
-        >Markup</a
-      >
-      <a
-        href="https://material.io/tools/resizer/#url={{ . }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="dropdown-item normal-link"
-        >RESIZER</a
-      >
-      <a
-        href="https://search.google.com/test/mobile-friendly?url={{ . }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="dropdown-item normal-link"
-        >Mobile</a
-      >
-      <a
-        href="https://developers.facebook.com/tools/debug/sharing/?q={{ . }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="dropdown-item normal-link"
-        >Facebook</a
-      >
+      <button class="button dropdown-item" onclick="openCheckToolPage('pagespeedInsights');">
+        <span>Page Speed Insights</span>
+      </button>
+      <button class="button dropdown-item" onclick="openCheckToolPage('richResults');">
+        <span>Rich Result</span>
+      </button>
+      <button class="button dropdown-item" onclick="openCheckToolPage('mobileFriendly');">
+        <span>Mobile Friendly</span>
+      </button>
+      <button class="button dropdown-item" onclick="openCheckToolPage('w3Validator');">
+        <span>Validate Markup</span>
+      </button>
+      <button class="button dropdown-item" onclick="openCheckToolPage('facebook');">
+        <span>Facebook Sharing Debugger</span>
+      </button>
       <a
         href="https://cards-dev.twitter.com/validator"
         target="_blank"
         rel="noopener noreferrer"
-        class="dropdown-item normal-link"
-        >Twitter</a
+        class="button dropdown-item"
+        >Twitter Card Validator</a
       >
     </div>
   </div>
@@ -72,8 +34,23 @@
 
 <script>
   function toggleDropdownCheckTools() {
-    var obj = document.getElementById("checkTools");
+    const obj = document.getElementById("checkTools");
     obj.classList.toggle("is-active");
   }
+
+  function openCheckToolPage(toolName) {
+    const toolsTable = {
+      pagespeedInsights: 'https://developers.google.com/speed/pagespeed/insights/?url=',
+      richResults: 'https://search.google.com/test/rich-results?url=',
+      mobileFriendly: 'https://search.google.com/test/mobile-friendly?url=',
+      w3Validator: 'https://validator.w3.org/nu/?doc=',
+      facebook: 'https://developers.facebook.com/tools/debug/?q=',
+    }
+    {{ if $.Site.IsServer }}
+      const toolURL = toolsTable[toolName] + '{{ $.Site.Params.productionBaseURL | safeURL }}{{ .RelPermalink }}';
+    {{ else }}
+      const toolURL = toolsTable[toolName] + window.location.href;
+    {{ end }}
+    window.open(toolURL, '_blank', 'noreferrer');
+  }
 </script>
-{{ end }}
