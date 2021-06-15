@@ -1,3 +1,9 @@
+{{ if ne $.Site.Params.hugoenv "production" }}
+  {{ block "checkTools" . }}
+  {{ end }}
+{{ end }}
+
+{{ define "checkTools" }}
 <div class="dropdown" id="checkTools">
   <div class="dropdown-trigger">
     <button class="button is-warning" aria-haspopup="true" aria-controls="dropdown-menu" onclick="toggleDropdownCheckTools();">
@@ -54,3 +60,4 @@
     window.open(toolURL, '_blank', 'noreferrer');
   }
 </script>
+{{ end }}
