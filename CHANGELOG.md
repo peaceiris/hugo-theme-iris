@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.35.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.34.0...v0.35.0) (2021-06-15)
+
+
+### chore
+
+* delete gitkeep ([a360306](https://github.com/peaceiris/hugo-theme-iris/commit/a360306f62637ba16dc30072a82251882534f717))
+
+### ci
+
+* remove gif mp4 ([22fdf5a](https://github.com/peaceiris/hugo-theme-iris/commit/22fdf5a08da079740c9775f66db7e58a9ab30640))
+
+### fix
+
+* links to check tools (#371) ([aefb4b5](https://github.com/peaceiris/hugo-theme-iris/commit/aefb4b5973c306d805e1c3a1de0f084b86f1a90d)), closes [#371](https://github.com/peaceiris/hugo-theme-iris/issues/371)
+
+
+
 # [0.34.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.33.0...v0.34.0) (2021-06-13)
 
 
