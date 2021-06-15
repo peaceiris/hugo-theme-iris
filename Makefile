@@ -28,29 +28,29 @@ bumphugo:
 
 .PHONY: build
 build:
-	$(eval opt := --minify --baseURL $(BASE_URL) --cleanDestinationDir)
+	$(eval opt := --minify --cleanDestinationDir)
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-build
 npm-build:
 	cd ./exampleSite && \
-	hugo --minify --baseURL $(BASE_URL) --cleanDestinationDir
+	hugo --minify --cleanDestinationDir
 
 .PHONY: test
 test:
-	$(eval opt := --minify --baseURL $(BASE_URL) \
+	$(eval opt := --minify \
 		--renderToMemory --i18n-warnings --path-warnings --debug)
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-test
 npm-test:
 	cd ./exampleSite && \
-	hugo --minify --baseURL $(BASE_URL) \
+	hugo --minify \
 		--renderToMemory --i18n-warnings --path-warnings --debug
 
 .PHONY: metrics
 metrics:
-	$(eval opt := --minify --baseURL $(BASE_URL) \
+	$(eval opt := --minify \
 		--renderToMemory --i18n-warnings --path-warnings --debug \
 		--templateMetrics --templateMetricsHints)
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
@@ -67,7 +67,6 @@ cibuild:
 cibuild-prod:
 	cd ./exampleSite && \
 		hugo --minify --cleanDestinationDir \
-			--baseURL ${BASE_URL} \
 			--i18n-warnings --path-warnings && \
 		wget -O ./public/report.html ${BASE_URL}/report.html || true
 
