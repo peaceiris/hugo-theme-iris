@@ -16,3 +16,11 @@ icon:
   mstile: /favicon/ms-icon-150x150.jpg
 
 disableBreadcrumbNavigation: false
+
+shareButtons:
+  twitter: true
+  facebook: true
+  pocket: true
+  feedly: true
+  hatenaBookmark: true
+  reddit: true

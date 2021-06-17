@@ -1,44 +1,57 @@
+{{ with $.Site.Params.shareButtons }}
 <div class="buttons has-addons">
-  <!-- Twitter -->
+  {{ with .twitter }}
   <a
-    href="//twitter.com/share?url={{ .Permalink }}&amp;text={{ .Title }}&nbsp;-&nbsp;{{ .Site.Title }}"
+    href="//twitter.com/share?url={{ $.Permalink }}&amp;text={{ $.Title }}&nbsp;-&nbsp;{{ $.Site.Title }}"
     rel="noopener noreferrer nofollow"
     target="_blank"
     class="button"
     >Twitter</a>
-  <!-- Facebook -->
+  {{ end }}
+
+  {{ with .facebook }}
   <a
-    href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"
+    href="//www.facebook.com/sharer/sharer.php?u={{ $.Permalink }}"
     rel="noopener noreferrer nofollow"
     target="_blank"
     class="button"
     >Facebook</a>
-  <!-- Pocket -->
+  {{ end }}
+
+  {{ with .pocket }}
   <a
-    href="https://getpocket.com/edit?url={{ .Permalink }}&amp;title={{ .Title }}"
+    href="https://getpocket.com/edit?url={{ $.Permalink }}&amp;title={{ $.Title }}"
     rel="noopener noreferrer nofollow"
     target="_blank"
     class="button"
     >Pocket</a>
-  <!-- Feedly -->
+  {{ end }}
+
+  {{ with .feedly }}
   <a
     href="https://feedly.com/i/subscription/feed/{{ $.Site.RSSLink }}"
     rel="noopener noreferrer nofollow"
     target="_blank"
     class="button"
     >Feedly</a>
-  <!-- Hatena Bookmark -->
+  {{ end }}
+
+  {{ with .hatenaBookmark }}
   <a
-    href="http://b.hatena.ne.jp/add?url={{ .Permalink }}"
+    href="http://b.hatena.ne.jp/add?url={{ $.Permalink }}"
     rel="noopener noreferrer nofollow"
     target="_blank"
     class="button"
     >Hatena Bookmark</a>
-  <!-- Reddit -->
+  {{ end }}
+
+  {{ with .reddit }}
   <a
-    href="//reddit.com/submit?url={{ .Permalink }}&amp;title={{ .Title }}"
+    href="//reddit.com/submit?url={{ $.Permalink }}&amp;title={{ $.Title }}"
     rel="noopener noreferrer nofollow"
     target="_blank"
     class="button"
     >Reddit</a>
+  {{ end }}
 </div>
+{{ end }}
