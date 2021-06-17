@@ -72,12 +72,12 @@
         break;
       {{ with $.Site.Params.repo }}
       case 'g+e':
-        window.open('{{ .URL }}/edit/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $.File.Path }}', '_blank');
+        window.open('{{ strings.TrimRight "/" .URL }}/edit/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $.File.Path }}', '_blank');
         break;
       {{ end }}
       {{ with $.Site.Params.repo }}
       case 'g+s':
-        window.open('{{ .URL }}/blob/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $.File.Path }}', '_blank');
+        window.open('{{ strings.TrimRight "/" .URL }}/blob/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $.File.Path }}', '_blank');
         break;
       {{ end }}
       case 'r':
