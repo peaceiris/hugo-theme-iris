@@ -7,9 +7,6 @@ publishdate: 2020-01-03T01:00:00.000Z
 # tags: ["hugo"]
 slide: true
 # weight: 1
-twitter:
-  username: piris314
-  hashtags: ["hugo"]
 ---
 
 # Reveal.js

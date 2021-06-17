@@ -1,0 +1,44 @@
+<div class="buttons has-addons">
+  <!-- Twitter -->
+  <a
+    href="//twitter.com/share?url={{ .Permalink }}&amp;text={{ .Title }}&nbsp;-&nbsp;{{ .Site.Title }}"
+    rel="noopener noreferrer nofollow"
+    target="_blank"
+    class="button"
+    >Twitter</a>
+  <!-- Facebook -->
+  <a
+    href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"
+    rel="noopener noreferrer nofollow"
+    target="_blank"
+    class="button"
+    >Facebook</a>
+  <!-- Pocket -->
+  <a
+    href="https://getpocket.com/edit?url={{ .Permalink }}&amp;title={{ .Title }}"
+    rel="noopener noreferrer nofollow"
+    target="_blank"
+    class="button"
+    >Pocket</a>
+  <!-- Feedly -->
+  <a
+    href="https://feedly.com/i/subscription/feed/{{ $.Site.BaseURL | safeURL }}index.xml"
+    rel="noopener noreferrer nofollow"
+    target="_blank"
+    class="button"
+    >Feedly</a>
+  <!-- Hatena Bookmark -->
+  <a
+    href="http://b.hatena.ne.jp/add?url={{ .Permalink }}"
+    rel="noopener noreferrer nofollow"
+    target="_blank"
+    class="button"
+    >Hatena Bookmark</a>
+  <!-- Reddit -->
+  <a
+    href="//reddit.com/submit?url={{ .Permalink }}&amp;title={{ .Title }}"
+    rel="noopener noreferrer nofollow"
+    target="_blank"
+    class="button"
+    >Reddit</a>
+</div>

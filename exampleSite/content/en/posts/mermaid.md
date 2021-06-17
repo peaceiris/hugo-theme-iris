@@ -8,9 +8,6 @@ publishdate: 2020-01-02T01:00:00.000Z
 toc: true
 # math: true
 # weight: 1
-twitter:
-  username: piris314
-  hashtags: ["hugo"]
 ---
 
 

@@ -8,9 +8,6 @@ eyecatch: "https://user-images.githubusercontent.com/30958501/121796747-647b7b80
 toc: true
 math: true
 # weight: 1
-twitter:
-  username: piris314
-  hashtags: ["hugo"]
 ---
 
 

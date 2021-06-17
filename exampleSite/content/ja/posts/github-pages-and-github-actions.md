@@ -8,9 +8,6 @@ eyecatch: 'https://user-images.githubusercontent.com/30958501/121798925-0c4b7600
 toc: true
 # math: true
 # weight: 1
-twitter:
-  username: piris314
-  hashtags: ["GitHubActions"]
 canonicalURL: https://github.com/peaceiris/actions-gh-pages
 ---
 
