@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.36.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.35.1...v0.36.0) (2021-06-17)
+
+
+### ci
+
+* bump actions/upload-artifact from 2.2.3 to 2.2.4 (#372) ([46bbcaf](https://github.com/peaceiris/hugo-theme-iris/commit/46bbcaf7e54fcfc63783fbd8add60dc6e5218b95)), closes [#372](https://github.com/peaceiris/hugo-theme-iris/issues/372)
+
+### docs
+
+* update screenshot thumbnail images (#373) ([a14dbf5](https://github.com/peaceiris/hugo-theme-iris/commit/a14dbf5811dfa7ddfcb246b04df322376d99585f)), closes [#373](https://github.com/peaceiris/hugo-theme-iris/issues/373)
+
+### feat
+
+* Link to commit on GitHub ([64a8e1c](https://github.com/peaceiris/hugo-theme-iris/commit/64a8e1c8a34af93095e5df5202a3c0c8dccffc89))
+* Option to enable share buttons ([ea65375](https://github.com/peaceiris/hugo-theme-iris/commit/ea653755a57756d03ab451d989ce2537c5506bf2))
+* share-buttons (#375) ([20f36b9](https://github.com/peaceiris/hugo-theme-iris/commit/20f36b9a0829c959cc8511f0e9b1ff66b58abb18)), closes [#375](https://github.com/peaceiris/hugo-theme-iris/issues/375)
+
+### fix
+
+* Pass .Site.RSSLink to Feedly ([4ab492a](https://github.com/peaceiris/hugo-theme-iris/commit/4ab492afe62f19d7b0bb6ef6c5d28b56acc80aff))
+* Trim urls with strings.TrimRight ([1162d72](https://github.com/peaceiris/hugo-theme-iris/commit/1162d724fe35b4aae05044cffa444303c874a639))
+
+
+
 ## [0.35.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.35.0...v0.35.1) (2021-06-15)
 
 
