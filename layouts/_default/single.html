@@ -1,7 +1,9 @@
 {{ define "main" }}
-  <section class="section">
-    {{ partial "eyecatch" . }}
-  </section>
+  {{ if $.Params.eyecatch }}
+    <section class="section">
+      {{ partial "eyecatch" . }}
+    </section>
+  {{ end }}
 
   <section class="section">
     {{ partial "content" . }}
@@ -9,16 +11,22 @@
 
   <hr>
 
-  <section class="section">
-    {{ partial "share-buttons" . }}
-  </section>
+  {{ if $.Site.Params.shareButtons }}
+    <section class="section">
+      {{ partial "share-buttons" . }}
+    </section>
+  {{ end }}
 
-  <section class="section">
-    {{ template "_internal/disqus.html" . }}
-  </section>
+  {{ if $.Site.DisqusShortname }}
+    <section class="section">
+      {{ template "_internal/disqus.html" . }}
+    </section>
+  {{ end }}
 
-  <section class="section">
-    <h2 class="title is-3">{{ i18n "random_recommended_posts" . }}</h2>
-    {{ partial "random-post-list" . }}
-  </section>
+  {{ if $.Site.Params.enableRandomRecommendedPosts }}
+    <section class="section">
+      <h2 class="title is-3">{{ i18n "random_recommended_posts" . }}</h2>
+      {{ partial "random-post-list" . }}
+    </section>
+  {{ end }}
 {{ end }}

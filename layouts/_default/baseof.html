@@ -2,7 +2,7 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
   {{ partial "head" . }}
   <body>
-    {{ with $.Params.slide }}
+    {{ if $.Params.slide }}
       <div class="reveal">
         <div class="slides">
           {{- range (split $.RawContent "---\n") -}}

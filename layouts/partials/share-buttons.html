@@ -1,6 +1,5 @@
-{{ with $.Site.Params.shareButtons }}
 <div class="buttons has-addons">
-  {{ with .twitter }}
+  {{ if $.Site.Params.shareButtons.twitter }}
   <a
     href="//twitter.com/share?url={{ $.Permalink }}&amp;text={{ $.Title }}&nbsp;-&nbsp;{{ $.Site.Title }}"
     rel="noopener noreferrer nofollow"
@@ -9,7 +8,7 @@
     >Twitter</a>
   {{ end }}
 
-  {{ with .facebook }}
+  {{ if $.Site.Params.shareButtons.facebook }}
   <a
     href="//www.facebook.com/sharer/sharer.php?u={{ $.Permalink }}"
     rel="noopener noreferrer nofollow"
@@ -18,7 +17,7 @@
     >Facebook</a>
   {{ end }}
 
-  {{ with .pocket }}
+  {{ if $.Site.Params.shareButtons.pocket }}
   <a
     href="https://getpocket.com/edit?url={{ $.Permalink }}&amp;title={{ $.Title }}"
     rel="noopener noreferrer nofollow"
@@ -27,7 +26,7 @@
     >Pocket</a>
   {{ end }}
 
-  {{ with .feedly }}
+  {{ if $.Site.Params.shareButtons.feedly }}
   <a
     href="https://feedly.com/i/subscription/feed/{{ $.Site.RSSLink }}"
     rel="noopener noreferrer nofollow"
@@ -36,7 +35,7 @@
     >Feedly</a>
   {{ end }}
 
-  {{ with .hatenaBookmark }}
+  {{ if $.Site.Params.shareButtons.hatenaBookmark }}
   <a
     href="http://b.hatena.ne.jp/add?url={{ $.Permalink }}"
     rel="noopener noreferrer nofollow"
@@ -45,7 +44,7 @@
     >Hatena Bookmark</a>
   {{ end }}
 
-  {{ with .reddit }}
+  {{ if $.Site.Params.shareButtons.reddit }}
   <a
     href="//reddit.com/submit?url={{ $.Permalink }}&amp;title={{ $.Title }}"
     rel="noopener noreferrer nofollow"
@@ -54,4 +53,3 @@
     >Reddit</a>
   {{ end }}
 </div>
-{{ end }}

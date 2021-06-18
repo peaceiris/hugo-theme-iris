@@ -45,7 +45,7 @@
 <!-- Twitter card -->
 <meta name="twitter:card" content="summary_large_image" />
 
-{{ with $.Params.twitter.username }}
+{{ with $.Site.Params.twitter.username }}
   <meta name="twitter:site" content="@{{ . }}" />
   <meta name="twitter:creator" content="@{{ . }}" />
 {{ else }}
