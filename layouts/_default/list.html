@@ -17,9 +17,7 @@
       <div class="column is-half">
         <a href="{{ .Permalink }}" class="normal-link">
           <div class="card">
-            {{ if $.Params.eyecatch }}
-              {{ partial "eyecatch" . }}
-            {{ end }}
+            {{ partial "eyecatch" . }}
             <div class="card-content">
               {{ $title := "" }}
               {{ with .Title }}

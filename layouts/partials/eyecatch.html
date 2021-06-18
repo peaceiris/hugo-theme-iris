@@ -1,47 +1,50 @@
-{{ $imageSrc := $.Params.eyecatch }}
-{{ $hashedDestination := sha256 $imageSrc }}
-{{ $extension := path.Ext $imageSrc }}
-{{ $localPath := delimit (slice "images/" $hashedDestination $extension) "" }}
-{{ $assetPath := delimit (slice "assets/" $localPath) "" }}
-{{ $imagePath := $imageSrc }}
-{{ if (fileExists $assetPath) }}
-{{ $imagePath = $localPath }}
-{{ end }}
+{{ with $.Params.eyecatch }}
 
-{{ with resources.Get $imagePath }}
-  {{ $image := . }}
-  {{ $small := $image }}
-  {{ $medium := $image }}
-  {{ $large := $image }}
-  {{ if hugo.IsExtended }}
-    {{ $small = $image.Resize "480x webp" }}
-    {{ $medium = $image.Resize "768x webp" }}
-    {{ $large = $image.Resize "1024x webp" }}
-  {{ else }}
-    {{ $small = $image.Resize "480x jpg" }}
-    {{ $medium = $image.Resize "768x jpg" }}
-    {{ $large = $image.Resize "1024x jpg" }}
+  {{ $imageSrc := $.Params.eyecatch }}
+  {{ $hashedDestination := sha256 $imageSrc }}
+  {{ $extension := path.Ext $imageSrc }}
+  {{ $localPath := delimit (slice "images/" $hashedDestination $extension) "" }}
+  {{ $assetPath := delimit (slice "assets/" $localPath) "" }}
+  {{ $imagePath := $imageSrc }}
+  {{ if (fileExists $assetPath) }}
+  {{ $imagePath = $localPath }}
   {{ end }}
-  <figure class="image container">
-    <picture>
-      <source media="(max-width: 480px)" srcset="{{ $small.RelPermalink }} 480w">
-      <source media="(max-width: 768px)" srcset="{{ $medium.RelPermalink }} 768w">
-      <source media="(max-width: 1024px)" srcset="{{ $large.RelPermalink }} 1024w">
+
+  {{ with resources.Get $imagePath }}
+    {{ $image := . }}
+    {{ $small := $image }}
+    {{ $medium := $image }}
+    {{ $large := $image }}
+    {{ if hugo.IsExtended }}
+      {{ $small = $image.Resize "480x webp" }}
+      {{ $medium = $image.Resize "768x webp" }}
+      {{ $large = $image.Resize "1024x webp" }}
+    {{ else }}
+      {{ $small = $image.Resize "480x jpg" }}
+      {{ $medium = $image.Resize "768x jpg" }}
+      {{ $large = $image.Resize "1024x jpg" }}
+    {{ end }}
+    <figure class="image container">
+      <picture>
+        <source media="(max-width: 480px)" srcset="{{ $small.RelPermalink }} 480w">
+        <source media="(max-width: 768px)" srcset="{{ $medium.RelPermalink }} 768w">
+        <source media="(max-width: 1024px)" srcset="{{ $large.RelPermalink }} 1024w">
+        <img
+          src="{{ $large.RelPermalink }}"
+          alt="{{ $.Params.Description }}"
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+    </figure>
+  {{ else }}
+    <figure class="image container">
       <img
-        src="{{ $large.RelPermalink }}"
+        src="{{ $imagePath }}"
         alt="{{ $.Params.Description }}"
         decoding="async"
         loading="lazy"
       />
-    </picture>
-  </figure>
-{{ else }}
-  <figure class="image container">
-    <img
-      src="{{ $imagePath }}"
-      alt="{{ $.Params.Description }}"
-      decoding="async"
-      loading="lazy"
-    />
-  </figure>
+    </figure>
+  {{ end }}
 {{ end }}
