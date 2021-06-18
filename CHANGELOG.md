@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.37.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.36.0...v0.37.0) (2021-06-18)
+
+
+### deps
+
+* update dependencies ([014bbb0](https://github.com/peaceiris/hugo-theme-iris/commit/014bbb0078439f5352403759090c9b3eff227ad1))
+
+### feat
+
+* Add enableRandomRecommendedPosts (#376) ([dc3874a](https://github.com/peaceiris/hugo-theme-iris/commit/dc3874a52653a637cca63f6649ef230d3185b542)), closes [#376](https://github.com/peaceiris/hugo-theme-iris/issues/376)
+
+
+
 # [0.36.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.35.1...v0.36.0) (2021-06-17)
 
 
