@@ -1,12 +1,12 @@
 # menu
 main:
   - identifier: posts
-    name: posts
+    name: Posts
     pre: ""
     url: "/posts/"
     weight: 1
   - identifier: repository
-    name: repository
+    name: Repository
     pre: ""
     url: "https://github.com/peaceiris/hugo-theme-iris"
     weight: 2
@@ -14,7 +14,7 @@ main:
       target: "_blank"
       rel: "noopener noreferrer"
   - identifier: author
-    name: author
+    name: Author
     pre: ""
     url: "https://peaceiris.com"
     weight: 3
@@ -22,7 +22,7 @@ main:
       target: "_blank"
       rel: "noopener noreferrer"
   - identifier: hugo-site
-    name: hugo
+    name: Hugo
     pre: ""
     url: "https://gohugo.io/"
     weight: 4
@@ -30,7 +30,7 @@ main:
       target: "_blank"
       rel: "noopener noreferrer"
   - identifier: rss
-    name: rss
+    name: RSS
     pre: ""
     url: "/index.xml"
     weight: 5

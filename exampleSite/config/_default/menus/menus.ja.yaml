@@ -1,0 +1,36 @@
+# menu
+main:
+  - identifier: posts
+    name: 記事一覧
+    pre: ""
+    url: "/posts/"
+    weight: 1
+  - identifier: repository
+    name: リポジトリ
+    pre: ""
+    url: "https://github.com/peaceiris/hugo-theme-iris"
+    weight: 2
+    params:
+      target: "_blank"
+      rel: "noopener noreferrer"
+  - identifier: author
+    name: 作者
+    pre: ""
+    url: "https://peaceiris.com"
+    weight: 3
+    params:
+      target: "_blank"
+      rel: "noopener noreferrer"
+  - identifier: hugo-site
+    name: Hugo
+    pre: ""
+    url: "https://gohugo.io/"
+    weight: 4
+    params:
+      target: "_blank"
+      rel: "noopener noreferrer"
+  - identifier: rss
+    name: RSS
+    pre: ""
+    url: "/index.xml"
+    weight: 5
