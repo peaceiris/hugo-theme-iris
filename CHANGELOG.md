@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.38.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.38.0...v0.38.1) (2021-06-18)
+
+
+### deps
+
+* bump hugo from 0.83.1 to 0.84.0 ([7e6b29a](https://github.com/peaceiris/hugo-theme-iris/commit/7e6b29ac1f3e2290054cc12f0b0038b376a34d3d))
+
+
+
 # [0.38.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.37.0...v0.38.0) (2021-06-18)
 
 
