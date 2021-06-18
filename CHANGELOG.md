@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.38.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.37.0...v0.38.0) (2021-06-18)
+
+
+### deps
+
+* bump hugo from 0.83.1 to 0.84.0 ([63232ad](https://github.com/peaceiris/hugo-theme-iris/commit/63232addf377f6c2bfbfbbee9631a269b5e04a4c))
+
+### fix
+
+* header menu (#377) ([115499c](https://github.com/peaceiris/hugo-theme-iris/commit/115499cda74c1445fa3884fce000cbe7e32948f0)), closes [#377](https://github.com/peaceiris/hugo-theme-iris/issues/377)
+
+
+
 # [0.37.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.36.0...v0.37.0) (2021-06-18)
 
 
