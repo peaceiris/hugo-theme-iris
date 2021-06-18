@@ -59,7 +59,7 @@
             {{ .Description }}
           {{ end }}
         </p>
-        {{ if (not $.Site.Params.disableBreadcrumbNavigation) }}
+        {{ if $.Site.Params.enableBreadcrumbNavigation }}
           {{ partial "breadcrumb" . }}
         {{ end }}
         <p class="is-italic has-text-grey-light has-text-weight-light">{{ partial "canonical-link" . }}</p>
