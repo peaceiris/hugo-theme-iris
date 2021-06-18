@@ -26,7 +26,7 @@
           </div>
           <div id="hero-head-navbar-menu" class="navbar-menu">
             <div class="navbar-end">
-              {{ range $.Site.Menus.main }}
+              {{ range $.Site.Menus.main.ByWeight }}
                 <a
                   class="navbar-item"
                   href="{{ .URL | relLangURL }}"
