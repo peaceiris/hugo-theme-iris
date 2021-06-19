@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.39.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.38.1...v0.39.0) (2021-06-19)
+
+
+### deps
+
+* Bump hugo-mod-bulma from 0.2.0 to 0.3.0 (#378) ([1674c91](https://github.com/peaceiris/hugo-theme-iris/commit/1674c919144db3bb33d9213c4451f204122d0236)), closes [#378](https://github.com/peaceiris/hugo-theme-iris/issues/378)
+
+
+
 ## [0.38.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.38.0...v0.38.1) (2021-06-18)
 
 
