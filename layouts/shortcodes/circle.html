@@ -34,7 +34,7 @@
       <img
         class="is-rounded"
         src="{{ $large.RelPermalink }}"
-        alt="{{ $alt | safeHTML }}"
+        alt="{{ $alt | safeHTMLAttr }}"
         decoding="async"
         loading="lazy"
       />
@@ -47,7 +47,7 @@
       <img
         class="is-rounded"
         src="{{ $imagePath }}"
-        alt="{{ $alt | safeHTML }}"
+        alt="{{ $alt | safeHTMLAttr }}"
         decoding="async"
         loading="lazy"
       />

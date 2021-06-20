@@ -1,6 +1,6 @@
 {{ $caption := "" }}
 {{ with $.Text }}
-  {{ $caption = . | safeHTML }}
+  {{ $caption = . | safeHTMLAttr }}
 {{ end }}
 
 {{ $imageSrc := $.Destination }}
