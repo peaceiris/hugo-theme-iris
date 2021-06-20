@@ -12,9 +12,9 @@
 
 {{ $description := "" }}
 {{ if $.IsHome }}
-  {{ $description = $.Site.Params.description | safeHTML }}
+  {{ $description = $.Site.Params.description | safeHTMLAttr }}
 {{ else }}
-  {{ $description = $.Description | safeHTML }}
+  {{ $description = $.Description | safeHTMLAttr }}
 {{ end }}
 
 {{ $title := "" }}
@@ -28,9 +28,9 @@
 {{ end }}
 
 {{ if $.IsHome }}
-  {{ $title = $.Site.Params.Title | safeHTML }}
+  {{ $title = $.Site.Params.Title | safeHTMLAttr }}
 {{ else }}
-  {{ $title = $title | safeHTML }}
+  {{ $title = $title | safeHTMLAttr }}
 {{ end }}
 
 <!-- OGP: Open Graph Protocol -->
