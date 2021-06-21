@@ -13,7 +13,7 @@
 
   {{- if eq .node .start -}}
     <li class="is-active">
-      <a href="#" aria-current="page" class="normal-link">{{- .node.LinkTitle -}}</a>
+      <a href="#" aria-current="page" class="normal-link">{{- .node.LinkTitle | truncate 20 -}}</a>
     </li>
   {{- else -}}
     <li>
