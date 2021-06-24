@@ -32,5 +32,13 @@
 </url><url>
 <loc>https://hugothemeiris.peaceiris.app/posts/markdown-syntax/</loc>
 <lastmod>2020-12-12T19:23:07+09:00</lastmod>
+</url><url>
+<loc>https://hugothemeiris.peaceiris.app/categories/</loc>
+<xhtml:link rel="alternate" hreflang="ja" href="https://hugothemeiris.peaceiris.app/ja/categories/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://hugothemeiris.peaceiris.app/categories/"/>
+</url><url>
+<loc>https://hugothemeiris.peaceiris.app/tags/</loc>
+<xhtml:link rel="alternate" hreflang="ja" href="https://hugothemeiris.peaceiris.app/ja/tags/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://hugothemeiris.peaceiris.app/tags/"/>
 </url>
 </urlset>
