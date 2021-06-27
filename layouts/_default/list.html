@@ -39,7 +39,13 @@
               {{ if .Params.math }}
                 {{ $math = true }}
               {{ end }}
-              <p>{{ .Date.Format "2006-01-02" }}{{ partial "badges/slide" . }}</p>
+              <p>
+                {{ .Date.Format "2006-01-02" }}
+                <div class="tags">
+                  {{ partial "badges/draft" . }}
+                  {{ partial "badges/slide" . }}
+                </div>
+              </p>
             </div>
           </div>
         </a>

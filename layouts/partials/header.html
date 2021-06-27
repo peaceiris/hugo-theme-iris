@@ -63,6 +63,13 @@
           {{ partial "breadcrumb" . }}
         {{ end }}
         <p class="is-italic has-text-grey-light has-text-weight-light">{{ partial "canonical-link" . }}</p>
+        {{ if .Params.draft }}
+          <p>
+            <div class="tags">
+              {{ partial "badges/draft" . }}
+            </div>
+          </p>
+        {{ end }}
         {{ with .GitInfo }}
           <p class="has-text-grey-light is-pulled-right">
             <a
