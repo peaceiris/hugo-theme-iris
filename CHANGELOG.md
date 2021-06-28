@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.39.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.39.0...v0.39.1) (2021-06-28)
+
+
+### ci
+
+* create pr with gh ([ec1c7e6](https://github.com/peaceiris/hugo-theme-iris/commit/ec1c7e6df2defc3beaa72b2d69f6d30337587216))
+
+### deps
+
+* bump hugo from 0.84.0 to 0.84.1 ([48a9f9c](https://github.com/peaceiris/hugo-theme-iris/commit/48a9f9c446bdc7cbef8c1552bdd1639941b9e3f8))
+* bump hugo from 0.84.1 to 0.84.2 (#384) ([a99f30f](https://github.com/peaceiris/hugo-theme-iris/commit/a99f30fcf7c8af774d920d52b7d3166143eb9ff2)), closes [#384](https://github.com/peaceiris/hugo-theme-iris/issues/384)
+
+### feat
+
+* badges/draft (#382) ([26ec34a](https://github.com/peaceiris/hugo-theme-iris/commit/26ec34a45f0a00e52810fec8d7ab65c23ab293f2)), closes [#382](https://github.com/peaceiris/hugo-theme-iris/issues/382)
+* truncate title of breadcrumb (#381) ([5d78fa3](https://github.com/peaceiris/hugo-theme-iris/commit/5d78fa3f49b81bd58b7d5d24347a71d81c44eff7)), closes [#381](https://github.com/peaceiris/hugo-theme-iris/issues/381)
+
+### fix
+
+* add random_recommended_posts ([69419ef](https://github.com/peaceiris/hugo-theme-iris/commit/69419efd93b54fcb71aa742b32e31abc3c738c80))
+* hugo mod init first ([c061f79](https://github.com/peaceiris/hugo-theme-iris/commit/c061f79efbea3409c7c46ab86b4030279285be8c))
+* path to hugo ([7a501fa](https://github.com/peaceiris/hugo-theme-iris/commit/7a501fae67b7152160a1216e65eb690b04f351ac))
+* Use safeHTMLAttr instead of safeHTML (#379) ([749f561](https://github.com/peaceiris/hugo-theme-iris/commit/749f561f01be275bd702b885cea22e819ca94a3e)), closes [#379](https://github.com/peaceiris/hugo-theme-iris/issues/379)
+
+
+
 # [0.39.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.38.1...v0.39.0) (2021-06-19)
 
 
