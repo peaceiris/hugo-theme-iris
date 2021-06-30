@@ -44,6 +44,10 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 ![Hugo IRIS Theme](images/screenshot.jpg)
 
 ![Hugo IRIS Theme](images/screenshot.jpg "This is the screenshot")
+
+{{</* centered */>}}
+![Hugo IRIS Theme](images/screenshot.jpg)
+{{</* /centered */>}}
 ```
 
 ### Output
@@ -51,6 +55,10 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 ![Hugo IRIS Theme](images/screenshot.jpg)
 
 ![Hugo IRIS Theme](images/screenshot.jpg "This is the screenshot")
+
+{{< centered >}}
+![Hugo IRIS Theme](images/screenshot.jpg)
+{{< /centered >}}
 
 
 
