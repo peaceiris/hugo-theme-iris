@@ -1,11 +1,10 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-description:
+description: ""
 publishdate: {{ .Date }}
-# draft: true
-eyecatch: images/eyecatch.jpg
+draft: false
+eyecatch: ""
 toc: true
-# math: true
-# weight: 1
-# canonicalURL:
+math: false
+canonicalURL: ""
 ---
