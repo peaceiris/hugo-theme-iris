@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.40.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.39.1...v0.40.0) (2021-06-30)
+
+
+### deps
+
+* bump hugo from 0.84.2 to 0.84.3 (#385) ([bc69c65](https://github.com/peaceiris/hugo-theme-iris/commit/bc69c65e1bbf54c478ae0e4d758e474e963a1cc4)), closes [#385](https://github.com/peaceiris/hugo-theme-iris/issues/385)
+
+### docs
+
+* Add eyecatch (#388) ([b30c5d2](https://github.com/peaceiris/hugo-theme-iris/commit/b30c5d2fc0ff019fad5541b62f90706a110bd408)), closes [#388](https://github.com/peaceiris/hugo-theme-iris/issues/388)
+
+### feat
+
+* eyecatch random-post-list (#386) ([f7fd2af](https://github.com/peaceiris/hugo-theme-iris/commit/f7fd2af66a85285a026840d0edd3cc66dce86e3f)), closes [#386](https://github.com/peaceiris/hugo-theme-iris/issues/386)
+* shortcode centered (#387) ([c1b701e](https://github.com/peaceiris/hugo-theme-iris/commit/c1b701ec7bdffe1951ad9149d59eff700878bded)), closes [#387](https://github.com/peaceiris/hugo-theme-iris/issues/387)
+
+
+
 ## [0.39.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.39.0...v0.39.1) (2021-06-28)
 
 
