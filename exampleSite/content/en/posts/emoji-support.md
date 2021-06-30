@@ -2,7 +2,10 @@
 title: Emoji Support
 date: 2019-09-30T08:00:00.000Z
 description: Guide to emoji usage in Hugo
+draft: false
 eyecatch: "https://user-images.githubusercontent.com/30958501/123906010-63648100-d9ae-11eb-9456-c2b9178a91af.jpg"
+toc: true
+math: false
 ---
 
 

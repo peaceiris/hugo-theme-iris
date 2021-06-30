@@ -2,7 +2,10 @@
 title: Rich Content
 date: 2019-09-29T08:00:00.000Z
 description: A brief description of Hugo Shortcodes
+draft: false
+eyecatch: "https://user-images.githubusercontent.com/30958501/123906104-8c851180-d9ae-11eb-90fb-067e2344c7b0.jpg"
 toc: true
+math: false
 ---
 
 ## Shortcodes

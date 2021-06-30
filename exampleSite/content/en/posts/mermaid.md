@@ -2,12 +2,10 @@
 title: mermaid Graph Support
 description: Generation of diagram and flowchart from text in a similar manner as markdown
 publishdate: 2020-01-02T01:00:00.000Z
-# draft: true
-# eyecatch: images/mermaid.jpg
-# tags: ["hugo"]
+draft: false
+eyecatch: "https://user-images.githubusercontent.com/30958501/123906097-8858f400-d9ae-11eb-9db0-f2e8fe5a17a0.png"
 toc: true
-# math: true
-# weight: 1
+math: false
 ---
 
 

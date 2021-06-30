@@ -2,7 +2,10 @@
 title: Markdown Syntax Guide
 date: 2019-09-25T23:00:00.000Z
 description: Sample article showcasing basic Markdown syntax and formatting for HTML elements.
+draft: false
+eyecatch: "https://user-images.githubusercontent.com/30958501/123906102-8b53e480-d9ae-11eb-8639-d4eb09dafa7e.jpg"
 toc: true
+math: false
 ---
 
 
