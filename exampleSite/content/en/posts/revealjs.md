@@ -3,7 +3,7 @@ title: Reveal.js Support
 description: Easily creating beautiful presentations using Markdown
 publishdate: 2020-01-03T01:00:00.000Z
 draft: false
-eyecatch: "https://user-images.githubusercontent.com/30958501/123906097-8858f400-d9ae-11eb-9db0-f2e8fe5a17a0.png"
+eyecatch: "https://user-images.githubusercontent.com/30958501/123906100-8a22b780-d9ae-11eb-849c-3bbb54581611.png"
 slide: true
 ---
 
