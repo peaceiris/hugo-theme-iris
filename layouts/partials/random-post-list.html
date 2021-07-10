@@ -1,5 +1,5 @@
 <div class="columns is-multiline is-centered">
-  {{ range first 2 (shuffle $.Site.RegularPages) }}
+  {{ range first 2 (shuffle ($.Site.RegularPages | complement (slice $.Page))) }}
     <div class="column is-half">
       <a href="{{ .RelPermalink }}" rel="nofollow">
 
