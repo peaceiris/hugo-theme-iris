@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.40.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.40.0...v0.40.1) (2021-07-10)
+
+
+### chore
+
+* Add demosite (#392) ([466c56c](https://github.com/peaceiris/hugo-theme-iris/commit/466c56c03b767c92a91543c5409e0b418052ec98)), closes [#392](https://github.com/peaceiris/hugo-theme-iris/issues/392)
+* Delete .gitignore ([f7edd1b](https://github.com/peaceiris/hugo-theme-iris/commit/f7edd1b7581a68f5c5af1854372e33cd81a9bcae)), closes [#390](https://github.com/peaceiris/hugo-theme-iris/issues/390)
+
+### ci
+
+* bump actions/setup-node from 2.1.5 to 2.2.0 (#389) ([12982fa](https://github.com/peaceiris/hugo-theme-iris/commit/12982fa6be603cb251b1a8c3316f68b31204131e)), closes [#389](https://github.com/peaceiris/hugo-theme-iris/issues/389)
+
+### deps
+
+* bump hugo from 0.84.3 to 0.84.4 (#391) ([b921865](https://github.com/peaceiris/hugo-theme-iris/commit/b9218654d615fe60e0826771e9ed4085c6176e45)), closes [#391](https://github.com/peaceiris/hugo-theme-iris/issues/391)
+* bump hugo from 0.84.4 to 0.85.0 (#395) ([bac23f3](https://github.com/peaceiris/hugo-theme-iris/commit/bac23f3ff71fd99bfaa3d15a20cf188be7cf1a0f)), closes [#395](https://github.com/peaceiris/hugo-theme-iris/issues/395)
+
+### feat
+
+* Improve canonicalURL for Netlify CMS (#396) ([0484dc0](https://github.com/peaceiris/hugo-theme-iris/commit/0484dc0e7e5e73b636b432042295a0736e1beb9a)), closes [#396](https://github.com/peaceiris/hugo-theme-iris/issues/396)
+
+
+
 # [0.40.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.39.1...v0.40.0) (2021-06-30)
 
 
