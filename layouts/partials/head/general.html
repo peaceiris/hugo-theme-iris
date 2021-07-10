@@ -57,6 +57,7 @@
 <!-- Open Graph Protocol (OGP) -->
 {{ partial "head/ogp" . }}
 
-{{ with .Page.Params.canonicalURL }}
-<link rel="canonical" href="{{ . | safeURL }}">
+{{ $canonicalURL := urls.Parse $.Page.Params.canonicalURL }}
+{{ if $canonicalURL.Host }}
+<link rel="canonical" href="{{ $.Page.Params.canonicalURL | safeURL }}">
 {{ end }}
