@@ -72,7 +72,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
-        if: github.ref == 'refs/heads/main'
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           #deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -83,7 +83,7 @@ jobs:
 
   lighthouse:
     needs: deploy
-    if: github.ref == 'refs/heads/main'
+    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-18.04
     timeout-minutes: 2
     steps:
@@ -124,7 +124,7 @@ jobs:
   test-docker:
     runs-on: ubuntu-18.04
     timeout-minutes: 2
-    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
     steps:
       - uses: actions/checkout@v2.3.4
 
@@ -140,7 +140,7 @@ jobs:
   test-setup:
     runs-on: ubuntu-18.04
     timeout-minutes: 2
-    if: github.ref == 'refs/heads/main'
+    if: ${{ github.ref == 'refs/heads/main' }}
     strategy:
       matrix:
         extended:
@@ -183,12 +183,13 @@ jobs:
           hugo
 
   themes-preview:
+    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-18.04
     timeout-minutes: 3
     steps:
       - uses: actions/checkout@v2.3.4
         with:
-          repository: gohugoio/hugoThemes
+          repository: gohugoio/hugoThemesSiteBuilder
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2.5.0
@@ -203,24 +204,16 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugomod-
 
-      - name: Checkout hugo-iris-theme main
-        run: git submodule update --init --remote hugo-theme-iris
-
-      - name: Checkout hugo-iris-theme pull/${{ github.event.number }}
-        if: github.event_name == 'pull_request'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd hugo-theme-iris
-          gh pr checkout ${{ github.event.number }}
+      - name: Overwrite themes.txt
+        run: echo "github.com/peaceiris/hugo-theme-iris" > themes.txt
 
       - name: Build
+        working-directory: ./cmd/hugothemesitebuilder/build/site
         env:
-          BASE_URL: https://hugo-theme-iris-themes-preview.netlify.app
+          DEPLOY_PRIME_URL: https://hugo-theme-iris-themes-preview.netlify.app
         run: |
-          (cd ./_script && ./generateThemeSite.sh "${BASE_URL}")
-          hugo -s _script/hugoThemeSite/themeSite --baseURL "/"
-          cat << EOF > ./_script/hugoThemeSite/themeSite/public/robots.txt
+          bash ./build.sh
+          cat << EOF > ./public/robots.txt
           User-agent: *
           Disallow: /
           EOF
@@ -228,7 +221,7 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.2
         with:
-          publish-dir: './_script/hugoThemeSite/themeSite/public'
+          publish-dir: './public'
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
