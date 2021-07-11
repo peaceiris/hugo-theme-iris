@@ -1,0 +1,11 @@
+{{ $url := urls.Parse $.Page.Params.canonicalURL }}
+
+{{ if or $.Params.slide $.Params.slide $url.Host }}
+<div class="tags">
+{{ end }}
+  {{ partial "badges/draft" . }}
+  {{ partial "badges/slide" . }}
+  {{ partial "badges/canonical" . }}
+{{ if or $.Params.slide $.Params.slide $url.Host }}
+</div>
+{{ end }}

@@ -1,0 +1,4 @@
+{{ $url := urls.Parse $.Page.Params.canonicalURL }}
+{{ if $url.Host }}
+<span class="tag is-link">canonical | {{ $url.Host }}</span>
+{{ end }}
