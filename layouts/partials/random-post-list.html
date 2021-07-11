@@ -16,6 +16,11 @@
             <div class="content">
               {{ .Description }}
             </div>
+
+            <p>
+              {{ .Date.Format "2006-01-02" }}
+              {{ partial "badges/badges" . }}
+            </p>
           </div>
         </div>
 

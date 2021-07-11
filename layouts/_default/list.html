@@ -41,10 +41,7 @@
               {{ end }}
               <p>
                 {{ .Date.Format "2006-01-02" }}
-                <div class="tags">
-                  {{ partial "badges/draft" . }}
-                  {{ partial "badges/slide" . }}
-                </div>
+                {{ partial "badges/badges" . }}
               </p>
             </div>
           </div>
