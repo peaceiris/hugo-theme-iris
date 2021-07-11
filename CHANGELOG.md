@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.41.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.40.1...v0.41.0) (2021-07-11)
+
+
+### ci
+
+* Add actions/setup-go ([355882e](https://github.com/peaceiris/hugo-theme-iris/commit/355882eb18f30756b2cdb1821f37d8a53208d403))
+* Remove themes-preview ([a6fd82e](https://github.com/peaceiris/hugo-theme-iris/commit/a6fd82e5571342e80a6edda26868d4a4f52f891d))
+* Update themes-preview ([dc28c65](https://github.com/peaceiris/hugo-theme-iris/commit/dc28c658a036a775e711a04630855e32baa7fe20))
+
+### feat
+
+* Add canonical badge (#398) ([f318cc4](https://github.com/peaceiris/hugo-theme-iris/commit/f318cc4585f78caf654c94e79e1131a88732a728)), closes [#398](https://github.com/peaceiris/hugo-theme-iris/issues/398)
+
+### fix
+
+* Exclude itself from list (#397) ([ed90085](https://github.com/peaceiris/hugo-theme-iris/commit/ed90085684599f909b8e6985b347893c3eaaf0ed)), closes [#397](https://github.com/peaceiris/hugo-theme-iris/issues/397)
+
+
+
 ## [0.40.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.40.0...v0.40.1) (2021-07-10)
 
 
