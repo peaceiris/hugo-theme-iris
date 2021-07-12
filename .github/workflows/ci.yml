@@ -12,9 +12,6 @@ on:
   schedule:
     - cron: "13 13 * * *"
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-
 permissions:
   actions: write
   contents: write
@@ -28,6 +25,8 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     timeout-minutes: 3
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v2.3.4
         with:
