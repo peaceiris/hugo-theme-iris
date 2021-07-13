@@ -4,7 +4,6 @@ Hugo IRIS Theme
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/images/tn.png" alt="Hugo Iris Theme thumbnail" width="500px">
-</div>
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/peaceiris/hugo-theme-iris/blob/main/LICENSE)
 [![release](https://img.shields.io/github/release/peaceiris/hugo-theme-iris.svg)](https://github.com/peaceiris/hugo-theme-iris/releases/latest)
@@ -13,6 +12,8 @@ Hugo IRIS Theme
 ![deploy status](https://github.com/peaceiris/hugo-theme-iris/workflows/CI/badge.svg?branch=main&event=push)
 [![hugo themes](https://img.shields.io/static/v1?label=Hugo%20Themes&message=IRIS&color=blueviolet)](https://themes.gohugo.io/hugo-theme-iris/)
 [![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugothemeiris.peaceiris.app/report.html)
+
+</div>
 
 [Go to the demo site](https://hugothemeiris.peaceiris.app/).
 
