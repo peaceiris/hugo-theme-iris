@@ -4,7 +4,7 @@ licenselink = "https://github.com/peaceiris/hugo-theme-iris/blob/main/LICENSE"
 description = "Hugo Iris Theme - Portfolio and Blog"
 homepage = "https://github.com/peaceiris/hugo-theme-iris"
 demosite = "https://hugothemeiris.peaceiris.app/"
-min_version = "0.85.0"
+min_version = "0.86.0"
 tags = [
   "blog",
   "responsive",
