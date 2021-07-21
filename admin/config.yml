@@ -4,20 +4,41 @@ backend:
   branch: main
   # squash_merges: true
 
-media_folder: "static/images"
+media_folder: "assets/images"
 # media_folder_relative: true
 public_folder: "images/"
 editor:
-  preview: false
+  preview: true
 # publish_mode: editorial_workflow
 
-display_url: https://hugothemeiris.peaceiris.app
+site_url: https://hugothemeiris.peaceiris.app
+display_url: https://github.com/peaceiris/hugo-theme-iris
 logo_url: https://hugothemeiris.peaceiris.app/favicon/favicon64.ico
 
 collections:
-  - label: "Post"
-    name: "post"
-    folder: "content/posts"
+  - label: "Home en"
+    name: "home-en"
+    folder: "content/en"
+    create: false
+    slug: "_index"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Home ja"
+    name: "home-ja"
+    folder: "content/ja"
+    create: false
+    slug: "_index"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Post en"
+    name: "post-en"
+    folder: "content/en/posts"
     create: true
     slug: "{{slug}}"
     fields:
@@ -25,14 +46,43 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - {
+          label: "Eyecatch",
+          name: "eyecatch",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Canonical URL",
+          name: "canonicalURL",
+          widget: "string",
+          required: false,
+        }
+      - { label: "ToC", name: "toc", widget: "boolean", default: false }
+      - { label: "Math", name: "math", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown" }
-  - label: "Home"
-    name: "home"
-    folder: "content"
-    create: false
-    slug: "_index"
+  - label: "Post ja"
+    name: "post-ja"
+    folder: "content/ja/posts"
+    create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - {
+          label: "Eyecatch",
+          name: "eyecatch",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Canonical URL",
+          name: "canonicalURL",
+          widget: "string",
+          required: false,
+        }
+      - { label: "ToC", name: "toc", widget: "boolean", default: false }
+      - { label: "Math", name: "math", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown" }
