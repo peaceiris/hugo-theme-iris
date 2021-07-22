@@ -15,24 +15,42 @@
 
 {{ with resources.Get $imagePath }}
   {{ $image := . }}
-  {{ $small := . }}
-  {{ $medium := . }}
-  {{ $large := . }}
+
+  {{ $smallJPG := $image }}
+  {{ $mediumJPG := $image }}
+  {{ $largeJPG := $image }}
+
+  {{ $smallWebP := $image }}
+  {{ $mediumWebP := $image }}
+  {{ $largeWebP := $image }}
+
+  {{ $smallJPG = $image.Resize "480x jpg" }}
+  {{ $mediumJPG = $image.Resize "768x jpg" }}
+  {{ $largeJPG = $image.Resize "1024x jpg" }}
+
   {{ if hugo.IsExtended }}
-    {{ $small = .Resize "480x webp" }}
-    {{ $medium = .Resize "768x webp" }}
-    {{ $large = .Resize "1024x webp" }}
-  {{ else }}
-    {{ $small = .Resize "480x jpg" }}
-    {{ $medium = .Resize "768x jpg" }}
-    {{ $large = .Resize "1024x jpg" }}
+    {{ $smallWebP = $image.Resize "480x webp" }}
+    {{ $mediumWebP = $image.Resize "768x webp" }}
+    {{ $largeWebP = $image.Resize "1024x webp" }}
   {{ end }}
+
   <figure class="image container">
     <picture>
-      <source media="(max-width: 480px)" srcset="{{ $small.RelPermalink }} 480w">
-      <source media="(max-width: 768px)" srcset="{{ $medium.RelPermalink }} 768w">
-      <source media="(max-width: 1024px)" srcset="{{ $large.RelPermalink }} 1024w">
-      <img src="{{ $large.RelPermalink }}" alt="{{ $caption }}" decoding="async" loading="lazy">
+      {{ if hugo.IsExtended }}
+      <source type="image/webp" media="(max-width: 480px)" srcset="{{ $smallWebP.RelPermalink }} 480w">
+      <source type="image/webp" media="(max-width: 768px)" srcset="{{ $mediumWebP.RelPermalink }} 768w">
+      <source type="image/webp" media="(max-width: 1024px)" srcset="{{ $largeWebP.RelPermalink }} 1024w">
+      {{ end }}
+
+      <source type="image/jpeg" media="(max-width: 480px)" srcset="{{ $smallJPG.RelPermalink }} 480w">
+      <source type="image/jpeg" media="(max-width: 768px)" srcset="{{ $mediumJPG.RelPermalink }} 768w">
+      <source type="image/jpeg" media="(max-width: 1024px)" srcset="{{ $largeJPG.RelPermalink }} 1024w">
+      <img
+        src="{{ $largeJPG.RelPermalink }}"
+        alt="{{ $caption }}"
+        decoding="async"
+        loading="lazy"
+      />
     </picture>
     {{ with $caption }}
       <figcaption class="has-text-centered mt-2">{{ . }}</figcaption>
