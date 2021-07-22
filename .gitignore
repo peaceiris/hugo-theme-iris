@@ -2,3 +2,5 @@
 *~
 public
 node_modules
+resources/**/*.jpg
+resources/**/*.webp
