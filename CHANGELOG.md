@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.41.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.41.0...v0.41.1) (2021-07-22)
+
+
+### chore
+
+* Fix badges style ([3bbdaa8](https://github.com/peaceiris/hugo-theme-iris/commit/3bbdaa87d480ec53b95914e28dc14cbf289ef6fd))
+* fix concurrency ([334a53e](https://github.com/peaceiris/hugo-theme-iris/commit/334a53ef70a06ac02c4495aaab1106d60d351def))
+
+### ci
+
+* Add concurrency permissions (#399) ([dc4a302](https://github.com/peaceiris/hugo-theme-iris/commit/dc4a302fda652cbb5babc6d6c4f52c96ac68a515)), closes [#399](https://github.com/peaceiris/hugo-theme-iris/issues/399)
+* bump actions/setup-node from 2.2.0 to 2.3.0 (#402) ([f699626](https://github.com/peaceiris/hugo-theme-iris/commit/f6996269bb7e61e143c68199188529e4943a58ca)), closes [#402](https://github.com/peaceiris/hugo-theme-iris/issues/402)
+
+### deps
+
+* bump hugo from 0.85.0 to 0.86.0 (#403) ([263d698](https://github.com/peaceiris/hugo-theme-iris/commit/263d6989c4a37057e9fc5e209cd8977eb7c1931d)), closes [#403](https://github.com/peaceiris/hugo-theme-iris/issues/403)
+
+### feat
+
+* Update collections ([a72df96](https://github.com/peaceiris/hugo-theme-iris/commit/a72df969f61dbc742bd667b8e0ce1db5f586dcfe))
+
+### fix
+
+* Show responsive jpeg for old browsers (#404) ([48ae66d](https://github.com/peaceiris/hugo-theme-iris/commit/48ae66d0c2a2752759b15db804f4c3772fc2f8f3)), closes [#404](https://github.com/peaceiris/hugo-theme-iris/issues/404)
+
+
+
 # [0.41.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.40.1...v0.41.0) (2021-07-11)
 
 
