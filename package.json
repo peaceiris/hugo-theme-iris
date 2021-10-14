@@ -28,7 +28,7 @@
       "npm test"
     ],
     "{README,CONTRIBUTING}.md": [
-      "npx doctoc@2.0.0 --github"
+      "npx doctoc@2.1.0 --github"
     ]
   },
   "devDependencies": {
