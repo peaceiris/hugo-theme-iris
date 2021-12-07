@@ -4,5 +4,5 @@ contact_links:
     url: https://discourse.gohugo.io/
     about: Please ask questions about Hugo here.
   - name: Q&A for the Iris Theme
-    url: https://github.com/peaceiris/hugo-theme-iris/discussions/new?category=q-a
+    url: https://github.com/peaceiris/hugo-theme-iris/discussions/categories/q-a
     about: Please ask questions about Hugo Iris Theme here.
