@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.41.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.41.1...v0.41.2) (2021-12-13)
+
+
+### ci
+
+* bump actions/cache from 2.1.6 to 2.1.7 (#440) ([6c6a319](https://github.com/peaceiris/hugo-theme-iris/commit/6c6a319afab49d1fc3a6d64f4104a00cd46d52be)), closes [#440](https://github.com/peaceiris/hugo-theme-iris/issues/440)
+* bump actions/checkout from 2.3.4 to 2.3.5 (#425) ([99a41b0](https://github.com/peaceiris/hugo-theme-iris/commit/99a41b0ff86192bc51a084243183f304e9d05012)), closes [#425](https://github.com/peaceiris/hugo-theme-iris/issues/425)
+* bump actions/checkout from 2.3.5 to 2.4.0 (#430) ([54c7926](https://github.com/peaceiris/hugo-theme-iris/commit/54c7926b34402342b3446190cf847356ae27c56f)), closes [#430](https://github.com/peaceiris/hugo-theme-iris/issues/430)
+* bump actions/setup-node from 2.3.0 to 2.3.1 (#409) ([ee796b9](https://github.com/peaceiris/hugo-theme-iris/commit/ee796b9c03b3b160400baa4dd061911d7ceaed33)), closes [#409](https://github.com/peaceiris/hugo-theme-iris/issues/409)
+* bump actions/setup-node from 2.3.1 to 2.3.2 (#411) ([8cad279](https://github.com/peaceiris/hugo-theme-iris/commit/8cad2797b342555b8e09a88b64506e6e816d8130)), closes [#411](https://github.com/peaceiris/hugo-theme-iris/issues/411)
+* bump actions/setup-node from 2.3.2 to 2.4.0 (#412) ([9857a2a](https://github.com/peaceiris/hugo-theme-iris/commit/9857a2adfa8ccf0ebd161a85e88cc51a59acb664)), closes [#412](https://github.com/peaceiris/hugo-theme-iris/issues/412)
+* bump actions/setup-node from 2.4.0 to 2.4.1 (#418) ([adcb85d](https://github.com/peaceiris/hugo-theme-iris/commit/adcb85dead902e97317cf0d4e6d2090b7df2c30e)), closes [#418](https://github.com/peaceiris/hugo-theme-iris/issues/418)
+* bump actions/setup-node from 2.4.1 to 2.5.0 (#441) ([363b941](https://github.com/peaceiris/hugo-theme-iris/commit/363b9413cf514197f7f5c9971530498f27ddb2b4)), closes [#441](https://github.com/peaceiris/hugo-theme-iris/issues/441)
+* bump actions/upload-artifact from 2.2.4 to 2.3.0 (#443) ([cfc84a3](https://github.com/peaceiris/hugo-theme-iris/commit/cfc84a37d98527d91fad64b0702aef51f84494c0)), closes [#443](https://github.com/peaceiris/hugo-theme-iris/issues/443)
+* bump peaceiris/workflows from 0.10.0 to 0.11.0 (#420) ([1dc99bc](https://github.com/peaceiris/hugo-theme-iris/commit/1dc99bcce32834921cd7472e35ec5dd9a1dee28c)), closes [#420](https://github.com/peaceiris/hugo-theme-iris/issues/420)
+* bump peaceiris/workflows from 0.8.1 to 0.10.0 (#415) ([e856839](https://github.com/peaceiris/hugo-theme-iris/commit/e856839a442f0b61a454085821db93774d0be291)), closes [#415](https://github.com/peaceiris/hugo-theme-iris/issues/415)
+
+### deps
+
+* bump hugo from 0.86.0 to 0.86.1 (#408) ([87814fd](https://github.com/peaceiris/hugo-theme-iris/commit/87814fdc3c0e4df3e5f6caff69034b88f003c87f)), closes [#408](https://github.com/peaceiris/hugo-theme-iris/issues/408)
+* bump hugo from 0.86.1 to 0.87.0 (#410) ([d08b646](https://github.com/peaceiris/hugo-theme-iris/commit/d08b646141c6f69fde673ef619e8e52ddc1331a0)), closes [#410](https://github.com/peaceiris/hugo-theme-iris/issues/410)
+* bump hugo from 0.87.0 to 0.88.0 (#416) ([5dff233](https://github.com/peaceiris/hugo-theme-iris/commit/5dff233e5132292e123c8cd1931545c324b546f2)), closes [#416](https://github.com/peaceiris/hugo-theme-iris/issues/416)
+* bump hugo from 0.88.0 to 0.88.1 (#417) ([c4ca44c](https://github.com/peaceiris/hugo-theme-iris/commit/c4ca44c71c3b99f2b8dbf0671df7a8607f347b51)), closes [#417](https://github.com/peaceiris/hugo-theme-iris/issues/417)
+* bump hugo from 0.88.1 to 0.89.0 (#431) ([b1d9b51](https://github.com/peaceiris/hugo-theme-iris/commit/b1d9b516fa570dadc8ad5f9ce7618cbe1d9f8ba6)), closes [#431](https://github.com/peaceiris/hugo-theme-iris/issues/431)
+* bump hugo from 0.89.0 to 0.89.1 (#432) ([c2d786c](https://github.com/peaceiris/hugo-theme-iris/commit/c2d786ca4355726b9ae2783984eb6fd3b2ba8784)), closes [#432](https://github.com/peaceiris/hugo-theme-iris/issues/432)
+* bump hugo from 0.89.1 to 0.89.2 (#433) ([5ff2094](https://github.com/peaceiris/hugo-theme-iris/commit/5ff2094a001e8dcc5fbcfe5fde4cb27f4e5c2434)), closes [#433](https://github.com/peaceiris/hugo-theme-iris/issues/433)
+* bump hugo from 0.89.2 to 0.89.3 (#435) ([33d2be4](https://github.com/peaceiris/hugo-theme-iris/commit/33d2be452e84b7118eaeb98e7e739b227444a5f5)), closes [#435](https://github.com/peaceiris/hugo-theme-iris/issues/435)
+* bump hugo from 0.89.3 to 0.89.4 (#436) ([1544a0c](https://github.com/peaceiris/hugo-theme-iris/commit/1544a0ca236e60a4fb650a2b76b4708479f819e5)), closes [#436](https://github.com/peaceiris/hugo-theme-iris/issues/436)
+* bump hugo from 0.89.4 to 0.90.0 (#444) ([6b2d457](https://github.com/peaceiris/hugo-theme-iris/commit/6b2d4576680df7642653814a3e5f9c53dbb63fa2)), closes [#444](https://github.com/peaceiris/hugo-theme-iris/issues/444)
+* bump hugo from 0.90.0 to 0.90.1 (#445) ([a766c92](https://github.com/peaceiris/hugo-theme-iris/commit/a766c92dfa3641a067890e535a524979b88a1331)), closes [#445](https://github.com/peaceiris/hugo-theme-iris/issues/445)
+* bump hugo from 0.90.0 to 0.90.1 (#446) ([6d32177](https://github.com/peaceiris/hugo-theme-iris/commit/6d32177798459d6c96c381cd8f77bae3b1736dff)), closes [#446](https://github.com/peaceiris/hugo-theme-iris/issues/446)
+* node 14.17.4 ([4c35133](https://github.com/peaceiris/hugo-theme-iris/commit/4c35133ea9707ad98ac4012775bbde60c8110381))
+* node 14.17.5 ([69f055d](https://github.com/peaceiris/hugo-theme-iris/commit/69f055d8e61a284b5727cd1268eb0b4ae73f91d5))
+
+
+
 ## [0.41.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.41.0...v0.41.1) (2021-07-22)
 
 
