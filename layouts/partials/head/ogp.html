@@ -1,8 +1,12 @@
 {{ $imagePath := "" }}
 {{ if $.Params.eyecatch }}
   {{ with resources.Get $.Params.eyecatch }}
-    {{ $image := . }}
-    {{ $imagePath = ($image | resources.Fingerprint "sha512").Permalink }}
+    {{ with .Err }}
+      {{ warnf "%s" . }}
+    {{ else }}
+      {{ $image := . }}
+      {{ $imagePath = ($image | resources.Fingerprint "sha512").Permalink }}
+    {{ end }}
   {{ else }}
     {{ $imagePath = $.Params.eyecatch }}
   {{ end }}

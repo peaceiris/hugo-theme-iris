@@ -14,48 +14,52 @@
 {{ end }}
 
 {{ with resources.Get $imagePath }}
-  {{ $image := . }}
+  {{ with .Err }}
+    {{ warnf "%s" . }}
+  {{ else }}
+    {{ $image := . }}
 
-  {{ $smallJPG := $image }}
-  {{ $mediumJPG := $image }}
-  {{ $largeJPG := $image }}
+    {{ $smallJPG := $image }}
+    {{ $mediumJPG := $image }}
+    {{ $largeJPG := $image }}
 
-  {{ $smallWebP := $image }}
-  {{ $mediumWebP := $image }}
-  {{ $largeWebP := $image }}
+    {{ $smallWebP := $image }}
+    {{ $mediumWebP := $image }}
+    {{ $largeWebP := $image }}
 
-  {{ $smallJPG = $image.Resize "480x jpg" }}
-  {{ $mediumJPG = $image.Resize "768x jpg" }}
-  {{ $largeJPG = $image.Resize "1024x jpg" }}
+    {{ $smallJPG = $image.Resize "480x jpg" }}
+    {{ $mediumJPG = $image.Resize "768x jpg" }}
+    {{ $largeJPG = $image.Resize "1024x jpg" }}
 
-  {{ if hugo.IsExtended }}
-    {{ $smallWebP = $image.Resize "480x webp" }}
-    {{ $mediumWebP = $image.Resize "768x webp" }}
-    {{ $largeWebP = $image.Resize "1024x webp" }}
-  {{ end }}
-
-  <figure class="image container">
-    <picture>
-      {{ if hugo.IsExtended }}
-      <source type="image/webp" media="(max-width: 480px)" srcset="{{ $smallWebP.RelPermalink }} 480w">
-      <source type="image/webp" media="(max-width: 768px)" srcset="{{ $mediumWebP.RelPermalink }} 768w">
-      <source type="image/webp" media="(max-width: 1024px)" srcset="{{ $largeWebP.RelPermalink }} 1024w">
-      {{ end }}
-
-      <source type="image/jpeg" media="(max-width: 480px)" srcset="{{ $smallJPG.RelPermalink }} 480w">
-      <source type="image/jpeg" media="(max-width: 768px)" srcset="{{ $mediumJPG.RelPermalink }} 768w">
-      <source type="image/jpeg" media="(max-width: 1024px)" srcset="{{ $largeJPG.RelPermalink }} 1024w">
-      <img
-        src="{{ $largeJPG.RelPermalink }}"
-        alt="{{ $caption }}"
-        decoding="async"
-        loading="lazy"
-      />
-    </picture>
-    {{ with $caption }}
-      <figcaption class="has-text-centered mt-2">{{ . }}</figcaption>
+    {{ if hugo.IsExtended }}
+      {{ $smallWebP = $image.Resize "480x webp" }}
+      {{ $mediumWebP = $image.Resize "768x webp" }}
+      {{ $largeWebP = $image.Resize "1024x webp" }}
     {{ end }}
-  </figure>
+
+    <figure class="image container">
+      <picture>
+        {{ if hugo.IsExtended }}
+        <source type="image/webp" media="(max-width: 480px)" srcset="{{ $smallWebP.RelPermalink }} 480w">
+        <source type="image/webp" media="(max-width: 768px)" srcset="{{ $mediumWebP.RelPermalink }} 768w">
+        <source type="image/webp" media="(max-width: 1024px)" srcset="{{ $largeWebP.RelPermalink }} 1024w">
+        {{ end }}
+
+        <source type="image/jpeg" media="(max-width: 480px)" srcset="{{ $smallJPG.RelPermalink }} 480w">
+        <source type="image/jpeg" media="(max-width: 768px)" srcset="{{ $mediumJPG.RelPermalink }} 768w">
+        <source type="image/jpeg" media="(max-width: 1024px)" srcset="{{ $largeJPG.RelPermalink }} 1024w">
+        <img
+          src="{{ $largeJPG.RelPermalink }}"
+          alt="{{ $caption }}"
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+      {{ with $caption }}
+        <figcaption class="has-text-centered mt-2">{{ . }}</figcaption>
+      {{ end }}
+    </figure>
+  {{ end }}
 {{ else }}
   <figure class="image container">
     <img
