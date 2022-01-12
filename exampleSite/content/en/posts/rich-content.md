@@ -35,12 +35,12 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 ### Usage
 
 ```md
-{{</* tweet 1085870671291310081 */>}}
+{{</* tweet user="SanDiegoZoo" id="1453110110599868418" */>}}
 ```
 
 ### Example
 
-{{< tweet 1085870671291310081 >}}
+{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}
 
 
 
