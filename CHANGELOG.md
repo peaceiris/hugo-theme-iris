@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.41.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.41.2...v0.41.3) (2022-03-05)
+
+
+### ci
+
+* bump actions/checkout from 2.4.0 to 3 (#470) ([2f79246](https://github.com/peaceiris/hugo-theme-iris/commit/2f792464890ef662c3f43fc18d7f07d4062ccec4)), closes [#470](https://github.com/peaceiris/hugo-theme-iris/issues/470)
+* bump actions/setup-node from 2.5.0 to 2.5.1 (#452) ([ed3ec51](https://github.com/peaceiris/hugo-theme-iris/commit/ed3ec51e1b29191cb99fad09a8f5f850d0b568a7)), closes [#452](https://github.com/peaceiris/hugo-theme-iris/issues/452)
+* bump actions/setup-node from 2.5.1 to 3.0.0 (#469) ([b8c0c09](https://github.com/peaceiris/hugo-theme-iris/commit/b8c0c09bd78d7f1f95f2516acc38fec92a3bc7ae)), closes [#469](https://github.com/peaceiris/hugo-theme-iris/issues/469)
+* bump actions/upload-artifact from 2.3.0 to 2.3.1 (#447) ([d1f97c9](https://github.com/peaceiris/hugo-theme-iris/commit/d1f97c99fce9d1855d8daa4c19398e92901d0c9b)), closes [#447](https://github.com/peaceiris/hugo-theme-iris/issues/447)
+* bump actions/upload-artifact from 2.3.1 to 3 (#471) ([ba79725](https://github.com/peaceiris/hugo-theme-iris/commit/ba79725771d90fd06eec7a37448486f48926286b)), closes [#471](https://github.com/peaceiris/hugo-theme-iris/issues/471)
+* bump nwtgck/actions-netlify from 1.2.2 to 1.2.3 (#450) ([16b3fd5](https://github.com/peaceiris/hugo-theme-iris/commit/16b3fd5a9e7f2121bba9666a47aa8977ee395fd4)), closes [#450](https://github.com/peaceiris/hugo-theme-iris/issues/450)
+
+### deps
+
+* bump hugo from 0.90.1 to 0.92.0 (#455) ([7ea6808](https://github.com/peaceiris/hugo-theme-iris/commit/7ea6808a2121346a095c66bba23e376520df59bf)), closes [#455](https://github.com/peaceiris/hugo-theme-iris/issues/455)
+* bump hugo from 0.92.0 to 0.92.1 (#462) ([4cce951](https://github.com/peaceiris/hugo-theme-iris/commit/4cce9518c2fa20cccc1ecd5ffb7ccc07110067cc)), closes [#462](https://github.com/peaceiris/hugo-theme-iris/issues/462)
+* bump hugo from 0.92.1 to 0.92.2 (#467) ([7c7ee44](https://github.com/peaceiris/hugo-theme-iris/commit/7c7ee44496a21c9bf7684b3ceef34cbf7e1794c3)), closes [#467](https://github.com/peaceiris/hugo-theme-iris/issues/467)
+* bump hugo from 0.92.2 to 0.93.2 (#472) ([e609b05](https://github.com/peaceiris/hugo-theme-iris/commit/e609b057ac172eaaf91fa8eaf339c49daf50aa71)), closes [#472](https://github.com/peaceiris/hugo-theme-iris/issues/472)
+* update devDependencies ([7708f3d](https://github.com/peaceiris/hugo-theme-iris/commit/7708f3d092e8998c100cc735a0aaf6bfb580f0d4))
+* update devDependencies ([f02d488](https://github.com/peaceiris/hugo-theme-iris/commit/f02d488873354916995886aad9a029741f6f2b29))
+
+### fix
+
+* tweet shortcode requires two named parameters ([f14714f](https://github.com/peaceiris/hugo-theme-iris/commit/f14714fafae9d462e5f1e6eb53d1d3a061f4b391))
+
+
+
 ## [0.41.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.41.1...v0.41.2) (2021-12-13)
 
 
