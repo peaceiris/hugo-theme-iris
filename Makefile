@@ -10,12 +10,12 @@ GH_USER_ID := peaceiris
 up:
 	$(DOCKER_COMPOSE) up -d
 	$(DOCKER_COMPOSE) exec hugo hugo \
-		server --navigateToChanged --bind=0.0.0.0 --buildDrafts --i18n-warnings
+		server --navigateToChanged --bind=0.0.0.0 --buildDrafts
 
 .PHONY: npm-up
 npm-up:
 	cd ./exampleSite && \
-	hugo server --navigateToChanged --buildDrafts --i18n-warnings
+	hugo server --navigateToChanged --buildDrafts
 
 .PHONY: hugo
 hugo:
@@ -39,19 +39,19 @@ npm-build:
 .PHONY: test
 test:
 	$(eval opt := --minify \
-		--renderToMemory --i18n-warnings --path-warnings --debug)
+		--renderToMemory --printPathWarnings --debug)
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-test
 npm-test:
 	cd ./exampleSite && \
 	hugo --minify \
-		--renderToMemory --i18n-warnings --path-warnings --debug
+		--renderToMemory --printPathWarnings --debug
 
 .PHONY: metrics
 metrics:
 	$(eval opt := --minify \
-		--renderToMemory --i18n-warnings --path-warnings --debug \
+		--renderToMemory --printPathWarnings --debug \
 		--templateMetrics --templateMetricsHints)
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
@@ -60,14 +60,14 @@ cibuild:
 	cd ./exampleSite && \
 		hugo --minify --cleanDestinationDir \
 			--environment "staging" \
-			--i18n-warnings --path-warnings --debug \
+			--printPathWarnings --debug \
 			--templateMetrics --templateMetricsHints
 
 .PHONY: cibuild-prod
 cibuild-prod:
 	cd ./exampleSite && \
 		hugo --minify --cleanDestinationDir \
-			--i18n-warnings --path-warnings && \
+			--printPathWarnings && \
 		wget -O ./public/report.html ${BASE_URL}/report.html || true
 
 .PHONY: fetchdata
