@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.41.4](https://github.com/peaceiris/hugo-theme-iris/compare/v0.41.3...v0.41.4) (2022-03-07)
+
+
+### deps
+
+* bump shell-quote from 1.7.2 to 1.7.3 (#474) ([f74b55e](https://github.com/peaceiris/hugo-theme-iris/commit/f74b55e0085d91caf6353fb8df37b00aa8d68043)), closes [#474](https://github.com/peaceiris/hugo-theme-iris/issues/474)
+
+
+
 ## [0.41.3](https://github.com/peaceiris/hugo-theme-iris/compare/v0.41.2...v0.41.3) (2022-03-05)
 
 
