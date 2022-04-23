@@ -1,4 +1,3 @@
-github.com/hakimel/reveal.js v0.0.0-20210609121455-a453ac08a820/go.mod h1:vIoaZ8tJbfDF30DhKf6Dia5ykePO0tETa9Posw8UrOE=
 github.com/jaywcjlove/hotkeys v3.9.0+incompatible h1:0x69ug5QLo14njeVZF0QwZmOVhsxVN/NJ9pUUnCzEG8=
 github.com/jaywcjlove/hotkeys v3.9.0+incompatible/go.mod h1:B8sgoHCreUIgvVuJaI5mfsyw/gFV+c+OlJfNbLpdtzQ=
 github.com/jgthms/bulma v0.0.0-20210618174152-5a23dcbfe4bf/go.mod h1:89FLBKXYFKfOKAoDeUT26V0pHGwzr205cMXAEqtAVOI=
@@ -10,5 +9,3 @@ github.com/peaceiris/hugo-mod-mathjax v0.2.0 h1:GHsEarZ7Ko1UD9HJ1pjXQ/Ic+3ChGDuG
 github.com/peaceiris/hugo-mod-mathjax v0.2.0/go.mod h1:7FJooVihcCuB6+9lBZ6+rFaUu2VrpOTqO5xybz6sRxY=
 github.com/peaceiris/hugo-mod-mermaidjs v0.9.0 h1:McUfF8bAmVYnQv1iX+7ds25e9L44o/49vEbFAHQ71wA=
 github.com/peaceiris/hugo-mod-mermaidjs v0.9.0/go.mod h1:P49aHKrQgzZhguUe5Zd9rQDzsm4rzQZWyYMH7IGF8/I=
-github.com/peaceiris/hugo-mod-revealjs v0.4.0 h1:V0ko0Op3kDMTJ3Cuegb+Uyv3UwyYJtCLmb+K7bPiRvM=
-github.com/peaceiris/hugo-mod-revealjs v0.4.0/go.mod h1:XtjBQXghMXua1iwSngEoy4q0MV36q5+qmS0rrNAFJLg=
