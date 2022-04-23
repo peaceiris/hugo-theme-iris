@@ -1,0 +1,12 @@
+name: "Setup Hugo envs"
+description: "A composite action to setup Hugo environments variables"
+runs:
+  using: "composite"
+  steps:
+    - name: Set envs
+      shell: bash
+      run: |
+        . ./.env
+        echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
+        echo "::set-output name=GO_VERSION::${GO_VERSION}"
+        echo "::set-output name=NODE_VERSION::$(cat .nvmrc)"

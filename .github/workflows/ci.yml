@@ -16,12 +16,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-permissions:
-  actions: write
-  contents: write
-  deployments: write
-  pull-requests: write
-
 env:
   HUGO_CACHEDIR: /tmp/hugo_cache
 
@@ -29,6 +23,10 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     timeout-minutes: 3
+    permissions:
+      contents: write
+      deployments: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v3
         with:
@@ -36,40 +34,29 @@ jobs:
 
       - name: Set envs
         id: envs
-        run: |
-          . ./.env
-          echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
-          echo "::set-output name=GO_VERSION::${GO_VERSION}"
+        uses: ./.github/workflows/scripts/envs
 
-      - uses: peaceiris/workflows/setup-go@v0.13.0
+      - uses: peaceiris/workflows/setup-hugo@main
         with:
+          node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
           go-version: "${{ steps.envs.outputs.GO_VERSION }}"
-          cache-path: |
-            ${{ env.HUGO_CACHEDIR }}
-          cache-key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          cache-restore-keys: |
-            ${{ runner.os }}-hugomod-
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2.5.0
-        with:
           hugo-version: "${{ steps.envs.outputs.HUGO_VERSION }}"
           extended: true
 
       - uses: denoland/setup-deno@v1
         with:
-          deno-version: 'v1.x'
+          deno-version: "v1.x"
 
-      - run: make fetchdata
+      - run: make fetch-data
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
-      - run: make cibuild
+      - run: make build-staging
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.3
         with:
-          publish-dir: './exampleSite/public'
+          publish-dir: "./exampleSite/public"
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
@@ -81,7 +68,7 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
 
-      - run: make cibuild-prod
+      - run: make build-prod
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
@@ -91,18 +78,18 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./exampleSite/public
           allow_empty_commit: true
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
 
   lighthouse:
     needs: deploy
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-20.04
-    timeout-minutes: 2
+    timeout-minutes: 3
+    permissions:
+      contents: write
     steps:
-      - uses: actions/setup-node@v3.1.1
-        with:
-          node-version: "14"
+      - uses: peaceiris/workflows/setup-node@v0.13.0
 
       - name: Install lighthouse
         run: sudo npm i -g lighthouse
@@ -131,33 +118,41 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./public
           keep_files: true
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
 
   docker:
     runs-on: ubuntu-20.04
-    timeout-minutes: 2
+    timeout-minutes: 3
     if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/cache@v3
+      - name: Set envs
+        id: envs
+        uses: ./.github/workflows/scripts/envs
+
+      - uses: peaceiris/workflows/setup-hugo@main
         with:
-          path: ${{ env.HUGO_CACHEDIR }}
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod-
+          node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
+          go-version: "${{ steps.envs.outputs.GO_VERSION }}"
+          hugo-version: "${{ steps.envs.outputs.HUGO_VERSION }}"
+          extended: true
 
       - name: prepare
         run: |
           sed -i 's/enableGitInfo: true/# enableGitInfo: true/' exampleSite/config/_default/config.yaml
 
-      - run: make build
+      - run: make docker-build
 
   setup:
     runs-on: ubuntu-20.04
-    timeout-minutes: 2
+    timeout-minutes: 3
     if: ${{ github.ref == 'refs/heads/main' }}
+    permissions:
+      contents: read
     strategy:
       matrix:
         extended:
@@ -168,30 +163,16 @@ jobs:
 
       - name: Set envs
         id: envs
-        run: |
-          . ./.env
-          echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
-          echo "::set-output name=GO_VERSION::${GO_VERSION}"
+        uses: ./.github/workflows/scripts/envs
 
-      - uses: peaceiris/workflows/setup-go@v0.13.0
+      - uses: peaceiris/workflows/setup-hugo@main
         with:
+          node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
           go-version: "${{ steps.envs.outputs.GO_VERSION }}"
-          cache-path: |
-            ${{ env.HUGO_CACHEDIR }}
-          cache-key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          cache-restore-keys: |
-            ${{ runner.os }}-hugomod-
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2.5.0
-        with:
           hugo-version: "${{ steps.envs.outputs.HUGO_VERSION }}"
           extended: ${{ matrix.extended }}
 
-      - name: Setup Git
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
+      - uses: peaceiris/workflows/setup-git@main
 
       - name: Create a new Hugo project
         run: |
@@ -200,4 +181,5 @@ jobs:
           cd ~
           bash ./setup.sh "homepage" "peaceiris"
           cd homepage
+          npm ci
           hugo

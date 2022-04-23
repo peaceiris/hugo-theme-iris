@@ -1,80 +1,80 @@
-include .env
-
 pwd := $(CURDIR)
 cmd := ""
-DOCKER_COMPOSE := docker-compose
+DOCKER_COMPOSE := docker compose
 GH_USER_ID := peaceiris
 
 
-.PHONY: up
-up:
+.PHONY: docker-npm-ci
+docker-npm-ci: fetch-fonts
 	export HUGO_VERSION=$(shell make get-hugo-version) && \
-		$(DOCKER_COMPOSE) up -d && \
-		$(DOCKER_COMPOSE) exec hugo hugo \
-			server --navigateToChanged --bind=0.0.0.0 --buildDrafts
+	$(DOCKER_COMPOSE) run --rm --entrypoint=npm hugo ci
 
-.PHONY: npm-up
-npm-up:
+.PHONY: docker-dev
+docker-dev: docker-npm-ci
+	$(eval opt := server --navigateToChanged --bind=0.0.0.0 --buildDrafts)
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+	$(DOCKER_COMPOSE) up -d && \
+	$(DOCKER_COMPOSE) exec hugo hugo $(opt)
+
+.PHONY: docker-hugo
+docker-hugo: docker-npm-ci
+	# make docker-hugo cmd="version"
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
+
+.PHONY: docker-build
+docker-build: docker-npm-ci
+	$(eval opt := --minify --cleanDestinationDir)
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
+
+.PHONY: docker-test
+docker-test: docker-npm-ci
+	$(eval opt := --minify --renderToMemory --printPathWarnings --debug \
+		--templateMetrics --templateMetricsHints)
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
+
+.PHONY: npm-ci
+npm-ci: fetch-fonts
+	cd ./exampleSite && \
+	npm ci
+
+.PHONY: dev
+dev: npm-ci
 	cd ./exampleSite && \
 	hugo server --navigateToChanged --buildDrafts
 
-.PHONY: hugo
-hugo:
-	# make hugo cmd="version"
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
-		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
-
-.PHONY: build
-build:
-	$(eval opt := --minify --cleanDestinationDir)
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
-		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
-
-.PHONY: npm-build
-npm-build:
-	cd ./exampleSite && \
-	hugo --minify --cleanDestinationDir
-
 .PHONY: test
-test:
-	$(eval opt := --minify --renderToMemory --printPathWarnings --debug)
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
-		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
-
-.PHONY: npm-test
-npm-test:
+test: npm-ci
 	cd ./exampleSite && \
-	hugo --minify \
-		--renderToMemory --printPathWarnings --debug
+	hugo --minify --renderToMemory --printPathWarnings --debug \
+		--templateMetrics --templateMetricsHints
 
-.PHONY: metrics
-metrics:
-	$(eval opt := --minify \
-		--renderToMemory --printPathWarnings --debug \
-		--templateMetrics --templateMetricsHints)
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
-		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
-
-.PHONY: cibuild
-cibuild:
+.PHONY: build-staging
+build-staging: npm-ci
 	cd ./exampleSite && \
-		hugo --minify --cleanDestinationDir \
-			--environment "staging" \
-			--printPathWarnings --debug \
-			--templateMetrics --templateMetricsHints
+	hugo --minify --cleanDestinationDir \
+		--environment "staging" \
+		--printPathWarnings --debug \
+		--templateMetrics --templateMetricsHints
 
-.PHONY: cibuild-prod
-cibuild-prod:
+.PHONY: build-prod
+build-prod: npm-ci
 	cd ./exampleSite && \
-		hugo --minify --cleanDestinationDir \
-			--printPathWarnings && \
-		wget -O ./public/report.html ${BASE_URL}/report.html || true
+	hugo --minify --cleanDestinationDir --printPathWarnings && \
+	wget -O ./public/report.html ${BASE_URL}/report.html || true
 
-.PHONY: fetchdata
-fetchdata:
+.PHONY: fetch-fonts
+fetch-fonts:
 	cd ./exampleSite && \
-		bash ./scripts/fetch_data.sh ${GH_USER_ID} > ./data/github/${GH_USER_ID}.json && \
-		deno run --allow-net --allow-read --allow-write --unstable scripts/fetch_images.ts
+	bash ./scripts/fetch_fonts.sh
+
+.PHONY: fetch-data
+fetch-data:
+	cd ./exampleSite && \
+	bash ./scripts/fetch_data.sh ${GH_USER_ID} > ./data/github/${GH_USER_ID}.json && \
+	deno run --allow-net --allow-read --allow-write --unstable scripts/fetch_images.ts
 
 .PHONY: get-go-version
 get-go-version:

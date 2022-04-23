@@ -1,0 +1,21 @@
+{
+  "author": "",
+  "comments": {
+    "dependencies": {
+      "bulma": "project"
+    },
+    "devDependencies": {}
+  },
+  "dependencies": {
+    "bulma": "^0.9.3"
+  },
+  "description": "",
+  "devDependencies": {},
+  "license": "MIT",
+  "main": "index.js",
+  "name": "examplesite",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.0"
+}
