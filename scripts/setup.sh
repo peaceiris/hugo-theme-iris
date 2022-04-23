@@ -9,7 +9,7 @@ wget https://github.com/peaceiris/hugo-theme-iris/archive/main.zip
 unzip main.zip
 rm main.zip
 hugo mod init "github.com/$2/$1"
-cp -r ./hugo-theme-iris-main/exampleSite/{assets,config,content,data,i18n,static,.gitignore} .
+cp -r ./hugo-theme-iris-main/exampleSite/{assets,config,content,data,i18n,static,.gitignore,package-lock.json,package.json} .
 rm ./assets/images/.gitignore
 rm -rf hugo-theme-iris-main
 hugo mod get -u github.com/peaceiris/hugo-theme-iris

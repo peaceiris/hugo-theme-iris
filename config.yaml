@@ -1,6 +1,5 @@
 module:
   imports:
-    - path: github.com/peaceiris/hugo-mod-bulma
     - path: github.com/peaceiris/hugo-mod-mermaidjs
     - path: github.com/peaceiris/hugo-mod-mathjax
     - path: github.com/jaywcjlove/hotkeys

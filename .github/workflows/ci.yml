@@ -16,12 +16,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-permissions:
-  actions: write
-  contents: write
-  deployments: write
-  pull-requests: write
-
 env:
   HUGO_CACHEDIR: /tmp/hugo_cache
 
@@ -29,6 +23,10 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     timeout-minutes: 3
+    permissions:
+      contents: write
+      deployments: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v3
         with:
@@ -40,6 +38,11 @@ jobs:
           . ./.env
           echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
           echo "::set-output name=GO_VERSION::${GO_VERSION}"
+          echo "::set-output name=NVMRC::$(cat .nvmrc)"
+
+      - uses: peaceiris/workflows/setup-node@v0.13.0
+        with:
+          node-version: "${{ steps.envs.outputs.NVMRC }}"
 
       - uses: peaceiris/workflows/setup-go@v0.13.0
         with:
@@ -98,11 +101,11 @@ jobs:
     needs: deploy
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-20.04
-    timeout-minutes: 2
+    timeout-minutes: 3
+    permissions:
+      contents: write
     steps:
-      - uses: actions/setup-node@v3.1.1
-        with:
-          node-version: "14"
+      - uses: peaceiris/workflows/setup-node@v0.13.0
 
       - name: Install lighthouse
         run: sudo npm i -g lighthouse
@@ -136,8 +139,10 @@ jobs:
 
   docker:
     runs-on: ubuntu-20.04
-    timeout-minutes: 2
+    timeout-minutes: 3
     if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v3
 
@@ -156,8 +161,10 @@ jobs:
 
   setup:
     runs-on: ubuntu-20.04
-    timeout-minutes: 2
+    timeout-minutes: 3
     if: ${{ github.ref == 'refs/heads/main' }}
+    permissions:
+      contents: read
     strategy:
       matrix:
         extended:
@@ -172,6 +179,11 @@ jobs:
           . ./.env
           echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
           echo "::set-output name=GO_VERSION::${GO_VERSION}"
+          echo "::set-output name=NVMRC::$(cat .nvmrc)"
+
+      - uses: peaceiris/workflows/setup-node@v0.13.0
+        with:
+          node-version: "${{ steps.envs.outputs.NVMRC }}"
 
       - uses: peaceiris/workflows/setup-go@v0.13.0
         with:
@@ -188,10 +200,7 @@ jobs:
           hugo-version: "${{ steps.envs.outputs.HUGO_VERSION }}"
           extended: ${{ matrix.extended }}
 
-      - name: Setup Git
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
+      - uses: peaceiris/workflows/setup-git@main
 
       - name: Create a new Hugo project
         run: |
@@ -200,4 +209,5 @@ jobs:
           cd ~
           bash ./setup.sh "homepage" "peaceiris"
           cd homepage
+          npm ci
           hugo

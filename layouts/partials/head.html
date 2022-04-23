@@ -11,7 +11,8 @@
   </style>
   {{ else }}
   <style>
-    {{ $bulmaCSS := resources.Get "theme/scss/bulma.scss" | toCSS | minify }}
+    {{ $bulmaOps := (dict "includePaths" (slice "node_modules")) }}
+    {{ $bulmaCSS := resources.Get "theme/scss/bulma.scss" | toCSS $bulmaOps | minify }}
     {{ $bulmaCSS.Content | safeCSS }}
 
     {{ $syntaxCSS := resources.Get "theme/css/syntax.css" | toCSS | minify }}

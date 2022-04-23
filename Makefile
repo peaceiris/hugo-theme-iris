@@ -16,36 +16,38 @@ up:
 .PHONY: npm-up
 npm-up:
 	cd ./exampleSite && \
-	hugo server --navigateToChanged --buildDrafts
+		hugo server --navigateToChanged --buildDrafts
 
 .PHONY: hugo
 hugo:
 	# make hugo cmd="version"
 	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) run --rm --entrypoint=npm hugo ci && \
 		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
 
 .PHONY: build
 build:
 	$(eval opt := --minify --cleanDestinationDir)
 	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) run --rm --entrypoint=npm hugo ci && \
 		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-build
 npm-build:
 	cd ./exampleSite && \
-	hugo --minify --cleanDestinationDir
+		hugo --minify --cleanDestinationDir
 
 .PHONY: test
 test:
 	$(eval opt := --minify --renderToMemory --printPathWarnings --debug)
 	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) run --rm --entrypoint=npm hugo ci && \
 		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-test
 npm-test:
 	cd ./exampleSite && \
-	hugo --minify \
-		--renderToMemory --printPathWarnings --debug
+		hugo --minify --renderToMemory --printPathWarnings --debug
 
 .PHONY: metrics
 metrics:
@@ -53,11 +55,13 @@ metrics:
 		--renderToMemory --printPathWarnings --debug \
 		--templateMetrics --templateMetricsHints)
 	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) run --rm --entrypoint=npm hugo ci && \
 		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: cibuild
 cibuild:
 	cd ./exampleSite && \
+		npm ci && \
 		hugo --minify --cleanDestinationDir \
 			--environment "staging" \
 			--printPathWarnings --debug \
@@ -66,6 +70,7 @@ cibuild:
 .PHONY: cibuild-prod
 cibuild-prod:
 	cd ./exampleSite && \
+		npm ci && \
 		hugo --minify --cleanDestinationDir \
 			--printPathWarnings && \
 		wget -O ./public/report.html ${BASE_URL}/report.html || true

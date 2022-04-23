@@ -368,10 +368,10 @@ git commit -m "deps: bump hugo-theme-iris"
 ## Special Thanks
 
 - [Hugo]
-- [Bulma] via [peaceiris/hugo-mod-bulma](https://github.com/peaceiris/hugo-mod-bulma)
+- [Bulma]
 - [reveal.js]
-- [MathJax] via [peaceiris/hugo-mod-mathjax](https://github.com/peaceiris/hugo-mod-mathjax)
-- [mermaid] via [peaceiris/hugo-mod-mermaidjs](https://github.com/peaceiris/hugo-mod-mermaidjs)
+- [MathJax]
+- [mermaid]
 - [jaywcjlove/hotkeys](https://github.com/jaywcjlove/hotkeys)
 
 <!-- - Font Awesome -->
