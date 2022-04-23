@@ -173,6 +173,8 @@ jobs:
           extended: ${{ matrix.extended }}
 
       - uses: peaceiris/workflows/setup-git@main
+        with:
+          flags: "--global"
 
       - name: Create a new Hugo project
         run: |
