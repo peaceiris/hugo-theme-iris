@@ -1,6 +1,4 @@
 module:
-  imports:
-    - path: github.com/jaywcjlove/hotkeys
-      mounts:
-        - source: dist
-          target: assets/mod/hotkeys
+  hugoVersion:
+    extended: true
+    min: "0.97.3"
