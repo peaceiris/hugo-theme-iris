@@ -24,10 +24,6 @@ hugo:
 	export HUGO_VERSION=$(shell make get-hugo-version) && \
 		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
 
-.PHONY: bumphugo
-bumphugo:
-	bash ./scripts/bump_hugo.sh
-
 .PHONY: build
 build:
 	$(eval opt := --minify --cleanDestinationDir)

@@ -15,5 +15,3 @@ services:
     tty: true
     working_dir: /src/hugo-theme-iris/exampleSite
     entrypoint: bash
-    command:
-      - "git config --global --add safe.directory /src/hugo-theme-iris"
