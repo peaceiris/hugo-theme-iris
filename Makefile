@@ -8,9 +8,10 @@ GH_USER_ID := peaceiris
 
 .PHONY: up
 up:
-	$(DOCKER_COMPOSE) up -d
-	$(DOCKER_COMPOSE) exec hugo hugo \
-		server --navigateToChanged --bind=0.0.0.0 --buildDrafts
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) up -d && \
+		$(DOCKER_COMPOSE) exec hugo hugo \
+			server --navigateToChanged --bind=0.0.0.0 --buildDrafts
 
 .PHONY: npm-up
 npm-up:
@@ -20,7 +21,8 @@ npm-up:
 .PHONY: hugo
 hugo:
 	# make hugo cmd="version"
-	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
 
 .PHONY: bumphugo
 bumphugo:
@@ -29,7 +31,8 @@ bumphugo:
 .PHONY: build
 build:
 	$(eval opt := --minify --cleanDestinationDir)
-	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-build
 npm-build:
@@ -38,9 +41,9 @@ npm-build:
 
 .PHONY: test
 test:
-	$(eval opt := --minify \
-		--renderToMemory --printPathWarnings --debug)
-	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
+	$(eval opt := --minify --renderToMemory --printPathWarnings --debug)
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-test
 npm-test:
@@ -53,7 +56,8 @@ metrics:
 	$(eval opt := --minify \
 		--renderToMemory --printPathWarnings --debug \
 		--templateMetrics --templateMetricsHints)
-	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: cibuild
 cibuild:
