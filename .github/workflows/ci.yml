@@ -51,7 +51,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
-      - run: make cibuild
+      - run: make build-staging
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.3
@@ -68,7 +68,7 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
 
-      - run: make cibuild-prod
+      - run: make build-prod
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
@@ -145,7 +145,7 @@ jobs:
         run: |
           sed -i 's/enableGitInfo: true/# enableGitInfo: true/' exampleSite/config/_default/config.yaml
 
-      - run: make build
+      - run: make docker-build
 
   setup:
     runs-on: ubuntu-20.04

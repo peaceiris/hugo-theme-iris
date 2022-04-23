@@ -16,11 +16,11 @@
   "scripts": {
     "postinstall": "npx husky install",
     "start": "run-p client server",
-    "server": "make up",
+    "server": "make dev",
     "client": "wait-on http://localhost:1313 && open http://localhost:1313",
-    "up": "make npm-up",
-    "build": "make npm-build",
-    "test": "make npm-test",
+    "dev": "make dev",
+    "build": "make build-prod",
+    "test": "make test",
     "release": "standard-version"
   },
   "lint-staged": {
@@ -40,7 +40,7 @@
     "wait-on": "^6.0.1"
   },
   "engines": {
-    "node": ">=16.13.2",
-    "npm": ">=8.3.0"
+    "node": ">=16.14.2",
+    "npm": ">=8.7.0"
   }
 }
