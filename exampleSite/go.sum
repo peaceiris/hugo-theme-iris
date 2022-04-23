@@ -3,6 +3,7 @@ github.com/hakimel/reveal.js v0.0.0-20210827074853-01d8d669bc2b h1:kgGMoXKbp58tg
 github.com/hakimel/reveal.js v0.0.0-20210827074853-01d8d669bc2b/go.mod h1:vIoaZ8tJbfDF30DhKf6Dia5ykePO0tETa9Posw8UrOE=
 github.com/jaywcjlove/hotkeys v3.8.7+incompatible h1:bHVYgNlsrfgya/U5dQiM703gzZZXzQuvM1B62FPNh2U=
 github.com/jaywcjlove/hotkeys v3.8.7+incompatible/go.mod h1:B8sgoHCreUIgvVuJaI5mfsyw/gFV+c+OlJfNbLpdtzQ=
+github.com/jaywcjlove/hotkeys v3.9.0+incompatible/go.mod h1:B8sgoHCreUIgvVuJaI5mfsyw/gFV+c+OlJfNbLpdtzQ=
 github.com/jgthms/bulma v0.0.0-20210618174152-5a23dcbfe4bf/go.mod h1:89FLBKXYFKfOKAoDeUT26V0pHGwzr205cMXAEqtAVOI=
 github.com/jgthms/bulma v0.0.0-20210828105430-67ab02b2890d h1:Mlp9/N0fRpb7Bw1nqvCmtGZRmrvbvwlHEZX6kOr2+Wk=
 github.com/jgthms/bulma v0.0.0-20210828105430-67ab02b2890d/go.mod h1:89FLBKXYFKfOKAoDeUT26V0pHGwzr205cMXAEqtAVOI=

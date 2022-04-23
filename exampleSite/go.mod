@@ -1,12 +1,11 @@
 module github.com/peaceiris/hugo-theme-iris/exampleSite
 
-go 1.15
+go 1.18
 
 replace github.com/peaceiris/hugo-theme-iris => ../
 
 require (
 	github.com/hakimel/reveal.js v0.0.0-20210827074853-01d8d669bc2b // indirect
-	github.com/jaywcjlove/hotkeys v3.8.7+incompatible // indirect
 	github.com/jgthms/bulma v0.0.0-20210828105430-67ab02b2890d // indirect
 	github.com/mathjax/MathJax v0.0.0-20210617144258-7146ffa47956 // indirect
 	github.com/mermaid-js/mermaid v8.8.5-0.20210826174357-48b6a32fe19a+incompatible // indirect
