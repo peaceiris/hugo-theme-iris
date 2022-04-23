@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.42.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.42.0...v0.42.1) (2022-04-23)
+
+
+### build
+
+* hugo non-extended version deprecated ([b7adc99](https://github.com/peaceiris/hugo-theme-iris/commit/b7adc99b803323a709e3948c4ddc082f87b931be))
+* useResourceCacheWhen fallback ([31213da](https://github.com/peaceiris/hugo-theme-iris/commit/31213dada0f022ac49cac3f3520a18b74e504fa3))
+
+### chore
+
+* hugo mod tidy ([c497e94](https://github.com/peaceiris/hugo-theme-iris/commit/c497e94d7292b77fab53185e891eea176d151f65))
+
+
+
 # [0.42.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.41.4...v0.42.0) (2022-04-23)
 
 
