@@ -8,9 +8,10 @@ GH_USER_ID := peaceiris
 
 .PHONY: up
 up:
-	$(DOCKER_COMPOSE) up -d
-	$(DOCKER_COMPOSE) exec hugo hugo \
-		server --navigateToChanged --bind=0.0.0.0 --buildDrafts
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) up -d && \
+		$(DOCKER_COMPOSE) exec hugo hugo \
+			server --navigateToChanged --bind=0.0.0.0 --buildDrafts
 
 .PHONY: npm-up
 npm-up:
@@ -20,7 +21,8 @@ npm-up:
 .PHONY: hugo
 hugo:
 	# make hugo cmd="version"
-	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
 
 .PHONY: bumphugo
 bumphugo:
@@ -29,7 +31,8 @@ bumphugo:
 .PHONY: build
 build:
 	$(eval opt := --minify --cleanDestinationDir)
-	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-build
 npm-build:
@@ -38,9 +41,9 @@ npm-build:
 
 .PHONY: test
 test:
-	$(eval opt := --minify \
-		--renderToMemory --printPathWarnings --debug)
-	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
+	$(eval opt := --minify --renderToMemory --printPathWarnings --debug)
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-test
 npm-test:
@@ -53,7 +56,8 @@ metrics:
 	$(eval opt := --minify \
 		--renderToMemory --printPathWarnings --debug \
 		--templateMetrics --templateMetricsHints)
-	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
+	export HUGO_VERSION=$(shell make get-hugo-version) && \
+		$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: cibuild
 cibuild:
@@ -75,3 +79,11 @@ fetchdata:
 	cd ./exampleSite && \
 		bash ./scripts/fetch_data.sh ${GH_USER_ID} > ./data/github/${GH_USER_ID}.json && \
 		deno run --allow-net --allow-read --allow-write --unstable scripts/fetch_images.ts
+
+.PHONY: get-go-version
+get-go-version:
+	@cd ./deps && go mod edit -json | jq -r '.Go'
+
+.PHONY: get-hugo-version
+get-hugo-version:
+	@cd ./deps && go mod edit -json | jq -r '.Require[] | select(.Path == "github.com/gohugoio/hugo") | .Version | split("v") | .[1]'
