@@ -34,28 +34,12 @@ jobs:
 
       - name: Set envs
         id: envs
-        run: |
-          . ./.env
-          echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
-          echo "::set-output name=GO_VERSION::${GO_VERSION}"
-          echo "::set-output name=NVMRC::$(cat .nvmrc)"
+        uses: ./.github/workflows/scripts/envs
 
-      - uses: peaceiris/workflows/setup-node@v0.13.0
+      - uses: peaceiris/workflows/setup-hugo@main
         with:
-          node-version: "${{ steps.envs.outputs.NVMRC }}"
-
-      - uses: peaceiris/workflows/setup-go@v0.13.0
-        with:
+          node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
           go-version: "${{ steps.envs.outputs.GO_VERSION }}"
-          cache-path: |
-            ${{ env.HUGO_CACHEDIR }}
-          cache-key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          cache-restore-keys: |
-            ${{ runner.os }}-hugomod-
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2.5.0
-        with:
           hugo-version: "${{ steps.envs.outputs.HUGO_VERSION }}"
           extended: true
 
@@ -146,12 +130,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/cache@v3
+      - name: Set envs
+        id: envs
+        uses: ./.github/workflows/scripts/envs
+
+      - uses: peaceiris/workflows/setup-hugo@main
         with:
-          path: ${{ env.HUGO_CACHEDIR }}
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod-
+          node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
+          go-version: "${{ steps.envs.outputs.GO_VERSION }}"
+          hugo-version: "${{ steps.envs.outputs.HUGO_VERSION }}"
+          extended: true
 
       - name: prepare
         run: |
@@ -175,28 +163,12 @@ jobs:
 
       - name: Set envs
         id: envs
-        run: |
-          . ./.env
-          echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
-          echo "::set-output name=GO_VERSION::${GO_VERSION}"
-          echo "::set-output name=NVMRC::$(cat .nvmrc)"
+        uses: ./.github/workflows/scripts/envs
 
-      - uses: peaceiris/workflows/setup-node@v0.13.0
+      - uses: peaceiris/workflows/setup-hugo@main
         with:
-          node-version: "${{ steps.envs.outputs.NVMRC }}"
-
-      - uses: peaceiris/workflows/setup-go@v0.13.0
-        with:
+          node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
           go-version: "${{ steps.envs.outputs.GO_VERSION }}"
-          cache-path: |
-            ${{ env.HUGO_CACHEDIR }}
-          cache-key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          cache-restore-keys: |
-            ${{ runner.os }}-hugomod-
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2.5.0
-        with:
           hugo-version: "${{ steps.envs.outputs.HUGO_VERSION }}"
           extended: ${{ matrix.extended }}
 
