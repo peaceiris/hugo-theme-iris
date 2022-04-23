@@ -153,11 +153,6 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     permissions:
       contents: read
-    strategy:
-      matrix:
-        extended:
-          - true
-          - false
     steps:
       - uses: actions/checkout@v3
 
@@ -170,7 +165,7 @@ jobs:
           node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
           go-version: "${{ steps.envs.outputs.GO_VERSION }}"
           hugo-version: "${{ steps.envs.outputs.HUGO_VERSION }}"
-          extended: ${{ matrix.extended }}
+          extended: true
 
       - uses: peaceiris/workflows/setup-git@main
         with:
