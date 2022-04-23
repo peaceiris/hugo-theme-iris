@@ -36,6 +36,11 @@ minify:
     xml:
       keepWhitespace: true
 
+build:
+  noJSConfigInAssets: false
+  useResourceCacheWhen: fallback
+  writeStats: true
+
 # Configure Languages
 DefaultContentLanguage: en
 languages:
