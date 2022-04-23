@@ -213,7 +213,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.75.1"
+          hugo-version: "0.97.3"
           extended: true
 
       - name: Fetch data
