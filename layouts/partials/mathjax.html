@@ -6,6 +6,6 @@
   };
 </script>
 
-{{ $js := resources.Get "mod/mathjax/tex-mml-chtml.js" }}
+{{ $js := resources.GetRemote "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js" }}
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
 <script defer type="text/javascript" id="MathJax-script" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
