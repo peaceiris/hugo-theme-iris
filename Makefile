@@ -75,3 +75,11 @@ fetchdata:
 	cd ./exampleSite && \
 		bash ./scripts/fetch_data.sh ${GH_USER_ID} > ./data/github/${GH_USER_ID}.json && \
 		deno run --allow-net --allow-read --allow-write --unstable scripts/fetch_images.ts
+
+.PHONY: get-go-version
+get-go-version:
+	@cd ./deps && go mod edit -json | jq -r '.Go'
+
+.PHONY: get-hugo-version
+get-hugo-version:
+	@cd ./deps && go mod edit -json | jq -r '.Require[] | select(.Path == "github.com/gohugoio/hugo") | .Version | split("v") | .[1]'

@@ -33,3 +33,12 @@ updates:
   - "dependencies-gomod"
   commit-message:
     prefix: deps(gomod)
+
+- package-ecosystem: "gomod"
+  directory: "/deps"
+  schedule:
+    interval: "daily"
+    time: "11:00"
+    timezone: "Japan"
+  commit-message:
+    prefix: "deps"
