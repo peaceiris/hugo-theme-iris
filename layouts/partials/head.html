@@ -4,9 +4,9 @@
 
   {{ if $.Params.slide }}
   <style>
-    {{ $cssMain := resources.Get "mod/revealjs/dist/reveal.css" | toCSS | minify }}
+    {{ $cssMain := resources.GetRemote "https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css" | toCSS | minify }}
     {{ $cssMain.Content | safeCSS }}
-    {{ $cssTheme := resources.Get "mod/revealjs/dist/theme/white.css" | toCSS | minify }}
+    {{ $cssTheme := resources.GetRemote "https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css" | toCSS | minify }}
     {{ $cssTheme.Content | safeCSS }}
   </style>
   {{ else }}
