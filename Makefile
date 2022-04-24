@@ -4,32 +4,31 @@ DOCKER_COMPOSE := docker compose
 GH_USER_ID := peaceiris
 
 
-.PHONY: docker-npm-ci
-docker-npm-ci:
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
-	$(DOCKER_COMPOSE) run --rm --entrypoint=npm hugo ci
+.PHONY: npm-ci
+npm-ci:
+	npm ci
 
 .PHONY: docker-dev
-docker-dev: docker-npm-ci
+docker-dev: npm-ci
 	$(eval opt := server --navigateToChanged --bind=0.0.0.0 --buildDrafts)
 	export HUGO_VERSION=$(shell make get-hugo-version) && \
 	$(DOCKER_COMPOSE) up -d && \
 	$(DOCKER_COMPOSE) exec hugo hugo $(opt)
 
 .PHONY: docker-hugo
-docker-hugo: docker-npm-ci
+docker-hugo: npm-ci
 	# make docker-hugo cmd="version"
 	export HUGO_VERSION=$(shell make get-hugo-version) && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
 
 .PHONY: docker-build
-docker-build: docker-npm-ci
+docker-build: npm-ci
 	$(eval opt := --minify --cleanDestinationDir)
 	export HUGO_VERSION=$(shell make get-hugo-version) && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: docker-test
-docker-test: docker-npm-ci
+docker-test: npm-ci
 	$(eval opt := --minify --renderToMemory --printPathWarnings --debug \
 		--templateMetrics --templateMetricsHints)
 	export HUGO_VERSION=$(shell make get-hugo-version) && \

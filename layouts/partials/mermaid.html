@@ -1,4 +1,4 @@
-{{ $js := resources.GetRemote "https://cdn.jsdelivr.net/npm/mermaid@9.0.1/dist/mermaid.min.js" }}
+{{ $js := resources.Get "mermaid/dist/mermaid.min.js" }}
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
 <script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 <script>

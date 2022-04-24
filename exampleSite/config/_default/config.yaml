@@ -8,12 +8,14 @@ module:
       target: assets
     - source: static
       target: static
-    - source: node_modules/mathjax
-      target: assets/mathjax
     - source: node_modules/reveal.js
       target: assets/reveal.js
     - source: node_modules/hotkeys-js
       target: assets/hotkeys-js
+    - source: node_modules/mermaid
+      target: assets/mermaid
+    - source: node_modules/mathjax
+      target: assets/mathjax
     - source: node_modules/mathjax/es5/output/chtml/fonts/woff-v2
       target: static/mathjax/es5/output/chtml/fonts/woff-v2
 
