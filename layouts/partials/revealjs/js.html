@@ -1,24 +1,24 @@
-{{ $revealjs := resources.GetRemote "https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js" }}
+{{ $revealjs := resources.Get "reveal.js/dist/reveal.js" }}
 {{ $revealjsHash := $revealjs | resources.Fingerprint "sha512" }}
 <script src="{{ $revealjsHash.Permalink }}" integrity="{{ $revealjsHash.Data.Integrity }}"></script>
 
-{{ $markdown := resources.GetRemote "https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/markdown/markdown.js" }}
+{{ $markdown := resources.Get "reveal.js/plugin/markdown/markdown.js" }}
 {{ $markdownHash := $markdown | resources.Fingerprint "sha512" }}
 <script src="{{ $markdownHash.Permalink }}" integrity="{{ $markdownHash.Data.Integrity }}"></script>
 
-{{ $highlight := resources.GetRemote "https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/highlight.js" }}
+{{ $highlight := resources.Get "reveal.js/plugin/highlight/highlight.js" }}
 {{ $highlightHash := $highlight | resources.Fingerprint "sha512" }}
 <script src="{{ $highlightHash.Permalink }}" integrity="{{ $highlightHash.Data.Integrity }}"></script>
 
-{{ $zoom := resources.GetRemote "https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/zoom/zoom.js" }}
+{{ $zoom := resources.Get "reveal.js/plugin/zoom/zoom.js" }}
 {{ $zoomHash := $zoom | resources.Fingerprint "sha512" }}
 <script src="{{ $zoomHash.Permalink }}" integrity="{{ $zoomHash.Data.Integrity }}"></script>
 
-{{ $notes := resources.GetRemote "https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/notes/notes.js" }}
+{{ $notes := resources.Get "reveal.js/plugin/notes/notes.js" }}
 {{ $notesHash := $notes | resources.Fingerprint "sha512" }}
 <script src="{{ $notesHash.Permalink }}" integrity="{{ $notesHash.Data.Integrity }}"></script>
 
-{{ $math := resources.GetRemote "https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/math/math.js" }}
+{{ $math := resources.Get "reveal.js/plugin/math/math.js" }}
 {{ $mathHash := $math | resources.Fingerprint "sha512" }}
 <script src="{{ $mathHash.Permalink }}" integrity="{{ $mathHash.Data.Integrity }}"></script>
 
