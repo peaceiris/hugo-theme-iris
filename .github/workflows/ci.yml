@@ -36,7 +36,7 @@ jobs:
         id: envs
         uses: ./.github/workflows/scripts/envs
 
-      - uses: peaceiris/workflows/setup-hugo@main
+      - uses: peaceiris/workflows/setup-hugo@v0.14.0
         with:
           node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
           go-version: "${{ steps.envs.outputs.GO_VERSION }}"
@@ -89,7 +89,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: peaceiris/workflows/setup-node@v0.13.0
+      - uses: peaceiris/workflows/setup-node@v0.14.0
 
       - name: Install lighthouse
         run: sudo npm i -g lighthouse
@@ -134,7 +134,7 @@ jobs:
         id: envs
         uses: ./.github/workflows/scripts/envs
 
-      - uses: peaceiris/workflows/setup-hugo@main
+      - uses: peaceiris/workflows/setup-hugo@v0.14.0
         with:
           node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
           go-version: "${{ steps.envs.outputs.GO_VERSION }}"
@@ -160,14 +160,14 @@ jobs:
         id: envs
         uses: ./.github/workflows/scripts/envs
 
-      - uses: peaceiris/workflows/setup-hugo@main
+      - uses: peaceiris/workflows/setup-hugo@v0.14.0
         with:
           node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
           go-version: "${{ steps.envs.outputs.GO_VERSION }}"
           hugo-version: "${{ steps.envs.outputs.HUGO_VERSION }}"
           extended: true
 
-      - uses: peaceiris/workflows/setup-git@main
+      - uses: peaceiris/workflows/setup-git@v0.14.0
         with:
           flags: "--global"
 
