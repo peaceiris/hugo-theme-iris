@@ -40,4 +40,3 @@ npm run release -- --release-as "${RELEASE_TYPE}" --preset eslint
 TAG_NAME="v$(jq -r '.version' ./package.json)"
 git push origin main
 git push origin "${TAG_NAME}"
-g
