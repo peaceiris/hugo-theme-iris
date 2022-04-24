@@ -35,19 +35,24 @@ docker-test: docker-npm-ci
 	export HUGO_VERSION=$(shell make get-hugo-version) && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
+.PHONY: npm-ci
+npm-ci: fetch-fonts
+	cd ./exampleSite && \
+	npm ci
+
 .PHONY: dev
-dev: fetch-fonts
+dev: npm-ci
 	cd ./exampleSite && \
 	hugo server --renderStaticToDisk --navigateToChanged --buildDrafts
 
 .PHONY: test
-test: fetch-fonts
+test: npm-ci
 	cd ./exampleSite && \
 	hugo --minify --renderToMemory --printPathWarnings --debug \
 		--templateMetrics --templateMetricsHints
 
 .PHONY: build-staging
-build-staging: fetch-fonts
+build-staging: npm-ci
 	cd ./exampleSite && \
 	hugo --minify --cleanDestinationDir \
 		--environment "staging" \
@@ -55,7 +60,7 @@ build-staging: fetch-fonts
 		--templateMetrics --templateMetricsHints
 
 .PHONY: build-prod
-build-prod: fetch-fonts
+build-prod: npm-ci
 	cd ./exampleSite && \
 	hugo --minify --cleanDestinationDir --printPathWarnings && \
 	wget -O ./public/report.html ${BASE_URL}/report.html || true
