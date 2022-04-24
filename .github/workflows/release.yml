@@ -6,9 +6,11 @@ on:
       - "v*.*.*"
 
 jobs:
-  release:
-    runs-on: ubuntu-18.04
+  main:
+    runs-on: ubuntu-20.04
     timeout-minutes: 2
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - uses: peaceiris/workflows/create-release-npm@v0.14.1
