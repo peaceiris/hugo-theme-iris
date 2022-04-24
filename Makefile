@@ -5,7 +5,7 @@ GH_USER_ID := peaceiris
 
 
 .PHONY: docker-npm-ci
-docker-npm-ci: fetch-fonts
+docker-npm-ci:
 	export HUGO_VERSION=$(shell make get-hugo-version) && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=npm hugo ci
 
@@ -36,7 +36,7 @@ docker-test: docker-npm-ci
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-ci
-npm-ci: fetch-fonts
+npm-ci:
 	cd ./exampleSite && \
 	npm ci
 
@@ -64,11 +64,6 @@ build-prod: npm-ci
 	cd ./exampleSite && \
 	hugo --minify --cleanDestinationDir --printPathWarnings && \
 	wget -O ./public/report.html ${BASE_URL}/report.html || true
-
-.PHONY: fetch-fonts
-fetch-fonts:
-	cd ./exampleSite && \
-	bash ./scripts/fetch_fonts.sh
 
 .PHONY: fetch-data
 fetch-data:

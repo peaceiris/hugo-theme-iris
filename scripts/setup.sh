@@ -13,6 +13,5 @@ cp -r ./hugo-theme-iris-main/exampleSite/{.gitignore,assets,config,content,data,
 rm ./assets/images/.gitignore
 rm -rf hugo-theme-iris-main
 hugo mod get -u github.com/peaceiris/hugo-theme-iris
-bash ./scripts/fetch_fonts.sh
 git add .
 git commit -m "Add hugo-theme-iris"
