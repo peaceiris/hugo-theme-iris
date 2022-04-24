@@ -49,7 +49,7 @@
   </div>
 </div>
 
-{{ $js := resources.GetRemote "https://cdn.jsdelivr.net/npm/hotkeys-js@3.9.0/dist/hotkeys.min.js" }}
+{{ $js := resources.Get "hotkeys-js/dist/hotkeys.min.js" }}
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
 <script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 <script>

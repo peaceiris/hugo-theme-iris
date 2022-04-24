@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "bulma": "^0.9.3",
+    "hotkeys-js": "^3.9.0",
     "mathjax": "^3.2.0",
     "reveal.js": "^4.0.2"
   },
