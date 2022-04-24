@@ -43,7 +43,7 @@ npm-ci: fetch-fonts
 .PHONY: dev
 dev: npm-ci
 	cd ./exampleSite && \
-	hugo server --navigateToChanged --buildDrafts
+	hugo server --renderStaticToDisk --navigateToChanged --buildDrafts
 
 .PHONY: test
 test: npm-ci
