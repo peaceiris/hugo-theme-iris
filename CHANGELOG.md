@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.43.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.42.1...v0.43.0) (2022-04-24)
+
+
+### build
+
+* add hugo mod tidy ([1b8b952](https://github.com/peaceiris/hugo-theme-iris/commit/1b8b9528dac11ffa9ee73ca8afb0eb8664925ec4))
+* remove fetch_fonts.sh (#514) ([82294ba](https://github.com/peaceiris/hugo-theme-iris/commit/82294bafe04b3f5953549266c372a9d05238b566)), closes [#514](https://github.com/peaceiris/hugo-theme-iris/issues/514)
+
+### chore
+
+* add --renderStaticToDisk ([12be587](https://github.com/peaceiris/hugo-theme-iris/commit/12be5878a54ebe8361372818f6bb0c103fb17a93)), closes [#504](https://github.com/peaceiris/hugo-theme-iris/issues/504)
+* go mod tidy ([8680da4](https://github.com/peaceiris/hugo-theme-iris/commit/8680da46db3da98cd050ce2a58c6c319185514ac))
+* remove npm-ci task ([50048b8](https://github.com/peaceiris/hugo-theme-iris/commit/50048b8cf401b15f51ac4980f7b7e408c76f3143)), closes [#500](https://github.com/peaceiris/hugo-theme-iris/issues/500)
+
+### ci
+
+* add Dependabot automation (#510) ([6494118](https://github.com/peaceiris/hugo-theme-iris/commit/64941180864caab173d2cb07900fb0d36c891468)), closes [#510](https://github.com/peaceiris/hugo-theme-iris/issues/510)
+* add dependencies-go label ([734222b](https://github.com/peaceiris/hugo-theme-iris/commit/734222bb1db5c570f27495829a6dfc88ac3e4d7c))
+* add npm exampleSite ([e634736](https://github.com/peaceiris/hugo-theme-iris/commit/e63473692a0ee50fecd4046fe48fcb60ea294022))
+* bump peaceiris/workflows from 0.14.0 to 0.14.1 (#511) ([4489823](https://github.com/peaceiris/hugo-theme-iris/commit/4489823e608ed29af2782f54ea291502e6ff0897)), closes [#511](https://github.com/peaceiris/hugo-theme-iris/issues/511)
+* change cancel-in-progress to false ([40cdd8d](https://github.com/peaceiris/hugo-theme-iris/commit/40cdd8db1c085cf5af5ccc7359c273972e0233cd))
+* fix package-ecosystem npm_and_yarn ([4c3e975](https://github.com/peaceiris/hugo-theme-iris/commit/4c3e9756b1b6c17f256bfda1510ee019871036c4))
+* fix trigger type to review_requested ([42dcc8e](https://github.com/peaceiris/hugo-theme-iris/commit/42dcc8e3f4a711c97a6798d17027d3addff665f5))
+* pin peaceiris/workflows to 0.14.0 ([1587276](https://github.com/peaceiris/hugo-theme-iris/commit/1587276d3a9f3879bb75bad2f11b475df7e582af))
+* rename label from CI/CD to cicd ([db8e6eb](https://github.com/peaceiris/hugo-theme-iris/commit/db8e6ebe6120d2e69f03190a83922e4b74285682))
+
+### docs
+
+* add Install Node.js and npm ([100dfcf](https://github.com/peaceiris/hugo-theme-iris/commit/100dfcf5b7ff7de9284a40e019ae86ca7db5088e))
+
+### feat
+
+* manage hotkeys with npm (#516) ([d520749](https://github.com/peaceiris/hugo-theme-iris/commit/d520749cdef4b4456687e21302d9b5ef81c3a785)), closes [#516](https://github.com/peaceiris/hugo-theme-iris/issues/516)
+* manage mathjax with npm (#512) ([28c1165](https://github.com/peaceiris/hugo-theme-iris/commit/28c1165f1761bd8646434148634bc75cf4d066b0)), closes [#512](https://github.com/peaceiris/hugo-theme-iris/issues/512)
+* manage mermaid with npm (#517) ([6da70c1](https://github.com/peaceiris/hugo-theme-iris/commit/6da70c17be94f8365d336bc4bde4bddfcc4f13c7)), closes [#517](https://github.com/peaceiris/hugo-theme-iris/issues/517)
+* manage reveal.js with npm (#515) ([0741f5d](https://github.com/peaceiris/hugo-theme-iris/commit/0741f5dc6b1ab16139c66462a3bbbf91d854fb66)), closes [#515](https://github.com/peaceiris/hugo-theme-iris/issues/515)
+
+
+
 ## [0.42.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.42.0...v0.42.1) (2022-04-23)
 
 
