@@ -42,4 +42,4 @@ updates:
   labels:
   - "dependencies-go"
   commit-message:
-    prefix: "deps(gomod)"
+    prefix: "deps(go)"
