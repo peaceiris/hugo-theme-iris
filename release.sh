@@ -37,10 +37,7 @@ npm ci
 npm run build
 npm run release -- --release-as "${RELEASE_TYPE}" --preset eslint
 
-hugo mod tidy && hugo mod verify
-(cd ./exampleSite && hugo mod tidy && hugo mod verify)
-git commit -a "chore: hugo mod tidy"
-
 TAG_NAME="v$(jq -r '.version' ./package.json)"
 git push origin main
 git push origin "${TAG_NAME}"
+g
