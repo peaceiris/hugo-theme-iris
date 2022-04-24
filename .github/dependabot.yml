@@ -39,5 +39,7 @@ updates:
     interval: "daily"
     time: "11:00"
     timezone: "Japan"
+  labels:
+  - "dependencies-go"
   commit-message:
     prefix: "deps(gomod)"
