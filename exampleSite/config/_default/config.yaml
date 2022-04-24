@@ -3,6 +3,15 @@ baseURL: "https://hugothemeiris.peaceiris.app"
 module:
   imports:
     - path: github.com/peaceiris/hugo-theme-iris
+  mounts:
+    - source: assets
+      target: assets
+    - source: static
+      target: static
+    - source: node_modules/mathjax
+      target: assets/mathjax
+    - source: node_modules/mathjax/es5/output/chtml/fonts/woff-v2
+      target: static/mathjax/es5/output/chtml/fonts/woff-v2
 
 # googleAnalytics: UA-123-45
 disqusShortname: hugothemeiris

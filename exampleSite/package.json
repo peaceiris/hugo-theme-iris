@@ -7,10 +7,10 @@
     "devDependencies": {}
   },
   "dependencies": {
-    "bulma": "^0.9.3"
+    "bulma": "^0.9.3",
+    "mathjax": "^3.1.4"
   },
   "description": "",
-  "devDependencies": {},
   "license": "MIT",
   "main": "index.js",
   "name": "examplesite",
