@@ -1,0 +1,20 @@
+name: Dependabot Merge
+
+on:
+  pull_request_review:
+    types:
+      - submitted
+
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+    if: |
+      ${{ github.event.pull_request.user.login == 'dependabot[bot]' }} &&
+      github.event.review.state == 'approved'
+    permissions: {}
+    steps:
+      - name: Merge
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        run: gh pr comment --body "@dependabot squash and merge" "${PR_URL}"
