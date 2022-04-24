@@ -123,6 +123,12 @@ This theme depends on Hugo Modules.
 
 - [Download and install - The Go Programming Language](https://golang.org/doc/install)
 
+### Install Node.js and npm
+
+This theme depends on `node` and `npm`.
+
+cf. [Installing Node.js via package manager | Node.js](https://nodejs.org/en/download/package-manager/)
+
 ### Initialize New Hugo Project
 
 Here is [the setup script](https://github.com/peaceiris/hugo-theme-iris/blob/main/scripts/setup.sh).
