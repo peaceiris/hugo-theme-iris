@@ -11,5 +11,5 @@ services:
       - ${HUGO_CACHEDIR}:/tmp/hugo_cache
     stdin_open: true
     tty: true
-    working_dir: /src/hugo-theme-iris/exampleSite
+    working_dir: /src/hugo-theme-iris
     entrypoint: bash

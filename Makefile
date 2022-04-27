@@ -1,8 +1,9 @@
-pwd := $(CURDIR)
-cmd := ""
+cmd := "version"
+opt := ""
 DOCKER_COMPOSE := docker compose
 GH_USER_ID := peaceiris
-
+HUGO_VERSION := $(shell cd ./deps && go mod edit -json | jq -r '.Require[] | select(.Path == "github.com/gohugoio/hugo") | .Version | split("v") | .[1]')
+GO_VERSION := $(shell cd ./deps && go mod edit -json | jq -r '.Go')
 
 .PHONY: bump-node
 bump-node:
@@ -10,60 +11,55 @@ bump-node:
 
 .PHONY: npm-ci
 npm-ci:
+	cd ./exampleSite && \
 	npm ci
 
 .PHONY: docker-dev
-docker-dev: npm-ci
-	$(eval opt := server --navigateToChanged --bind=0.0.0.0 --buildDrafts)
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
+docker-dev:
+	$(eval opt := --bind=0.0.0.0)
+	export HUGO_VERSION=${HUGO_VERSION} && \
 	$(DOCKER_COMPOSE) up -d && \
-	$(DOCKER_COMPOSE) exec hugo hugo $(opt)
+	$(DOCKER_COMPOSE) exec hugo make dev opt=$(opt) || \
+	$(DOCKER_COMPOSE) down
 
 .PHONY: docker-hugo
-docker-hugo: npm-ci
-	# make docker-hugo cmd="version"
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
+docker-hugo:
+	@echo 'usage: make docker-hugo cmd="version"'
+	export HUGO_VERSION=${HUGO_VERSION} && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
 
 .PHONY: docker-build
-docker-build: npm-ci
-	$(eval opt := --minify --cleanDestinationDir)
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
-	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
+docker-build:
+	export HUGO_VERSION=${HUGO_VERSION} && \
+	$(DOCKER_COMPOSE) run --rm --entrypoint=make hugo build-prod
 
 .PHONY: docker-test
-docker-test: npm-ci
-	$(eval opt := --minify --renderToMemory --printPathWarnings --debug \
-		--templateMetrics --templateMetricsHints)
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
-	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
-
-.PHONY: npm-ci
-npm-ci:
-	cd ./exampleSite && \
-	npm ci
+docker-test:
+	export HUGO_VERSION=${HUGO_VERSION} && \
+	$(DOCKER_COMPOSE) run --rm --entrypoint=make hugo test
 
 .PHONY: dev
-dev: npm-ci
+dev:
 	cd ./exampleSite && \
-	hugo server --renderStaticToDisk --navigateToChanged --buildDrafts
+	hugo server --renderStaticToDisk --navigateToChanged --buildDrafts $(opt)
 
 .PHONY: test
-test: npm-ci
+test:
 	cd ./exampleSite && \
-	hugo --minify --renderToMemory --printPathWarnings --debug \
-		--templateMetrics --templateMetricsHints
+	hugo --minify --debug --renderToMemory \
+		--templateMetrics --templateMetricsHints \
+		--printPathWarnings --printUnusedTemplates
 
 .PHONY: build-staging
-build-staging: npm-ci
+build-staging:
 	cd ./exampleSite && \
-	hugo --minify --cleanDestinationDir \
+	hugo --minify --debug --cleanDestinationDir \
 		--environment "staging" \
-		--printPathWarnings --debug \
-		--templateMetrics --templateMetricsHints
+		--templateMetrics --templateMetricsHints \
+		--printPathWarnings --printUnusedTemplates
 
 .PHONY: build-prod
-build-prod: npm-ci
+build-prod:
 	cd ./exampleSite && \
 	hugo --minify --cleanDestinationDir --printPathWarnings && \
 	wget -O ./public/report.html ${BASE_URL}/report.html || true
@@ -76,8 +72,8 @@ fetch-data:
 
 .PHONY: get-go-version
 get-go-version:
-	@cd ./deps && go mod edit -json | jq -r '.Go'
+	@echo ${GO_VERSION}
 
 .PHONY: get-hugo-version
 get-hugo-version:
-	@cd ./deps && go mod edit -json | jq -r '.Require[] | select(.Path == "github.com/gohugoio/hugo") | .Version | split("v") | .[1]'
+	@echo ${HUGO_VERSION}
