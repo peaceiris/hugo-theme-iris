@@ -22,7 +22,8 @@ jobs:
       - name: Approve
         if: |
           (steps.meta.outputs.package-ecosystem == 'github_actions') ||
-          (steps.meta.outputs.package-ecosystem == 'npm_and_yarn' && steps.meta.outputs.directory == '/') ||
+          (steps.meta.outputs.package-ecosystem == 'go_modules' && steps.meta.outputs.directory == '/deps') ||
+          (steps.meta.outputs.package-ecosystem == 'npm_and_yarn' && steps.meta.outputs.directory == '/' ||
           (steps.meta.outputs.package-ecosystem == 'npm_and_yarn' && steps.meta.outputs.directory == '/exampleSite' && steps.meta.outputs.update-type == 'version-update:semver-minor') ||
           (steps.meta.outputs.package-ecosystem == 'npm_and_yarn' && steps.meta.outputs.directory == '/exampleSite' && steps.meta.outputs.update-type == 'version-update:semver-patch')
         env:
