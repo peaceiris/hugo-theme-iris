@@ -6,6 +6,15 @@ on:
       - opened
 
 jobs:
+  dump:
+    runs-on: ubuntu-20.04
+    permissions: {}
+    steps:
+      - name: Dump GitHub context
+        env:
+          GH_CXT: ${{ toJson(github) }}
+        run: echo "${GH_CXT}"
+
   approve:
     runs-on: ubuntu-20.04
     if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
