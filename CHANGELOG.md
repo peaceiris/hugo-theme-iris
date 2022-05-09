@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.43.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.43.0...v0.43.1) (2022-05-09)
+
+
+### build
+
+* remove hugo mod tidy ([ce44c48](https://github.com/peaceiris/hugo-theme-iris/commit/ce44c48d87224c27000c52c43ea399eda1fece4e))
+
+### chore
+
+* add bump-node task (#526) ([4717a41](https://github.com/peaceiris/hugo-theme-iris/commit/4717a413f5230a73a15c775871fbae53d27cee2d)), closes [#526](https://github.com/peaceiris/hugo-theme-iris/issues/526)
+
+### ci
+
+* add dump job ([105cec0](https://github.com/peaceiris/hugo-theme-iris/commit/105cec0ea172a054fbfea99b8fdc500ddd002b00))
+* add patch to filter ([720dbad](https://github.com/peaceiris/hugo-theme-iris/commit/720dbad3ae0a917709fd283a2833c00bbe1ef6ce))
+* fix filter ([bc1e9f9](https://github.com/peaceiris/hugo-theme-iris/commit/bc1e9f9a884a2094031c2ac414ce7db3232fb22f))
+* fix filter ([1b29741](https://github.com/peaceiris/hugo-theme-iris/commit/1b29741be19d080380a58c80a3ab38165166448a))
+
+### docs
+
+* delete old workflow example ([2d4e48b](https://github.com/peaceiris/hugo-theme-iris/commit/2d4e48b7d9ef25b4a8979bafb496b5c4f1f999f5))
+
+
+
 # [0.43.0](https://github.com/peaceiris/hugo-theme-iris/compare/v0.42.1...v0.43.0) (2022-04-24)
 
 
