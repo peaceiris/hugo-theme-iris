@@ -4,6 +4,10 @@ DOCKER_COMPOSE := docker compose
 GH_USER_ID := peaceiris
 
 
+.PHONY: bump-node
+bump-node:
+	bash scripts/bump_node.sh
+
 .PHONY: npm-ci
 npm-ci:
 	npm ci
