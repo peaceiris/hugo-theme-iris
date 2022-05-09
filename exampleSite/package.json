@@ -7,7 +7,7 @@
     "devDependencies": {}
   },
   "dependencies": {
-    "bulma": "^0.9.3",
+    "bulma": "^0.9.4",
     "hotkeys-js": "^3.9.3",
     "mathjax": "^3.2.0",
     "mermaid": "^9.0.1",
