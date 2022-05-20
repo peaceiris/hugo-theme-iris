@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.43.2](https://github.com/peaceiris/hugo-theme-iris/compare/v0.43.1...v0.43.2) (2022-05-20)
+
+
+### ci
+
+* bump peaceiris/workflows from 0.14.1 to 0.15.0 (#531) ([b39a497](https://github.com/peaceiris/hugo-theme-iris/commit/b39a49708bdb24bbe59c537303bc222e92089e4a)), closes [#531](https://github.com/peaceiris/hugo-theme-iris/issues/531)
+
+
+
 ## [0.43.1](https://github.com/peaceiris/hugo-theme-iris/compare/v0.43.0...v0.43.1) (2022-05-09)
 
 
