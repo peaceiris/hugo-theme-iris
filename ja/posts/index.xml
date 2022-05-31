@@ -11,9 +11,8 @@
 <link>https://hugothemeiris.peaceiris.app/ja/posts/github-pages-and-github-actions/</link>
 <pubDate>Fri, 01 Nov 2019 01:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.app/ja/posts/github-pages-and-github-actions/</guid>
-<description>GitHub Actions for GitHub Pages GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators peaceiris/actions-gh-pages
-This is a GitHub Action to deploy your static files to GitHub Pages. This deploy action can be combined simply and freely with Static Site Generators (Hugo, mdBook, MkDocs, Gatsby, GitBook, etc.).
-- name:Deployuses:peaceiris/actions-gh-pages@v3with:deploy_key:${{ secrets.ACTIONS_DEPLOY_KEY }}publish_dir:./publicThe above example step will deploy ./public directory to gh-pages branch.</description>
+<description>GitHub Actions for GitHub Pages GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators peaceiris/actions-gh-pages This is a GitHub Action to deploy your static files to GitHub Pages. This deploy action can be combined simply and freely with Static Site Generators (Hugo, mdBook, MkDocs, Gatsby, GitBook, etc.).
+- name: Deploy uses: peaceiris/actions-gh-pages@v3 with: deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} publish_dir: ./public The above example step will deploy .</description>
 </item>
 </channel>
 </rss>

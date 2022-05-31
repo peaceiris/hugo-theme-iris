@@ -23,15 +23,15 @@ Point Of View Hold down the alt key (ctrl in Linux) and click on any element to 
 <pubDate>Thu, 02 Jan 2020 01:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.app/posts/mermaid/</guid>
 <description>mermaid mermaid-js/mermaid: Generation of diagram and flowchart from text in a similar manner as markdown Example Input Use mermaid shortcode.
-{{&amp;lt; mermaid &amp;gt;}} sequenceDiagram participant Alice participant Bob Alice-&amp;gt;&amp;gt;John: Hello John, how are you? loop Healthcheck John-&amp;gt;&amp;gt;John: Fight against hypochondria end Note right of John: Rational thoughts &amp;lt;br/&amp;gt;prevail! John--&amp;gt;&amp;gt;Alice: Great! John-&amp;gt;&amp;gt;Bob: How about you? Bob--&amp;gt;&amp;gt;John: Jolly good! {{&amp;lt; /mermaid &amp;gt;}} Output sequenceDiagram participant Alice participant Bob Alice-John: Hello John, how are you?</description>
+{{&amp;lt; mermaid &amp;gt;}} sequenceDiagram participant Alice participant Bob Alice-&amp;gt;&amp;gt;John: Hello John, how are you? loop Healthcheck John-&amp;gt;&amp;gt;John: Fight against hypochondria end Note right of John: Rational thoughts &amp;lt;br/&amp;gt;prevail! John--&amp;gt;&amp;gt;Alice: Great! John-&amp;gt;&amp;gt;Bob: How about you? Bob--&amp;gt;&amp;gt;John: Jolly good! {{&amp;lt; /mermaid &amp;gt;}} Output sequenceDiagram participant Alice participant Bob Alice->>John: Hello John, how are you?</description>
 </item>
 <item>
 <title>MathJax Support $E=mc^2$</title>
 <link>https://hugothemeiris.peaceiris.app/posts/math/</link>
 <pubDate>Wed, 01 Jan 2020 01:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.app/posts/math/</guid>
-<description>MathJax mathjax/MathJax: Beautiful math in all browsers Inline Example Input Inline $E =mc^2$ Output Inline $E = mc^2$
-Basic Example Input $$\sum_{i=0}^n i^2=\frac{(n^2+n)(2n+1)}{6} $$ Output $$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$
+<description>MathJax mathjax/MathJax: Beautiful math in all browsers Inline Example Input Inline $E = mc^2$ Output Inline $E = mc^2$
+Basic Example Input $$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$ Output $$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$
 Math Shortcode See also this thread .
 Input {{&amp;lt; math &amp;gt;}} \begin{vmatrix}a &amp;amp; b\\ c &amp;amp; d \end{vmatrix} {{&amp;lt; /math &amp;gt;}} Output $$ \begin{vmatrix}a &amp; b\\ c &amp; d \end{vmatrix} $$ </description>
 </item>
@@ -40,9 +40,8 @@ Input {{&amp;lt; math &amp;gt;}} \begin{vmatrix}a &amp;amp; b\\ c &amp;amp; d \e
 <link>https://hugothemeiris.peaceiris.app/posts/github-pages-and-github-actions/</link>
 <pubDate>Fri, 01 Nov 2019 01:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.app/posts/github-pages-and-github-actions/</guid>
-<description>GitHub Actions for GitHub Pages GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators peaceiris/actions-gh-pages
-This is a GitHub Action to deploy your static files to GitHub Pages. This deploy action can be combined simply and freely with Static Site Generators (Hugo, mdBook, MkDocs, Gatsby, GitBook, etc.).
-- name:Deployuses:peaceiris/actions-gh-pages@v3with:deploy_key:${{ secrets.ACTIONS_DEPLOY_KEY }}publish_dir:./publicThe above example step will deploy ./public directory to gh-pages branch.</description>
+<description>GitHub Actions for GitHub Pages GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators peaceiris/actions-gh-pages This is a GitHub Action to deploy your static files to GitHub Pages. This deploy action can be combined simply and freely with Static Site Generators (Hugo, mdBook, MkDocs, Gatsby, GitBook, etc.).
+- name: Deploy uses: peaceiris/actions-gh-pages@v3 with: deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} publish_dir: ./public The above example step will deploy .</description>
 </item>
 <item>
 <title>Emoji Support</title>
