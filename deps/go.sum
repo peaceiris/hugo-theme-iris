@@ -78,8 +78,8 @@ github.com/go-gl/glfw/v3.3/glfw v0.0.0-20191125211704-12ad95a8df72/go.mod h1:tQ2
 github.com/go-gl/glfw/v3.3/glfw v0.0.0-20200222043503-6f7a984d4dc4/go.mod h1:tQ2UAYgL5IevRw8kRxooKSPJfGvJ9fJQFa0TUsXzTg8=
 github.com/gobwas/glob v0.2.3 h1:A4xDbljILXROh+kObIiy5kIaPYD8e96x1tgBhUI5J+Y=
 github.com/gobwas/glob v0.2.3/go.mod h1:d3Ez4x06l9bZtSvzIay5+Yzi0fmZzPgnTbPcKjJAkT8=
-github.com/gohugoio/hugo v0.100.0 h1:hOrH2hmO4N+e/m/wS3dW2VvscSIV9Cka1Vc3xHGyT1g=
-github.com/gohugoio/hugo v0.100.0/go.mod h1:iye/iv02t3j06LBxMm3Txez9/PDdQaJGDTdqcCtmxc4=
+github.com/gohugoio/hugo v0.100.1 h1:nYZ/in9BELU3cTVWGTFgZC0DKcjdjb06+kl28MxdqRo=
+github.com/gohugoio/hugo v0.100.1/go.mod h1:iye/iv02t3j06LBxMm3Txez9/PDdQaJGDTdqcCtmxc4=
 github.com/gohugoio/locales v0.14.0 h1:Q0gpsZwfv7ATHMbcTNepFd59H7GoykzWJIxi113XGDc=
 github.com/gohugoio/locales v0.14.0/go.mod h1:ip8cCAv/cnmVLzzXtiTpPwgJ4xhKZranqNqtoIu0b/4=
 github.com/gohugoio/localescompressed v1.0.1 h1:KTYMi8fCWYLswFyJAeOtuk/EkXR/KPTHHNN9OS+RTxo=
