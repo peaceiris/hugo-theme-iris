@@ -1,6 +1,7 @@
 .DS_Store
 *~
-.idea
+.idea/
+.vscode/
 
 public
 node_modules

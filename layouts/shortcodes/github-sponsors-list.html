@@ -4,21 +4,23 @@
 {{ $userData := (index $githubData $id) }}
 <div class="columns is-multiline is-mobile is-centered">
 {{ range $userData.data.user.sponsorshipsAsMaintainer.nodes }}
-  {{ $sponsorID := .sponsor.login }}
-  {{ $sponsorURL := delimit (slice "https://github.com/" $sponsorID) "" | safeURL }}
-  <div class="column is-3-mobile is-2-tablet">
-    <figure class="image is-64x64">
-      <a href="{{ $sponsorURL }}" rel="noopener noreferrer" target="_blank" class="normal-link">
-        <img
-          class="is-rounded"
-          alt="{{ $sponsorID }} | GitHub"
-          src="{{ $sponsorURL }}.png"
-          decoding="async"
-          loading="lazy"
-        />
-      </a>
-      <figcaption>{{ print $sponsorID }}</figcaption>
-    </figure>
-  </div>
+  {{ if .sponsor }}
+    {{ $sponsorID := .sponsor.login }}
+    {{ $sponsorURL := delimit (slice "https://github.com/" $sponsorID) "" | safeURL }}
+    <div class="column is-3-mobile is-2-tablet">
+      <figure class="image is-64x64">
+        <a href="{{ $sponsorURL }}" rel="noopener noreferrer" target="_blank" class="normal-link">
+          <img
+            class="is-rounded"
+            alt="{{ $sponsorID }} | GitHub"
+            src="{{ $sponsorURL }}.png"
+            decoding="async"
+            loading="lazy"
+          />
+        </a>
+        <figcaption>{{ print $sponsorID }}</figcaption>
+      </figure>
+    </div>
+  {{ end }}
 {{ end }}
 </div>
