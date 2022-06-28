@@ -4,7 +4,7 @@
 {{ $userData := (index $githubData $id) }}
 <div class="columns is-multiline is-mobile is-centered">
 {{ range $userData.data.user.sponsorshipsAsMaintainer.nodes }}
-  {{ with .sponsor }}
+  {{ if .sponsor }}
     {{ $sponsorID := .sponsor.login }}
     {{ $sponsorURL := delimit (slice "https://github.com/" $sponsorID) "" | safeURL }}
     <div class="column is-3-mobile is-2-tablet">
