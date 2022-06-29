@@ -37,6 +37,6 @@ jobs:
           RELEASE_TITLE="Release ${NEW_TAG}"
           git tag -a ${NEW_TAG} -m "${RELEASE_TITLE}"
           git push origin ${NEW_TAG}
-          echo "See [CHANGELOG](https://github.com/peaceiris/playground-actions/compare/${CURRENT_TAG}...${NEW_TAG}) for more details." > "${RELEASE_NOTES}"
+          echo "See [CHANGELOG](https://github.com/${GITHUB_REPOSITORY}/compare/${CURRENT_TAG}...${NEW_TAG}) for more details." > "${RELEASE_NOTES}"
           gh release create "${NEW_TAG}" --title "${RELEASE_TITLE}" --notes-file "${RELEASE_NOTES}"
           rm "${RELEASE_NOTES}"
