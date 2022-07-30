@@ -47,6 +47,8 @@ jobs:
         with:
           deno-version: "v1.x"
 
+      - run: make npm-ci
+
       - run: make fetch-data
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
@@ -145,6 +147,7 @@ jobs:
         run: |
           sed -i 's/enableGitInfo: true/# enableGitInfo: true/' exampleSite/config/_default/config.yaml
 
+      - run: make npm-ci
       - run: make docker-build
 
   setup:
