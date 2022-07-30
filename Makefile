@@ -61,12 +61,19 @@ build-staging: npm-ci
 		--environment "staging" \
 		--printPathWarnings --debug \
 		--templateMetrics --templateMetricsHints
+	$(MAKE) pagefind
 
 .PHONY: build-prod
 build-prod: npm-ci
 	cd ./exampleSite && \
 	hugo --minify --cleanDestinationDir --printPathWarnings && \
 	wget -O ./public/report.html ${BASE_URL}/report.html || true
+	$(MAKE) pagefind
+
+.PHONY: pagefind
+pagefind:
+	cd ./exampleSite && \
+	npm_config_yes=true npx pagefind@v0.5.3 --source "public"
 
 .PHONY: fetch-data
 fetch-data:
