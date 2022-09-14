@@ -139,6 +139,7 @@ mkdir homepage
 wget https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/scripts/setup.sh
 bash ./setup.sh homepage "your_github_id"
 cd homepage
+npm ci
 hugo server
 ```
 
