@@ -8,34 +8,30 @@ GH_USER_ID := peaceiris
 bump-node:
 	bash scripts/bump_node.sh
 
-.PHONY: npm-ci
-npm-ci:
-	npm ci
-
 .PHONY: docker-dev
 docker-dev: npm-ci
 	$(eval opt := server --navigateToChanged --bind=0.0.0.0 --buildDrafts)
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
+	export HUGO_VERSION=v$(shell make get-hugo-version) && \
 	$(DOCKER_COMPOSE) up -d && \
 	$(DOCKER_COMPOSE) exec hugo hugo $(opt)
 
 .PHONY: docker-hugo
 docker-hugo: npm-ci
 	# make docker-hugo cmd="version"
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
+	export HUGO_VERSION=v$(shell make get-hugo-version) && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
 
 .PHONY: docker-build
 docker-build: npm-ci
 	$(eval opt := --minify --cleanDestinationDir)
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
+	export HUGO_VERSION=v$(shell make get-hugo-version) && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: docker-test
 docker-test: npm-ci
 	$(eval opt := --minify --renderToMemory --printPathWarnings --debug \
 		--templateMetrics --templateMetricsHints)
-	export HUGO_VERSION=$(shell make get-hugo-version) && \
+	export HUGO_VERSION=v$(shell make get-hugo-version) && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: npm-ci

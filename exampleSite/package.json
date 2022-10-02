@@ -8,10 +8,10 @@
   },
   "dependencies": {
     "bulma": "^0.9.4",
-    "hotkeys-js": "^3.9.4",
+    "hotkeys-js": "^3.10.0",
     "mathjax": "^3.2.2",
-    "mermaid": "^9.1.4",
-    "reveal.js": "^4.0.2"
+    "mermaid": "^9.1.7",
+    "reveal.js": "^4.3.1"
   },
   "description": "",
   "license": "MIT",

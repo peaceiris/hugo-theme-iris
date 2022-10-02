@@ -21,7 +21,7 @@ env:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     timeout-minutes: 3
     permissions:
       contents: write
@@ -84,7 +84,7 @@ jobs:
   lighthouse:
     needs: deploy
     if: ${{ github.ref == 'refs/heads/main' }}
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     timeout-minutes: 3
     permissions:
       contents: write

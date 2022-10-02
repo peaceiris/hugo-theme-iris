@@ -3,7 +3,7 @@ version: "3"
 services:
   hugo:
     container_name: hugo_theme_iris
-    image: ghcr.io/peaceiris/hugo:v${HUGO_VERSION}-mod
+    image: ghcr.io/peaceiris/hugo:${HUGO_VERSION}-mod
     ports:
       - 1313:1313
     volumes:
