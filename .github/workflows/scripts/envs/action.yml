@@ -6,7 +6,6 @@ runs:
     - name: Set envs
       shell: bash
       run: |
-        . ./.env
-        echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
-        echo "::set-output name=GO_VERSION::${GO_VERSION}"
+        echo "::set-output name=HUGO_VERSION::$(make get-hugo-version)"
+        echo "::set-output name=GO_VERSION::$(make get-go-version)"
         echo "::set-output name=NODE_VERSION::$(cat .nvmrc)"

@@ -1,34 +1,26 @@
-name: Dependabot Approve
+name: Dependabot Merger
 
 on:
-  pull_request_target:
-    types:
-      - opened
+  pull_request:
 
 jobs:
-  dump:
-    runs-on: ubuntu-20.04
-    permissions: {}
-    steps:
-      - name: Dump GitHub context
-        env:
-          GH_CXT: ${{ toJson(github) }}
-        run: echo "${GH_CXT}"
-
-  approve:
-    runs-on: ubuntu-20.04
-    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
+  main:
+    runs-on: ubuntu-22.04
+    if: github.actor == 'dependabot[bot]'
+    timeout-minutes: 2
     permissions:
-      contents: read
-      pull-requests: read
+      contents: write
+      pull-requests: write
+    env:
+      PR_URL: ${{ github.event.pull_request.html_url }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: Dependabot metadata
-        id: meta
-        uses: dependabot/fetch-metadata@v1.3.3
-
       - uses: actions/checkout@v3
 
-      - name: Approve
+      - uses: dependabot/fetch-metadata@v1.3.3
+        id: meta
+
+      - name: Approve and Merge
         if: |
           (steps.meta.outputs.package-ecosystem == 'github_actions') ||
           (steps.meta.outputs.package-ecosystem == 'go_modules' && steps.meta.outputs.directory == '/deps') ||
@@ -45,3 +37,4 @@ jobs:
           else
             echo "PR already approved, skipping additional approvals to minimize emails/notification noise.";
           fi
+          gh pr merge --auto --squash "${PR_URL}"
