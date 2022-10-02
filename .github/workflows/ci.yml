@@ -20,7 +20,26 @@ env:
   HUGO_CACHEDIR: /tmp/hugo_cache
 
 jobs:
+  envs:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 1
+    permissions: {}
+    outputs:
+      HUGO_VERSION: ${{ steps.envs.outputs.HUGO_VERSION }}
+      GO_VERSION: ${{ steps.envs.outputs.GO_VERSION }}
+      NODE_VERSION: ${{ steps.envs.outputs.NODE_VERSION }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set envs
+        id: envs
+        run: |
+          echo "::set-output name=HUGO_VERSION::$(make get-hugo-version)"
+          echo "::set-output name=GO_VERSION::$(make get-go-version)"
+          echo "::set-output name=NODE_VERSION::$(cat .nvmrc)"
+
   deploy:
+    needs: envs
     runs-on: ubuntu-22.04
     timeout-minutes: 3
     permissions:
@@ -32,15 +51,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set envs
-        id: envs
-        uses: ./.github/workflows/scripts/envs
-
       - uses: peaceiris/workflows/setup-hugo@v0.16.0
         with:
-          node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
-          go-version: "${{ steps.envs.outputs.GO_VERSION }}"
-          hugo-version: "${{ steps.envs.outputs.HUGO_VERSION }}"
+          node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
+          go-version: "${{ needs.envs.outputs.GO_VERSION }}"
+          hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
 
       - uses: denoland/setup-deno@v1
@@ -122,6 +137,7 @@ jobs:
           user_email: "github-actions[bot]@users.noreply.github.com"
 
   docker:
+    needs: envs
     runs-on: ubuntu-20.04
     timeout-minutes: 3
     if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
@@ -130,15 +146,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set envs
-        id: envs
-        uses: ./.github/workflows/scripts/envs
-
       - uses: peaceiris/workflows/setup-hugo@v0.16.0
         with:
-          node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
-          go-version: "${{ steps.envs.outputs.GO_VERSION }}"
-          hugo-version: "${{ steps.envs.outputs.HUGO_VERSION }}"
+          node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
+          go-version: "${{ needs.envs.outputs.GO_VERSION }}"
+          hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
 
       - name: prepare
@@ -148,6 +160,7 @@ jobs:
       - run: make docker-build
 
   setup:
+    needs: envs
     runs-on: ubuntu-20.04
     timeout-minutes: 3
     if: ${{ github.ref == 'refs/heads/main' }}
@@ -156,15 +169,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set envs
-        id: envs
-        uses: ./.github/workflows/scripts/envs
-
       - uses: peaceiris/workflows/setup-hugo@v0.16.0
         with:
-          node-version: "${{ steps.envs.outputs.NODE_VERSION }}"
-          go-version: "${{ steps.envs.outputs.GO_VERSION }}"
-          hugo-version: "${{ steps.envs.outputs.HUGO_VERSION }}"
+          node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
+          go-version: "${{ needs.envs.outputs.GO_VERSION }}"
+          hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
 
       - uses: peaceiris/workflows/setup-git@v0.16.0
