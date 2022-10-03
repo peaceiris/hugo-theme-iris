@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: dependabot/fetch-metadata@v1.3.3
+      - uses: dependabot/fetch-metadata@v1.3.4
         id: meta
 
       - name: Approve and Merge
