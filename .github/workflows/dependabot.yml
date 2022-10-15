@@ -27,9 +27,6 @@ jobs:
           (steps.meta.outputs.package-ecosystem == 'npm_and_yarn' && steps.meta.outputs.directory == '/' ) ||
           (steps.meta.outputs.package-ecosystem == 'npm_and_yarn' && steps.meta.outputs.directory == '/exampleSite' && steps.meta.outputs.update-type == 'version-update:semver-minor') ||
           (steps.meta.outputs.package-ecosystem == 'npm_and_yarn' && steps.meta.outputs.directory == '/exampleSite' && steps.meta.outputs.update-type == 'version-update:semver-patch')
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           gh pr checkout "${PR_URL}" # sets the upstream metadata for `gh pr status`
           if [ "$(gh pr status --json reviewDecision -q .currentBranch.reviewDecision)" != "APPROVED" ]; then
