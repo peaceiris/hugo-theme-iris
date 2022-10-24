@@ -24,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: peaceiris/workflows/setup-git@v0.17.1
+      - uses: peaceiris/workflows/setup-git@v0.17.2
 
       - name: Create release
         env:
