@@ -34,9 +34,9 @@ jobs:
       - name: Set envs
         id: envs
         run: |
-          echo "::set-output name=HUGO_VERSION::$(make get-hugo-version)"
-          echo "::set-output name=GO_VERSION::$(make get-go-version)"
-          echo "::set-output name=NODE_VERSION::$(cat .nvmrc)"
+          echo "HUGO_VERSION=$(make get-hugo-version)" | tee -a "${GITHUB_OUTPUT}"
+          echo "GO_VERSION=$(make get-go-version)" | tee -a "${GITHUB_OUTPUT}"
+          echo "NODE_VERSION=$(cat .nvmrc)" | tee -a "${GITHUB_OUTPUT}"
 
   deploy:
     needs: envs
