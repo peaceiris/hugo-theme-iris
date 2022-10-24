@@ -26,7 +26,6 @@ jobs:
     permissions: {}
     outputs:
       HUGO_VERSION: ${{ steps.envs.outputs.HUGO_VERSION }}
-      GO_VERSION: ${{ steps.envs.outputs.GO_VERSION }}
       NODE_VERSION: ${{ steps.envs.outputs.NODE_VERSION }}
     steps:
       - uses: actions/checkout@v3
@@ -35,7 +34,6 @@ jobs:
         id: envs
         run: |
           echo "HUGO_VERSION=$(make get-hugo-version)" | tee -a "${GITHUB_OUTPUT}"
-          echo "GO_VERSION=$(make get-go-version)" | tee -a "${GITHUB_OUTPUT}"
           echo "NODE_VERSION=$(cat .nvmrc)" | tee -a "${GITHUB_OUTPUT}"
 
   deploy:
