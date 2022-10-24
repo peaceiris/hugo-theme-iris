@@ -54,7 +54,6 @@ jobs:
       - uses: peaceiris/workflows/setup-hugo@v0.17.2
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
-          go-version: "${{ needs.envs.outputs.GO_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
 
@@ -172,7 +171,6 @@ jobs:
       - uses: peaceiris/workflows/setup-hugo@v0.17.2
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
-          go-version: "${{ needs.envs.outputs.GO_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
 
