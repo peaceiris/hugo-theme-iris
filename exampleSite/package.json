@@ -10,7 +10,7 @@
     "bulma": "^0.9.4",
     "hotkeys-js": "^3.10.0",
     "mathjax": "^3.2.2",
-    "mermaid": "^9.1.7",
+    "mermaid": "^9.2.0",
     "reveal.js": "^4.4.0"
   },
   "description": "",
