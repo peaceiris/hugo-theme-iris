@@ -4,7 +4,6 @@
     "local>peaceiris/renovate-config"
   ],
   "enabledManagers": [
-    "docker-compose",
     "nvm"
-  ],
+  ]
 }
