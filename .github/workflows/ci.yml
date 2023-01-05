@@ -27,6 +27,10 @@ jobs:
     permissions: {}
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
       - name: Validate renovate.json
         run: npx --package renovate -c 'renovate-config-validator'
 
