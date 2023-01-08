@@ -114,7 +114,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: peaceiris/workflows/setup-node@v0.18.1
+      - uses: peaceiris/workflows/setup-node@v0.19.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: ''
 
       - name: Install lighthouse
         run: sudo npm i -g lighthouse
