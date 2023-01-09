@@ -63,7 +63,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: peaceiris/workflows/setup-hugo@v0.18.1
+      - uses: peaceiris/workflows/setup-hugo@v0.19.1
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
@@ -162,7 +162,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: peaceiris/workflows/setup-hugo@v0.18.1
+      - uses: peaceiris/workflows/setup-hugo@v0.19.1
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
@@ -184,13 +184,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: peaceiris/workflows/setup-hugo@v0.18.1
+      - uses: peaceiris/workflows/setup-hugo@v0.19.1
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
 
-      - uses: peaceiris/workflows/setup-git@v0.18.1
+      - uses: peaceiris/workflows/setup-git@v0.19.1
         with:
           flags: "--global"
 
