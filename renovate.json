@@ -3,12 +3,6 @@
   "extends": [
     "local>peaceiris/renovate-config"
   ],
-  "enabledManagers": [
-    "nvm",
-    "github-actions",
-    "gomod",
-    "npm"
-  ],
   "packageRules": [
     {
       "automerge": true,
