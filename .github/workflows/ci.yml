@@ -30,9 +30,9 @@ jobs:
       - uses: peaceiris/workflows/setup-node@v0.19.1
         with:
           node-version-file: ".nvmrc"
-          cache: ""
-      - name: Validate renovate.json
-        run: npx --package renovate -c 'renovate-config-validator'
+          cache: "npm"
+      - run: npm ci
+      - run: npm run test:renovate
 
   envs:
     runs-on: ubuntu-22.04
