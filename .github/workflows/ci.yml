@@ -21,7 +21,7 @@ env:
   HUGO_CACHEDIR: /tmp/hugo_cache
 
 jobs:
-  misc:
+  renovate:
     runs-on: ubuntu-22.04
     timeout-minutes: 1
     permissions: {}
@@ -68,6 +68,8 @@ jobs:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
+
+      - run: make npm-ci
 
       - uses: denoland/setup-deno@v1
         with:

@@ -40,18 +40,18 @@ npm-ci:
 	npm ci
 
 .PHONY: dev
-dev: npm-ci
+dev:
 	cd ./exampleSite && \
 	hugo server --renderStaticToDisk --navigateToChanged --buildDrafts
 
 .PHONY: test
-test: npm-ci
+test:
 	cd ./exampleSite && \
 	hugo --minify --renderToMemory --printPathWarnings --debug \
 		--templateMetrics --templateMetricsHints
 
 .PHONY: build-staging
-build-staging: npm-ci
+build-staging:
 	cd ./exampleSite && \
 	hugo --minify --cleanDestinationDir \
 		--environment "staging" \
@@ -59,7 +59,7 @@ build-staging: npm-ci
 		--templateMetrics --templateMetricsHints
 
 .PHONY: build-prod
-build-prod: npm-ci
+build-prod:
 	cd ./exampleSite && \
 	hugo --minify --cleanDestinationDir --printPathWarnings && \
 	wget -O ./public/report.html ${BASE_URL}/report.html || true
