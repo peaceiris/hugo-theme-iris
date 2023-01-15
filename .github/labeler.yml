@@ -1,0 +1,14 @@
+cicd:
+  - .github/workflows/*
+  - renovate.json
+
+dependencies:
+  - .nvmrc
+  - package.json
+  - package-lock.json
+  - go.mod
+  - go.sum
+
+documentation:
+  - README.md
+  - CONTRIBUTING.md
