@@ -1,12 +1,14 @@
 changelog:
   categories:
-    - title: "What's Changed"
+    - title: "Improvements"
       labels:
         - "*"
       exclude:
         labels:
-          - "renovate"
+          - "dependencies"
     - title: "Dependencies"
       labels:
-        - "renovate"
         - "dependencies"
+    - title: "CI/CD"
+      labels:
+        - "cicd"
