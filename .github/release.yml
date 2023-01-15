@@ -6,9 +6,14 @@ changelog:
       exclude:
         labels:
           - "dependencies"
+          - "cicd"
+          - "documentation"
     - title: "Dependencies"
       labels:
         - "dependencies"
     - title: "CI/CD"
       labels:
         - "cicd"
+    - title: "Documentation"
+      labels:
+        - "documentation"
