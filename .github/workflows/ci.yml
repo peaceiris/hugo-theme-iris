@@ -99,7 +99,7 @@ jobs:
       - run: make build-prod
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3.9.1
+        uses: peaceiris/actions-gh-pages@v3.9.2
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           #deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
@@ -146,7 +146,7 @@ jobs:
           cp ./report.html ./public/report.html
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3.9.1
+        uses: peaceiris/actions-gh-pages@v3.9.2
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./public
