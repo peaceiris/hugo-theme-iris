@@ -36,4 +36,4 @@ jobs:
           RELEASE_TITLE="Release ${NEW_TAG}"
           git tag -a "${NEW_TAG}" -m "${RELEASE_TITLE}"
           git push origin "${NEW_TAG}"
-          gh release create "${NEW_TAG}" --title "${RELEASE_TITLE}" --generate-notes
+          gh release create "${NEW_TAG}" --title "${RELEASE_TITLE}" --generate-notes --discussion-category "Announcements"
