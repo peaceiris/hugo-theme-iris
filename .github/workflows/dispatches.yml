@@ -1,0 +1,25 @@
+name: Dispatches
+
+# https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#create-a-repository-dispatch-event
+
+on:
+  release:
+    types: published
+    tags: 'v*.*.*'
+
+env:
+  GH_API_VERSION: "2022-11-28"
+
+jobs:
+  post:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 1
+    permissions: {}
+    steps:
+      - name: blog
+        run: |
+          curl -X POST "https://api.github.com/repos/peaceiris/peaceiris.com/dispatches" \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GH_PAT_BLOG }}"\
+            -H "X-GitHub-Api-Version: ${{ env.GH_API_VERSION }}" \
+            -d '{"event_type": "release", "client_payload": {"tag_name": "'"${GITHUB_REF_NAME}"'"}}'
