@@ -20,15 +20,22 @@ jobs:
     permissions:
       contents: write
     steps:
+      - uses: peaceiris/actions-github-app-token@v1
+        id: app
+        with:
+          app_id: ${{ secrets.GH_APP_ID }}
+          private_key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+
       - uses: actions/checkout@v3
         with:
+          token: ${{ steps.app.outputs.token }}
           fetch-depth: 0
 
       - uses: peaceiris/workflows/setup-git@v0.19.1
 
       - name: Create release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app.outputs.token }}
         run: |
           CURRENT_TAG=$(git describe --abbrev=0)
           NEW_VERSION=$(npm_config_yes=true npx semver "${CURRENT_TAG}" --increment ${{ github.event.inputs.semver_type }})
