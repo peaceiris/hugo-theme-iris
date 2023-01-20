@@ -113,7 +113,7 @@ jobs:
     needs: deploy
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-22.04
-    timeout-minutes: 10
+    timeout-minutes: 20
     permissions:
       contents: write
     steps:
