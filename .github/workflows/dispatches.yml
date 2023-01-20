@@ -20,6 +20,6 @@ jobs:
         run: |
           curl -X POST "https://api.github.com/repos/peaceiris/peaceiris.com/dispatches" \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.GH_PAT_BLOG }}"\
+            -H "Authorization: Bearer ${{ secrets.GH_PAT_BLOG }}" \
             -H "X-GitHub-Api-Version: ${{ env.GH_API_VERSION }}" \
             -d '{"event_type": "release", "client_payload": {"tag_name": "'"${GITHUB_REF_NAME}"'"}}'
