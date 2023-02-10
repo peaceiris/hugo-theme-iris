@@ -125,7 +125,7 @@ jobs:
           cache: ""
 
       - name: Install lighthouse
-        run: sudo npm i -g lighthouse
+        run: sudo npm i -g lighthouse@9.6.8
 
       - name: Run lighthouse
         run: |
