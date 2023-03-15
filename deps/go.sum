@@ -82,6 +82,8 @@ github.com/gohugoio/hugo v0.110.0 h1:FBBypy+UXD9BWaMReIZ+y2FSxFwlJCqoutVi7jKa90o
 github.com/gohugoio/hugo v0.110.0/go.mod h1:Fn7vtWrDBSojvaHSft+KMHhl6aH2934CR2njI32i38k=
 github.com/gohugoio/hugo v0.111.2 h1:A2CfJINyRS0sLa5XhuPLU2mcv3rskELx1FVSW4Uzxj8=
 github.com/gohugoio/hugo v0.111.2/go.mod h1:8rmzgQh5cam/ShZq0R+l9E0+qOzPQXc4wxQalDS6fUw=
+github.com/gohugoio/hugo v0.111.3 h1:m98NJv/5ivJLkQ4u3vPYsrAfBTnDIefZPGhnw/7xW80=
+github.com/gohugoio/hugo v0.111.3/go.mod h1:1gb2es3022plbaNiZjhBTdpXN2cepIeqvBnL/NHnKLY=
 github.com/gohugoio/locales v0.14.0 h1:Q0gpsZwfv7ATHMbcTNepFd59H7GoykzWJIxi113XGDc=
 github.com/gohugoio/locales v0.14.0/go.mod h1:ip8cCAv/cnmVLzzXtiTpPwgJ4xhKZranqNqtoIu0b/4=
 github.com/gohugoio/localescompressed v1.0.1 h1:KTYMi8fCWYLswFyJAeOtuk/EkXR/KPTHHNN9OS+RTxo=
@@ -167,6 +169,8 @@ github.com/mitchellh/mapstructure v1.5.0 h1:jeMsZIYE/09sWLaz43PL7Gy6RuMjD2eJVyua
 github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
 github.com/niklasfasching/go-org v1.6.5 h1:5YAIqNTdl6lAOb7lD2AyQ1RuFGPVrAKvUexphk8PGbo=
 github.com/niklasfasching/go-org v1.6.5/go.mod h1:ybv0eGDnxylFUfFE+ySaQc734j/L3+/ChKZ/h63a2wM=
+github.com/niklasfasching/go-org v1.6.6 h1:U6+mJ80p3weR4oP+Z+Pb2EVkSbt1MUwweBbUcF1hVqQ=
+github.com/niklasfasching/go-org v1.6.6/go.mod h1:o3pMQpO9n6RNBXz2Oc2DiRkaVwjns0JElyKiG7yXwA4=
 github.com/pelletier/go-toml/v2 v2.0.6 h1:nrzqCb7j9cDFj2coyLNLaZuJTLjWjlaz6nvTvIwycIU=
 github.com/pelletier/go-toml/v2 v2.0.6/go.mod h1:eumQOmlWiOPt5WriQQqoM5y18pDHwha2N+QD+EUNTek=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
