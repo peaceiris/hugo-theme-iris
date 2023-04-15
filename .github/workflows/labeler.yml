@@ -11,6 +11,6 @@ jobs:
       pull-requests: write
     steps:
       # https://github.com/actions/labeler
-      - uses: actions/labeler@v4.0.3
+      - uses: actions/labeler@4.1.0
         with:
           repo-token: ${{ github.token }}
