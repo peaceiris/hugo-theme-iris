@@ -3,6 +3,12 @@
   "extends": [
     "local>peaceiris/renovate-config"
   ],
+  "enabledManagers": [
+    "docker-compose",
+    "gomod",
+    "npm",
+    "nvm"
+  ],
   "packageRules": [
     {
       "automerge": true,
