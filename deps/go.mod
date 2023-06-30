@@ -2,7 +2,7 @@ module theme
 
 go 1.18
 
-require github.com/gohugoio/hugo v0.114.1
+require github.com/gohugoio/hugo v0.115.0
 
 require (
 	github.com/armon/go-radix v1.0.0 // indirect
@@ -23,7 +23,7 @@ require (
 	github.com/mattn/go-isatty v0.0.19 // indirect
 	github.com/mitchellh/hashstructure v1.1.0 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
-	github.com/niklasfasching/go-org v1.6.6 // indirect
+	github.com/niklasfasching/go-org v1.7.0 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.8 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/spf13/afero v1.9.5 // indirect
