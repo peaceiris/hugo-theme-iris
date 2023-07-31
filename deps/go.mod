@@ -2,7 +2,7 @@ module theme
 
 go 1.18
 
-require github.com/gohugoio/hugo v0.115.4
+require github.com/gohugoio/hugo v0.116.0
 
 require (
 	github.com/armon/go-radix v1.0.0 // indirect
@@ -33,7 +33,7 @@ require (
 	golang.org/x/exp v0.0.0-20221031165847-c99f073a8326 // indirect
 	golang.org/x/net v0.11.0 // indirect
 	golang.org/x/sys v0.9.0 // indirect
-	golang.org/x/text v0.10.0 // indirect
+	golang.org/x/text v0.11.0 // indirect
 	google.golang.org/protobuf v1.30.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
