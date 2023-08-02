@@ -28,7 +28,7 @@
 
   {{ if $.Site.Params.shareButtons.feedly }}
   <a
-    href="https://feedly.com/i/subscription/feed/{{ $.Site.RSSLink }}"
+    href="https://feedly.com/i/subscription/feed/{{ ((.GetPage "/").OutputFormats.Get "rss").Permalink }}"
     rel="noopener noreferrer nofollow"
     target="_blank"
     class="button"
