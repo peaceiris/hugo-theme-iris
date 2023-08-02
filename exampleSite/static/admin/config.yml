@@ -11,9 +11,9 @@ editor:
   preview: true
 # publish_mode: editorial_workflow
 
-site_url: https://hugothemeiris.peaceiris.app
+site_url: https://hugothemeiris.peaceiris.com
 display_url: https://github.com/peaceiris/hugo-theme-iris
-logo_url: https://hugothemeiris.peaceiris.app/favicon/favicon64.ico
+logo_url: https://hugothemeiris.peaceiris.com/favicon/favicon64.ico
 
 collections:
   - label: "Home en"
