@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <title>Home on Hugo IRIS Theme</title>
-<link>https://hugothemeiris.peaceiris.app/</link>
+<link>https://hugothemeiris.peaceiris.com/</link>
 <description>Recent content in Home on Hugo IRIS Theme</description>
 <generator>Hugo -- gohugo.io</generator>
 <language>en-us</language>
-<lastBuildDate>Thu, 03 Sep 2020 23:00:00 +0000</lastBuildDate><atom:link href="https://hugothemeiris.peaceiris.app/index.xml" rel="self" type="application/rss+xml"/>
+<lastBuildDate>Thu, 03 Sep 2020 23:00:00 +0000</lastBuildDate><atom:link href="https://hugothemeiris.peaceiris.com/index.xml" rel="self" type="application/rss+xml"/>
 <item>
 <title>Reveal.js Support</title>
-<link>https://hugothemeiris.peaceiris.app/posts/revealjs/</link>
+<link>https://hugothemeiris.peaceiris.com/posts/revealjs/</link>
 <pubDate>Fri, 03 Jan 2020 01:00:00 +0000</pubDate>
-<guid>https://hugothemeiris.peaceiris.app/posts/revealjs/</guid>
+<guid>https://hugothemeiris.peaceiris.com/posts/revealjs/</guid>
 <description>Reveal.js The Html Presentation Framework Created by Hakim El Hattab and contributors.
 Hello There reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
 Vertical Slides To be developed.
@@ -19,17 +19,17 @@ Point Of View Hold down the alt key (ctrl in Linux) and click on any element to 
 </item>
 <item>
 <title>mermaid Graph Support</title>
-<link>https://hugothemeiris.peaceiris.app/posts/mermaid/</link>
+<link>https://hugothemeiris.peaceiris.com/posts/mermaid/</link>
 <pubDate>Thu, 02 Jan 2020 01:00:00 +0000</pubDate>
-<guid>https://hugothemeiris.peaceiris.app/posts/mermaid/</guid>
+<guid>https://hugothemeiris.peaceiris.com/posts/mermaid/</guid>
 <description>mermaid mermaid-js/mermaid: Generation of diagram and flowchart from text in a similar manner as markdown Example Input Use mermaid shortcode.
 {{&amp;lt; mermaid &amp;gt;}} sequenceDiagram participant Alice participant Bob Alice-&amp;gt;&amp;gt;John: Hello John, how are you? loop Healthcheck John-&amp;gt;&amp;gt;John: Fight against hypochondria end Note right of John: Rational thoughts &amp;lt;br/&amp;gt;prevail! John--&amp;gt;&amp;gt;Alice: Great! John-&amp;gt;&amp;gt;Bob: How about you? Bob--&amp;gt;&amp;gt;John: Jolly good! {{&amp;lt; /mermaid &amp;gt;}} Output sequenceDiagram participant Alice participant Bob Alice->>John: Hello John, how are you?</description>
 </item>
 <item>
 <title>MathJax Support $E=mc^2$</title>
-<link>https://hugothemeiris.peaceiris.app/posts/math/</link>
+<link>https://hugothemeiris.peaceiris.com/posts/math/</link>
 <pubDate>Wed, 01 Jan 2020 01:00:00 +0000</pubDate>
-<guid>https://hugothemeiris.peaceiris.app/posts/math/</guid>
+<guid>https://hugothemeiris.peaceiris.com/posts/math/</guid>
 <description>MathJax mathjax/MathJax: Beautiful math in all browsers Inline Example Input Inline $E = mc^2$ Output Inline $E = mc^2$
 Basic Example Input $$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$ Output $$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$
 Math Shortcode See also this thread .
@@ -37,24 +37,24 @@ Input {{&amp;lt; math &amp;gt;}} \begin{vmatrix}a &amp;amp; b\\ c &amp;amp; d \e
 </item>
 <item>
 <title>GitHub Pages and GitHub Actions</title>
-<link>https://hugothemeiris.peaceiris.app/posts/github-pages-and-github-actions/</link>
+<link>https://hugothemeiris.peaceiris.com/posts/github-pages-and-github-actions/</link>
 <pubDate>Fri, 01 Nov 2019 01:00:00 +0000</pubDate>
-<guid>https://hugothemeiris.peaceiris.app/posts/github-pages-and-github-actions/</guid>
+<guid>https://hugothemeiris.peaceiris.com/posts/github-pages-and-github-actions/</guid>
 <description>GitHub Actions for GitHub Pages GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators peaceiris/actions-gh-pages This is a GitHub Action to deploy your static files to GitHub Pages. This deploy action can be combined simply and freely with Static Site Generators (Hugo, mdBook, MkDocs, Gatsby, GitBook, etc.).
 - name: Deploy uses: peaceiris/actions-gh-pages@v3 with: deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} publish_dir: ./public The above example step will deploy .</description>
 </item>
 <item>
 <title>Emoji Support</title>
-<link>https://hugothemeiris.peaceiris.app/posts/emoji-support/</link>
+<link>https://hugothemeiris.peaceiris.com/posts/emoji-support/</link>
 <pubDate>Mon, 30 Sep 2019 08:00:00 +0000</pubDate>
-<guid>https://hugothemeiris.peaceiris.app/posts/emoji-support/</guid>
+<guid>https://hugothemeiris.peaceiris.com/posts/emoji-support/</guid>
 <description>&lt;p>Emoji can be enabled in a Hugo project in a number of ways.&lt;/p></description>
 </item>
 <item>
 <title>Rich Content</title>
-<link>https://hugothemeiris.peaceiris.app/posts/rich-content/</link>
+<link>https://hugothemeiris.peaceiris.com/posts/rich-content/</link>
 <pubDate>Sun, 29 Sep 2019 08:00:00 +0000</pubDate>
-<guid>https://hugothemeiris.peaceiris.app/posts/rich-content/</guid>
+<guid>https://hugothemeiris.peaceiris.com/posts/rich-content/</guid>
 <description>&lt;h2 id="shortcodes" class="title is-3">Shortcodes&lt;/h2>
 &lt;p>Hugo ships with several &lt;a
 href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes"
@@ -70,9 +70,9 @@ and a set of Simple Shortcodes that enable static and no-JS versions of various 
 </item>
 <item>
 <title>Markdown Syntax Guide</title>
-<link>https://hugothemeiris.peaceiris.app/posts/markdown-syntax/</link>
+<link>https://hugothemeiris.peaceiris.com/posts/markdown-syntax/</link>
 <pubDate>Wed, 25 Sep 2019 23:00:00 +0000</pubDate>
-<guid>https://hugothemeiris.peaceiris.app/posts/markdown-syntax/</guid>
+<guid>https://hugothemeiris.peaceiris.com/posts/markdown-syntax/</guid>
 <description>&lt;p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p></description>
 </item>
 </channel>
