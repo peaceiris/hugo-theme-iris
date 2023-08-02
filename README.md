@@ -11,11 +11,11 @@ Hugo IRIS Theme
 [![release feed](https://img.shields.io/badge/release-feed-yellow)](https://github.com/peaceiris/hugo-theme-iris/releases.atom)
 ![deploy status](https://github.com/peaceiris/hugo-theme-iris/workflows/CI/badge.svg?branch=main&event=push)
 [![hugo themes](https://img.shields.io/static/v1?label=Hugo%20Themes&message=IRIS&color=blueviolet)](https://themes.gohugo.io/themes/hugo-theme-iris/)
-[![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugothemeiris.peaceiris.app/report.html)
+[![lighthouse score](https://img.shields.io/static/v1?label=Lighthouse%20Score&message=Good&color=green)](https://hugothemeiris.peaceiris.com/report.html)
 
 </div>
 
-[Go to the demo site](https://hugothemeiris.peaceiris.app/).
+[Go to the demo site](https://hugothemeiris.peaceiris.com/).
 
 
 
@@ -80,8 +80,8 @@ This repository includes a [Hugo] theme.
   - JSON-LD
   - Canonical URL on header
 - Performance
-  - [PageSpeed Insights Scores: Good](https://developers.google.com/speed/pagespeed/insights/?hl=EN&url=https%3A%2F%2Fhugothemeiris.peaceiris.app%2F)
-  - [Lighthouse Scores: Good](https://hugothemeiris.peaceiris.app/report.html)
+  - [PageSpeed Insights Scores: Good](https://developers.google.com/speed/pagespeed/insights/?hl=EN&url=https%3A%2F%2Fhugothemeiris.peaceiris.com%2F)
+  - [Lighthouse Scores: Good](https://hugothemeiris.peaceiris.com/report.html)
 - Contents
   - Breadcrumb List
   - Syntax Highlighting
@@ -304,7 +304,7 @@ Please follow the instruction as the same as the `repo` shortcode.
 
 ### math
 
-See also [the example page](https://hugothemeiris.peaceiris.app/posts/math/).
+See also [the example page](https://hugothemeiris.peaceiris.com/posts/math/).
 
 When you use the ampersand sign `&`, you need to use the following math shortcode.
 
