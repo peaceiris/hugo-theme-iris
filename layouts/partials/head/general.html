@@ -35,7 +35,9 @@
 {{ partial "head/favicon" . }}
 
 <!-- Feed, RSS -->
-<link rel="alternate" type="application/rss+xml" href="{{ .Site.RSSLink }}" title="{{ with .Site.Title }}{{ . }}{{ end }}">
+{{ with .OutputFormats.Get "rss" }}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end }}
 
 {{ $title := "" }}
 {{ with $.Title }}
