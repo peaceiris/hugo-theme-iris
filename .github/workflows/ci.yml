@@ -82,7 +82,7 @@ jobs:
       - run: make build-staging
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v2.0.0
+        uses: nwtgck/actions-netlify@v2.1.0
         with:
           publish-dir: "./exampleSite/public"
           production-branch: main
