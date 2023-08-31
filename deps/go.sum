@@ -122,6 +122,8 @@ github.com/gohugoio/hugo v0.116.1 h1:ROVjRP+/cPk92fFepbeZxX20Uoq9tbao+uC5Bk/lxYQ
 github.com/gohugoio/hugo v0.116.1/go.mod h1:Q0IEjbhbnsccfsCViP5nohC05eVSglmc6oFfGN5m3fg=
 github.com/gohugoio/hugo v0.117.0 h1:VP7MVke7R36zjUkWezg7mEtfnwHm2L5u0JwvMHvcsZQ=
 github.com/gohugoio/hugo v0.117.0/go.mod h1:b6mjGjvIqRD36x+ePNDhn1ZCXdWBkvu95+dZNTCuoDM=
+github.com/gohugoio/hugo v0.118.2 h1:N+Gf+Zs74xuURsBN/Q1mevb68SgH77bapkREDjW4/Ss=
+github.com/gohugoio/hugo v0.118.2/go.mod h1:loOGCp1OeKj3qCxrUe6L/FP1m0qF0EA9QbZ6ARXVoho=
 github.com/gohugoio/locales v0.14.0 h1:Q0gpsZwfv7ATHMbcTNepFd59H7GoykzWJIxi113XGDc=
 github.com/gohugoio/locales v0.14.0/go.mod h1:ip8cCAv/cnmVLzzXtiTpPwgJ4xhKZranqNqtoIu0b/4=
 github.com/gohugoio/localescompressed v1.0.1 h1:KTYMi8fCWYLswFyJAeOtuk/EkXR/KPTHHNN9OS+RTxo=
@@ -224,6 +226,8 @@ github.com/pelletier/go-toml/v2 v2.0.8 h1:0ctb6s9mE31h0/lhu+J6OPmVeDxJn+kYnJc2jZ
 github.com/pelletier/go-toml/v2 v2.0.8/go.mod h1:vuYfssBdrU2XDZ9bYydBu6t+6a6PYNcZljzZR9VXg+4=
 github.com/pelletier/go-toml/v2 v2.0.9 h1:uH2qQXheeefCCkuBBSLi7jCiSmj3VRh2+Goq2N7Xxu0=
 github.com/pelletier/go-toml/v2 v2.0.9/go.mod h1:tJU2Z3ZkXwnxa4DPO899bsyIoywizdUvyaeZurnPPDc=
+github.com/pelletier/go-toml/v2 v2.1.0 h1:FnwAJ4oYMvbT/34k9zzHuZNrhlz48GB3/s6at6/MHO4=
+github.com/pelletier/go-toml/v2 v2.1.0/go.mod h1:tJU2Z3ZkXwnxa4DPO899bsyIoywizdUvyaeZurnPPDc=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pkg/sftp v1.13.1/go.mod h1:3HaPG6Dq1ILlpPZRO0HVMrsydcdLt6HRDccSgb87qRg=
