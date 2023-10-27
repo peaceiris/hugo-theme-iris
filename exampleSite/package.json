@@ -11,7 +11,7 @@
     "hotkeys-js": "^3.10.1",
     "mathjax": "^3.2.2",
     "mermaid": "^9.3.0",
-    "reveal.js": "^4.4.0"
+    "reveal.js": "^5.0.0"
   },
   "description": "",
   "license": "MIT",
