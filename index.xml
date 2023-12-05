@@ -58,16 +58,18 @@ Input {{&amp;lt; math &amp;gt;}} \begin{vmatrix}a &amp;amp; b\\ c &amp;amp; d \e
 <guid>https://hugothemeiris.peaceiris.com/posts/rich-content/</guid>
 <description>&lt;h2 id="shortcodes" class="title is-3">Shortcodes&lt;/h2>
 &lt;p>Hugo ships with several &lt;a
-href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes"
-target="_blank" rel="noopener noreferrer">
-Built-in Shortcodes
+ href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes"
+ 
+ target="_blank" rel="noopener noreferrer">
+ Built-in Shortcodes
 &lt;/a>
-for rich content, along with a &lt;a
-href="https://gohugo.io/about/hugo-and-gdpr/"
-target="_blank" rel="noopener noreferrer">
-Privacy Config
+ for rich content, along with a &lt;a
+ href="https://gohugo.io/about/hugo-and-gdpr/"
+ 
+ target="_blank" rel="noopener noreferrer">
+ Privacy Config
 &lt;/a>
-and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p></description>
+ and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p></description>
 </item>
 <item>
 <title>Markdown Syntax Guide</title>
