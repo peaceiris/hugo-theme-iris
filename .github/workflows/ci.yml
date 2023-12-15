@@ -135,7 +135,7 @@ jobs:
             'https://hugothemeiris.peaceiris.com'
 
       - name: Upload result
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: lighthouse-report
           path: report.html
