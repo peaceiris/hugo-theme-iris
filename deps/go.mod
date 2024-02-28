@@ -2,7 +2,7 @@ module theme
 
 go 1.18
 
-require github.com/gohugoio/hugo v0.123.4
+require github.com/gohugoio/hugo v0.123.6
 
 require (
 	github.com/armon/go-radix v1.0.1-0.20221118154546-54df44f2176c // indirect
@@ -12,7 +12,7 @@ require (
 	github.com/bep/godartsass/v2 v2.0.0 // indirect
 	github.com/bep/golibsass v1.1.1 // indirect
 	github.com/bep/logg v0.4.0 // indirect
-	github.com/bep/overlayfs v0.9.1 // indirect
+	github.com/bep/overlayfs v0.9.2 // indirect
 	github.com/clbanning/mxj/v2 v2.7.0 // indirect
 	github.com/cli/safeexec v1.0.1 // indirect
 	github.com/fatih/color v1.16.0 // indirect
