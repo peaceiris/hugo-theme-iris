@@ -2,7 +2,7 @@ module theme
 
 go 1.18
 
-require github.com/gohugoio/hugo v0.123.7
+require github.com/gohugoio/hugo v0.123.8
 
 require (
 	github.com/armon/go-radix v1.0.1-0.20221118154546-54df44f2176c // indirect
