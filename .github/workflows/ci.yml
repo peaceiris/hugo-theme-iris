@@ -122,10 +122,10 @@ jobs:
       - uses: peaceiris/workflows/setup-node@v0.19.2
         with:
           node-version-file: ".nvmrc"
-          cache: ""
+          cache: "npm"
 
       - name: Install lighthouse
-        run: sudo npm i -g lighthouse@9.6.8
+        run: sudo npm i -g lighthouse@11.7.1
 
       - name: Run lighthouse
         run: |
