@@ -9,6 +9,7 @@ footer:
   copyright:
     name: peaceiris
     link: "https://peaceiris.com/"
+    year: 2019
 
 icon:
   favicon: /favicon/favicon64.ico
