@@ -31,7 +31,7 @@ jobs:
           token: ${{ steps.app.outputs.token }}
           fetch-depth: 0
 
-      - uses: peaceiris/workflows/setup-git@v0.19.2
+      - uses: peaceiris/workflows/setup-git@v0.20.0
 
       - name: Create release
         env:
