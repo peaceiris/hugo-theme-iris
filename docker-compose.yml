@@ -8,7 +8,9 @@ services:
       - 1313:1313
     volumes:
       - ${PWD}:/src/hugo-theme-iris
-      - ${HUGO_CACHEDIR}:/tmp/hugo_cache
+      - ${HUGO_CACHEDIR}:/root/.cache/hugo
+    environment:
+      - HUGO_CACHEDIR=/root/.cache/hugo
     stdin_open: true
     tty: true
     working_dir: /src/hugo-theme-iris/exampleSite

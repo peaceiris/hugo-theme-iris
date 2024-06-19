@@ -18,7 +18,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  HUGO_CACHEDIR: /tmp/hugo_cache
+  HUGO_CACHEDIR: ~/.cache/hugo
 
 jobs:
   renovate:
