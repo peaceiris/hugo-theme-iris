@@ -36,7 +36,7 @@ jobs:
 
   envs:
     runs-on: ubuntu-22.04
-    timeout-minutes: 1
+    timeout-minutes: 2
     permissions: {}
     outputs:
       HUGO_VERSION: ${{ steps.envs.outputs.HUGO_VERSION }}
