@@ -17,7 +17,7 @@
     </section>
   {{ end }}
 
-  {{ if $.Site.DisqusShortname }}
+  {{ if $.Site.Config.Services.Disqus.Shortname }}
     <section class="section">
       {{ template "_internal/disqus.html" . }}
     </section>
