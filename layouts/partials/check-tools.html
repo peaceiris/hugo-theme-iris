@@ -52,7 +52,7 @@
       w3Validator: 'https://validator.w3.org/nu/?doc=',
       facebook: 'https://developers.facebook.com/tools/debug/?q=',
     }
-    {{ if $.Site.IsServer }}
+    {{ if hugo.IsServer }}
       const toolURL = toolsTable[toolName] + '{{ $.Site.Params.productionBaseURL | safeURL }}{{ .RelPermalink }}';
     {{ else }}
       const toolURL = toolsTable[toolName] + window.location.href;

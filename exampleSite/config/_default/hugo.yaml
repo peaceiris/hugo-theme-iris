@@ -19,9 +19,6 @@ module:
     - source: node_modules/mathjax/es5/output/chtml/fonts/woff-v2
       target: static/mathjax/es5/output/chtml/fonts/woff-v2
 
-# googleAnalytics: UA-123-45
-disqusShortname: hugothemeiris
-
 paginate: 3
 canonifyURLs: true
 enableRobotsTXT: true
@@ -34,6 +31,12 @@ pygmentsCodefences: true
 enableEmoji: true
 enableGitInfo: true
 enableInlineShortcodes: true
+
+services:
+  # googleAnalytics
+    # id: G-XXXXXXXXX
+  disqus:
+    shortname: hugothemeiris
 
 taxonomies: {}
 #   - tag: tags
