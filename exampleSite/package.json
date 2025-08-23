@@ -9,7 +9,7 @@
   "dependencies": {
     "bulma": "^0.9.4",
     "hotkeys-js": "^3.10.1",
-    "mathjax": "^3.2.2",
+    "mathjax": "^4.0.0",
     "mermaid": "^10.0.0",
     "reveal.js": "^5.0.0"
   },
