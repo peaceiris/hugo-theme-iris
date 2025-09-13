@@ -37,7 +37,7 @@
     "npm-run-all2": "^6.0.0",
     "open": "^10.0.0",
     "renovate": "^37.0.0",
-    "wait-on": "^7.0.1"
+    "wait-on": "^8.0.0"
   },
   "engines": {
     "node": ">=v16.19.0",
