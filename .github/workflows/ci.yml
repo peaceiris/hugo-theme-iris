@@ -26,8 +26,8 @@ jobs:
     timeout-minutes: 3
     permissions: {}
     steps:
-      - uses: actions/checkout@v4
-      - uses: peaceiris/workflows/setup-node@v0.20.1
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: peaceiris/workflows/setup-node@344651af76054dbb5c8231c3d0a18b109c029630 # v0.20.1
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
@@ -42,7 +42,7 @@ jobs:
       HUGO_VERSION: ${{ steps.envs.outputs.HUGO_VERSION }}
       NODE_VERSION: ${{ steps.envs.outputs.NODE_VERSION }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: Set envs
         id: envs
@@ -59,11 +59,11 @@ jobs:
       deployments: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 0
 
-      - uses: peaceiris/workflows/setup-hugo@v0.20.1
+      - uses: peaceiris/workflows/setup-hugo@344651af76054dbb5c8231c3d0a18b109c029630 # v0.20.1
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
@@ -71,7 +71,7 @@ jobs:
 
       - run: make npm-ci
 
-      - uses: denoland/setup-deno@v1
+      - uses: denoland/setup-deno@11b63cf76cfcafb4e43f97b6cad24d8e8438f62d # v1
         with:
           deno-version: "v1.x"
 
@@ -82,7 +82,7 @@ jobs:
       - run: make build-staging
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v3.0.0
+        uses: nwtgck/actions-netlify@4cbaf4c08f1a7bfa537d6113472ef4424e4eb654 # v3.0.0
         with:
           publish-dir: "./exampleSite/public"
           production-branch: main
@@ -99,7 +99,7 @@ jobs:
       - run: make build-prod
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4.0.0
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           #deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
@@ -115,9 +115,9 @@ jobs:
     runs-on: ubuntu-22.04
     timeout-minutes: 20
     permissions:
-      contents: write
+      contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: Install lighthouse
         run: sudo npm i -g lighthouse@11.7.1
@@ -130,7 +130,7 @@ jobs:
             'https://hugothemeiris.peaceiris.com'
 
       - name: Upload result
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: lighthouse-report
           path: report.html
@@ -141,7 +141,7 @@ jobs:
           cp ./report.html ./public/report.html
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4.0.0
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./public
@@ -157,9 +157,9 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
-      - uses: peaceiris/workflows/setup-hugo@v0.20.1
+      - uses: peaceiris/workflows/setup-hugo@344651af76054dbb5c8231c3d0a18b109c029630 # v0.20.1
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
@@ -179,15 +179,15 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
-      - uses: peaceiris/workflows/setup-hugo@v0.20.1
+      - uses: peaceiris/workflows/setup-hugo@344651af76054dbb5c8231c3d0a18b109c029630 # v0.20.1
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
 
-      - uses: peaceiris/workflows/setup-git@v0.20.1
+      - uses: peaceiris/workflows/setup-git@344651af76054dbb5c8231c3d0a18b109c029630 # v0.20.1
         with:
           flags: "--global"
 
