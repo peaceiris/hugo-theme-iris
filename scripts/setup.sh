@@ -3,15 +3,25 @@
 # fail on unset variables and command errors
 set -eu -o pipefail # -x: is for debugging
 
-cd $1
+project_name="$1"
+github_id="$2"
+theme_ref="${3:-main}"
+
+cd "${project_name}"
 git init
-wget https://github.com/peaceiris/hugo-theme-iris/archive/main.zip
-unzip main.zip
-rm main.zip
-hugo mod init "github.com/$2/$1"
-cp -r ./hugo-theme-iris-main/exampleSite/{.gitignore,assets,config,content,data,i18n,package-lock.json,package.json,scripts,static} .
+theme_archive="hugo-theme-iris.zip"
+wget -O "${theme_archive}" "https://github.com/peaceiris/hugo-theme-iris/archive/${theme_ref}.zip"
+unzip "${theme_archive}"
+rm "${theme_archive}"
+theme_dir="$(find . -maxdepth 1 -type d -name 'hugo-theme-iris-*' -print | head -n 1)"
+if [[ -z "${theme_dir}" ]]; then
+  echo "failed to extract hugo-theme-iris archive for ${theme_ref}" >&2
+  exit 1
+fi
+hugo mod init "github.com/${github_id}/${project_name}"
+cp -r "${theme_dir}"/exampleSite/{.gitignore,assets,config,content,data,i18n,package-lock.json,package.json,scripts,static} .
 rm ./assets/images/.gitignore
-rm -rf hugo-theme-iris-main
-hugo mod get -u github.com/peaceiris/hugo-theme-iris
+rm -rf "${theme_dir}"
+hugo mod get -u "github.com/peaceiris/hugo-theme-iris@${theme_ref}"
 git add .
 git commit -m "Add hugo-theme-iris"

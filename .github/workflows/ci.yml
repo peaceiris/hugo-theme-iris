@@ -196,7 +196,7 @@ jobs:
           mkdir ~/homepage
           cp scripts/setup.sh ~
           cd ~
-          bash ./setup.sh "homepage" "peaceiris"
+          bash ./setup.sh "homepage" "peaceiris" "${GITHUB_SHA}"
           cd homepage
           npm ci
           hugo
