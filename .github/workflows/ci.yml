@@ -23,7 +23,7 @@ env:
 jobs:
   renovate:
     runs-on: ubuntu-22.04
-    timeout-minutes: 1
+    timeout-minutes: 3
     permissions: {}
     steps:
       - uses: actions/checkout@v4
