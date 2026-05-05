@@ -302,6 +302,18 @@ Please follow the instruction as the same as the `repo` shortcode.
 |---|---|
 | ![Shortcode table mouse out](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/exampleSite/assets/images/shortcode_table_1.jpg) | ![Shortcode table mouse over](https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/exampleSite/assets/images/shortcode_table_2.jpg) |
 
+### diff
+
+Render a highlighted unified diff with Hugo's `strings.Diff` function.
+
+```md
+{{< diff oldName="before.html" newName="after.html" >}}
+<p>Powered by Hugo v0.124.1</p>
+---
+<p>Powered by Hugo v0.125.7</p>
+{{< /diff >}}
+```
+
 ### math
 
 See also [the example page](https://hugothemeiris.peaceiris.com/posts/math/).
