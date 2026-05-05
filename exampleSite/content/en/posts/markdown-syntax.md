@@ -140,6 +140,18 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 </html>
 {{< /highlight >}}
 
+### Code diff with the diff shortcode
+
+{{< diff oldName="before.html" newName="after.html" >}}
+<div class="message">
+  <p>Powered by Hugo v0.124.1</p>
+</div>
+---
+<div class="message">
+  <p>Powered by Hugo v0.125.7</p>
+</div>
+{{< /diff >}}
+
 
 
 ## List Types

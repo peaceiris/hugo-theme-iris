@@ -1,0 +1,21 @@
+{{ $oldName := or (.Get "oldName") "old" }}
+{{ $newName := or (.Get "newName") "new" }}
+{{ $separator := or (.Get "separator") "\n---\n" }}
+{{ $inner := replace .Inner "\r\n" "\n" }}
+{{ $parts := split (trim $inner "\n") $separator }}
+
+{{ if ne (len $parts) 2 }}
+  {{ errorf "The %q shortcode requires exactly two text blocks separated by %q. See %s" .Name (trim $separator "\n") .Position }}
+{{ else }}
+  {{ $old := trim (index $parts 0) "\n" }}
+  {{ $new := trim (index $parts 1) "\n" }}
+  {{ $diff := strings.Diff $oldName $old $newName $new }}
+
+  {{ if $diff }}
+    <div class="code-block diff-block">
+      {{ transform.Highlight $diff "diff" "" }}
+    </div>
+  {{ else }}
+    <p class="diff-block-empty has-text-grey-light is-italic">No differences.</p>
+  {{ end }}
+{{ end }}
