@@ -17,21 +17,20 @@ jobs:
   main:
     runs-on: ubuntu-22.04
     timeout-minutes: 5
-    permissions:
-      contents: write
+    permissions: {}
     steps:
-      - uses: peaceiris/actions-github-app-token@v1
+      - uses: peaceiris/actions-github-app-token@652b86006ad2c113bdd5c478c9a98f359829847b # v1
         id: app
         with:
           app_id: ${{ secrets.GH_APP_ID }}
           private_key: ${{ secrets.GH_APP_PRIVATE_KEY }}
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           token: ${{ steps.app.outputs.token }}
           fetch-depth: 0
 
-      - uses: peaceiris/workflows/setup-git@v0.20.1
+      - uses: peaceiris/workflows/setup-git@344651af76054dbb5c8231c3d0a18b109c029630 # v0.20.1
 
       - name: Create release
         env:
