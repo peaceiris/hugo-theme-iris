@@ -19,13 +19,13 @@ jobs:
     timeout-minutes: 5
     permissions: {}
     steps:
-      - uses: peaceiris/actions-github-app-token@652b86006ad2c113bdd5c478c9a98f359829847b # v1
+      - uses: actions/create-github-app-token@1b10c78c7865c340bc4f6099eb2f838309f1e8c3 # v3.1.1
         id: app
         with:
-          app_id: ${{ secrets.GH_APP_ID }}
-          private_key: ${{ secrets.GH_APP_PRIVATE_KEY }}
-          permissions: >-
-            {"contents":"write","discussions":"write"}
+          app-id: ${{ secrets.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-discussions: write
 
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
