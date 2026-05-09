@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bump Hugo"
+  short_description: "Guide Hugo version migrations"
+  default_prompt: "Use $bump-hugo to update this Hugo theme to a target Hugo release."
