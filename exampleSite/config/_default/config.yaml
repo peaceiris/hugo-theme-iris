@@ -45,6 +45,8 @@ markup:
   goldmark:
     extensions:
       extras:
+        delete:
+          enable: true
         insert:
           enable: true
         mark:
@@ -53,6 +55,7 @@ markup:
           enable: true
         superscript:
           enable: true
+      strikethrough: false
     renderer:
       unsafe: true
 
