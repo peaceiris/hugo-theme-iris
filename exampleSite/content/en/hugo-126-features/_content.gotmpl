@@ -1,0 +1,22 @@
+{{ range site.Data.hugo.v126.features }}
+  {{ $content := dict
+    "mediaType" "text/markdown"
+    "value" .body
+  }}
+  {{ $dates := dict "date" (time.AsTime .date) }}
+  {{ $params := dict
+    "eyecatch" .eyecatch
+    "math" false
+    "toc" false
+  }}
+  {{ $page := dict
+    "content" $content
+    "dates" $dates
+    "description" .description
+    "kind" "page"
+    "params" $params
+    "path" .slug
+    "title" .title
+  }}
+  {{ $.AddPage $page }}
+{{ end }}
