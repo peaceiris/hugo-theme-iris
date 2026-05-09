@@ -9,6 +9,8 @@ description: Create or draft GitHub planning issues for Hugo version bumps in th
 
 Create a focused planning issue for a Hugo version migration. Base the issue on the repository's current pinned Hugo module, the requested or latest appropriate target version, and the Hugo release notes between those versions.
 
+The plan should explicitly state that the Hugo dependency update happens inside the `deps/` Go module, not at the repository root.
+
 ## Workflow
 
 1. Determine the current pinned Hugo version from `deps/go.mod`:
@@ -30,7 +32,8 @@ Create a focused planning issue for a Hugo version migration. Base the issue on 
    - Check repository files that may influence the plan, especially `deps/go.mod`, `deps/go.sum`, `theme.toml`, `exampleSite/`, `layouts/`, `README.md`, and build scripts.
 
 4. Identify migration work:
-   - Always include updating `deps/go.mod` and refreshing `deps/go.sum`.
+   - Always include updating the Hugo pin in `deps/go.mod` and refreshing `deps/go.sum`.
+   - Mention that the update commands should be run from `deps/` and that the resulting `deps/` diff should be reviewed for necessary transitive changes only.
    - Include `theme.toml` `min_version` only when the theme or example site will rely on behavior introduced by the target Hugo version.
    - Add example-site tasks for new Hugo features only when they are relevant to this theme and can be demonstrated with local/static data.
    - Include checks for render hooks, templates, shortcodes, content rendering, markup configuration, image handling, multilingual behavior, and deprecations when release notes indicate risk.
@@ -56,7 +59,7 @@ When an example issue or PR is relevant: Follow the pattern from <example issue 
 ## Tasks
 
 - Update the pinned Hugo module in `deps/go.mod` from `<current>` to `<target>`.
-- Refresh `deps/go.sum`.
+- Refresh `deps/go.sum` from the `deps/` Go module and review the diff for necessary transitive dependency changes only.
 - Update `theme.toml` `min_version` if the theme or example site starts relying on `<target-minor>`-only behavior.
 - Add or update example-site coverage for <feature or behavior>, using local/static data only when builds are involved.
 - Check whether existing render hooks, templates, shortcodes, and markup configuration need changes for the Hugo release notes in scope.

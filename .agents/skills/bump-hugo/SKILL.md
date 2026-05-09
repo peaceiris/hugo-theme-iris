@@ -20,7 +20,8 @@ Follow the repository pattern from prior Hugo bumps: update the pinned Hugo modu
    - Read official Hugo release notes and docs for every relevant minor or patch between the current and target versions.
 
 2. Update the Hugo dependency pin.
-   - Change only the dependency module under `deps/` unless the task explicitly asks for broader module updates.
+   - Treat `deps/` as the only Go module for the Hugo pin update unless the task explicitly asks for broader module updates.
+   - Do not run `go get` or `go mod tidy` from the repository root for this migration.
    - From `deps/`, run `go get github.com/gohugoio/hugo@vX.Y.Z`, then `go mod tidy`.
    - Confirm `deps/go.mod` has the requested Hugo version and `deps/go.sum` changed only as needed.
    - Re-run `make get-hugo-version` from the repository root.
@@ -66,6 +67,7 @@ Use the release notes to decide which, if any, scoped changes are worth adding b
 ## PR Notes
 
 - Use a concise summary that states the old and new Hugo versions.
+- Mention the `deps/` update explicitly, including the `deps/go.mod` pin change and refreshed `deps/go.sum`.
 - List the example-site features added for the migration.
 - Include the `theme.toml` `min_version` decision.
 - Include verification commands and results.
