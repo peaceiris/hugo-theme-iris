@@ -4,11 +4,24 @@
 {{ end }}
 
 {{ $imageSrc := $.Destination }}
+{{ $imageURL := urls.Parse $imageSrc }}
+{{ $imageLookupPath := $imageURL.Path }}
+{{ if not $imageLookupPath }}
+  {{ $imageLookupPath = $imageSrc }}
+{{ end }}
+{{ $imageLookupPath = replaceRE "^\\./" "" $imageLookupPath }}
+{{ $imageSuffix := "" }}
+{{ with $imageURL.RawQuery }}
+  {{ $imageSuffix = printf "?%s" . }}
+{{ end }}
+{{ with $imageURL.Fragment }}
+  {{ $imageSuffix = printf "%s#%s" $imageSuffix . }}
+{{ end }}
 {{ $hashedDestination := sha256 $imageSrc }}
-{{ $extension := path.Ext $imageSrc }}
+{{ $extension := path.Ext $imageLookupPath }}
 {{ $localPath := delimit (slice "images/" $hashedDestination $extension) "" }}
 {{ $assetPath := delimit (slice "assets/" $localPath) "" }}
-{{ $imagePath := $imageSrc }}
+{{ $imagePath := $imageLookupPath }}
 {{ if (fileExists $assetPath) }}
   {{ $imagePath = $localPath }}
 {{ end }}
@@ -40,16 +53,16 @@
     <figure class="image container">
       <picture>
         {{ if hugo.IsExtended }}
-        <source type="image/webp" media="(max-width: 480px)" srcset="{{ $smallWebP.RelPermalink }} 480w">
-        <source type="image/webp" media="(max-width: 768px)" srcset="{{ $mediumWebP.RelPermalink }} 768w">
-        <source type="image/webp" media="(max-width: 1024px)" srcset="{{ $largeWebP.RelPermalink }} 1024w">
+        <source type="image/webp" media="(max-width: 480px)" srcset="{{ printf "%s%s" $smallWebP.RelPermalink $imageSuffix | safeURL }} 480w">
+        <source type="image/webp" media="(max-width: 768px)" srcset="{{ printf "%s%s" $mediumWebP.RelPermalink $imageSuffix | safeURL }} 768w">
+        <source type="image/webp" media="(max-width: 1024px)" srcset="{{ printf "%s%s" $largeWebP.RelPermalink $imageSuffix | safeURL }} 1024w">
         {{ end }}
 
-        <source type="image/jpeg" media="(max-width: 480px)" srcset="{{ $smallJPG.RelPermalink }} 480w">
-        <source type="image/jpeg" media="(max-width: 768px)" srcset="{{ $mediumJPG.RelPermalink }} 768w">
-        <source type="image/jpeg" media="(max-width: 1024px)" srcset="{{ $largeJPG.RelPermalink }} 1024w">
+        <source type="image/jpeg" media="(max-width: 480px)" srcset="{{ printf "%s%s" $smallJPG.RelPermalink $imageSuffix | safeURL }} 480w">
+        <source type="image/jpeg" media="(max-width: 768px)" srcset="{{ printf "%s%s" $mediumJPG.RelPermalink $imageSuffix | safeURL }} 768w">
+        <source type="image/jpeg" media="(max-width: 1024px)" srcset="{{ printf "%s%s" $largeJPG.RelPermalink $imageSuffix | safeURL }} 1024w">
         <img
-          src="{{ $largeJPG.RelPermalink }}"
+          src="{{ printf "%s%s" $largeJPG.RelPermalink $imageSuffix | safeURL }}"
           alt="{{ $caption }}"
           decoding="async"
           loading="lazy"
@@ -63,7 +76,7 @@
 {{ else }}
   <figure class="image container">
     <img
-      src="{{ $imagePath }}"
+      src="{{ $imageSrc | safeURL }}"
       alt="{{ $caption }}"
       decoding="async"
       loading="lazy"

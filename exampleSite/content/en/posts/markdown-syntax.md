@@ -48,6 +48,8 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 ![Hugo IRIS Theme](images/screenshot.jpg "This is the screenshot")
 
+![Hugo IRIS Theme](./images/screenshot.jpg?version=0.126.2#hugo-126 "This local image keeps its query and fragment")
+
 {{</* centered */>}}
 ![Hugo IRIS Theme](images/screenshot.jpg)
 {{</* /centered */>}}
@@ -58,6 +60,8 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 ![Hugo IRIS Theme](images/screenshot.jpg)
 
 ![Hugo IRIS Theme](images/screenshot.jpg "This is the screenshot")
+
+![Hugo IRIS Theme](./images/screenshot.jpg?version=0.126.2#hugo-126 "This local image keeps its query and fragment")
 
 {{< centered >}}
 ![Hugo IRIS Theme](images/screenshot.jpg)
@@ -175,6 +179,18 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
   2. Second Sub-item
 
 
+
+## Goldmark Extras
+
+~~Deleted text~~
+
+++Inserted text++
+
+==Marked text==
+
+H~2~O
+
+X^2^ + Y^2^ = Z^2^
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 

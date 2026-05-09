@@ -8,6 +8,7 @@ services:
       - 1313:1313
     volumes:
       - ${PWD}:/src/hugo-theme-iris
+      - ${HUGO_GIT_COMMON_DIR:-.git}:${HUGO_GIT_COMMON_DIR:-/src/hugo-theme-iris/.git}:ro
       - ${HUGO_CACHEDIR}:/root/.cache/hugo
     environment:
       - HUGO_CACHEDIR=/root/.cache/hugo

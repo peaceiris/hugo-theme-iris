@@ -43,6 +43,16 @@ imaging:
 
 markup:
   goldmark:
+    extensions:
+      extras:
+        insert:
+          enable: true
+        mark:
+          enable: true
+        subscript:
+          enable: true
+        superscript:
+          enable: true
     renderer:
       unsafe: true
 
