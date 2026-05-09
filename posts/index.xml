@@ -32,7 +32,7 @@ Point Of View Hold down the alt key (ctrl in Linux) and click on any element to 
 <pubDate>Wed, 01 Jan 2020 01:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.com/posts/math/</guid>
 <description>MathJax mathjax/MathJax: Beautiful math in all browsers Inline Example Input Inline $E = mc^2$ Output Inline $E = mc^2$
-Basic Example Input $$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$ Output $$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$
+Basic Example Input $$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$ Output $$ \sum_{i=0}n i2 = \frac{(n^2+n)(2n+1)}{6} $$
 Math Shortcode See also this thread .
 Input {{&amp;lt; math &amp;gt;}} \begin{vmatrix}a &amp;amp; b\\ c &amp;amp; d \end{vmatrix} {{&amp;lt; /math &amp;gt;}} Output $$ \begin{vmatrix}a &amp; b\\ c &amp; d \end{vmatrix} $$ </description>
 </item>
