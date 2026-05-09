@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
+<loc>https://hugothemeiris.peaceiris.com/hugo-126-features/content-adapter-demo/</loc>
+<lastmod>2024-05-14T00:00:00+00:00</lastmod>
+<priority>0</priority>
+</url><url>
+<loc>https://hugothemeiris.peaceiris.com/hugo-126-features/</loc>
+<lastmod>2026-05-09T23:46:59+09:00</lastmod>
+</url><url>
 <loc>https://hugothemeiris.peaceiris.com/</loc>
 <lastmod>2021-05-09T22:42:39+09:00</lastmod>
 <xhtml:link rel="alternate" hreflang="ja-jp" href="https://hugothemeiris.peaceiris.com/ja/"/>
@@ -31,6 +38,6 @@
 <lastmod>2022-01-13T02:53:04+09:00</lastmod>
 </url><url>
 <loc>https://hugothemeiris.peaceiris.com/posts/markdown-syntax/</loc>
-<lastmod>2026-05-06T03:59:02+09:00</lastmod>
+<lastmod>2026-05-09T23:46:59+09:00</lastmod>
 </url>
 </urlset>
