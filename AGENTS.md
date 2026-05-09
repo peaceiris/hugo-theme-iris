@@ -28,5 +28,4 @@ Recent history uses Conventional Commits, for example `build: bump hugo from v0.
 
 ## Agent-Specific Instructions
 
-When acting as an automated contributor in this repository, communicate with the user in Japanese unless they request another language.
 Use English for repository-facing content, including documentation, code comments, commit messages, and pull request text, unless the task explicitly requires another language.
