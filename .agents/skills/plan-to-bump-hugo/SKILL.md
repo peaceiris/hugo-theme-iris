@@ -73,8 +73,6 @@ When an example issue or PR is relevant: Follow the pattern from <example issue 
 
 ## Test plan
 
-- `npm test`
-- `make build-staging`
 - `make docker-build`
 - Run `make dev` and visually confirm:
   - the new or updated example-site coverage renders correctly,
@@ -82,7 +80,7 @@ When an example issue or PR is relevant: Follow the pattern from <example issue 
   - no unexpected warnings appear during local development.
 ```
 
-Adjust the visual confirmation bullets to match the planned change. Remove bullets that do not apply, but keep the test plan strong enough for a Hugo theme migration.
+Adjust the visual confirmation bullets to match the planned change. Remove bullets that do not apply, but keep `make docker-build` as the primary verification command for Hugo theme migrations.
 
 ## GitHub Notes
 

@@ -39,9 +39,7 @@ Follow the repository pattern from prior Hugo bumps: update the pinned Hugo modu
    - Keep `theme.toml` `min_version` unchanged unless the theme or example site now relies on behavior unavailable in the old minimum version. If changed, set it to the minimum Hugo version that actually provides the required behavior and mention the reason in the PR.
 
 5. Validate.
-   - Run `npm test`.
-   - Run `make build-staging`.
-   - Run `make docker-build` when Docker is available or when the issue/PR asks for Docker parity.
+   - Run `make docker-build` as the primary verification command.
    - For visible output changes, run `make dev` and inspect the affected example pages.
    - If a command cannot run locally, record the exact blocker and what was still verified.
 
@@ -70,5 +68,5 @@ Use the release notes to decide which, if any, scoped changes are worth adding b
 - Mention the `deps/` update explicitly, including the `deps/go.mod` pin change and refreshed `deps/go.sum`.
 - List the example-site features added for the migration.
 - Include the `theme.toml` `min_version` decision.
-- Include verification commands and results.
+- Include the `make docker-build` verification result.
 - A suitable commit title is `build: bump hugo from vA.B to vX.Y`.
