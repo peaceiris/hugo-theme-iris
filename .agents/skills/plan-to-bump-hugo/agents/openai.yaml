@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Hugo Bump"
+  short_description: "Create planning issues for Hugo upgrades"
+  default_prompt: "Use $plan-to-bump-hugo to create a new planning issue for the next Hugo version bump."
