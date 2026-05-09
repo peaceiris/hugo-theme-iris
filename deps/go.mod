@@ -1,6 +1,6 @@
 module theme
 
-go 1.21.8
+go 1.21
 
 require github.com/gohugoio/hugo v0.131.0
 
