@@ -3,6 +3,7 @@ cmd := ""
 DOCKER_COMPOSE := docker compose
 GH_USER_ID := peaceiris
 HUGO_GIT_COMMON_DIR := $(shell git rev-parse --path-format=absolute --git-common-dir)
+CI_OWNER ?= 1000:1000
 
 
 .PHONY: bump-node
@@ -38,7 +39,7 @@ docker-test: npm-ci docker-prepare
 .PHONY: docker-prepare
 docker-prepare:
 	@if [ "$${CI:-}" = "true" ]; then \
-		sudo chown -R 1000:1000 ./exampleSite; \
+		sudo chown -R $(CI_OWNER) ./exampleSite; \
 	fi
 
 .PHONY: npm-ci
