@@ -34,6 +34,7 @@ The plan should explicitly state that the Hugo dependency update happens inside 
 4. Identify migration work:
    - Always include updating the Hugo pin in `deps/go.mod` and refreshing `deps/go.sum`.
    - Mention that the update commands should be run from `deps/` and that the resulting `deps/` diff should be reviewed for necessary transitive changes only.
+   - Include a check that `deps/go.mod` keeps the repository's CI-compatible major.minor Go directive. If `go get` rewrites it to a patch version such as `go 1.21.8`, the migration should restore the major.minor form before Docker validation.
    - Include `theme.toml` `min_version` only when the theme or example site will rely on behavior introduced by the target Hugo version.
    - Add example-site tasks for new Hugo features only when they are relevant to this theme and can be demonstrated with local/static data.
    - Include checks for render hooks, templates, shortcodes, content rendering, markup configuration, image handling, multilingual behavior, and deprecations when release notes indicate risk.
@@ -60,6 +61,7 @@ When an example issue or PR is relevant: Follow the pattern from <example issue 
 
 - Update the pinned Hugo module in `deps/go.mod` from `<current>` to `<target>`.
 - Refresh `deps/go.sum` from the `deps/` Go module and review the diff for necessary transitive dependency changes only.
+- Keep the `deps/go.mod` Go directive in CI-compatible major.minor form, restoring it if `go get` rewrites it to a patch version.
 - Update `theme.toml` `min_version` if the theme or example site starts relying on `<target-minor>`-only behavior.
 - Add or update example-site coverage for <feature or behavior>, using local/static data only when builds are involved.
 - Check whether existing render hooks, templates, shortcodes, and markup configuration need changes for the Hugo release notes in scope.
@@ -73,6 +75,7 @@ When an example issue or PR is relevant: Follow the pattern from <example issue 
 
 ## Test plan
 
+- `make get-hugo-version` prints `<target-without-leading-v>`, ensuring Docker validation uses `HUGO_VERSION=v<target-without-leading-v>`.
 - `make docker-build`
 - Run `make dev` and visually confirm:
   - the new or updated example-site coverage renders correctly,
@@ -80,7 +83,7 @@ When an example issue or PR is relevant: Follow the pattern from <example issue 
   - no unexpected warnings appear during local development.
 ```
 
-Adjust the visual confirmation bullets to match the planned change. Remove bullets that do not apply, but keep `make docker-build` as the primary verification command for Hugo theme migrations.
+Adjust the visual confirmation bullets to match the planned change. Remove bullets that do not apply, but keep `make get-hugo-version` and `make docker-build` as required checks for Hugo theme migrations.
 
 ## GitHub Notes
 
