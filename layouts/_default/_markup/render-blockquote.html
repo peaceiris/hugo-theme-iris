@@ -1,6 +1,12 @@
 {{ if eq .Type "alert" }}
   <blockquote class="hugo-alert hugo-alert-{{ .AlertType }}">
-    <p class="hugo-alert-heading">{{ or (i18n .AlertType) (title .AlertType) }}</p>
+    <p class="hugo-alert-heading">
+      {{- with .AlertTitle -}}
+        {{ . }}
+      {{- else -}}
+        {{ or (i18n .AlertType) (title .AlertType) }}
+      {{- end -}}
+    </p>
     {{ .Text | safeHTML }}
   </blockquote>
 {{ else }}
