@@ -15,11 +15,16 @@ main:
     pre: ""
     url: "/hugo-131-url-tokens/"
     weight: 3
+  - identifier: hugo-136
+    name: Hugo v0.136
+    pre: ""
+    url: "/hugo-136-url-escapes/"
+    weight: 4
   - identifier: repository
     name: Repository
     pre: ""
     url: "https://github.com/peaceiris/hugo-theme-iris"
-    weight: 4
+    weight: 5
     params:
       target: "_blank"
       rel: "noopener noreferrer"
@@ -27,7 +32,7 @@ main:
     name: Author
     pre: ""
     url: "https://peaceiris.com"
-    weight: 5
+    weight: 6
     params:
       target: "_blank"
       rel: "noopener noreferrer"
@@ -35,7 +40,7 @@ main:
     name: Hugo
     pre: ""
     url: "https://gohugo.io/"
-    weight: 6
+    weight: 7
     params:
       target: "_blank"
       rel: "noopener noreferrer"
@@ -43,4 +48,4 @@ main:
     name: RSS
     pre: ""
     url: "/index.xml"
-    weight: 7
+    weight: 8

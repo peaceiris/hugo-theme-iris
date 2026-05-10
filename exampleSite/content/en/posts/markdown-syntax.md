@@ -123,10 +123,10 @@ Tables aren't part of the core Markdown spec, but Hugo supports them out-of-the-
 
 <br>
 
-| Name | Age |
-|---|---:|
-| Bob | 27 |
-| Alice | 23 |
+| Name | Role | Age |
+|:---|:---:|---:|
+| Bob | Writer | 27 |
+| Alice | Designer | 23 |
 
 ### Shortcode table
 
