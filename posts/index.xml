@@ -5,44 +5,173 @@
 <description>Recent content in Posts on Hugo IRIS Theme</description>
 <generator>Hugo</generator>
 <language>en-us</language>
-<lastBuildDate>Sun, 10 May 2026 13:50:46 +0900</lastBuildDate>
+<lastBuildDate>Sun, 10 May 2026 15:25:29 +0900</lastBuildDate>
 <atom:link href="https://hugothemeiris.peaceiris.com/posts/index.xml" rel="self" type="application/rss+xml"/>
 <item>
 <title>Reveal.js Support</title>
 <link>https://hugothemeiris.peaceiris.com/posts/revealjs/</link>
 <pubDate>Fri, 03 Jan 2020 01:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.com/posts/revealjs/</guid>
-<description>Reveal.js The Html Presentation Framework Created by Hakim El Hattab and contributors.
-Hello There reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-Vertical Slides To be developed.
-Slide Overview Press ESC to enter the slide overview.
-Point Of View Hold down the alt key (ctrl in Linux) and click on any element to zoom towards it using zoom.</description>
+<description>&lt;h1 id="revealjs" class="title is-2">Reveal.js&lt;/h1>
+&lt;h3 id="the-html-presentation-framework" class="title is-4">The Html Presentation Framework&lt;/h3>
+&lt;p>Created by &lt;a
+ href="https://hakim.se/"
+ 
+ target="_blank" rel="noopener noreferrer">
+ Hakim El Hattab
+&lt;/a>
+ and contributors.&lt;/p>
+&lt;hr>
+&lt;h2 id="hello-there" class="title is-3">Hello There&lt;/h2>
+&lt;p>reveal.js enables you to create beautiful interactive slide decks using HTML.
+This presentation will show you examples of what it can do.&lt;/p>
+&lt;hr>
+&lt;h2 id="vertical-slides" class="title is-3">Vertical Slides&lt;/h2>
+&lt;p>To be developed.&lt;/p>
+&lt;hr>
+&lt;h2 id="slide-overview" class="title is-3">Slide Overview&lt;/h2>
+&lt;p>Press ESC to enter the slide overview.&lt;/p>
+&lt;hr>
+&lt;h2 id="point-of-view" class="title is-3">Point Of View&lt;/h2>
+&lt;p>Hold down the alt key (ctrl in Linux) and click on any element to zoom towards it using &lt;a
+ href="https://lab.hakim.se/zoom-js/"
+ 
+ target="_blank" rel="noopener noreferrer">
+ zoom.js
+&lt;/a>
+.
+Click again to zoom back out.&lt;/p></description>
 </item>
 <item>
 <title>mermaid Graph Support</title>
 <link>https://hugothemeiris.peaceiris.com/posts/mermaid/</link>
 <pubDate>Thu, 02 Jan 2020 01:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.com/posts/mermaid/</guid>
-<description>mermaid mermaid-js/mermaid: Generation of diagram and flowchart from text in a similar manner as markdown Example Input Use mermaid shortcode.
-{{&amp;lt; mermaid &amp;gt;}} sequenceDiagram participant Alice participant Bob Alice-&amp;gt;&amp;gt;John: Hello John, how are you? loop Healthcheck John-&amp;gt;&amp;gt;John: Fight against hypochondria end Note right of John: Rational thoughts &amp;lt;br/&amp;gt;prevail! John--&amp;gt;&amp;gt;Alice: Great! John-&amp;gt;&amp;gt;Bob: How about you? Bob--&amp;gt;&amp;gt;John: Jolly good! {{&amp;lt; /mermaid &amp;gt;}} Output sequenceDiagram participant Alice participant Bob Alice->>John: Hello John, how are you?</description>
+<description>&lt;h2 id="mermaid" class="title is-3">mermaid&lt;/h2>
+&lt;p>&lt;a
+ href="https://github.com/mermaid-js/mermaid"
+ 
+ target="_blank" rel="noopener noreferrer">
+ mermaid-js/mermaid: Generation of diagram and flowchart from text in a similar manner as markdown
+&lt;/a>
+&lt;/p>
+&lt;h2 id="example" class="title is-3">Example&lt;/h2>
+&lt;h3 id="input" class="title is-4">Input&lt;/h3>
+&lt;p>Use &lt;code>mermaid&lt;/code> shortcode.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">mermaid&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sequenceDiagram
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> participant Alice
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> participant Bob
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> loop Healthcheck
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> John-&amp;gt;&amp;gt;John: Fight against hypochondria
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> end
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Note right of John: Rational thoughts &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">br&lt;/span>&lt;span class="p">/&amp;gt;&lt;/span>prevail!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> John--&amp;gt;&amp;gt;Alice: Great!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> John-&amp;gt;&amp;gt;Bob: How about you?
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Bob--&amp;gt;&amp;gt;John: Jolly good!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">mermaid&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="output" class="title is-4">Output&lt;/h3>
+&lt;pre tabindex="0">&lt;code>&lt;div class="mermaid">
+sequenceDiagram
+ participant Alice
+ participant Bob
+ Alice->>John: Hello John, how are you?
+ loop Healthcheck
+ John->>John: Fight against hypochondria
+ end
+ Note right of John: Rational thoughts &lt;br/>prevail!
+ John-->>Alice: Great!
+ John->>Bob: How about you?
+ Bob-->>John: Jolly good!
+&lt;/div>
+
+&lt;/code>&lt;/pre></description>
 </item>
 <item>
 <title>MathJax Support $E=mc^2$</title>
 <link>https://hugothemeiris.peaceiris.com/posts/math/</link>
 <pubDate>Wed, 01 Jan 2020 01:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.com/posts/math/</guid>
-<description>MathJax mathjax/MathJax: Beautiful math in all browsers Inline Example Input Inline $E = mc^2$ Output Inline $E = mc^2$
-Basic Example Input $$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$ Output $$ \sum_{i=0}n i2 = \frac{(n^2+n)(2n+1)}{6} $$
-Math Shortcode See also this thread .
-Input {{&amp;lt; math &amp;gt;}} \begin{vmatrix}a &amp;amp; b\\ c &amp;amp; d \end{vmatrix} {{&amp;lt; /math &amp;gt;}} Output $$ \begin{vmatrix}a &amp; b\\ c &amp; d \end{vmatrix} $$ </description>
+<description>&lt;h2 id="mathjax" class="title is-3">MathJax&lt;/h2>
+&lt;p>&lt;a
+ href="https://github.com/mathjax/MathJax"
+ 
+ target="_blank" rel="noopener noreferrer">
+ mathjax/MathJax: Beautiful math in all browsers
+&lt;/a>
+&lt;/p>
+&lt;h2 id="inline-example" class="title is-3">Inline Example&lt;/h2>
+&lt;h3 id="input" class="title is-4">Input&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-tex" data-lang="tex">&lt;span class="line">&lt;span class="cl">Inline &lt;span class="s">$&lt;/span>&lt;span class="nb">E &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb"> mc^&lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="s">$&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="output" class="title is-4">Output&lt;/h3>
+&lt;p>Inline $E = mc^2$&lt;/p>
+&lt;h2 id="basic-example" class="title is-3">Basic Example&lt;/h2>
+&lt;h3 id="input-1" class="title is-4">Input&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-tex" data-lang="tex">&lt;span class="line">&lt;span class="cl">&lt;span class="sb">$$&lt;/span>&lt;span class="nb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">&lt;/span>&lt;span class="nv">\sum&lt;/span>&lt;span class="nb">_{i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span>&lt;span class="nb">}^n i^&lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="nb"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb"> &lt;/span>&lt;span class="nv">\frac&lt;/span>&lt;span class="nb">{&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="nb">n^&lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nb">n&lt;/span>&lt;span class="o">)(&lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="nb">n&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="nb">}{&lt;/span>&lt;span class="m">6&lt;/span>&lt;span class="nb">}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">&lt;/span>&lt;span class="s">$$&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="output-1" class="title is-4">Output&lt;/h3>
+&lt;p>$$
+\sum_{i=0}&lt;sup>n i&lt;/sup>2 = \frac{(n^2+n)(2n+1)}{6}
+$$&lt;/p>
+&lt;h2 id="math-shortcode" class="title is-3">Math Shortcode&lt;/h2>
+&lt;p>See also &lt;a
+ href="https://discourse.gohugo.io/t/use-goldmark-mathjax-extension/25721"
+ 
+ target="_blank" rel="noopener noreferrer">
+ this thread
+&lt;/a>
+.&lt;/p>
+&lt;h3 id="input-2" class="title is-4">Input&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">math&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">\begin{vmatrix}a &lt;span class="err">&amp;amp;&lt;/span> b\\
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c &lt;span class="err">&amp;amp;&lt;/span> d
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">\end{vmatrix}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">math&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="output-2" class="title is-4">Output&lt;/h3>
+$$
+
+\begin{vmatrix}a &amp; b\\
+c &amp; d
+\end{vmatrix}
+
+$$</description>
 </item>
 <item>
 <title>GitHub Pages and GitHub Actions</title>
 <link>https://hugothemeiris.peaceiris.com/posts/github-pages-and-github-actions/</link>
 <pubDate>Fri, 01 Nov 2019 01:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.com/posts/github-pages-and-github-actions/</guid>
-<description>GitHub Actions for GitHub Pages GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators peaceiris/actions-gh-pages This is a GitHub Action to deploy your static files to GitHub Pages. This deploy action can be combined simply and freely with Static Site Generators (Hugo, mdBook, MkDocs, Gatsby, GitBook, etc.).
-- name: Deploy uses: peaceiris/actions-gh-pages@v3 with: deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} publish_dir: ./public The above example step will deploy .</description>
+<description>&lt;h2 id="github-actions-for-github-pages" class="title is-3">GitHub Actions for GitHub Pages&lt;/h2>
+
+ &lt;blockquote>
+ &lt;p>GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators
+&lt;cite>&lt;a
+ href="https://github.com/peaceiris/actions-gh-pages"
+ 
+ target="_blank" rel="noopener noreferrer">
+ peaceiris/actions-gh-pages
+&lt;/a>
+&lt;/cite>&lt;/p>
+
+ &lt;/blockquote>
+
+&lt;p>This is a &lt;strong>GitHub Action&lt;/strong> to deploy your static files to &lt;strong>GitHub Pages&lt;/strong>.
+This deploy action can be combined simply and freely with &lt;a
+ href="https://www.staticgen.com/"
+ title="StaticGen"
+ target="_blank" rel="noopener noreferrer">
+ Static Site Generators
+&lt;/a>
+
+(Hugo, mdBook, MkDocs, Gatsby, GitBook, etc.).&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Deploy&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-gh-pages@v3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">deploy_key&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.ACTIONS_DEPLOY_KEY }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_dir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">./public&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The above example step will deploy &lt;code>./public&lt;/code> directory to &lt;code>gh-pages&lt;/code> branch.&lt;/p></description>
 </item>
 <item>
 <title>Emoji Support</title>

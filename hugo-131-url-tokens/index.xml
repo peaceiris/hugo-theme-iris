@@ -12,8 +12,8 @@
 <link>https://hugothemeiris.peaceiris.com/hugo-131/front-matter-url-token-demo/</link>
 <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.com/hugo-131/front-matter-url-token-demo/</guid>
-<description>This page is stored below content/en/hugo-131-url-tokens/, but its section cascade renders it at /hugo-131/front-matter-url-token-demo/.
-The example keeps the content local and deterministic while exercising the theme&amp;rsquo;s list links, breadcrumbs, canonical URLs, and processed eyecatch image output.</description>
+<description>&lt;p>This page is stored below &lt;code>content/en/hugo-131-url-tokens/&lt;/code>, but its section cascade renders it at &lt;code>/hugo-131/front-matter-url-token-demo/&lt;/code>.&lt;/p>
+&lt;p>The example keeps the content local and deterministic while exercising the theme&amp;rsquo;s list links, breadcrumbs, canonical URLs, and processed eyecatch image output.&lt;/p></description>
 </item>
 </channel>
 </rss>
