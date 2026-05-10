@@ -98,6 +98,9 @@ The blockquote element represents content that is quoted from another source, op
 
 > [!Tip]
 > Mixed-case alert designators are normalized before rendering.
+
+> [!WARNING]+ Custom alert title
+> Hugo v0.134 adds Obsidian-style alert titles.
 ```
 
 > [!NOTE]
@@ -109,13 +112,23 @@ The blockquote element represents content that is quoted from another source, op
 > [!Tip]
 > Mixed-case alert designators are normalized before rendering.
 
+> [!WARNING]+ Custom alert title
+> Hugo v0.134 adds Obsidian-style alert titles.
+
 
 
 ## Tables
 
-Tables aren't part of the core Markdown spec, but Hugo supports supports them out-of-the-box.
+Tables aren't part of the core Markdown spec, but Hugo supports them out-of-the-box. Standard Markdown tables are styled by the theme table render hook.
 
 <br>
+
+| Name | Age |
+|---|---:|
+| Bob | 27 |
+| Alice | 23 |
+
+### Shortcode table
 
 {{< table >}}
 | Name | Age |

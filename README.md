@@ -85,7 +85,7 @@ This repository includes a [Hugo] theme.
 - Contents
   - Breadcrumb List
   - Syntax Highlighting
-  - GitHub-style blockquote alerts
+  - GitHub-style and Obsidian-style blockquote alerts
   - Table of Contents
   - Random Post List
   - [MathJax]: Beautiful math in all browsers.
@@ -289,6 +289,8 @@ Please follow the instruction as the same as the `repo` shortcode.
 <img width="500px" src="https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/exampleSite/assets/images/shortcode_github-sponsors-list.jpg" alt="Shortcode github-sponsors-list">
 
 ### table
+
+Standard Markdown tables are styled automatically by the theme table render hook. The shortcode remains available when explicit wrapping is useful.
 
 ```md
 {{< table >}}
