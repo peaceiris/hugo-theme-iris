@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Hugo v0.131 URL Tokens on Hugo IRIS Theme</title>
+<link>https://hugothemeiris.peaceiris.com/posts/hugo-131-url-tokens/</link>
+<description>Recent content in Hugo v0.131 URL Tokens on Hugo IRIS Theme</description>
+<generator>Hugo</generator>
+<language>en-us</language>
+<lastBuildDate>Sun, 10 May 2026 17:06:22 +0900</lastBuildDate>
+<atom:link href="https://hugothemeiris.peaceiris.com/posts/hugo-131-url-tokens/index.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>Front Matter URL Tokens</title>
+<link>https://hugothemeiris.peaceiris.com/posts/hugo-131/front-matter-url-token-demo/</link>
+<pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
+<guid>https://hugothemeiris.peaceiris.com/posts/hugo-131/front-matter-url-token-demo/</guid>
+<description>&lt;p>This page is stored below &lt;code>content/en/posts/hugo-131-url-tokens/&lt;/code>, but its section cascade renders it at &lt;code>/posts/hugo-131/front-matter-url-token-demo/&lt;/code>.&lt;/p>
+&lt;p>The example keeps the content local and deterministic while exercising the theme&amp;rsquo;s list links, breadcrumbs, canonical URLs, and processed eyecatch image output.&lt;/p></description>
+</item>
+</channel>
+</rss>
