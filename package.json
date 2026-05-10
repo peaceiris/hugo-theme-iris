@@ -36,7 +36,7 @@
     "lint-staged": "^17.0.0",
     "npm-run-all2": "^6.0.0",
     "open": "^11.0.0",
-    "renovate": "^37.0.0",
+    "renovate": "^43.150.0",
     "wait-on": "^7.0.1"
   },
   "engines": {
