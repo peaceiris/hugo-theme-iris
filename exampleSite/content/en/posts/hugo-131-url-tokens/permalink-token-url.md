@@ -9,6 +9,6 @@ toc: false
 math: false
 ---
 
-This page is stored below `content/en/hugo-131-url-tokens/`, but its section cascade renders it at `/hugo-131/front-matter-url-token-demo/`.
+This page is stored below `content/en/posts/hugo-131-url-tokens/`, but its section cascade renders it at `/posts/hugo-131/front-matter-url-token-demo/`.
 
 The example keeps the content local and deterministic while exercising the theme's list links, breadcrumbs, canonical URLs, and processed eyecatch image output.
