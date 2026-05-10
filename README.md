@@ -85,6 +85,7 @@ This repository includes a [Hugo] theme.
 - Contents
   - Breadcrumb List
   - Syntax Highlighting
+  - GitHub-style blockquote alerts
   - Table of Contents
   - Random Post List
   - [MathJax]: Beautiful math in all browsers.

@@ -44,14 +44,14 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 
 
-## Vimeo Simple Shortcode
+## Vimeo Shortcode
 
 ### Usage
 
 ```md
-{{</* vimeo_simple 48912912 */>}}
+{{</* vimeo 48912912 */>}}
 ```
 
 ### Example
 
-{{< vimeo_simple 48912912 >}}
+{{< vimeo 48912912 >}}

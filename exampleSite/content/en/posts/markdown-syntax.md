@@ -87,6 +87,28 @@ The blockquote element represents content that is quoted from another source, op
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
+### GitHub-style alerts
+
+```md
+> [!NOTE]
+> Hugo v0.132 adds Markdown blockquote render hooks with GitHub-style alert syntax.
+
+> [!warning]
+> Hugo v0.132.2 fixes lower-case alert designators.
+
+> [!Tip]
+> Mixed-case alert designators are normalized before rendering.
+```
+
+> [!NOTE]
+> Hugo v0.132 adds Markdown blockquote render hooks with GitHub-style alert syntax.
+
+> [!warning]
+> Hugo v0.132.2 fixes lower-case alert designators.
+
+> [!Tip]
+> Mixed-case alert designators are normalized before rendering.
+
 
 
 ## Tables

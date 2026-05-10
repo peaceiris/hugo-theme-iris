@@ -173,7 +173,7 @@ blockquote {
   background: $grey-dark;
   border-left: 0.2rem solid chocolate;
 
-  :before {
+  &:before {
     display: inline-block;
     position: absolute;
     top: 0.5rem;
@@ -198,6 +198,47 @@ blockquote {
     color: $grey-lighter;
     font-size: 0.9rem;
   }
+}
+
+blockquote.hugo-alert {
+  padding: 1rem 1.25rem;
+  font-style: normal;
+  border-left-width: 0.3rem;
+
+  &:before {
+    content: none;
+  }
+
+  .hugo-alert-heading {
+    margin-top: 0rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+
+  p {
+    margin: 0.75rem 0rem;
+  }
+}
+
+blockquote.hugo-alert-note {
+  border-left-color: skyblue;
+}
+
+blockquote.hugo-alert-tip {
+  border-left-color: limegreen;
+}
+
+blockquote.hugo-alert-important {
+  border-left-color: mediumpurple;
+}
+
+blockquote.hugo-alert-warning {
+  border-left-color: gold;
+}
+
+blockquote.hugo-alert-caution {
+  border-left-color: tomato;
 }
 
 // ====================
