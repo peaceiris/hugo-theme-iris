@@ -24,7 +24,8 @@ services:
   disqus:
     shortname: hugothemeiris
 
-paginate: 3
+pagination:
+  pagerSize: 3
 canonifyURLs: true
 enableRobotsTXT: true
 pluralizeListTitles: false
