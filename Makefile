@@ -50,7 +50,7 @@ npm-ci:
 .PHONY: dev
 dev:
 	cd ./exampleSite && \
-	hugo server --renderStaticToDisk --navigateToChanged --buildDrafts
+	hugo server --renderStaticToDisk --navigateToChanged --buildDrafts -O
 
 .PHONY: test
 test:
