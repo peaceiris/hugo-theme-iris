@@ -10,30 +10,36 @@ bump-node:
 	bash scripts/bump_node.sh
 
 .PHONY: docker-dev
-docker-dev: npm-ci
+docker-dev: npm-ci docker-prepare
 	$(eval opt := server --navigateToChanged --bind=0.0.0.0 --buildDrafts)
 	export HUGO_VERSION=v$(shell make get-hugo-version) HUGO_GIT_COMMON_DIR="$(HUGO_GIT_COMMON_DIR)" && \
 	$(DOCKER_COMPOSE) up -d && \
 	$(DOCKER_COMPOSE) exec hugo hugo $(opt)
 
 .PHONY: docker-hugo
-docker-hugo: npm-ci
+docker-hugo: npm-ci docker-prepare
 	# make docker-hugo cmd="version"
 	export HUGO_VERSION=v$(shell make get-hugo-version) HUGO_GIT_COMMON_DIR="$(HUGO_GIT_COMMON_DIR)" && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(cmd)
 
 .PHONY: docker-build
-docker-build: npm-ci
+docker-build: npm-ci docker-prepare
 	$(eval opt := --minify --cleanDestinationDir)
 	export HUGO_VERSION=v$(shell make get-hugo-version) HUGO_GIT_COMMON_DIR="$(HUGO_GIT_COMMON_DIR)" && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: docker-test
-docker-test: npm-ci
+docker-test: npm-ci docker-prepare
 	$(eval opt := --minify --renderToMemory --printPathWarnings --logLevel debug \
 		--templateMetrics --templateMetricsHints)
 	export HUGO_VERSION=v$(shell make get-hugo-version) HUGO_GIT_COMMON_DIR="$(HUGO_GIT_COMMON_DIR)" && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
+
+.PHONY: docker-prepare
+docker-prepare:
+	@if [ "$${CI:-}" = "true" ]; then \
+		sudo chown -R 1000:1000 ./exampleSite; \
+	fi
 
 .PHONY: npm-ci
 npm-ci:

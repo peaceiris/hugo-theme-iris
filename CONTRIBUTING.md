@@ -29,7 +29,7 @@ git clone https://github.com/<username>/hugo-theme-iris.git
 cd ./hugo-theme-iris
 
 # (3) Start Hugo Server with Docker.
-make up
+make docker-dev
 ```
 
 
