@@ -20,7 +20,9 @@ module:
       target: static/mathjax/es5/output/chtml/fonts/woff-v2
 
 # googleAnalytics: UA-123-45
-disqusShortname: hugothemeiris
+services:
+  disqus:
+    shortname: hugothemeiris
 
 paginate: 3
 canonifyURLs: true
