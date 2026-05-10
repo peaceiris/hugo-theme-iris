@@ -27,7 +27,7 @@ jobs:
     permissions: {}
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
-      - uses: peaceiris/workflows/setup-node@f99ac413519ad25fb17bff62d8f9f5e5ca32927d # v0.21.5
+      - uses: peaceiris/workflows/setup-node@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
@@ -63,7 +63,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: peaceiris/workflows/setup-hugo@f99ac413519ad25fb17bff62d8f9f5e5ca32927d # v0.21.5
+      - uses: peaceiris/workflows/setup-hugo@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
@@ -159,7 +159,7 @@ jobs:
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
-      - uses: peaceiris/workflows/setup-node@f99ac413519ad25fb17bff62d8f9f5e5ca32927d # v0.21.5
+      - uses: peaceiris/workflows/setup-node@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           cache: "npm"
@@ -180,13 +180,13 @@ jobs:
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
-      - uses: peaceiris/workflows/setup-hugo@f99ac413519ad25fb17bff62d8f9f5e5ca32927d # v0.21.5
+      - uses: peaceiris/workflows/setup-hugo@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
 
-      - uses: peaceiris/workflows/setup-git@f99ac413519ad25fb17bff62d8f9f5e5ca32927d # v0.21.5
+      - uses: peaceiris/workflows/setup-git@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
         with:
           flags: "--global"
 
