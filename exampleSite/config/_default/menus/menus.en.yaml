@@ -8,17 +8,17 @@ main:
   - identifier: hugo-126
     name: Hugo v0.126
     pre: ""
-    url: "/hugo-126-features/"
+    url: "/posts/hugo-126-features/"
     weight: 2
   - identifier: hugo-131
     name: Hugo v0.131
     pre: ""
-    url: "/hugo-131-url-tokens/"
+    url: "/posts/hugo-131-url-tokens/"
     weight: 3
   - identifier: hugo-136
     name: Hugo v0.136
     pre: ""
-    url: "/hugo-136-url-escapes/"
+    url: "/posts/hugo-136-url-escapes/"
     weight: 4
   - identifier: repository
     name: Repository
