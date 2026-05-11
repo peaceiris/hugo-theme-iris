@@ -14,7 +14,7 @@
   "license": "MIT",
   "author": "peaceiris",
   "scripts": {
-    "postinstall": "npx husky install",
+    "prepare": "husky",
     "start": "make dev",
     "server": "make dev",
     "dev": "make dev",
