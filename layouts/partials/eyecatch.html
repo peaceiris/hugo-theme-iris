@@ -10,10 +10,10 @@
   {{ $imagePath = $localPath }}
   {{ end }}
 
-  {{ with resources.Get $imagePath }}
+  {{ with try (resources.Get $imagePath) }}
     {{ with .Err }}
       {{ warnf "%s" . }}
-    {{ else }}
+    {{ else with .Value }}
       {{ $image := . }}
 
       {{ $smallJPG := $image }}
@@ -53,15 +53,15 @@
           />
         </picture>
       </figure>
+    {{ else }}
+      <figure class="image container">
+        <img
+          src="{{ $imagePath }}"
+          alt="{{ $.Params.Description }}"
+          decoding="async"
+          loading="lazy"
+        />
+      </figure>
     {{ end }}
-  {{ else }}
-    <figure class="image container">
-      <img
-        src="{{ $imagePath }}"
-        alt="{{ $.Params.Description }}"
-        decoding="async"
-        loading="lazy"
-      />
-    </figure>
   {{ end }}
 {{ end }}

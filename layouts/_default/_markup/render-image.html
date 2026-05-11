@@ -26,10 +26,10 @@
   {{ $imagePath = $localPath }}
 {{ end }}
 
-{{ with resources.Get $imagePath }}
+{{ with try (resources.Get $imagePath) }}
   {{ with .Err }}
     {{ warnf "%s" . }}
-  {{ else }}
+  {{ else with .Value }}
     {{ $image := . }}
 
     {{ $smallJPG := $image }}
@@ -72,17 +72,17 @@
         <figcaption class="has-text-centered mt-2">{{ . }}</figcaption>
       {{ end }}
     </figure>
+  {{ else }}
+    <figure class="image container">
+      <img
+        src="{{ $imageSrc | safeURL }}"
+        alt="{{ $caption }}"
+        decoding="async"
+        loading="lazy"
+      />
+      {{ with $caption }}
+        <figcaption class="has-text-centered mt-2">{{ . }}</figcaption>
+      {{ end }}
+    </figure>
   {{ end }}
-{{ else }}
-  <figure class="image container">
-    <img
-      src="{{ $imageSrc | safeURL }}"
-      alt="{{ $caption }}"
-      decoding="async"
-      loading="lazy"
-    />
-    {{ with $caption }}
-      <figcaption class="has-text-centered mt-2">{{ . }}</figcaption>
-    {{ end }}
-  </figure>
 {{ end }}

@@ -30,17 +30,17 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 
 
-## Twitter Shortcode
+## X Shortcode
 
 ### Usage
 
 ```md
-{{</* tweet user="SanDiegoZoo" id="1453110110599868418" */>}}
+{{</* x user="SanDiegoZoo" id="1453110110599868418" */>}}
 ```
 
 ### Example
 
-{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}
+{{< x user="SanDiegoZoo" id="1453110110599868418" >}}
 
 
 

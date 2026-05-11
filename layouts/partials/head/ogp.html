@@ -1,14 +1,14 @@
 {{ $imagePath := "" }}
 {{ if $.Params.eyecatch }}
-  {{ with resources.Get $.Params.eyecatch }}
+  {{ with try (resources.Get $.Params.eyecatch) }}
     {{ with .Err }}
       {{ warnf "%s" . }}
-    {{ else }}
+    {{ else with .Value }}
       {{ $image := . }}
       {{ $imagePath = ($image | resources.Fingerprint "sha512").Permalink }}
+    {{ else }}
+      {{ $imagePath = $.Params.eyecatch }}
     {{ end }}
-  {{ else }}
-    {{ $imagePath = $.Params.eyecatch }}
   {{ end }}
 {{ else }}
   {{ $imagePath = $.Site.Params.ogp.image | absURL }}
