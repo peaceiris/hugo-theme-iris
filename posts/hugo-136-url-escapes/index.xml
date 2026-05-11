@@ -12,8 +12,8 @@
 <link>https://hugothemeiris.peaceiris.com/posts/hugo-136/literal:colon/</link>
 <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.com/posts/hugo-136/literal:colon/</guid>
-<description>&lt;p&gt;This page is stored below &lt;code&gt;content/en/posts/hugo-136-url-escapes/&lt;/code&gt;, but its front matter renders it at &lt;code&gt;/posts/hugo-136/literal:colon/&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The example keeps the content local and deterministic while exercising the theme&amp;rsquo;s list links, breadcrumbs, canonical URLs, and processed eyecatch image output with Hugo v0.136 escaped-colon URL handling.&lt;/p&gt;</description>
+<description>&lt;p>This page is stored below &lt;code>content/en/posts/hugo-136-url-escapes/&lt;/code>, but its front matter renders it at &lt;code>/posts/hugo-136/literal:colon/&lt;/code>.&lt;/p>
+&lt;p>The example keeps the content local and deterministic while exercising the theme&amp;rsquo;s list links, breadcrumbs, canonical URLs, and processed eyecatch image output with Hugo v0.136 escaped-colon URL handling.&lt;/p></description>
 </item>
 </channel>
 </rss>
