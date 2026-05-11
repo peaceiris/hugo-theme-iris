@@ -11,11 +11,6 @@
   ],
   "packageRules": [
     {
-      "automerge": true,
-      "matchUpdateTypes": ["minor", "patch"],
-      "automergeStrategy": "squash"
-    },
-    {
       "groupName": "renovate",
       "matchPackageNames": ["renovate"],
       "minimumReleaseAge": "30 days"
