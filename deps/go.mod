@@ -2,7 +2,7 @@ module theme
 
 go 1.22
 
-require github.com/gohugoio/hugo v0.140.2
+require github.com/gohugoio/hugo v0.141.0
 
 require (
 	github.com/armon/go-radix v1.0.1-0.20221118154546-54df44f2176c // indirect
@@ -16,7 +16,7 @@ require (
 	github.com/cli/safeexec v1.0.1 // indirect
 	github.com/fatih/color v1.18.0 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect
-	github.com/gohugoio/hashstructure v0.1.0 // indirect
+	github.com/gohugoio/hashstructure v0.3.0 // indirect
 	github.com/gohugoio/locales v0.14.0 // indirect
 	github.com/gohugoio/localescompressed v1.0.1 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
@@ -32,8 +32,8 @@ require (
 	github.com/tdewolff/parse/v2 v2.7.15 // indirect
 	github.com/tdewolff/test v1.0.11-0.20240106005702-7de5f7df4739 // indirect
 	golang.org/x/exp v0.0.0-20221031165847-c99f073a8326 // indirect
-	golang.org/x/net v0.33.0 // indirect
-	golang.org/x/sys v0.28.0 // indirect
+	golang.org/x/net v0.34.0 // indirect
+	golang.org/x/sys v0.29.0 // indirect
 	golang.org/x/text v0.21.0 // indirect
 	google.golang.org/protobuf v1.35.2 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect

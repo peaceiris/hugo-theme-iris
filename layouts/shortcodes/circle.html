@@ -11,10 +11,10 @@
   {{ $imagePath = $localPath }}
 {{ end }}
 
-{{ with resources.Get $imagePath }}
+{{ with try (resources.Get $imagePath) }}
   {{ with .Err }}
     {{ warnf "%s" . }}
-  {{ else }}
+  {{ else with .Value }}
     {{ $image := . }}
 
     {{ $smallJPG := $image }}
@@ -57,17 +57,17 @@
       </picture>
     </figure>
     <br>
+  {{ else }}
+    <br>
+      <figure class="image is-180x180 container">
+        <img
+          class="is-rounded"
+          src="{{ $imagePath }}"
+          alt="{{ $alt | safeHTMLAttr }}"
+          decoding="async"
+          loading="lazy"
+        />
+      </figure>
+    <br>
   {{ end }}
-{{ else }}
-  <br>
-    <figure class="image is-180x180 container">
-      <img
-        class="is-rounded"
-        src="{{ $imagePath }}"
-        alt="{{ $alt | safeHTMLAttr }}"
-        decoding="async"
-        loading="lazy"
-      />
-    </figure>
-  <br>
 {{ end }}
