@@ -3,6 +3,7 @@
   {{ with try (resources.Get $.Params.eyecatch) }}
     {{ with .Err }}
       {{ warnf "%s" . }}
+      {{ $imagePath = $.Params.eyecatch }}
     {{ else with .Value }}
       {{ $image := . }}
       {{ $imagePath = ($image | resources.Fingerprint "sha512").Permalink }}
