@@ -1,1 +1,4 @@
 # Config for production
+
+minify:
+  minifyOutput: true
