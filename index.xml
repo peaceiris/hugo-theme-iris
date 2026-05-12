@@ -178,7 +178,6 @@ $$</description>
  peaceiris/actions-gh-pages
 &lt;/a>
 &lt;/cite>&lt;/p>
-
  &lt;/blockquote>
 
 &lt;p>This is a &lt;strong>GitHub Action&lt;/strong> to deploy your static files to &lt;strong>GitHub Pages&lt;/strong>.
