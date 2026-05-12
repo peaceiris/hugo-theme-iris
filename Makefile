@@ -25,13 +25,13 @@ docker-hugo: npm-ci docker-prepare
 
 .PHONY: docker-build
 docker-build: npm-ci docker-prepare
-	$(eval opt := --minify --cleanDestinationDir)
+	$(eval opt := --cleanDestinationDir)
 	export HUGO_VERSION=v$(shell make get-hugo-version) HUGO_GIT_COMMON_DIR="$(HUGO_GIT_COMMON_DIR)" && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
 
 .PHONY: docker-test
 docker-test: npm-ci docker-prepare
-	$(eval opt := --minify --renderToMemory --printPathWarnings --logLevel debug \
+	$(eval opt := --renderToMemory --printPathWarnings --logLevel debug \
 		--templateMetrics --templateMetricsHints)
 	export HUGO_VERSION=v$(shell make get-hugo-version) HUGO_GIT_COMMON_DIR="$(HUGO_GIT_COMMON_DIR)" && \
 	$(DOCKER_COMPOSE) run --rm --entrypoint=hugo hugo $(opt)
@@ -55,13 +55,13 @@ dev:
 .PHONY: test
 test:
 	cd ./exampleSite && \
-	hugo --minify --renderToMemory --printPathWarnings --logLevel debug \
+	hugo --renderToMemory --printPathWarnings --logLevel debug \
 		--templateMetrics --templateMetricsHints
 
 .PHONY: build-staging
 build-staging:
 	cd ./exampleSite && \
-	hugo --minify --cleanDestinationDir \
+	hugo --cleanDestinationDir \
 		--environment "staging" \
 		--printPathWarnings --logLevel debug \
 		--templateMetrics --templateMetricsHints
@@ -69,7 +69,7 @@ build-staging:
 .PHONY: build-prod
 build-prod:
 	cd ./exampleSite && \
-	hugo --minify --cleanDestinationDir --printPathWarnings && \
+	hugo --cleanDestinationDir --printPathWarnings && \
 	wget -O ./public/report.html ${BASE_URL}/report.html || true
 
 .PHONY: fetch-data

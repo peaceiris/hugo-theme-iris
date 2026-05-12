@@ -1,2 +1,5 @@
-# Config for production
+# Config for staging
 baseURL: "/"
+
+minify:
+  minifyOutput: true
