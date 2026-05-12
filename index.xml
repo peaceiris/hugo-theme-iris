@@ -5,8 +5,16 @@
 <description>Recent content in Home on Hugo IRIS Theme</description>
 <generator>Hugo</generator>
 <language>en-us</language>
-<lastBuildDate>Mon, 11 May 2026 23:49:53 +0900</lastBuildDate>
+<lastBuildDate>Tue, 12 May 2026 18:07:00 +0900</lastBuildDate>
 <atom:link href="https://hugothemeiris.peaceiris.com/index.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>Content Basename URL Token</title>
+<link>https://hugothemeiris.peaceiris.com/posts/hugo-144/content-basename-token/</link>
+<pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
+<guid>https://hugothemeiris.peaceiris.com/posts/hugo-144/content-basename-token/</guid>
+<description>&lt;p>This page is stored as &lt;code>content-basename-token.md&lt;/code>, and its section cascade renders it at &lt;code>/posts/hugo-144/content-basename-token/&lt;/code>.&lt;/p>
+&lt;p>The example keeps the content local and deterministic while exercising the theme&amp;rsquo;s list links, breadcrumbs, canonical URLs, and processed eyecatch image output with Hugo v0.144 content basename URL handling.&lt;/p></description>
+</item>
 <item>
 <title>Literal Colon URL</title>
 <link>https://hugothemeiris.peaceiris.com/posts/hugo-136/literal:colon/</link>
