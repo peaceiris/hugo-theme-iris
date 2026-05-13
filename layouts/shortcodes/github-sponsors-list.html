@@ -1,5 +1,5 @@
 {{ $id := .Get "id" }}
-{{ $JSONdata := .Page.Site.Data }}
+{{ $JSONdata := hugo.Data }}
 {{ $githubData := (index $JSONdata "github") }}
 {{ $userData := (index $githubData $id) }}
 <div class="columns is-multiline is-mobile is-centered">

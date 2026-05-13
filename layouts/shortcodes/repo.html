@@ -8,7 +8,7 @@
 
 {{ $id := .Get "id" }}
 {{ $repoName := .Get "name" }}
-{{ $JSONdata := .Page.Site.Data }}
+{{ $JSONdata := hugo.Data }}
 {{ $githubData := (index $JSONdata "github") }}
 {{ $userData := (index $githubData $id) }}
 {{ range $userData.data.user.repositories.nodes }}
