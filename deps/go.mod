@@ -2,7 +2,7 @@ module theme
 
 go 1.25
 
-require github.com/gohugoio/hugo v0.158.0
+require github.com/gohugoio/hugo v0.159.2
 
 require (
 	github.com/bep/clocks v0.5.0 // indirect
@@ -30,7 +30,7 @@ require (
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/spf13/afero v1.15.0 // indirect
 	github.com/spf13/cast v1.10.0 // indirect
-	github.com/tdewolff/parse/v2 v2.8.10 // indirect
+	github.com/tdewolff/parse/v2 v2.8.11 // indirect
 	golang.org/x/net v0.52.0 // indirect
 	golang.org/x/sys v0.42.0 // indirect
 	golang.org/x/text v0.35.0 // indirect
