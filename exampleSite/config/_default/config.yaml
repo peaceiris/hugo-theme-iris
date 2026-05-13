@@ -58,6 +58,19 @@ markup:
           enable: true
         superscript:
           enable: true
+      passthrough:
+        delimiters:
+          block:
+            - - '\['
+              - '\]'
+            - - $$
+              - $$
+          inline:
+            - - '\('
+              - '\)'
+            - - $
+              - $
+        enable: true
       strikethrough: false
     renderer:
       unsafe: true
