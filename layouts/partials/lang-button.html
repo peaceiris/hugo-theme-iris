@@ -3,7 +3,7 @@
 <div class="dropdown" id="langDrop">
   <div class="dropdown-trigger">
     <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" onclick="toggleDropdownActive();">
-      <span>{{ .Language.LanguageName }} ↓</span>
+      <span>{{ .Language.Label }} ↓</span>
     </button>
   </div>
   <div class="dropdown-menu" id="dropdown-menu" role="menu">
@@ -12,7 +12,7 @@
       {{/* partial "console-log" $langPage */}}
       {{/* partial "console-log" (len .Translations) */}}
       {{ range $langPage.Translations }}
-        <a href="{{ .RelPermalink }}" class="dropdown-item normal-link">{{ .Language.LanguageName }}</a>
+        <a href="{{ .RelPermalink }}" class="dropdown-item normal-link">{{ .Language.Label }}</a>
       {{ end }}
     </div>
   </div>
