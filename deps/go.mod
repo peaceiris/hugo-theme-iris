@@ -2,7 +2,7 @@ module theme
 
 go 1.24
 
-require github.com/gohugoio/hugo v0.153.5
+require github.com/gohugoio/hugo v0.154.5
 
 require (
 	github.com/bep/clocks v0.5.0 // indirect
@@ -16,7 +16,7 @@ require (
 	github.com/clbanning/mxj/v2 v2.7.0 // indirect
 	github.com/fatih/color v1.18.0 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect
-	github.com/goccy/go-yaml v1.19.1 // indirect
+	github.com/goccy/go-yaml v1.19.2 // indirect
 	github.com/gohugoio/go-radix v1.2.0 // indirect
 	github.com/gohugoio/hashstructure v0.6.0 // indirect
 	github.com/gohugoio/locales v0.14.0 // indirect
