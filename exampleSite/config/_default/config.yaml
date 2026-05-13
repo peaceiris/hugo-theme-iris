@@ -77,8 +77,8 @@ DefaultContentLanguage: en
 languages:
   en:
     contentDir: content/en
-    languageName: English
-    languageCode: en-us
+    label: English
+    locale: en-us
     params:
       author: peaceiris
       description: Hugo IRIS Theme Demo Site
@@ -93,8 +93,8 @@ languages:
     weight: 1
   ja:
     contentDir: content/ja
-    languageName: 日本語
-    languageCode: ja-jp
+    label: 日本語
+    locale: ja-jp
     params:
       author: peaceiris
       description: Hugo IRIS テーマデモサイト
