@@ -144,10 +144,9 @@ sequenceDiagram
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;\sum&lt;/span&gt;&lt;span class="nb"&gt;_{i&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="nb"&gt;}^n i^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="nb"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt; &lt;/span&gt;&lt;span class="nv"&gt;\frac&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;n^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;n&lt;/span&gt;&lt;span class="o"&gt;)(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="nb"&gt;n&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="nb"&gt;}{&lt;/span&gt;&lt;span class="m"&gt;6&lt;/span&gt;&lt;span class="nb"&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s"&gt;$$&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="output-1" class="title is-4"&gt;Output&lt;/h3&gt;
-&lt;p&gt;$$
-\sum_{i=0}&lt;sup&gt;n i&lt;/sup&gt;2 = \frac{(n^2+n)(2n+1)}{6}
-$$&lt;/p&gt;
-&lt;h2 id="math-shortcode" class="title is-3"&gt;Math Shortcode&lt;/h2&gt;
+$$
+\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+$$&lt;h2 id="math-shortcode" class="title is-3"&gt;Math Shortcode&lt;/h2&gt;
 &lt;p&gt;See also &lt;a
  href="https://discourse.gohugo.io/t/use-goldmark-mathjax-extension/25721"
  
