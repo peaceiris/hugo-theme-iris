@@ -8,7 +8,7 @@ on:
 
 jobs:
   comment:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-slim
     timeout-minutes: 1
     permissions:
       contents: read
