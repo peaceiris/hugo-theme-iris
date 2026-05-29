@@ -1,23 +1,12 @@
 <nav class="breadcrumb" aria-label="breadcrumbs">
   <ul>
-    {{- template "breadcrumb" (dict "node" . "start" .) -}}
+    {{- range .Ancestors.Reverse -}}
+      <li>
+        <a href="{{- .Permalink -}}">{{- .LinkTitle -}}</a>
+      </li>
+    {{- end -}}
+    <li class="is-active">
+      <a href="#" aria-current="page" class="normal-link">{{- .LinkTitle | truncate 20 -}}</a>
+    </li>
   </ul>
 </nav>
-
-{{- define "breadcrumb" -}}
-  {{- if .node.Parent -}}
-    {{- template "breadcrumb" (dict "node" .node.Parent "start" .start) -}}
-  {{- else if not .node.IsHome -}}
-    {{- template "breadcrumb" (dict "node" .node.Site.Home "start" .start) -}}
-  {{- end -}}
-
-  {{- if eq .node .start -}}
-    <li class="is-active">
-      <a href="#" aria-current="page" class="normal-link">{{- .node.LinkTitle | truncate 20 -}}</a>
-    </li>
-  {{- else -}}
-    <li>
-      <a href="{{- .node.Permalink -}}">{{- .node.LinkTitle -}}</a>
-    </li>
-  {{- end -}}
-{{- end -}}
