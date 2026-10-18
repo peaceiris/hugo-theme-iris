@@ -4,9 +4,9 @@
 
   {{ if $.Params.slide }}
   <style>
-    {{ $cssMain := resources.Get "reveal.js/dist/reveal.css" | toCSS | minify }}
+    {{ $cssMain := resources.Get "reveal.js/dist/reveal.css" | minify }}
     {{ $cssMain.Content | safeCSS }}
-    {{ $cssTheme := resources.Get "reveal.js/dist/theme/white.css" | toCSS | minify }}
+    {{ $cssTheme := resources.Get "reveal.js/dist/theme/white.css" | minify }}
     {{ $cssTheme.Content | safeCSS }}
   </style>
   {{ else }}
@@ -15,7 +15,7 @@
     {{ $bulmaCSS := resources.Get "theme/scss/bulma.scss" | toCSS $bulmaOps | minify }}
     {{ $bulmaCSS.Content | safeCSS }}
 
-    {{ $syntaxCSS := resources.Get "theme/css/syntax.css" | toCSS | minify }}
+    {{ $syntaxCSS := resources.Get "theme/css/syntax.css" | minify }}
     {{ $syntaxCSS.Content | safeCSS }}
 
     {{ $themeCSS := resources.Get "theme/scss/style.scss" | toCSS | minify }}

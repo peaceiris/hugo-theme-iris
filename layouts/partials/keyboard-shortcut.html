@@ -70,15 +70,18 @@
       case 'g+p':
         window.location.href = '{{ "/posts" | absLangURL }}';
         break;
+      {{ with $.File }}
+      {{ $filePath := .Path }}
       {{ with $.Site.Params.repo }}
       case 'g+e':
-        window.open('{{ strings.TrimRight "/" .URL }}/edit/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $.File.Path }}', '_blank');
+        window.open('{{ strings.TrimRight "/" .URL }}/edit/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $filePath }}', '_blank');
         break;
       {{ end }}
       {{ with $.Site.Params.repo }}
       case 'g+s':
-        window.open('{{ strings.TrimRight "/" .URL }}/blob/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $.File.Path }}', '_blank');
+        window.open('{{ strings.TrimRight "/" .URL }}/blob/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $filePath }}', '_blank');
         break;
+      {{ end }}
       {{ end }}
       case 'r':
         window.location.reload();
