@@ -53,7 +53,7 @@ dev:
 	hugo server --renderStaticToDisk --navigateToChanged --buildDrafts -O
 
 .PHONY: test
-test: test-repo
+test: test-repo test-fetch-images
 	cd ./exampleSite && \
 	hugo --renderToMemory --printPathWarnings --logLevel debug \
 		--templateMetrics --templateMetricsHints
@@ -62,8 +62,12 @@ test: test-repo
 test-repo:
 	node --test tests/repo.test.mjs
 
+.PHONY: test-fetch-images
+test-fetch-images:
+	node --test tests/fetch-images.test.mjs
+
 .PHONY: build-staging
-build-staging: test-repo
+build-staging: test-repo test-fetch-images
 	cd ./exampleSite && \
 	hugo --cleanDestinationDir \
 		--environment "staging" \
@@ -80,7 +84,7 @@ build-prod:
 fetch-data:
 	cd ./exampleSite && \
 	bash ./scripts/fetch_data.sh ${GH_USER_ID} > ./data/github/${GH_USER_ID}.json && \
-	deno run --allow-net --allow-read --allow-write --unstable scripts/fetch_images.ts
+	node scripts/fetch_images.mjs
 
 .PHONY: get-go-version
 get-go-version:
