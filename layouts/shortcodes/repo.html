@@ -17,7 +17,11 @@
     {{ $fullname = .nameWithOwner }}
     {{ $url = .url }}
     {{ $description = .description }}
-    {{ $stars = .stargazers.totalCount }}
+    {{ if isset . "stargazerCount" }}
+      {{ $stars = .stargazerCount }}
+    {{ else }}
+      {{ $stars = .stargazers.totalCount }}
+    {{ end }}
     {{ $forks = .forkCount }}
     {{ $lang = .primaryLanguage.name }}
   {{ end }}

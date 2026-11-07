@@ -27,9 +27,7 @@ query($owner: String!) {
           name
         }
         forkCount
-        stargazers {
-          totalCount
-        }
+        stargazerCount
       }
     }
   }
