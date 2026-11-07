@@ -33,10 +33,10 @@
   "devDependencies": {
     "husky": "9.1.7",
     "lint-staged": "17.0.4",
-    "renovate": "43.150.0"
+    "renovate": "44.222.1"
   },
   "engines": {
-    "node": "24.x",
+    "node": "26.x",
     "npm": "11.x"
   }
 }
