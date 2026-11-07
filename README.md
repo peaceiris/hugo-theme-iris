@@ -127,7 +127,9 @@ This theme depends on Hugo Modules.
 
 ### Install Node.js and npm
 
-This theme depends on `node` and `npm`.
+This theme uses Node.js 26 and npm 11. The exact Node.js version is pinned in
+`.nvmrc`; run `nvm install` and `nvm use` in the repository before installing
+dependencies.
 
 cf. [Installing Node.js via package manager | Node.js](https://nodejs.org/en/download/package-manager/)
 

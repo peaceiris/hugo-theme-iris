@@ -115,8 +115,13 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
+      - uses: peaceiris/workflows/setup-node@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
       - name: Install lighthouse
-        run: sudo npm i -g lighthouse@11.7.1
+        run: npm i -g lighthouse@11.7.1
 
       - name: Run lighthouse
         run: |
