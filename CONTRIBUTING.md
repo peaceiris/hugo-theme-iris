@@ -33,6 +33,17 @@ make docker-dev
 ```
 
 
+`make fetch-data` uses an authenticated GitHub CLI to refresh repository data,
+then runs `exampleSite/scripts/fetch_images.mjs` with the Node.js version in
+`.nvmrc`. The image downloader uses only Node.js built-ins. It scans
+`exampleSite/content/**/*.md` for PNG/JPG/JPEG URLs on
+`user-images.githubusercontent.com`, caches them under `assets/images` using
+SHA-256 filenames, and skips existing files. Failed image downloads are logged
+and do not stop the remaining downloads.
+
+Run `make test-fetch-images` for offline downloader tests. These also run through
+`npm test` and the CI staging build.
+
 
 ## Create Commit and Push
 
