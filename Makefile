@@ -53,13 +53,17 @@ dev:
 	hugo server --renderStaticToDisk --navigateToChanged --buildDrafts -O
 
 .PHONY: test
-test:
+test: test-repo
 	cd ./exampleSite && \
 	hugo --renderToMemory --printPathWarnings --logLevel debug \
 		--templateMetrics --templateMetricsHints
 
+.PHONY: test-repo
+test-repo:
+	node --test tests/repo.test.mjs
+
 .PHONY: build-staging
-build-staging:
+build-staging: test-repo
 	cd ./exampleSite && \
 	hugo --cleanDestinationDir \
 		--environment "staging" \
