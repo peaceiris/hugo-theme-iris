@@ -53,7 +53,7 @@ dev:
 	hugo server --renderStaticToDisk --navigateToChanged --buildDrafts -O
 
 .PHONY: test
-test: test-repo test-fetch-images
+test: test-repo test-fetch-images test-keyboard-shortcut
 	cd ./exampleSite && \
 	hugo --renderToMemory --printPathWarnings --logLevel debug \
 		--templateMetrics --templateMetricsHints
@@ -66,8 +66,12 @@ test-repo:
 test-fetch-images:
 	node --test tests/fetch-images.test.mjs
 
+.PHONY: test-keyboard-shortcut
+test-keyboard-shortcut:
+	node --test tests/keyboard-shortcut.test.mjs
+
 .PHONY: build-staging
-build-staging: test-repo test-fetch-images
+build-staging: test-repo test-fetch-images test-keyboard-shortcut
 	cd ./exampleSite && \
 	hugo --cleanDestinationDir \
 		--environment "staging" \
