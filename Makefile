@@ -4,6 +4,8 @@ DOCKER_COMPOSE := docker compose
 GH_USER_ID := peaceiris
 HUGO_GIT_COMMON_DIR := $(shell git rev-parse --path-format=absolute --git-common-dir)
 CI_OWNER ?= 1000:1000
+export SASS_INSTALL_DIR ?= $(HOME)/.local/share/hugo-theme-iris/dart-sass
+export PATH := $(SASS_INSTALL_DIR):$(PATH)
 
 
 .PHONY: bump-node
@@ -42,6 +44,14 @@ docker-prepare:
 		sudo chown -R $(CI_OWNER) ./exampleSite; \
 	fi
 
+.PHONY: setup-sass
+setup-sass:
+	bash exampleSite/scripts/setup-dart-sass.sh
+
+.PHONY: test-setup-sass
+test-setup-sass:
+	node --test tests/setup-dart-sass.test.mjs
+
 .PHONY: npm-ci
 npm-ci:
 	cd ./exampleSite && \
@@ -53,7 +63,7 @@ dev:
 	hugo server --renderStaticToDisk --navigateToChanged --buildDrafts -O
 
 .PHONY: test
-test: test-repo test-fetch-images
+test: test-repo test-fetch-images test-setup-sass
 	cd ./exampleSite && \
 	hugo --renderToMemory --printPathWarnings --logLevel debug \
 		--templateMetrics --templateMetricsHints
@@ -67,7 +77,7 @@ test-fetch-images:
 	node --test tests/fetch-images.test.mjs
 
 .PHONY: build-staging
-build-staging: test-repo test-fetch-images
+build-staging: test-repo test-fetch-images test-setup-sass
 	cd ./exampleSite && \
 	hugo --cleanDestinationDir \
 		--environment "staging" \

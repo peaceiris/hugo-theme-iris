@@ -67,7 +67,9 @@ jobs:
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
-          extended: true
+          extended: false
+
+      - run: make setup-sass
 
       - run: make npm-ci
 
@@ -175,7 +177,6 @@ jobs:
     needs: envs
     runs-on: ubuntu-24.04
     timeout-minutes: 3
-    if: ${{ github.ref == 'refs/heads/main' }}
     permissions:
       contents: read
     steps:
@@ -185,7 +186,7 @@ jobs:
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
-          extended: true
+          extended: false
 
       - uses: peaceiris/workflows/setup-git@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
         with:
@@ -199,4 +200,6 @@ jobs:
           bash ./setup.sh "homepage" "peaceiris" "${GITHUB_SHA}"
           cd homepage
           npm ci
+          bash scripts/setup-dart-sass.sh
+          export PATH="${HOME}/.local/share/hugo-theme-iris/dart-sass:${PATH}"
           hugo

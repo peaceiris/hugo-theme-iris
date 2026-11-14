@@ -95,7 +95,7 @@ This repository includes a [Hugo] theme.
   - Responsive
   - Eye-catching Image
   - OGP Image
-  - WebP: requiring a Hugo extended version
+  - WebP support
 - Disqus Comment System
 - Keyboard Shortcut: Press `?` (`Shift+/`) to show help modal.
 
@@ -115,7 +115,7 @@ This repository includes a [Hugo] theme.
 
 ### Install Hugo
 
-You can find the minimum supported Hugo version in [theme.toml] `min_version`. Using Hugo extended version is desirable.
+You can find the minimum supported Hugo version in [theme.toml] `min_version`. Hugo 0.170.0 and later use the standard edition and require a separate native Dart Sass compiler for this theme.
 
 [theme.toml]: https://github.com/peaceiris/hugo-theme-iris/blob/main/theme.toml
 
@@ -143,8 +143,18 @@ wget https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/scripts/se
 bash ./setup.sh homepage "your_github_id"
 cd homepage
 npm ci
+bash scripts/setup-dart-sass.sh
+export PATH="${HOME}/.local/share/hugo-theme-iris/dart-sass:${PATH}"
 hugo server
 ```
+
+The setup script installs Dart Sass 1.108.2 on Linux (glibc) and macOS, on x64 or
+arm64, and verifies the official archive checksum. It needs Bash, curl, tar, and
+sha256sum (or shasum on macOS). Add the PATH export to your shell profile for
+future sessions. Set `SASS_INSTALL_DIR` to override the installation directory
+and add that directory to PATH instead. Keep it outside your Hugo project.
+The npm `sass` package does not provide the embedded protocol Hugo needs.
+On Windows, use WSL with this script.
 
 - http://localhost:1313/
 
