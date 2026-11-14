@@ -193,11 +193,13 @@ jobs:
           flags: "--global"
 
       - name: Create a new Hugo project
+        env:
+          THEME_REF: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
           mkdir ~/homepage
           cp scripts/setup.sh ~
           cd ~
-          bash ./setup.sh "homepage" "peaceiris" "${GITHUB_SHA}"
+          bash ./setup.sh "homepage" "peaceiris" "${THEME_REF}"
           cd homepage
           npm ci
           bash scripts/setup-dart-sass.sh
