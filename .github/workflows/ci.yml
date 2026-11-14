@@ -31,7 +31,12 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
+
+      - name: Set up npm
+        run: bash scripts/setup_npm.sh
       - run: npm ci
+      - name: Verify RE2 native binding
+        run: node -e 'new (require("re2"))(".*").test("test")'
       - run: npm run test:renovate
 
   envs:
@@ -68,6 +73,9 @@ jobs:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
+
+      - name: Set up npm
+        run: bash scripts/setup_npm.sh
 
       - run: make npm-ci
 
@@ -120,6 +128,9 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "npm"
 
+      - name: Set up npm
+        run: bash scripts/setup_npm.sh
+
       - name: Install lighthouse
         run: npm i -g lighthouse@11.7.1
 
@@ -165,6 +176,9 @@ jobs:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           cache: "npm"
 
+      - name: Set up npm
+        run: bash scripts/setup_npm.sh
+
       - name: prepare
         run: |
           sed -i 's/enableGitInfo: true/# enableGitInfo: true/' exampleSite/config/_default/config.yaml
@@ -186,6 +200,9 @@ jobs:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
+
+      - name: Set up npm
+        run: bash scripts/setup_npm.sh
 
       - uses: peaceiris/workflows/setup-git@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
         with:

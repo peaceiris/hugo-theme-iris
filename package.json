@@ -38,5 +38,8 @@
   "engines": {
     "node": "26.x",
     "npm": "12.x"
+  },
+  "allowScripts": {
+    "re2@1.27.0": true
   }
 }
