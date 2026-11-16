@@ -12,35 +12,7 @@
 <link>https://hugothemeiris.peaceiris.com/ja/posts/github-pages-and-github-actions/</link>
 <pubDate>Fri, 01 Nov 2019 01:00:00 +0000</pubDate>
 <guid>https://hugothemeiris.peaceiris.com/ja/posts/github-pages-and-github-actions/</guid>
-<description>&lt;h2 id="github-actions-for-github-pages" class="title is-3"&gt;GitHub Actions for GitHub Pages&lt;/h2&gt;
-
- &lt;blockquote&gt;
- &lt;p&gt;GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators
-&lt;cite&gt;&lt;a
- href="https://github.com/peaceiris/actions-gh-pages"
- 
- target="_blank" rel="noopener noreferrer"&gt;
- peaceiris/actions-gh-pages
-&lt;/a&gt;
-&lt;/cite&gt;&lt;/p&gt;
-
- &lt;/blockquote&gt;
-
-&lt;p&gt;This is a &lt;strong&gt;GitHub Action&lt;/strong&gt; to deploy your static files to &lt;strong&gt;GitHub Pages&lt;/strong&gt;.
-This deploy action can be combined simply and freely with &lt;a
- href="https://www.staticgen.com/"
- title="StaticGen"
- target="_blank" rel="noopener noreferrer"&gt;
- Static Site Generators
-&lt;/a&gt;
-
-(Hugo, mdBook, MkDocs, Gatsby, GitBook, etc.).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Deploy&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;peaceiris/actions-gh-pages@v3&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;with&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;deploy_key&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;${{ secrets.ACTIONS_DEPLOY_KEY }}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;publish_dir&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;./public&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above example step will deploy &lt;code&gt;./public&lt;/code&gt; directory to &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;</description>
+<description>&lt;h2 id="github-actions-for-github-pages" class="title is-3"&gt;GitHub Actions for GitHub Pages&lt;/h2&gt;&#10;&#10; &lt;blockquote&gt;&#10; &lt;p&gt;GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site with Static Site Generators&#10;&lt;cite&gt;&lt;a&#10; href="https://github.com/peaceiris/actions-gh-pages"&#10; &#10; target="_blank" rel="noopener noreferrer"&gt;&#10; peaceiris/actions-gh-pages&#10;&lt;/a&gt;&#10;&lt;/cite&gt;&lt;/p&gt;&#10;&#10; &lt;/blockquote&gt;&#10;&#10;&lt;p&gt;This is a &lt;strong&gt;GitHub Action&lt;/strong&gt; to deploy your static files to &lt;strong&gt;GitHub Pages&lt;/strong&gt;.&#10;This deploy action can be combined simply and freely with &lt;a&#10; href="https://www.staticgen.com/"&#10; title="StaticGen"&#10; target="_blank" rel="noopener noreferrer"&gt;&#10; Static Site Generators&#10;&lt;/a&gt;&#10;&#10;(Hugo, mdBook, MkDocs, Gatsby, GitBook, etc.).&lt;/p&gt;&#10;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;Deploy&lt;/span&gt;&lt;span class="w"&gt;&#10;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;peaceiris/actions-gh-pages@v3&lt;/span&gt;&lt;span class="w"&gt;&#10;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;with&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&#10;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;deploy_key&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;${{ secrets.ACTIONS_DEPLOY_KEY }}&lt;/span&gt;&lt;span class="w"&gt;&#10;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;publish_dir&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;./public&lt;/span&gt;&lt;span class="w"&gt;&#10;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above example step will deploy &lt;code&gt;./public&lt;/code&gt; directory to &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;</description>
 </item>
 </channel>
 </rss>
