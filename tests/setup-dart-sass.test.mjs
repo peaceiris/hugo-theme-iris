@@ -59,3 +59,9 @@ test('download failures stop installation', (t) => {
   f.executable(join(f.bin, 'curl'), 'exit 22');
   assert.equal(f.run().status, 22);
 });
+
+test('CI and local development use the same Dart Sass version', () => {
+  const workflow = readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8');
+  const versions = [...workflow.matchAll(/dart-sass-version: "([^"\n]+)"/g)].map((match) => match[1]);
+  assert.deepEqual(versions, [version, version]);
+});
