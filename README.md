@@ -95,7 +95,7 @@ This repository includes a [Hugo] theme.
   - Responsive
   - Eye-catching Image
   - OGP Image
-  - WebP: requiring a Hugo extended version
+  - WebP support
 - Disqus Comment System
 - Keyboard Shortcut: Press `?` (`Shift+/`) to show help modal.
 
@@ -115,7 +115,7 @@ This repository includes a [Hugo] theme.
 
 ### Install Hugo
 
-You can find the minimum supported Hugo version in [theme.toml] `min_version`. Using Hugo extended version is desirable.
+You can find the minimum supported Hugo version in [theme.toml] `min_version`. Hugo 0.170.0 and later use the standard edition and require a separate native Dart Sass compiler for this theme.
 
 [theme.toml]: https://github.com/peaceiris/hugo-theme-iris/blob/main/theme.toml
 
@@ -134,6 +134,13 @@ dependencies.
 cf. [Installing Node.js via package manager | Node.js](https://nodejs.org/en/download/package-manager/)
 
 ### Initialize New Hugo Project
+
+Before running the native commands below, install the official
+[standalone Dart Sass 1.108.2](https://github.com/sass/dart-sass/releases/tag/1.108.2)
+for your platform. Extract it outside your Hugo project and add its directory
+to your shell's `PATH`; verify with `sass --version`. The npm `sass` package
+does not provide the embedded protocol Hugo requires. For theme development
+with Docker, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Here is [the setup script](https://github.com/peaceiris/hugo-theme-iris/blob/main/scripts/setup.sh).
 
