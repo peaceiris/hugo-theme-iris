@@ -33,28 +33,28 @@ make docker-dev
 ```
 
 
-For native development, install the Hugo version from `make get-hugo-version`,
-Go, and the Node.js version in `.nvmrc`, then run:
+Use `make docker-test` and `make docker-build` to validate the example site.
+Docker commands use the compiler included in the Hugo image and do not require
+installing Hugo or Dart Sass on the host.
+
+For native development, first install the Hugo version from
+`make get-hugo-version`, Go, the Node.js version in `.nvmrc`, and the official
+[standalone Dart Sass 1.108.2](https://github.com/sass/dart-sass/releases/tag/1.108.2)
+for your platform. Extract Dart Sass outside the project and add its directory
+to your shell's `PATH` so `sass --version` prints `1.108.2`. The npm `sass`
+package does not provide the embedded protocol Hugo requires. Then run:
 
 ```sh
 npm ci
 make npm-ci
-make setup-sass
 npm test
 make build-staging
 make build-prod
 make dev
 ```
 
-CI uses the same `make setup-sass` command. The installer pins Dart Sass and
-checksums in `exampleSite/scripts/setup-dart-sass.sh`; update them together.
-Make adds its installation directory to PATH for native commands. For direct
-`hugo` commands, export
-`PATH="${HOME}/.local/share/hugo-theme-iris/dart-sass:${PATH}"` first.
-`SASS_INSTALL_DIR` can override this directory (outside the project).
-The installer supports Linux (glibc) and macOS on x64/arm64 and can be rerun.
-Docker commands continue to use the compiler included in the Hugo image and do
-not require installing Dart Sass on the host.
+CI installs Hugo and Dart Sass through `peaceiris/actions-hugo`; the
+`dart-sass-version` input in `.github/workflows/ci.yml` pins the compiler version.
 
 `make fetch-data` uses an authenticated GitHub CLI to refresh repository data,
 then runs `exampleSite/scripts/fetch_images.mjs` with the Node.js version in

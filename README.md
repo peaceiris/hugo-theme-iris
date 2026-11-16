@@ -135,6 +135,13 @@ cf. [Installing Node.js via package manager | Node.js](https://nodejs.org/en/dow
 
 ### Initialize New Hugo Project
 
+Before running the native commands below, install the official
+[standalone Dart Sass 1.108.2](https://github.com/sass/dart-sass/releases/tag/1.108.2)
+for your platform. Extract it outside your Hugo project and add its directory
+to your shell's `PATH`; verify with `sass --version`. The npm `sass` package
+does not provide the embedded protocol Hugo requires. For theme development
+with Docker, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 Here is [the setup script](https://github.com/peaceiris/hugo-theme-iris/blob/main/scripts/setup.sh).
 
 ```sh
@@ -143,18 +150,8 @@ wget https://raw.githubusercontent.com/peaceiris/hugo-theme-iris/main/scripts/se
 bash ./setup.sh homepage "your_github_id"
 cd homepage
 npm ci
-bash scripts/setup-dart-sass.sh
-export PATH="${HOME}/.local/share/hugo-theme-iris/dart-sass:${PATH}"
 hugo server
 ```
-
-The setup script installs Dart Sass 1.108.2 on Linux (glibc) and macOS, on x64 or
-arm64, and verifies the official archive checksum. It needs Bash, curl, tar, and
-sha256sum (or shasum on macOS). Add the PATH export to your shell profile for
-future sessions. Set `SASS_INSTALL_DIR` to override the installation directory
-and add that directory to PATH instead. Keep it outside your Hugo project.
-The npm `sass` package does not provide the embedded protocol Hugo needs.
-On Windows, use WSL with this script.
 
 - http://localhost:1313/
 
