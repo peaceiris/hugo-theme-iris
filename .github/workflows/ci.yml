@@ -27,13 +27,12 @@ jobs:
     permissions: {}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: peaceiris/workflows/setup-node@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
+      - uses: peaceiris/workflows/setup-node@2ac268509a354f2a6098d9995de4ab44f4f038b1 # v0.22.0
         with:
           node-version-file: ".nvmrc"
+          npm-version: "12"
           cache: "npm"
 
-      - name: Set up npm
-        run: npm install --global npm@12
       - run: npm ci
       - name: Verify RE2 native binding
         run: node -e 'new (require("re2"))(".*").test("test")'
@@ -74,8 +73,11 @@ jobs:
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
 
-      - name: Set up npm
-        run: npm install --global npm@12
+      - uses: peaceiris/workflows/setup-node@2ac268509a354f2a6098d9995de4ab44f4f038b1 # v0.22.0
+        with:
+          node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
+          npm-version: "12"
+          cache: "npm"
 
       - run: make npm-ci
 
@@ -123,13 +125,11 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: peaceiris/workflows/setup-node@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
+      - uses: peaceiris/workflows/setup-node@2ac268509a354f2a6098d9995de4ab44f4f038b1 # v0.22.0
         with:
           node-version-file: ".nvmrc"
+          npm-version: "12"
           cache: "npm"
-
-      - name: Set up npm
-        run: npm install --global npm@12
 
       - name: Install lighthouse
         run: npm i -g lighthouse@11.7.1
@@ -171,13 +171,11 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: peaceiris/workflows/setup-node@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
+      - uses: peaceiris/workflows/setup-node@2ac268509a354f2a6098d9995de4ab44f4f038b1 # v0.22.0
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
+          npm-version: "12"
           cache: "npm"
-
-      - name: Set up npm
-        run: npm install --global npm@12
 
       - name: prepare
         run: |
@@ -201,8 +199,11 @@ jobs:
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           extended: true
 
-      - name: Set up npm
-        run: npm install --global npm@12
+      - uses: peaceiris/workflows/setup-node@2ac268509a354f2a6098d9995de4ab44f4f038b1 # v0.22.0
+        with:
+          node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
+          npm-version: "12"
+          cache: "npm"
 
       - uses: peaceiris/workflows/setup-git@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
         with:
