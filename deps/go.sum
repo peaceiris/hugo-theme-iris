@@ -93,6 +93,8 @@ github.com/gohugoio/hugo v0.162.1 h1:GjmVbhwMoh69+VN1hTXGFncDiDySwqGyr8yRYxnjT+8
 github.com/gohugoio/hugo v0.162.1/go.mod h1:zdnn3irg2scM/ua3j96DmLNQu3X4BfOZrMX3Toz3La8=
 github.com/gohugoio/hugo v0.170.0 h1:XikL09ClZw4DgU3d7mQNo/cu/znKDbLvKU7CkmLypzo=
 github.com/gohugoio/hugo v0.170.0/go.mod h1:IZX1+i/yKOkHVRJRsSX4Dx3qDAUNcnndXL56OcxTlUg=
+github.com/gohugoio/hugo v0.170.1 h1:GMprZ1pgisPuMc8U66CDwTPqQO7knWGh2PvvfiV+XV0=
+github.com/gohugoio/hugo v0.170.1/go.mod h1:hCl2g2J7xsydwocxb1iX0YoP7QubzeEPvTkkq7pNzLM=
 github.com/gohugoio/hugo-goldmark-extensions/extras v0.7.0 h1:I/n6v7VImJ3aISLnn73JAHXyjcQsMVvbguQPTk9Ehus=
 github.com/gohugoio/hugo-goldmark-extensions/extras v0.7.0/go.mod h1:9LJNfKWFmhEJ7HW0in5znezMwH+FYMBIhNZ3VWtRcRs=
 github.com/gohugoio/hugo-goldmark-extensions/passthrough v0.5.0 h1:p13Q0DBCrBRpJGtbtlgkYNCs4TnIlZJh8vHgnAiofrI=

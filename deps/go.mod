@@ -2,7 +2,7 @@ module theme
 
 go 1.27.0
 
-require github.com/gohugoio/hugo v0.170.0
+require github.com/gohugoio/hugo v0.170.1
 
 require (
 	github.com/bep/clocks v0.5.0 // indirect
