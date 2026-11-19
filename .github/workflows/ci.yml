@@ -22,16 +22,21 @@ env:
 
 jobs:
   renovate:
+    needs: envs
     runs-on: ubuntu-slim
     timeout-minutes: 3
     permissions: {}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: peaceiris/workflows/setup-node@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
+      - uses: peaceiris/workflows/setup-node@2ac268509a354f2a6098d9995de4ab44f4f038b1 # v0.22.0
         with:
           node-version-file: ".nvmrc"
+          npm-version: "${{ needs.envs.outputs.NPM_VERSION }}"
           cache: "npm"
+
       - run: npm ci
+      - name: Verify RE2 native binding
+        run: node -e 'new (require("re2"))(".*").test("test")'
       - run: npm run test:renovate
 
   envs:
@@ -41,6 +46,7 @@ jobs:
     outputs:
       HUGO_VERSION: ${{ steps.envs.outputs.HUGO_VERSION }}
       NODE_VERSION: ${{ steps.envs.outputs.NODE_VERSION }}
+      NPM_VERSION: ${{ steps.envs.outputs.NPM_VERSION }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -49,6 +55,7 @@ jobs:
         run: |
           echo "HUGO_VERSION=$(make get-hugo-version)" | tee -a "${GITHUB_OUTPUT}"
           echo "NODE_VERSION=$(cat .nvmrc)" | tee -a "${GITHUB_OUTPUT}"
+          echo "NPM_VERSION=$(jq -er '.engines.npm' package.json)" | tee -a "${GITHUB_OUTPUT}"
 
   deploy:
     needs: envs
@@ -76,6 +83,12 @@ jobs:
         with:
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           dart-sass-version: "1.108.2"
+
+      - uses: peaceiris/workflows/setup-node@2ac268509a354f2a6098d9995de4ab44f4f038b1 # v0.22.0
+        with:
+          node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
+          npm-version: "${{ needs.envs.outputs.NPM_VERSION }}"
+          cache: "npm"
 
       - run: make npm-ci
 
@@ -114,7 +127,7 @@ jobs:
           user_email: "github-actions[bot]@users.noreply.github.com"
 
   lighthouse:
-    needs: deploy
+    needs: [envs, deploy]
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 20
@@ -123,9 +136,10 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: peaceiris/workflows/setup-node@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
+      - uses: peaceiris/workflows/setup-node@2ac268509a354f2a6098d9995de4ab44f4f038b1 # v0.22.0
         with:
           node-version-file: ".nvmrc"
+          npm-version: "${{ needs.envs.outputs.NPM_VERSION }}"
           cache: "npm"
 
       - name: Install lighthouse
@@ -168,9 +182,10 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: peaceiris/workflows/setup-node@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
+      - uses: peaceiris/workflows/setup-node@2ac268509a354f2a6098d9995de4ab44f4f038b1 # v0.22.0
         with:
           node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
+          npm-version: "${{ needs.envs.outputs.NPM_VERSION }}"
           cache: "npm"
 
       - name: prepare
@@ -201,6 +216,12 @@ jobs:
         with:
           hugo-version: "${{ needs.envs.outputs.HUGO_VERSION }}"
           dart-sass-version: "1.108.2"
+
+      - uses: peaceiris/workflows/setup-node@2ac268509a354f2a6098d9995de4ab44f4f038b1 # v0.22.0
+        with:
+          node-version: "${{ needs.envs.outputs.NODE_VERSION }}"
+          npm-version: "${{ needs.envs.outputs.NPM_VERSION }}"
+          cache: "npm"
 
       - uses: peaceiris/workflows/setup-git@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
         with:
