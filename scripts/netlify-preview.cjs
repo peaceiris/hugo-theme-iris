@@ -3,7 +3,6 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs/promises');
 const path = require('node:path');
-const { createHash } = require('node:crypto');
 
 const REPOSITORY = 'peaceiris/hugo-theme-iris';
 const DEPENDABOT_ID = 49699333;
@@ -48,30 +47,38 @@ async function validateSource({ github, context }) {
   return { run, pr };
 }
 
-async function download({ github, context }) {
+async function selectArtifact({ github, context }) {
   const { run } = await validateSource({ github, context });
   const artifacts = await github.paginate(github.rest.actions.listWorkflowRunArtifacts, {
     ...context.repo, run_id: run.id, per_page: 100,
   });
-  const matches = artifacts.filter(a => a.name === `netlify-preview-${run.head_sha}`);
+  const name = `netlify-preview-${run.head_sha}`;
+  const matches = artifacts.filter(a => a.name === name);
   assert.equal(matches.length, 1, 'Expected exactly one static preview artifact');
   const artifact = matches[0];
+  assert.ok(Number.isSafeInteger(artifact.id) && artifact.id > 0);
   assert.equal(artifact.expired, false);
   assert.equal(artifact.workflow_run.id, run.id);
   assert.equal(artifact.workflow_run.head_sha, run.head_sha);
-  assert.ok(artifact.size_in_bytes > 0 && artifact.size_in_bytes <= MAX_ZIP_BYTES);
+  assert.ok(Number.isSafeInteger(artifact.size_in_bytes) &&
+    artifact.size_in_bytes > 0 && artifact.size_in_bytes <= MAX_ZIP_BYTES);
   assert.match(artifact.digest, /^sha256:[0-9a-f]{64}$/);
   // Reject stale artifacts retained from an earlier attempt of the same run.
   assert.ok(Date.parse(artifact.created_at) >= Date.parse(run.run_started_at));
-  const { data } = await github.rest.actions.downloadArtifact({
-    ...context.repo, artifact_id: artifact.id, archive_format: 'zip',
-  });
-  const zip = Buffer.from(data);
-  assert.ok(zip.length > 0 && zip.length <= MAX_ZIP_BYTES);
-  assert.equal(`sha256:${createHash('sha256').update(zip).digest('hex')}`, artifact.digest);
-  await fs.writeFile(path.join(process.env.RUNNER_TEMP, 'netlify-preview.zip'), zip, {
-    flag: 'wx', mode: 0o600,
-  });
+  return { id: artifact.id, runId: run.id, archiveName: `${name}.zip` };
+}
+
+async function validateArchive({ downloadPath, expectedDirectory, archiveName }) {
+  assert.equal(downloadPath, expectedDirectory, 'Unexpected artifact download path');
+  assert.match(archiveName, /^netlify-preview-[0-9a-f]{40}\.zip$/);
+  assert.ok((await fs.lstat(downloadPath)).isDirectory(), 'Expected a real download directory');
+  // With skip-decompress, the action saves the raw file using the blob's filename.
+  assert.deepEqual(await fs.readdir(downloadPath), [archiveName], 'Expected exactly one named ZIP');
+  const archivePath = path.join(downloadPath, archiveName);
+  const archive = await fs.lstat(archivePath);
+  assert.ok(archive.isFile() && archive.size > 0 && archive.size <= MAX_ZIP_BYTES,
+    'Expected a regular ZIP file within the size limit');
+  return archivePath;
 }
 
 function validatePreviewUrl(value) {
@@ -123,4 +130,4 @@ async function record({ github, context, url, fetchImpl = fetch }) {
   });
 }
 
-module.exports = { validateSource, download, validatePreviewUrl, record };
+module.exports = { validateSource, selectArtifact, validateArchive, validatePreviewUrl, record };

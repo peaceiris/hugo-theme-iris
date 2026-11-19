@@ -1,11 +1,12 @@
 'use strict';
 const assert = require('node:assert/strict');
 const { test } = require('node:test');
-const { validateSource, validatePreviewUrl, record, download } = require('../scripts/netlify-preview.cjs');
-const { mkdtemp, readFile, rm } = require('node:fs/promises');
+const {
+  validateSource, selectArtifact, validateArchive, validatePreviewUrl, record,
+} = require('../scripts/netlify-preview.cjs');
+const fs = require('node:fs/promises');
 const { tmpdir } = require('node:os');
 const path = require('node:path');
-const { createHash } = require('node:crypto');
 
 function fixture() {
   const sha = 'a'.repeat(40);
@@ -99,30 +100,69 @@ test('head change during preview check cannot create a deployment', async () => 
   assert.equal(f.writes.length, 0);
 });
 
-test('artifact download is scoped to run, current attempt and digest', async t => {
+function artifactFixture() {
   const f = fixture();
-  const zip = Buffer.from('fixture archive bytes');
   const artifact = { id: 7, name: `netlify-preview-${f.run.head_sha}`, expired: false,
-    size_in_bytes: zip.length, digest: `sha256:${createHash('sha256').update(zip).digest('hex')}`,
+    size_in_bytes: 1024, digest: `sha256:${'b'.repeat(64)}`,
     workflow_run: { id: f.run.id, head_sha: f.run.head_sha }, created_at: '2026-11-19T00:01:00Z' };
-  f.github.rest.actions.listWorkflowRunArtifacts = () => {};
-  f.github.paginate = async (_, args) => { assert.equal(args.run_id, 123); return [artifact]; };
-  f.github.rest.actions.downloadArtifact = async args => {
-    assert.equal(args.artifact_id, 7); return { data: zip };
+  const artifacts = [artifact];
+  const list = () => {};
+  f.github.rest.actions.listWorkflowRunArtifacts = list;
+  f.github.paginate = async (endpoint, args) => {
+    assert.equal(endpoint, list);
+    assert.deepEqual(args, { owner: 'peaceiris', repo: 'hugo-theme-iris', run_id: 123, per_page: 100 });
+    return artifacts;
   };
-  const dir = await mkdtemp(path.join(tmpdir(), 'netlify-test-'));
-  const previous = process.env.RUNNER_TEMP;
-  process.env.RUNNER_TEMP = dir;
-  t.after(async () => {
-    if (previous === undefined) delete process.env.RUNNER_TEMP; else process.env.RUNNER_TEMP = previous;
-    await rm(dir, { recursive: true, force: true });
+  return { f, artifact, artifacts };
+}
+
+test('selects the exact artifact ID, run ID and ZIP name for the current preview', async () => {
+  const { f, artifact, artifacts } = artifactFixture();
+  artifacts.push({ ...artifact, id: 8, name: 'another-artifact' });
+  assert.deepEqual(await selectArtifact(f), {
+    id: 7, runId: 123, archiveName: `${artifact.name}.zip`,
   });
-  await download(f);
-  assert.deepEqual(await readFile(path.join(dir, 'netlify-preview.zip')), zip);
-  artifact.digest = `sha256:${'0'.repeat(64)}`;
-  await assert.rejects(download(f));
-  artifact.created_at = '2026-11-18T00:00:00Z';
-  await assert.rejects(download(f));
-  artifact.expired = true;
-  await assert.rejects(download(f));
+});
+
+for (const [name, mutate] of [
+  ['duplicate name', ({ artifact, artifacts }) => artifacts.push({ ...artifact, id: 8 })],
+  ['invalid ID', ({ artifact }) => { artifact.id = '7'; }],
+  ['expired artifact', ({ artifact }) => { artifact.expired = true; }],
+  ['wrong run', ({ artifact }) => { artifact.workflow_run.id = 124; }],
+  ['wrong head', ({ artifact }) => { artifact.workflow_run.head_sha = 'b'.repeat(40); }],
+  ['oversized artifact', ({ artifact }) => { artifact.size_in_bytes = 64 * 1024 * 1024 + 1; }],
+  ['missing digest', ({ artifact }) => { delete artifact.digest; }],
+  ['prior attempt', ({ artifact }) => { artifact.created_at = '2026-11-18T00:00:00Z'; }],
+]) {
+  test(`artifact selection rejects ${name}`, async () => {
+    const testData = artifactFixture();
+    mutate(testData);
+    await assert.rejects(selectArtifact(testData.f), { name: 'AssertionError' });
+  });
+}
+
+test('requires exactly the expected regular ZIP in the action output directory', async t => {
+  const directory = await fs.mkdtemp(path.join(tmpdir(), 'netlify-test-'));
+  t.after(() => fs.rm(directory, { recursive: true, force: true }));
+  const archiveName = `netlify-preview-${'a'.repeat(40)}.zip`;
+  const archivePath = path.join(directory, archiveName);
+  const download = { downloadPath: directory, expectedDirectory: directory, archiveName };
+
+  await assert.rejects(validateArchive({ ...download, downloadPath: tmpdir() }), /Unexpected artifact download path/);
+  await assert.rejects(validateArchive(download), /Expected exactly one named ZIP/);
+  await fs.writeFile(archivePath, 'fixture archive bytes');
+  assert.equal(await validateArchive(download), archivePath);
+
+  const extra = path.join(directory, 'extra.zip');
+  await fs.writeFile(extra, '');
+  await assert.rejects(validateArchive(download), /Expected exactly one named ZIP/);
+  await fs.unlink(extra);
+
+  await fs.truncate(archivePath, 0);
+  await assert.rejects(validateArchive(download), /regular ZIP file within the size limit/);
+  await fs.truncate(archivePath, 64 * 1024 * 1024 + 1);
+  await assert.rejects(validateArchive(download), /regular ZIP file within the size limit/);
+  await fs.unlink(archivePath);
+  await fs.symlink('missing.zip', archivePath);
+  await assert.rejects(validateArchive(download), /regular ZIP file within the size limit/);
 });
