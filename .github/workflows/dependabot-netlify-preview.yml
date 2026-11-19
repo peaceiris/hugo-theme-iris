@@ -1,0 +1,77 @@
+name: Dependabot Netlify preview
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+
+# No permissions flow from the untrusted build into this workflow.
+permissions: {}
+
+jobs:
+  preview:
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.actor.login == 'dependabot[bot]'
+    concurrency:
+      group: dependabot-netlify-${{ github.event.workflow_run.head_repository.id }}-${{ github.event.workflow_run.head_branch }}
+      cancel-in-progress: false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      actions: read
+      contents: read
+      pull-requests: read
+      deployments: write
+    steps:
+      # workflow_run's SHA is trusted default-branch code, never the PR checkout.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Validate source and download static artifact
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const preview = require('./scripts/netlify-preview.cjs');
+            await preview.download({github, context});
+
+      # Treat the ZIP as hostile data. Do not restore caches or run its contents.
+      - name: Extract only static preview files
+        run: python3 scripts/extract-netlify-preview.py "$RUNNER_TEMP/netlify-preview.zip" "$RUNNER_TEMP/netlify-static"
+
+      - name: Recheck current PR head before publishing
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const preview = require('./scripts/netlify-preview.cjs');
+            await preview.validateSource({github, context});
+
+      - name: Upload draft preview to Netlify
+        id: netlify
+        uses: nwtgck/actions-netlify@d22a32a27c918fe470bbc562e984f80ec48c2668 # v4.0.0
+        with:
+          publish-dir: ${{ runner.temp }}/netlify-static
+          # Do NOT set production-branch: workflow_run runs on the default branch.
+          production-deploy: false
+          deploy-message: Dependabot static preview
+          enable-pull-request-comment: false
+          enable-commit-comment: false
+          enable-commit-status: false
+          enable-github-deployment: false
+          fails-without-credentials: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 2
+
+      - name: Verify preview and record exact PR head deployment
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          PREVIEW_URL: ${{ steps.netlify.outputs.deploy-url }}
+        with:
+          script: |
+            const preview = require('./scripts/netlify-preview.cjs');
+            await preview.record({github, context, url: process.env.PREVIEW_URL});
