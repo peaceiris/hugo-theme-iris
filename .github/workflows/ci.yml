@@ -69,6 +69,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - uses: peaceiris/workflows/setup-node@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
         with:
@@ -93,12 +94,42 @@ jobs:
       - run: make npm-ci
 
       - run: make fetch-data
+        if: ${{ github.event_name != 'pull_request' || (github.event.pull_request.user.login != 'dependabot[bot]' && github.actor != 'dependabot[bot]') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
+      # Dependabot builds use the committed public GitHub data fixture, never GH_PAT.
+      - name: Fetch preview images without credentials
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]' }}
+        working-directory: exampleSite
+        run: node scripts/fetch_images.mjs
+
+      - name: Test preview boundary helpers
+        run: |
+          node --test tests/netlify-preview.test.cjs
+          python3 -m unittest discover -s tests -p 'test_netlify_preview.py'
+
       - run: make build-staging
 
+      # Capture staging output before build-prod overwrites the publish directory.
+      - name: Upload Dependabot preview artifact
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]' }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: netlify-preview-${{ github.event.pull_request.head.sha }}
+          # Preview is static-only: no routing directives, custom domain, or CMS config.
+          path: |
+            exampleSite/public
+            !exampleSite/public/CNAME
+            !exampleSite/public/_redirects
+            !exampleSite/public/admin/config.yml
+          if-no-files-found: error
+          retention-days: 1
+          overwrite: true
+          include-hidden-files: false
+
       - name: Deploy to Netlify
+        if: ${{ github.event_name != 'pull_request' || (github.event.pull_request.user.login != 'dependabot[bot]' && github.actor != 'dependabot[bot]') }}
         uses: nwtgck/actions-netlify@d22a32a27c918fe470bbc562e984f80ec48c2668 # v4.0.0
         with:
           publish-dir: "./exampleSite/public"
