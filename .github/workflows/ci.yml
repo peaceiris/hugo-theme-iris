@@ -123,6 +123,7 @@ jobs:
             !exampleSite/public/CNAME
             !exampleSite/public/_redirects
             !exampleSite/public/admin/config.yml
+            !exampleSite/public/posts/hugo-136/literal:colon/index.html
           if-no-files-found: error
           retention-days: 1
           overwrite: true
