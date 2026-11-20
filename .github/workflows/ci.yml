@@ -125,6 +125,7 @@ jobs:
             !exampleSite/public/admin/config.yml
           if-no-files-found: error
           retention-days: 1
+          overwrite: true
           include-hidden-files: false
 
       - name: Deploy to Netlify
