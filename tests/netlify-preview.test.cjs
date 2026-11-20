@@ -102,7 +102,7 @@ test('head change during preview check cannot create a deployment', async () => 
 
 function artifactFixture() {
   const f = fixture();
-  const artifact = { id: 7, name: `netlify-preview-${f.run.head_sha}`, expired: false,
+  const artifact = { id: 7, name: `netlify-preview-${f.run.head_sha}.zip`, expired: false,
     size_in_bytes: 1024, digest: `sha256:${'b'.repeat(64)}`,
     workflow_run: { id: f.run.id, head_sha: f.run.head_sha }, created_at: '2026-11-19T00:01:00Z' };
   const artifacts = [artifact];
@@ -120,12 +120,13 @@ test('selects the exact artifact ID, run ID and ZIP name for the current preview
   const { f, artifact, artifacts } = artifactFixture();
   artifacts.push({ ...artifact, id: 8, name: 'another-artifact' });
   assert.deepEqual(await selectArtifact(f), {
-    id: 7, runId: 123, archiveName: `${artifact.name}.zip`,
+    id: 7, runId: 123, archiveName: artifact.name,
   });
 });
 
 for (const [name, mutate] of [
   ['duplicate name', ({ artifact, artifacts }) => artifacts.push({ ...artifact, id: 8 })],
+  ['old artifact name without .zip', ({ artifact }) => { artifact.name = artifact.name.slice(0, -4); }],
   ['invalid ID', ({ artifact }) => { artifact.id = '7'; }],
   ['expired artifact', ({ artifact }) => { artifact.expired = true; }],
   ['wrong run', ({ artifact }) => { artifact.workflow_run.id = 124; }],

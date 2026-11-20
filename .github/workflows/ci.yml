@@ -112,18 +112,20 @@ jobs:
       - run: make build-staging
 
       # Capture staging output before build-prod overwrites the publish directory.
+      - name: Pack Dependabot preview ZIP
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]' }}
+        env:
+          PREVIEW_ZIP: netlify-preview-${{ github.event.pull_request.head.sha }}.zip
+        run: python3 scripts/pack-netlify-preview.py exampleSite/public "$RUNNER_TEMP/$PREVIEW_ZIP"
+
       - name: Upload Dependabot preview artifact
         if: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]' }}
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: netlify-preview-${{ github.event.pull_request.head.sha }}
-          # Preview is static-only: no routing directives, custom domain, or CMS config.
-          path: |
-            exampleSite/public
-            !exampleSite/public/CNAME
-            !exampleSite/public/_redirects
-            !exampleSite/public/admin/config.yml
-            !exampleSite/public/posts/hugo-136/literal:colon/index.html
+          # The overwrite lookup uses name even when the artifact takes its name from the file.
+          name: netlify-preview-${{ github.event.pull_request.head.sha }}.zip
+          path: ${{ runner.temp }}/netlify-preview-${{ github.event.pull_request.head.sha }}.zip
+          archive: false
           if-no-files-found: error
           retention-days: 1
           overwrite: true

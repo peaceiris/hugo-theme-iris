@@ -52,8 +52,8 @@ async function selectArtifact({ github, context }) {
   const artifacts = await github.paginate(github.rest.actions.listWorkflowRunArtifacts, {
     ...context.repo, run_id: run.id, per_page: 100,
   });
-  const name = `netlify-preview-${run.head_sha}`;
-  const matches = artifacts.filter(a => a.name === name);
+  const archiveName = `netlify-preview-${run.head_sha}.zip`;
+  const matches = artifacts.filter(a => a.name === archiveName);
   assert.equal(matches.length, 1, 'Expected exactly one static preview artifact');
   const artifact = matches[0];
   assert.ok(Number.isSafeInteger(artifact.id) && artifact.id > 0);
@@ -65,7 +65,7 @@ async function selectArtifact({ github, context }) {
   assert.match(artifact.digest, /^sha256:[0-9a-f]{64}$/);
   // Reject stale artifacts retained from an earlier attempt of the same run.
   assert.ok(Date.parse(artifact.created_at) >= Date.parse(run.run_started_at));
-  return { id: artifact.id, runId: run.id, archiveName: `${name}.zip` };
+  return { id: artifact.id, runId: run.id, archiveName };
 }
 
 async function validateArchive({ downloadPath, expectedDirectory, archiveName }) {
