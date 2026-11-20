@@ -1,6 +1,8 @@
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 import stat
+import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -41,6 +43,23 @@ class ExtractNetlifyPreviewTest(unittest.TestCase):
     self.assertEqual((self.output / 'css/main.css').read_bytes(), b'body{}')
     self.assertTrue((self.output / 'index.html').is_file())
     self.assertTrue((self.output / 'posts/literal:colon/index.html').is_file())
+
+  def test_packed_preview_keeps_the_colon_page_and_excludes_controls(self):
+    source = self.output.with_name('public')
+    published = ('index.html', 'posts/hugo-136/literal:colon/index.html', 'admin/index.html')
+    for name in (*published, 'CNAME', '_redirects', 'admin/config.yml',
+                 'posts/.hidden.html', '.hidden/index.html'):
+      entry = source / name
+      entry.parent.mkdir(parents=True, exist_ok=True)
+      entry.write_text(name)
+
+    packer = Path(__file__).resolve().parents[1] / 'scripts' / 'pack-netlify-preview.py'
+    subprocess.run([sys.executable, packer, source, self.archive], check=True)
+    with zipfile.ZipFile(self.archive) as zipped:
+      self.assertCountEqual(zipped.namelist(), published)
+    preview.extract(self.archive, self.output)
+    for name in published:
+      self.assertEqual((self.output / name).read_text(), name)
 
   def test_rejects_ambiguous_or_unsafe_path(self):
     for path in ('/x.html', '../x.html', 'css/../x.html', 'css\\x.html',
