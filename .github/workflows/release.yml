@@ -32,7 +32,7 @@ jobs:
           token: ${{ steps.app.outputs.token }}
           fetch-depth: 0
 
-      - uses: peaceiris/workflows/setup-node@99f66a30a38f806fd0df9014275c7cef0b6d9ca5 # v0.21.6
+      - uses: peaceiris/workflows/setup-node@2ac268509a354f2a6098d9995de4ab44f4f038b1 # v0.22.0
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
