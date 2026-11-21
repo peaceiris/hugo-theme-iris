@@ -1,5 +1,8 @@
-{{ with $.Site.Params.repo }}
-  <a class="button is-pulled-right" href="{{ strings.TrimRight "/" .URL }}/blob/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $.File.Path }}">
-    {{ i18n "view_on_github" }}
-  </a>
+{{ with .File }}
+  {{ $filePath := .Path }}
+  {{ with $.Site.Params.repo }}
+    <a class="button is-pulled-right" href="{{ strings.TrimRight "/" .URL }}/blob/{{ .branch }}/{{ .contentDir }}/{{ $.Lang }}/{{ $filePath }}">
+      {{ i18n "view_on_github" }}
+    </a>
+  {{ end }}
 {{ end }}
